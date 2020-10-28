@@ -42,7 +42,6 @@ def get_tags():
 
     Filelist = list_all_files(POSTS_PATH)
     for filePath in  Filelist :
-        print(filePath)
         for file in glob.glob(filePath):
             meta = yaml.load(get_front_matter(file))
             try:
