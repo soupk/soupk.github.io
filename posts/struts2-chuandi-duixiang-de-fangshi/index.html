@@ -1,0 +1,533 @@
+<!DOCTYPE html><html lang="en" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>StrutsMVCDemo4 - Struts2传递对象的方式（2.2.3） | Lemon</title><meta name="generator" content="Jekyll v4.1.1" /><meta property="og:title" content="StrutsMVCDemo4 - Struts2传递对象的方式（2.2.3）" /><meta name="author" content="Lemon" /><meta property="og:locale" content="en_US" /><meta name="description" content="目录结构" /><meta property="og:description" content="目录结构" /><link rel="canonical" href="http://localhost:4000/posts/struts2-chuandi-duixiang-de-fangshi/" /><meta property="og:url" content="http://localhost:4000/posts/struts2-chuandi-duixiang-de-fangshi/" /><meta property="og:site_name" content="Lemon" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2021-08-08T20:47:00+00:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="StrutsMVCDemo4 - Struts2传递对象的方式（2.2.3）" /><meta name="twitter:site" content="@twitter_username" /><meta name="twitter:creator" content="@Lemon" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/struts2-chuandi-duixiang-de-fangshi/"},"url":"http://localhost:4000/posts/struts2-chuandi-duixiang-de-fangshi/","author":{"@type":"Person","name":"Lemon"},"headline":"StrutsMVCDemo4 - Struts2传递对象的方式（2.2.3）","dateModified":"2021-08-08T20:47:00+00:00","datePublished":"2021-08-08T20:47:00+00:00","description":"目录结构","@context":"https://schema.org"}</script><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon.png"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon-precomposed.png"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/manifest.json"><meta name='msapplication-config' content='/assets/img/favicons/browserconfig.xml'><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/img/favicons/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="cdn.jsdelivr.net"><link rel="dns-prefetch" href="cdn.jsdelivr.net"><link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"><link rel="preload" as="style" href="/assets/css/post.css"><link rel="stylesheet" href="/assets/css/post.css"><link rel="preload" as="style" href="/assets/css/lib/bootstrap-toc.min.css"><link rel="stylesheet" href="/assets/css/lib/bootstrap-toc.min.css" /><link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/jquery@3.4.1" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"> <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" async></script> <script src="/assets/js/post.min.js" async></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column"><div id="nav-wrapper"><div id="profile-wrapper" class="d-flex flex-column"><div id="avatar" class="d-flex justify-content-center"> <a href="/" alt="avatar"> <img src="/assets/img/sample/avatar.jpg" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="profile-text mt-3"><div class="site-title"> <a href="/">Lemon</a></div><div class="site-subtitle font-italic"></div></div></div><ul class="nav flex-column"><li class="nav-item d-flex justify-content-center "> <a href="/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/categories/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/tags/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/archives/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/about/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul></div><div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4"> <span id="mode-toggle-wrapper"> <i class="mode-toggle fas fa-sun" dark-mode-invisible></i> <i class="mode-toggle fas fa-moon" light-mode-invisible></i> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } constructor() { if (this.mode != null) { if (this.mode == ModeToggle.DARK_MODE) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } var self = this; /* always follow the system prefers */ this.sysDarkPrefers.addListener(function() { if (self.mode != null) { if (self.mode == ModeToggle.DARK_MODE) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } }); } /* constructor() */ setDark() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_KEY); sessionStorage.removeItem(ModeToggle.MODE_KEY); } get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; } get isLightkMode() { return this.mode == ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } flipMode() { if (this.hasMode) { if (this.isSysDarkPrefer) { if (this.isLightkMode) { this.clearMode(); } else { this.setLight(); } } else { if (this.isDarkMode) { this.clearMode(); } else { this.setDark(); } } } else { if (this.isSysDarkPrefer) { this.setLight(); } else { this.setDark(); } } } /* flipMode() */ } /* ModeToggle */ let toggle = new ModeToggle(); $(".mode-toggle").click(function() { toggle.flipMode(); }); </script> </span> <span class="icon-border"></span> <a href="https://github.com/soupk" target="_blank"> <i class="fab fa-github-alt"></i> </a> <a href="https://twitter.com/twitter_username" target="_blank"> <i class="fab fa-twitter"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['kaiqiang.zhong','foxmail.com'].join('@')" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" > <i class="fas fa-rss"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Posts </a> </span> <span>StrutsMVCDemo4 - Struts2传递对象的方式（2.2.3）</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>StrutsMVCDemo4 - Struts2传递对象的方式（2.2.3）</h1><div class="post-meta text-muted d-flex flex-column"><div> Posted <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Sun, Aug 8, 2021, 8:47 PM +0000" > Aug 8 <i class="unloaded">2021-08-08T20:47:00+00:00</i> </span> by <span class="author"> Lemon </span></div><div> Updated <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="Wed, Aug 11, 2021, 4:25 PM +0800" > Aug 11 <i class="unloaded">2021-08-11T08:25:19+00:00</i> </span></div><div> <i class="far fa-eye fa-fw"></i> <span id="busuanzi_container_page_pv"> <span id="busuanzi_value_page_pv"></span> </span> views</div></div><div class="post-content"><h2 id="目录结构">目录结构</h2><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\Struts2\struts2-chuandi-duixiang-de-fangshi\1.png" /></p><h3 id="webxml">web.xml</h3><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;web-app</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> 
+         <span class="na">xmlns=</span><span class="s">"http://java.sun.com/xml/ns/javaee"</span> 
+         <span class="na">xsi:schemaLocation=</span><span class="s">"http://java.sun.com/xml/ns/javaee 
+                    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"</span> 
+         <span class="na">id=</span><span class="s">"WebApp_ID"</span> <span class="na">version=</span><span class="s">"2.5"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;display-name&gt;</span>Struts2MVCDemo<span class="nt">&lt;/display-name&gt;</span>
+    <span class="nt">&lt;welcome-file-list&gt;</span>
+        <span class="nt">&lt;welcome-file&gt;</span>index.html<span class="nt">&lt;/welcome-file&gt;</span>
+        <span class="nt">&lt;welcome-file&gt;</span>index.htm<span class="nt">&lt;/welcome-file&gt;</span>
+        <span class="nt">&lt;welcome-file&gt;</span>index.jsp<span class="nt">&lt;/welcome-file&gt;</span>
+        <span class="nt">&lt;welcome-file&gt;</span>default.html<span class="nt">&lt;/welcome-file&gt;</span>
+        <span class="nt">&lt;welcome-file&gt;</span>default.htm<span class="nt">&lt;/welcome-file&gt;</span>
+        <span class="nt">&lt;welcome-file&gt;</span>default.jsp<span class="nt">&lt;/welcome-file&gt;</span>
+    <span class="nt">&lt;/welcome-file-list&gt;</span>
+
+    <span class="nt">&lt;filter&gt;</span>
+        <span class="nt">&lt;filter-name&gt;</span>struts2<span class="nt">&lt;/filter-name&gt;</span>
+        <span class="nt">&lt;filter-class&gt;</span>
+            org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
+        <span class="nt">&lt;/filter-class&gt;</span>
+    <span class="nt">&lt;/filter&gt;</span>
+    <span class="nt">&lt;filter-mapping&gt;</span>
+        <span class="nt">&lt;filter-name&gt;</span>struts2<span class="nt">&lt;/filter-name&gt;</span>
+        <span class="nt">&lt;url-pattern&gt;</span>/*<span class="nt">&lt;/url-pattern&gt;</span>
+    <span class="nt">&lt;/filter-mapping&gt;</span>
+<span class="nt">&lt;/web-app&gt;</span>
+</pre></table></code></div></div><h3 id="strutsxml">struts.xml</h3><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span>
+<span class="cp">&lt;!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd"&gt;</span>
+<span class="nt">&lt;struts&gt;</span>
+    <span class="c">&lt;!-- 不需要默认Spring容器管理struts --&gt;</span>
+    <span class="nt">&lt;constant</span> <span class="na">name=</span><span class="s">"struts.objectFactory"</span> 
+              <span class="na">value=</span><span class="s">"com.opensymphony.xwork2.ObjectFactory"</span><span class="nt">&gt;&lt;/constant&gt;</span>
+
+    <span class="c">&lt;!-- 开发阶段，struts配置修改，重新加载 --&gt;</span>
+    <span class="nt">&lt;constant</span> <span class="na">name=</span><span class="s">"struts.configuration.xml.reload"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/constant&gt;</span>
+    
+    <span class="nt">&lt;package</span> <span class="na">name=</span><span class="s">"person"</span> <span class="na">namespace=</span><span class="s">"/person"</span> <span class="na">extends=</span><span class="s">"struts-default"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">"hello1"</span> <span class="na">class=</span><span class="s">"com.bbs.action.PersonAction"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;result</span> <span class="na">name=</span><span class="s">"success"</span><span class="nt">&gt;</span>/WEB-INF/success.jsp<span class="nt">&lt;/result&gt;</span>
+        <span class="nt">&lt;/action&gt;</span>
+        
+        <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">"hello2"</span> <span class="na">class=</span><span class="s">"com.bbs.action.PersonAction"</span> <span class="na">method=</span><span class="s">"zhangxueyou"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;result</span> <span class="na">name=</span><span class="s">"success"</span><span class="nt">&gt;</span>/WEB-INF/success.jsp<span class="nt">&lt;/result&gt;</span>
+            <span class="nt">&lt;result</span> <span class="na">name=</span><span class="s">"error"</span><span class="nt">&gt;</span>/WEB-INF/error.jsp<span class="nt">&lt;/result&gt;</span>
+        <span class="nt">&lt;/action&gt;</span>
+        
+        <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">"hello3"</span> <span class="na">class=</span><span class="s">"com.bbs.action.PersonAction"</span> <span class="na">method=</span><span class="s">"liming"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;result</span> <span class="na">name=</span><span class="s">"success"</span><span class="nt">&gt;</span>/WEB-INF/success.jsp<span class="nt">&lt;/result&gt;</span>
+            <span class="nt">&lt;result</span> <span class="na">name=</span><span class="s">"error"</span><span class="nt">&gt;</span>/WEB-INF/error.jsp<span class="nt">&lt;/result&gt;</span>
+        <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/package&gt;</span>
+
+    <span class="nt">&lt;include</span> <span class="na">file=</span><span class="s">"struts*.xml"</span><span class="nt">&gt;&lt;/include&gt;</span>
+<span class="nt">&lt;/struts&gt;</span>
+</pre></table></code></div></div><h3 id="struts1xml">struts1.xml</h3><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span>
+<span class="cp">&lt;!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd"&gt;</span>
+<span class="nt">&lt;struts&gt;</span>
+    <span class="nt">&lt;package</span> <span class="na">name=</span><span class="s">"animal"</span> <span class="na">namespace=</span><span class="s">""</span> <span class="na">extends=</span><span class="s">"person"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">"a1"</span> <span class="na">class=</span><span class="s">"com.bbs.action.AnimalAction"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;result</span> <span class="na">name=</span><span class="s">"success"</span><span class="nt">&gt;</span>/WEB-INF/success.jsp<span class="nt">&lt;/result&gt;</span>
+            <span class="nt">&lt;result</span> <span class="na">name=</span><span class="s">"error"</span><span class="nt">&gt;</span>/WEB-INF/error.jsp<span class="nt">&lt;/result&gt;</span>
+            <span class="nt">&lt;result</span> <span class="na">name=</span><span class="s">"input"</span><span class="nt">&gt;</span>/index.jsp<span class="nt">&lt;/result&gt;</span>
+        <span class="nt">&lt;/action&gt;</span>
+
+        <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">"a2"</span> <span class="na">class=</span><span class="s">"com.bbs.action.AnimalAction"</span> <span class="na">method=</span><span class="s">"admin"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;result</span> <span class="na">name=</span><span class="s">"success"</span><span class="nt">&gt;</span>/WEB-INF/success.jsp<span class="nt">&lt;/result&gt;</span>
+            <span class="nt">&lt;result</span> <span class="na">name=</span><span class="s">"error"</span><span class="nt">&gt;</span>/WEB-INF/error.jsp<span class="nt">&lt;/result&gt;</span>
+            <span class="nt">&lt;result</span> <span class="na">name=</span><span class="s">"input"</span><span class="nt">&gt;</span>/index.jsp<span class="nt">&lt;/result&gt;</span>
+        <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/package&gt;</span>
+<span class="nt">&lt;/struts&gt;</span>
+</pre></table></code></div></div><h3 id="personactionjava">PersonAction.java</h3><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+</pre><td class="rouge-code"><pre><span class="kn">package</span> <span class="nn">com.bbs.action</span><span class="o">;</span>
+
+<span class="c1">// struts2 Action层</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PersonAction</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    
+    <span class="c1">// 视图从值栈中获取name</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"调用getName方法"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"调用setName方法，在actionContext中记录值栈信息"</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+    <span class="c1">// 默认执行</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">execute</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// 返回result结果,视图名字</span>
+        <span class="k">return</span> <span class="s">"success"</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">zhangxueyou</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="s">"success"</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="s">"error"</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">liming</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"获取页面参数："</span> <span class="o">+</span> <span class="n">name</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">name</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">name</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">""</span><span class="o">))</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="s">"error"</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="s">"success"</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+<span class="o">}</span>
+</pre></table></code></div></div><h3 id="adminjava">Admin.java</h3><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+</pre><td class="rouge-code"><pre><span class="kn">package</span> <span class="nn">com.bbs.action</span><span class="o">;</span>
+
+<span class="cm">/**
+ * 管理员实体类，对应t_admin表 
+ * @author Administrator
+ *
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Admin</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">adminid</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">adminname</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">adminpassword</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAdminid</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">adminid</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAdminid</span><span class="o">(</span><span class="kt">int</span> <span class="n">adminid</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">adminid</span> <span class="o">=</span> <span class="n">adminid</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getAdminname</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">adminname</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAdminname</span><span class="o">(</span><span class="nc">String</span> <span class="n">adminname</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">adminname</span> <span class="o">=</span> <span class="n">adminname</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getAdminpassword</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">adminpassword</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAdminpassword</span><span class="o">(</span><span class="nc">String</span> <span class="n">adminpassword</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">adminpassword</span> <span class="o">=</span> <span class="n">adminpassword</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+       <span class="k">return</span> <span class="s">"adminid="</span> <span class="o">+</span> <span class="n">adminid</span> <span class="o">+</span> <span class="s">", adminname="</span> 
+       <span class="o">+</span> <span class="n">adminname</span> <span class="o">+</span> <span class="s">", adminpassword="</span> <span class="o">+</span> <span class="n">adminpassword</span><span class="o">;</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></table></code></div></div><h3 id="animalactionjava">AnimalAction.java</h3><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+</pre><td class="rouge-code"><pre><span class="kn">package</span> <span class="nn">com.bbs.action</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.opensymphony.xwork2.ActionSupport</span><span class="o">;</span>
+
+<span class="cm">/**
+ * action 模型，处理animal方法
+ * ActionSupport类不仅实现了action接口。还实现了：
+ * validateable      提供校验功能
+ * validationAware   提供校验功能
+ * textprovider      提供国际化支持
+ * localprovider     提供国际化支持
+ * serializable      序列化接口
+ * 所以，更多情况下，我们需要继承ActionSupport类
+ * @author Administrator
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AnimalAction</span> <span class="kd">extends</span> <span class="nc">ActionSupport</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">1L</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">pwd</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">Admin</span> <span class="n">admin</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getPwd</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">pwd</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPwd</span><span class="o">(</span><span class="nc">String</span> <span class="n">pwd</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">pwd</span> <span class="o">=</span> <span class="n">pwd</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">login</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">name</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"mayi"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">pwd</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"123"</span><span class="o">))</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="no">SUCCESS</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="no">ERROR</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">validate</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// 验证</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">name</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">pwd</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">addFieldError</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="s">"不能为空！"</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">admin</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">admin</span><span class="o">);</span>
+        <span class="k">return</span> <span class="no">SUCCESS</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+<span class="o">}</span>
+</pre></table></code></div></div><h3 id="successjsp">success.jsp</h3><div class="language-jsp highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre><td class="rouge-code"><pre><span class="nt">&lt;%@ page </span><span class="na">language=</span><span class="s">"java"</span><span class="na"> contentType=</span><span class="s">"text/html; charset=UTF-8"</span><span class="na">
+    pageEncoding=</span><span class="s">"UTF-8"</span><span class="nt">%&gt;</span>
+<span class="nt">&lt;%@  taglib </span><span class="na">prefix=</span><span class="s">"s"</span><span class="na"> uri=</span><span class="s">"/struts-tags"</span> <span class="nt">%&gt;</span>
+<span class="cp">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+    "http://www.w3.org/TR/html4/loose.dtd"&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Success页面<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    success
+    获取值栈属性值：${name }<span class="nt">&lt;br/&gt;</span>
+    id : ${admin.adminid }<span class="nt">&lt;br/&gt;</span>
+    username : ${admin.adminname }<span class="nt">&lt;br/&gt;</span>
+    password : ${admin.adminpassword }<span class="nt">&lt;br/&gt;</span>
+    <span class="nt">&lt;s:debug&gt;&lt;/s:debug&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></table></code></div></div><h3 id="indexjsp">index.jsp</h3><div class="language-jsp highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre><td class="rouge-code"><pre><span class="nt">&lt;%@ page </span><span class="na">language=</span><span class="s">"java"</span><span class="na"> contentType=</span><span class="s">"text/html; charset=UTF-8"</span><span class="na">
+    pageEncoding=</span><span class="s">"UTF-8"</span><span class="nt">%&gt;</span>
+<span class="cp">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+    "http://www.w3.org/TR/html4/loose.dtd"&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=UTF-8"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;title&gt;</span>Index页面<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+index
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://localhost:8080/Struts2MVCDemo/person/hello1"</span><span class="nt">&gt;</span>
+        请求链接-------PersonAction中的方法
+    <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></table></code></div></div><h3 id="errorjsp">error.jsp</h3><div class="language-jsp highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre><td class="rouge-code"><pre><span class="nt">&lt;%@ page </span><span class="na">language=</span><span class="s">"java"</span><span class="na"> contentType=</span><span class="s">"text/html; charset=UTF-8"</span><span class="na">
+    pageEncoding=</span><span class="s">"UTF-8"</span><span class="nt">%&gt;</span>
+<span class="cp">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+    "http://www.w3.org/TR/html4/loose.dtd"&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=UTF-8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Error页面<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        success
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></table></code></div></div><h2 id="请求地址">请求地址</h2><p>http://localhost:8080/Struts2MVCDemo/a2?name=mayi&amp;pwd=123&amp;admin.adminname=zhong&amp;admin.adminid=456&amp;admin.adminpassword=789</p><h2 id="运行结果">运行结果</h2><h3 id="控制台">控制台</h3><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\Struts2\struts2-chuandi-duixiang-de-fangshi\2.png" /></p><h3 id="浏览器">浏览器</h3><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\Struts2\struts2-chuandi-duixiang-de-fangshi\5.png" /><br /> <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\Struts2\struts2-chuandi-duixiang-de-fangshi\3.png" /></p></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/Knowledge/'>Knowledge</a>, <a href='/categories/Struts2/'>Struts2</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/Struts2/" class="post-tag no-text-decoration" >Struts2</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=StrutsMVCDemo4 - Struts2传递对象的方式（2.2.3） - Lemon&url=http://localhost:4000/posts/struts2-chuandi-duixiang-de-fangshi/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=StrutsMVCDemo4 - Struts2传递对象的方式（2.2.3） - Lemon&u=http://localhost:4000/posts/struts2-chuandi-duixiang-de-fangshi/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=StrutsMVCDemo4 - Struts2传递对象的方式（2.2.3） - Lemon&url=http://localhost:4000/posts/struts2-chuandi-duixiang-de-fangshi/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank"> <i class="fa-fw fab fa-telegram"></i> </a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:4000/posts/struts2-chuandi-duixiang-de-fangshi/" data-toggle="tooltip" data-placement="top" title="Linkedin" target="_blank"> <i class="fa-fw fab fa-linkedin"></i> </a> <a href="http://service.weibo.com/share/share.php?title=StrutsMVCDemo4 - Struts2传递对象的方式（2.2.3） - Lemon&url=http://localhost:4000/posts/struts2-chuandi-duixiang-de-fangshi/" data-toggle="tooltip" data-placement="top" title="Weibo" target="_blank"> <i class="fa-fw fab fa-weibo"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/struts2-zhongde-chongdingxiang/">StrutsMVCDemo6 - Struts2中的重定向（2.2.3）</a><li><a href="/posts/struts2-lanjieqi-de-shiyong/">StrutsMVCDemo5 - Struts2拦截器的使用（2.2.3）</a><li><a href="/posts/struts2-zhongde-tongpei/">Struts2中通配的使用</a><li><a href="/posts/struts2-chuandi-duixiang-de-fangshi/">StrutsMVCDemo4 - Struts2传递对象的方式（2.2.3）</a><li><a href="/posts/struts2-houtai-yanzheng/">StrutsMVCDemo3 - Struts2后台验证（2.2.3）</a></ul></div><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/Struts2/">Struts2</a> <a class="post-tag" href="/tags/RocketMQ/">RocketMQ</a> <a class="post-tag" href="/tags/WebLogic/">WebLogic</a> <a class="post-tag" href="/tags/MySQL/">MySQL</a> <a class="post-tag" href="/tags/Jekyll/">Jekyll</a> <a class="post-tag" href="/tags/Eclipse/">Eclipse</a> <a class="post-tag" href="/tags/Maven/">Maven</a> <a class="post-tag" href="/tags/GitBook/">GitBook</a> <a class="post-tag" href="/tags/CSS/">CSS</a> <a class="post-tag" href="/tags/Servlet/">Servlet</a></div></div></div><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/struts2-peizhi-buzhou/"><div class="card-body"> <span class="timeago small" > Aug 8 <i class="unloaded">2021-08-08T17:47:00+00:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>StrutsMVCDemo - Struts2配置步骤（2.2.3）</h3><div class="text-muted small"><p> 步骤 导入jar包，核心包struts2-core.xxx.jar、xwork-core.xxx.jar。 在Web项目上，支持Struts2特性：在web.xml中定义一个filter。这个filter就是FilterDispatcher类的具体实现类：StrutsPrepareAndExecuteFilter &lt;filter&gt; &lt...</p></div></div></a></div><div class="card"> <a href="/posts/huoqu-struts2-zhizhan-zhongde-zhi/"><div class="card-body"> <span class="timeago small" > Aug 8 <i class="unloaded">2021-08-08T18:47:00+00:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>StrutsMVCDemo2 - 获取Struts2值栈中的值（2.2.3）</h3><div class="text-muted small"><p> 目录结构 web.xml &lt;?xml version="1.0" encoding="UTF-8"?&gt; &lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schem...</p></div></div></a></div><div class="card"> <a href="/posts/struts2-houtai-yanzheng/"><div class="card-body"> <span class="timeago small" > Aug 8 <i class="unloaded">2021-08-08T19:47:00+00:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>StrutsMVCDemo3 - Struts2后台验证（2.2.3）</h3><div class="text-muted small"><p> Struts2提供的后台效验流程 拦截器调用指定的方法validate()方法； 判断保存错误的Map集合是否为空，为null，才执行action的execute()方法； 如果不为null, 说明验证有错误，不放行。 数据效验原理 public synchronized void addFieldError(String fieldName, String errorMe...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/struts2-houtai-yanzheng/" class="btn btn-outline-primary"><p>StrutsMVCDemo3 - Struts2后台验证（2.2.3）</p></a> <a href="/posts/struts2-lanjieqi-de-shiyong/" class="btn btn-outline-primary"><p>StrutsMVCDemo5 - Struts2拦截器的使用（2.2.3）</p></a></div></div></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> <script type="text/javascript"> const imgs = document.querySelectorAll('#post-wrapper img'); const observer = lozad(imgs); observer.observe(); </script> <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\lib/jquery.mousewheel.pack.js?v=3.1.3"></script> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\source/jquery.fancybox.pack.js?v=2.1.5"></script><link rel="stylesheet" type="text/css" href="\assets\plugins\fancybox-2.1.7\source/jquery.fancybox.css?v=2.1.5" media="screen" /><link rel="stylesheet" type="text/css" href="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-buttons.css?v=1.0.5" /> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script><link rel="stylesheet" type="text/css" href="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" /> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-media.js?v=1.0.6"></script> <script> $(document).ready(function() { $("p img").not('.emoji').each(function() { var strA = "<a class='fancybox' data-fancybox-group='gallery' href='" + $(this).attr("data-src") + "'></a>"; $(this).wrapAll(strA); }); $('.fancybox').fancybox(); }); </script><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2021 <a href="https://twitter.com/username">Lemon</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy/">Chirpy</a> theme.</p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-xl-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/tags/Struts2/">Struts2</a> <a class="post-tag" href="/tags/RocketMQ/">RocketMQ</a> <a class="post-tag" href="/tags/WebLogic/">WebLogic</a> <a class="post-tag" href="/tags/MySQL/">MySQL</a> <a class="post-tag" href="/tags/Jekyll/">Jekyll</a> <a class="post-tag" href="/tags/Eclipse/">Eclipse</a> <a class="post-tag" href="/tags/Maven/">Maven</a> <a class="post-tag" href="/tags/GitBook/">GitBook</a> <a class="post-tag" href="/tags/CSS/">CSS</a> <a class="post-tag" href="/tags/Servlet/">Servlet</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"><div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>{categories}</div><div><i class="fa fa-tag fa-fw"></i>{tags}</div></div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>' }); </script>
