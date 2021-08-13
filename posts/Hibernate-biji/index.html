@@ -1,0 +1,821 @@
+<!DOCTYPE html><html lang="en" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>Hibernate笔记 | Lemon</title><meta name="generator" content="Jekyll v4.1.1" /><meta property="og:title" content="Hibernate笔记" /><meta name="author" content="Lemon" /><meta property="og:locale" content="en_US" /><meta name="description" content="一、JavaProject配置过程（TestHibernate） 1、加入Hibernate支持，即拷贝Hibernate支持jar包；创建hiberante.cfg.xml文件。（注解配置方式） 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 &lt;?xml version=&#39;1.0&#39; encoding=&#39;utf-8&#39;?&gt; &lt;!DOCTYPE hibernate-configuration PUBLIC &quot;-//Hibernate/Hibernate Configuration DTD//EN&quot; &quot;http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd&quot;&gt; &lt;hibernate-configuration&gt; &lt;session-factory&gt; &lt;!-- 数据库连接 --&gt; &lt;property name=&quot;connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt; &lt;property name=&quot;connection.url&quot;&gt;jdbc:mysql://localhost:3306/bbs_db&lt;/property&gt; &lt;property name=&quot;connection.username&quot;&gt;root&lt;/property&gt; &lt;property name=&quot;connection.password&quot;&gt;root&lt;/property&gt; &lt;!-- 方言dialect --&gt; &lt;property name=&quot;dialect&quot;&gt;org.hibernate.dialect.MySQLDialect&lt;/property&gt; &lt;!-- 是否显示sql语句 --&gt; &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt; &lt;!-- 数据库更新方式 --&gt; &lt;property name=&quot;hbm2ddl.auto&quot;&gt;update&lt;/property&gt; &lt;!-- 实体关系映射 --&gt; &lt;mapping class=&quot;com.bbs.bean.User&quot;/&gt; &lt;/session-factory&gt; &lt;/hibernate-configuration&gt; 2、创建持久化类Admin、User等，并通过注解配置“实体关系映射”。（重点） 涉及多个知识点，如：@Many To One映射关系，@One To Many等。（重点） @GeneratedValue主键生成策略，常用strategy = GenerationType.AUTO（重点） fetch=FetchType.LAZY懒加载设置及级联配置cascade设置。（重点）（此处为系统设计部分，初级工程师先关注具体使用。）" /><meta property="og:description" content="一、JavaProject配置过程（TestHibernate） 1、加入Hibernate支持，即拷贝Hibernate支持jar包；创建hiberante.cfg.xml文件。（注解配置方式） 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 &lt;?xml version=&#39;1.0&#39; encoding=&#39;utf-8&#39;?&gt; &lt;!DOCTYPE hibernate-configuration PUBLIC &quot;-//Hibernate/Hibernate Configuration DTD//EN&quot; &quot;http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd&quot;&gt; &lt;hibernate-configuration&gt; &lt;session-factory&gt; &lt;!-- 数据库连接 --&gt; &lt;property name=&quot;connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt; &lt;property name=&quot;connection.url&quot;&gt;jdbc:mysql://localhost:3306/bbs_db&lt;/property&gt; &lt;property name=&quot;connection.username&quot;&gt;root&lt;/property&gt; &lt;property name=&quot;connection.password&quot;&gt;root&lt;/property&gt; &lt;!-- 方言dialect --&gt; &lt;property name=&quot;dialect&quot;&gt;org.hibernate.dialect.MySQLDialect&lt;/property&gt; &lt;!-- 是否显示sql语句 --&gt; &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt; &lt;!-- 数据库更新方式 --&gt; &lt;property name=&quot;hbm2ddl.auto&quot;&gt;update&lt;/property&gt; &lt;!-- 实体关系映射 --&gt; &lt;mapping class=&quot;com.bbs.bean.User&quot;/&gt; &lt;/session-factory&gt; &lt;/hibernate-configuration&gt; 2、创建持久化类Admin、User等，并通过注解配置“实体关系映射”。（重点） 涉及多个知识点，如：@Many To One映射关系，@One To Many等。（重点） @GeneratedValue主键生成策略，常用strategy = GenerationType.AUTO（重点） fetch=FetchType.LAZY懒加载设置及级联配置cascade设置。（重点）（此处为系统设计部分，初级工程师先关注具体使用。）" /><link rel="canonical" href="http://localhost:4000/posts/Hibernate-biji/" /><meta property="og:url" content="http://localhost:4000/posts/Hibernate-biji/" /><meta property="og:site_name" content="Lemon" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2021-08-12T05:23:00+00:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Hibernate笔记" /><meta name="twitter:site" content="@twitter_username" /><meta name="twitter:creator" content="@Lemon" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Hibernate-biji/"},"url":"http://localhost:4000/posts/Hibernate-biji/","author":{"@type":"Person","name":"Lemon"},"headline":"Hibernate笔记","dateModified":"2021-08-12T05:23:00+00:00","datePublished":"2021-08-12T05:23:00+00:00","description":"一、JavaProject配置过程（TestHibernate） 1、加入Hibernate支持，即拷贝Hibernate支持jar包；创建hiberante.cfg.xml文件。（注解配置方式） 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 &lt;?xml version=&#39;1.0&#39; encoding=&#39;utf-8&#39;?&gt; &lt;!DOCTYPE hibernate-configuration PUBLIC &quot;-//Hibernate/Hibernate Configuration DTD//EN&quot; &quot;http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd&quot;&gt; &lt;hibernate-configuration&gt; &lt;session-factory&gt; &lt;!-- 数据库连接 --&gt; &lt;property name=&quot;connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt; &lt;property name=&quot;connection.url&quot;&gt;jdbc:mysql://localhost:3306/bbs_db&lt;/property&gt; &lt;property name=&quot;connection.username&quot;&gt;root&lt;/property&gt; &lt;property name=&quot;connection.password&quot;&gt;root&lt;/property&gt; &lt;!-- 方言dialect --&gt; &lt;property name=&quot;dialect&quot;&gt;org.hibernate.dialect.MySQLDialect&lt;/property&gt; &lt;!-- 是否显示sql语句 --&gt; &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt; &lt;!-- 数据库更新方式 --&gt; &lt;property name=&quot;hbm2ddl.auto&quot;&gt;update&lt;/property&gt; &lt;!-- 实体关系映射 --&gt; &lt;mapping class=&quot;com.bbs.bean.User&quot;/&gt; &lt;/session-factory&gt; &lt;/hibernate-configuration&gt; 2、创建持久化类Admin、User等，并通过注解配置“实体关系映射”。（重点） 涉及多个知识点，如：@Many To One映射关系，@One To Many等。（重点） @GeneratedValue主键生成策略，常用strategy = GenerationType.AUTO（重点） fetch=FetchType.LAZY懒加载设置及级联配置cascade设置。（重点）（此处为系统设计部分，初级工程师先关注具体使用。）","@context":"https://schema.org"}</script><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon.png"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon-precomposed.png"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/manifest.json"><meta name='msapplication-config' content='/assets/img/favicons/browserconfig.xml'><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/img/favicons/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="cdn.jsdelivr.net"><link rel="dns-prefetch" href="cdn.jsdelivr.net"><link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"><link rel="preload" as="style" href="/assets/css/post.css"><link rel="stylesheet" href="/assets/css/post.css"><link rel="preload" as="style" href="/assets/css/lib/bootstrap-toc.min.css"><link rel="stylesheet" href="/assets/css/lib/bootstrap-toc.min.css" /><link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/jquery@3.4.1" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"> <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" async></script> <script src="/assets/js/post.min.js" async></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column"><div id="nav-wrapper"><div id="profile-wrapper" class="d-flex flex-column"><div id="avatar" class="d-flex justify-content-center"> <a href="/" alt="avatar"> <img src="/assets/img/sample/avatar.jpg" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="profile-text mt-3"><div class="site-title"> <a href="/">Lemon</a></div><div class="site-subtitle font-italic"></div></div></div><ul class="nav flex-column"><li class="nav-item d-flex justify-content-center "> <a href="/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/categories/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/tags/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/archives/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/about/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul></div><div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4"> <span id="mode-toggle-wrapper"> <i class="mode-toggle fas fa-sun" dark-mode-invisible></i> <i class="mode-toggle fas fa-moon" light-mode-invisible></i> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } constructor() { if (this.mode != null) { if (this.mode == ModeToggle.DARK_MODE) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } var self = this; /* always follow the system prefers */ this.sysDarkPrefers.addListener(function() { if (self.mode != null) { if (self.mode == ModeToggle.DARK_MODE) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } }); } /* constructor() */ setDark() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_KEY); sessionStorage.removeItem(ModeToggle.MODE_KEY); } get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; } get isLightkMode() { return this.mode == ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } flipMode() { if (this.hasMode) { if (this.isSysDarkPrefer) { if (this.isLightkMode) { this.clearMode(); } else { this.setLight(); } } else { if (this.isDarkMode) { this.clearMode(); } else { this.setDark(); } } } else { if (this.isSysDarkPrefer) { this.setLight(); } else { this.setDark(); } } } /* flipMode() */ } /* ModeToggle */ let toggle = new ModeToggle(); $(".mode-toggle").click(function() { toggle.flipMode(); }); </script> </span> <span class="icon-border"></span> <a href="https://github.com/soupk" target="_blank"> <i class="fab fa-github-alt"></i> </a> <a href="https://twitter.com/twitter_username" target="_blank"> <i class="fab fa-twitter"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['kaiqiang.zhong','foxmail.com'].join('@')" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" > <i class="fas fa-rss"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Posts </a> </span> <span>Hibernate笔记</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>Hibernate笔记</h1><div class="post-meta text-muted d-flex flex-column"><div> Posted <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Thu, Aug 12, 2021, 5:23 AM +0000" > Aug 12 <i class="unloaded">2021-08-12T05:23:00+00:00</i> </span> by <span class="author"> Lemon </span></div><div> Updated <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="Fri, Aug 13, 2021, 6:02 PM +0800" > Aug 13 <i class="unloaded">2021-08-13T10:02:10+00:00</i> </span></div><div> <i class="far fa-eye fa-fw"></i> <span id="busuanzi_container_page_pv"> <span id="busuanzi_value_page_pv"></span> </span> views</div></div><div class="post-content"><h2 id="一javaproject配置过程testhibernate">一、JavaProject配置过程（TestHibernate）</h2><p>1、加入Hibernate支持，即拷贝Hibernate支持jar包；创建hiberante.cfg.xml文件。（注解配置方式）</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre><td class="rouge-code"><pre><span class="cp">&lt;?xml version='1.0' encoding='utf-8'?&gt;</span>
+<span class="cp">&lt;!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"&gt;</span>
+<span class="nt">&lt;hibernate-configuration&gt;</span>
+    <span class="nt">&lt;session-factory&gt;</span>
+        <span class="c">&lt;!-- 数据库连接 --&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"connection.driver_class"</span><span class="nt">&gt;</span>com.mysql.jdbc.Driver<span class="nt">&lt;/property&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"connection.url"</span><span class="nt">&gt;</span>jdbc:mysql://localhost:3306/bbs_db<span class="nt">&lt;/property&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"connection.username"</span><span class="nt">&gt;</span>root<span class="nt">&lt;/property&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"connection.password"</span><span class="nt">&gt;</span>root<span class="nt">&lt;/property&gt;</span>
+       
+        <span class="c">&lt;!-- 方言dialect --&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dialect"</span><span class="nt">&gt;</span>org.hibernate.dialect.MySQLDialect<span class="nt">&lt;/property&gt;</span>
+       
+        <span class="c">&lt;!-- 是否显示sql语句 --&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"show_sql"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/property&gt;</span>
+       
+        <span class="c">&lt;!-- 数据库更新方式 --&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"hbm2ddl.auto"</span><span class="nt">&gt;</span>update<span class="nt">&lt;/property&gt;</span>
+       
+        <span class="c">&lt;!-- 实体关系映射 --&gt;</span>
+        <span class="nt">&lt;mapping</span> <span class="na">class=</span><span class="s">"com.bbs.bean.User"</span><span class="nt">/&gt;</span>       
+    <span class="nt">&lt;/session-factory&gt;</span>
+<span class="nt">&lt;/hibernate-configuration&gt;</span>
+</pre></table></code></div></div><p>2、创建持久化类Admin、User等，并通过注解配置“实体关系映射”。（重点）</p><ul><li>涉及多个知识点，如：<code class="language-plaintext highlighter-rouge">@Many To One</code>映射关系，<code class="language-plaintext highlighter-rouge">@One To Many</code>等。（重点）<li>@GeneratedValue主键生成策略，常用<code class="language-plaintext highlighter-rouge">strategy = GenerationType.AUTO</code>（重点）<li>fetch=FetchType.LAZY懒加载设置及级联配置cascade设置。（重点）（此处为系统设计部分，初级工程师先关注具体使用。）</ul><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+</pre><td class="rouge-code"><pre><span class="kn">package</span> <span class="nn">com.bbs.bean</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">javax.persistence.Column</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.persistence.Entity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.persistence.GeneratedValue</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.persistence.GenerationType</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.persistence.Id</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.persistence.Table</span><span class="o">;</span>
+ 
+<span class="c1">// 用户注册实体类，对应t_user表</span>
+<span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"t_user"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">User</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">userid</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">username</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">password</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">sex</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">hobbys</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">birthday</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">city</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">email</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">qq</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">createtime</span><span class="o">;</span>
+
+    <span class="nd">@Id</span>
+    <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="nc">GenerationType</span><span class="o">.</span><span class="na">AUTO</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getUserid</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">userid</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"username"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getUsername</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">username</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"password"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getPassword</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">password</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"sex"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getSex</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">sex</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"hobbys"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getHobbys</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">hobbys</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"birthday"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getBirthday</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">birthday</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"city"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getCity</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">city</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"email"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getEmail</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">email</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"qq"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getQq</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">qq</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"createtime"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getCreatetime</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">createtime</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUserid</span><span class="o">(</span><span class="kt">int</span> <span class="n">userid</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">userid</span> <span class="o">=</span> <span class="n">userid</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUsername</span><span class="o">(</span><span class="nc">String</span> <span class="n">username</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">username</span> <span class="o">=</span> <span class="n">username</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPassword</span><span class="o">(</span><span class="nc">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">password</span> <span class="o">=</span> <span class="n">password</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSex</span><span class="o">(</span><span class="nc">String</span> <span class="n">sex</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">sex</span> <span class="o">=</span> <span class="n">sex</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setHobbys</span><span class="o">(</span><span class="nc">String</span> <span class="n">hobbys</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">hobbys</span> <span class="o">=</span> <span class="n">hobbys</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBirthday</span><span class="o">(</span><span class="nc">String</span> <span class="n">birthday</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setCity</span><span class="o">(</span><span class="nc">String</span> <span class="n">city</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">city</span> <span class="o">=</span> <span class="n">city</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setEmail</span><span class="o">(</span><span class="nc">String</span> <span class="n">email</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">email</span> <span class="o">=</span> <span class="n">email</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setQq</span><span class="o">(</span><span class="nc">String</span> <span class="n">qq</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">qq</span> <span class="o">=</span> <span class="n">qq</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setCreatetime</span><span class="o">(</span><span class="nc">String</span> <span class="n">createtime</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">createtime</span> <span class="o">=</span> <span class="n">createtime</span><span class="o">;</span>
+    <span class="o">}</span>
+ 
+<span class="o">}</span>
+</pre></table></code></div></div><p>3、JavaProject工程项目下，需要通过工厂类，获取session对象：（代码片段）</p><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+</pre><td class="rouge-code"><pre><span class="kn">package</span> <span class="nn">com.bbs.util</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">org.hibernate.SessionFactory</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.hibernate.cfg.AnnotationConfiguration</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.hibernate.cfg.Configuration</span><span class="o">;</span>
+ 
+<span class="cm">/**
+ * 自定义工厂类 单例模式
+ * Hibernate五大核心接口
+ * configuration接口、
+ * sessionFactory接口、
+ * session接口、
+ * Transaction接口、
+ * query接口
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MySessionFactory</span> <span class="o">{</span>
+    <span class="cm">/**
+      * 1.设置私有的构造函数
+      * 2.定义一个静态变量
+      * 3.定义一段静态代码块
+      * 4.定义一个方法用于获取单例模式对象
+      * 5.单例模式分为饿汉模式和懒汉模式两种
+      */</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="nc">SessionFactory</span> <span class="n">sessionFactory</span><span class="o">;</span>
+
+    <span class="kd">static</span> <span class="o">{</span>
+        <span class="c1">// 使用configuration接口获取hibernate配置文件 /hibernate.cfg.xml"</span>
+        <span class="c1">// 第一种读取注解，第二种关系映射配置文件形式</span>
+        <span class="nc">Configuration</span> <span class="n">configuration</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AnnotationConfiguration</span><span class="o">();</span>
+        <span class="n">configuration</span><span class="o">.</span><span class="na">configure</span><span class="o">(</span><span class="s">"hibernate.cfg.xml"</span><span class="o">);</span>
+        <span class="c1">// 获取工厂类</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">sessionFactory</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">sessionFactory</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="na">buildSessionFactory</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 单例模式下具有一个私有的构造函数</span>
+    <span class="kd">private</span> <span class="nf">MySessionFactory</span><span class="o">()</span> <span class="o">{</span>
+
+    <span class="o">}</span>
+
+    <span class="c1">// 该方法用于获取工厂类</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">SessionFactory</span> <span class="nf">getSessionFactory</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">sessionFactory</span><span class="o">;</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></table></code></div></div><p>4、调用HibernateAPI五大接口，SessionFactory、Session、Transaction，完成对象持久化过程，即保存操作。</p><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre><td class="rouge-code"><pre><span class="nc">SessionFactory</span> <span class="n">factory</span> <span class="o">=</span> <span class="nc">MySessionFactory</span><span class="o">.</span><span class="na">getSessionFactory</span><span class="o">();</span>
+<span class="nc">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">openSession</span><span class="o">();</span>
+<span class="c1">// 开启事务</span>
+<span class="n">session</span><span class="o">.</span><span class="na">beginTransaction</span><span class="o">();</span>
+<span class="nc">Admin</span> <span class="n">admin</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Admin</span><span class="o">();</span>
+<span class="n">admin</span><span class="o">.</span><span class="na">setAdminname</span><span class="o">(</span><span class="s">"zhangsan"</span><span class="o">);</span>
+<span class="n">admin</span><span class="o">.</span><span class="na">setAdminpassword</span><span class="o">(</span><span class="s">"123456"</span><span class="o">);</span>
+<span class="c1">// 临时状态（瞬时状态）Transient</span>
+<span class="n">session</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">admin</span><span class="o">);</span>
+<span class="c1">// 提交事务</span>
+ <span class="n">session</span><span class="o">.</span><span class="na">getTransaction</span><span class="o">().</span><span class="na">commit</span><span class="o">();</span>
+ <span class="n">session</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</pre></table></code></div></div><p>及Query接口，HQL语句执行。</p><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="nc">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">openSession</span><span class="o">();</span>
+<span class="nc">Query</span> <span class="n">q</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="s">"from Admin e where e.adminid=:id"</span><span class="o">);</span>
+<span class="n">q</span><span class="o">.</span><span class="na">setInteger</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+<span class="n">session</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</pre></table></code></div></div><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+</pre><td class="rouge-code"><pre><span class="kn">package</span> <span class="nn">com.bbs.test</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">org.hibernate.Query</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.hibernate.Session</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.hibernate.SessionFactory</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.bbs.bean.User</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.bbs.util.MySessionFactory</span><span class="o">;</span>
+ 
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestOpenSession</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">SessionFactory</span> <span class="n">factory</span> <span class="o">=</span> <span class="nc">MySessionFactory</span><span class="o">.</span><span class="na">getSessionFactory</span><span class="o">();</span>
+        <span class="nc">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">openSession</span><span class="o">();</span>
+        <span class="c1">// 开启事务</span>
+        <span class="n">session</span><span class="o">.</span><span class="na">beginTransaction</span><span class="o">();</span>
+        <span class="c1">// 临时对象</span>
+        <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">User</span><span class="o">();</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setCreatetime</span><span class="o">(</span><span class="s">"1995-15-15"</span><span class="o">);</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setPassword</span><span class="o">(</span><span class="s">"123"</span><span class="o">);</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setSex</span><span class="o">(</span><span class="s">"1"</span><span class="o">);</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setUsername</span><span class="o">(</span><span class="s">"zhong"</span><span class="o">);</span>
+        <span class="c1">// 临时状态</span>
+        <span class="c1">// 持久化过程就是一个数据保存的过程</span>
+        <span class="n">session</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
+        <span class="c1">// 提交事务</span>
+        <span class="n">session</span><span class="o">.</span><span class="na">getTransaction</span><span class="o">().</span><span class="na">commit</span><span class="o">();</span>
+        <span class="n">session</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        
+        <span class="c1">//执行HQL语句</span>
+        <span class="nc">Session</span> <span class="n">session1</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">openSession</span><span class="o">();</span>
+        <span class="nc">Query</span> <span class="n">q</span> <span class="o">=</span> <span class="n">session1</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="s">"from User u where u.userid=:id"</span><span class="o">);</span>
+        <span class="n">q</span><span class="o">.</span><span class="na">setInteger</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="mi">8</span><span class="o">);</span>
+        <span class="nc">User</span> <span class="n">user1</span> <span class="o">=</span> <span class="o">(</span><span class="nc">User</span><span class="o">)</span> <span class="n">session1</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="mi">8</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"1."</span> <span class="o">+</span> <span class="o">((</span><span class="nc">User</span><span class="o">)(</span><span class="n">q</span><span class="o">.</span><span class="na">list</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">))).</span><span class="na">getUsername</span><span class="o">());</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"2."</span> <span class="o">+</span> <span class="n">user1</span><span class="o">.</span><span class="na">getUsername</span><span class="o">());</span>
+        <span class="n">session1</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></table></code></div></div><h2 id="二真实项目使用情况testhibernate1">二、真实项目使用情况（TestHibernate1）</h2><p>对以上项目架构做分析，其中<code class="language-plaintext highlighter-rouge">factory.openSession()</code>的使用，在实际项目中，每次访问都产生一个session，假如连续使用多次，则获得的session不是同一个对象，并且使用完需要调用close方法关闭session(每次都需要关闭；增加服务器负担)，所以，我们通常使用<code class="language-plaintext highlighter-rouge">factory.getCurrentSession</code>，从字面上可以看得出来，是获取当前上下文一个session对象，当第一次使用此方法时，会自动产生一个session对象，并且连续使用多次时，得到的session都是同一个对象，这就是与openSession的区别之一，简单而言，getCurrentSession就是，如果有已经使用的，用旧的，如果没有，建新的。getCurrentSession是在事务提交时自动调用close方法。实际项目中，我们选择使用getCurrentSession，并且此方法的使用，必须开启事务。使用<code class="language-plaintext highlighter-rouge">SessionFactory.getCurrentSession()</code>需要在hibernate.cfg.xml中如下配置：</p><ul><li><p>如果采用jdbc独立引用程序配置如下</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"hibernate.current_session_context_class"</span><span class="nt">&gt;</span>thread<span class="nt">&lt;/property&gt;</span>
+</pre></table></code></div></div><li><p>如果采用了JTA事务配置如下</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"hibernate.current_session_context_class"</span><span class="nt">&gt;</span>jta<span class="nt">&lt;/property&gt;</span>
+</pre></table></code></div></div></ul><p>具体使用步骤，如下：</p><ol><li><p>需要上下文配置（即在hibernate.cfg.xml）中，需要配置</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre> <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"current_session_context_class"</span><span class="nt">&gt;</span>thread<span class="nt">&lt;/property&gt;</span>
+</pre></table></code></div></div><li><p>代码如下</p><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre><td class="rouge-code"><pre> <span class="c1">// 必须加入事务，线程安全</span>
+ <span class="nc">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">getCurrentSession</span><span class="o">();</span>
+ <span class="c1">// 开启事务</span>
+ <span class="n">session</span><span class="o">.</span><span class="na">beginTransaction</span><span class="o">();</span>
+ <span class="nc">Message</span> <span class="n">e</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Message</span><span class="o">)</span> <span class="n">session</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Message</span><span class="o">.</span><span class="na">calss</span><span class="o">,</span> <span class="mi">39</span><span class="o">);</span>
+
+ <span class="c1">// 提交 自动close</span>
+ <span class="n">session</span><span class="o">.</span><span class="na">getTransaction</span><span class="o">().</span><span class="na">commit</span><span class="o">();</span>
+</pre></table></code></div></div><p>小提示：事务的处理，可以通过动态代理简化代码量，并可统一管理。</p></ol><p>在实际项目中，我们还需要考虑数据库访问时效性。需要使用“JDBC连接池”。我们选择C3P0，具体配置如下，同时导入C3P0的jar包支持：</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="c">&lt;!-- 连接池Jdbc connection pool C3P0 --&gt;</span>
+<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"connection.pool_size"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/property&gt;</span>
+</pre></table></code></div></div><h2 id="三webproject配置过程testsh11testsh12">三、WebProject配置过程（TestSH1.1&amp;TestSH1.2）</h2><p>Hibernate的使用我们在JavaProject中已经充分展示了；在WebProject项目中，使用Hibernate的方式和Java项目中没有太多区别。我们在实际项目中，是通过Spring整合Hibernate的方式集成使用；总体来说写的代码绝对比单独用Hibernate然后在DAO类里写的代码要少；使用Spring整合Hibernate，配置较多。</p><p>使用getCurrentSession，所有的操作都必须开启事务，所以需要我们注意，使用Spring框架的声明式事务，不再需要自动创建sessionFactory和session，不再需要手动控制事务的开启和关闭。（重点）</p><p>具体实现步骤如下：</p><ol><li>在Spirng配置文件中，装配一个<code class="language-plaintext highlighter-rouge">org.springframework.orm.hibernate3.LocalSessionFactoryBean</code>类。<ul><li>方法一、配置数据源，读取配置文件，获取连接信息；设置hibernate配置信息。</ul><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre><td class="rouge-code"><pre> <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"dataSource"</span> <span class="na">destory-method=</span><span class="s">"close"</span> 
+     <span class="na">class=</span><span class="s">"org.apache.commons.dbcp.BasicDataSource"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"driverClassName"</span> <span class="na">value=</span><span class="s">"${jdbc.driverClassName}"</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"url"</span> <span class="na">value=</span><span class="s">"${jdbc.url}"</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"username"</span> <span class="na">value=</span><span class="s">"${jdbc.username}"</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"password"</span> <span class="na">value=</span><span class="s">"${jdbc.password}"</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;/bean&gt;</span>
+ <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"sessionFactory"</span> 
+     <span class="na">class=</span><span class="s">"org.springframework.orm.hibernate4.LocalSessionFactoryBean"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dataSource"</span> <span class="na">ref=</span><span class="s">"dataSource"</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"annotatedClasses"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;list&gt;</span>
+             <span class="nt">&lt;value&gt;</span>com.hp.model.User<span class="nt">&lt;/value&gt;</span>
+             <span class="nt">&lt;value&gt;</span>com.hp.model.Log<span class="nt">&lt;/value&gt;</span>
+         <span class="nt">&lt;/list&gt;</span>
+     <span class="nt">&lt;/property&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"hibernateProperties"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;props&gt;</span>
+             <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">"hibernate.dialect"</span><span class="nt">&gt;</span>
+               org.hibernate.dialect.OracleDialect
+             <span class="nt">&lt;prop&gt;</span>
+             <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">"hibernate.show_sql"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/prop&gt;</span>
+         <span class="nt">&lt;/props&gt;</span>
+     <span class="nt">&lt;/property&gt;</span>
+ <span class="nt">&lt;/bean&gt;</span>
+</pre></table></code></div></div><p>或者hibernate3版本的AnnotationSessionFactoryBean</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre><td class="rouge-code"><pre> <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"sessionFactory"</span> 
+  <span class="na">class=</span><span class="s">"org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dataSource"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;ref</span> <span class="na">bean=</span><span class="s">"dataSource"</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;/property&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"hibernateProperties"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;props&gt;</span>
+             <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">"hibernate.dialect"</span><span class="nt">&gt;</span>
+                 org.hibernate.dialect.MySQLDialect
+             <span class="nt">&lt;/prop&gt;</span>
+             <span class="c">&lt;!-- 加入事务，就不需要此处配置 --&gt;</span>
+             <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">"hibernate.current_session_context_class"</span><span class="nt">&gt;</span>thread<span class="nt">&lt;/prop&gt;</span>
+             <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">"hibernate.show_sql"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/prop&gt;</span>
+         <span class="nt">&lt;/props&gt;</span>
+     <span class="nt">&lt;/property&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"packagesToScan"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;list&gt;</span>
+             <span class="nt">&lt;value&gt;</span>com.bbs.bean<span class="nt">&lt;/value&gt;</span>
+         <span class="nt">&lt;/list&gt;</span>
+     <span class="nt">&lt;/property&gt;</span>
+ <span class="nt">&lt;/bean&gt;</span>
+</pre></table></code></div></div></ol><ul><li><p>方法二、可以通过configLocation属性，加载hibernate.cfg.xml文件。</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"sessionFactory"</span> 
+    <span class="na">class=</span><span class="s">"org.springframework.orm.hibernate3.LocalSessionFactoryBean"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"configLocation"</span> <span class="na">value=</span><span class="s">"file:src/hibernate.cfg.xml"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/property&gt;</span>
+<span class="nt">&lt;/bean&gt;</span>
+</pre></table></code></div></div><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>    2. 在spring环境下，新建一个操作类TestSpringDao，需要继承HibernateDaoSupport。
+</pre></table></code></div></div><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre><span class="kd">public</span> <span class="kt">void</span> <span class="nf">test1</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">getSessionFactory</span><span class="o">().</span><span class="na">getCurrentSession</span><span class="o">();</span>
+    <span class="n">session</span><span class="o">.</span><span class="na">beginTransaction</span><span class="o">();</span>
+    <span class="nc">Message</span> <span class="n">e</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Message</span><span class="o">)</span> <span class="n">session</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Message</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="mi">35</span><span class="o">);</span>
+    <span class="n">session</span><span class="o">.</span><span class="na">getTransaction</span><span class="o">().</span><span class="na">commit</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></table></code></div></div></ul><ol><li><p>在spring配置文件中，装配一个bean，必须注入属性sessioniFactory值。</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre> <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"testDao1"</span> <span class="na">class=</span><span class="s">"com.bbs.test.TestSpringDao"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"sessionFactory"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;ref</span> <span class="na">bean=</span><span class="s">"sessionFactory"</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;/property&gt;</span>
+ <span class="nt">&lt;/bean&gt;</span>
+</pre></table></code></div></div><li><p>单元测试，此时可以获取Message对象，才成功。</p><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre> <span class="nc">ApplicationContext</span> <span class="n">ac</span> <span class="o">=</span> 
+     <span class="k">new</span> <span class="nf">ClassPathXmlApplicationContext</span><span class="o">(</span><span class="s">"applicationContext.xml"</span><span class="o">);</span>
+ <span class="c1">// 如何获取类的实例</span>
+ <span class="nc">TestSpringDao</span> <span class="n">dao1</span> <span class="o">=</span> <span class="o">(</span><span class="nc">TestSpringDao</span><span class="o">)</span> <span class="n">ac</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="s">"testDao1"</span><span class="o">);</span>
+ <span class="n">dao1</span><span class="o">.</span><span class="na">test1</span><span class="o">();</span>
+</pre></table></code></div></div></ol><h2 id="四实际项目使用testsh2">四、实际项目使用（TestSH2）</h2><p>在Spring整合Hibernate框架中，方法中需要开启事务，以及提交事务。这部分代码基本都是模板化的，那么，我们如何在编写过程中把这部分代码省略，或者让系统自动为我们添加。这时，我们考虑到动态代理模式及SpringAOP。我们在实际项目中是如何做的？demo演示如下，在实际项目中我们选择Spring3.0及Hibernate3.0，我们选择注解的形式：</p><ol><li><p>首先从配置文件开始：</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre><td class="rouge-code"><pre> <span class="c">&lt;!-- apache下的BasicDataSource，数据库连接池 --&gt;</span>
+ <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"dataSource"</span> <span class="na">destory-method=</span><span class="s">"close"</span> 
+     <span class="na">class=</span><span class="s">"org.apache.commons.dbcp.BasicDataSource"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"driverClassName"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;value&gt;</span>com.mysql.jdbc.Driver<span class="nt">&lt;/value&gt;</span>
+     <span class="nt">&lt;/property&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"url"</span> <span class="na">value=</span><span class="s">"${jdbc.url}"</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"username"</span> <span class="na">value=</span><span class="s">"root"</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"password"</span> <span class="na">value=</span><span class="s">"root"</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;/bean&gt;</span>
+ <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"sessionFactory"</span> 
+  <span class="na">class=</span><span class="s">"org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dataSource"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;ref</span> <span class="na">bean=</span><span class="s">"dataSource"</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;/property&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"hibernateProperties"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;props&gt;</span>
+             <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">"hibernate.dialect"</span><span class="nt">&gt;</span>
+                 org.hibernate.dialect.MySQLDialect
+             <span class="nt">&lt;/prop&gt;</span>
+             <span class="c">&lt;!-- 加入事务，就不需要此处配置 --&gt;</span>
+             <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">"hibernate.current_session_context_class"</span><span class="nt">&gt;</span>thread<span class="nt">&lt;/prop&gt;</span>
+             <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">"hibernate.show_sql"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/prop&gt;</span>
+         <span class="nt">&lt;/props&gt;</span>
+     <span class="nt">&lt;/property&gt;</span>
+     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"packagesToScan"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;list&gt;</span>
+             <span class="nt">&lt;value&gt;</span>com.bbs.bean<span class="nt">&lt;/value&gt;</span>
+         <span class="nt">&lt;/list&gt;</span>
+     <span class="err">&lt;</span>/property
+ <span class="nt">&lt;/bean&gt;</span>
+</pre></table></code></div></div><li><p>设计dao层具体实现：</p><p>按照MVC的设计思想，我们创建UserDao层，com.bbs.dao.impl，创建类UserDaoImpl，继承HibernateDaoSupport，这个类是Spring框架提供的，我们使用其中的getHibernateTemplate方法(其中还有一个getSession方法，不常用)，getHibernateTemplate方法提供非常多的常用方法来完成基本的操作。而getSession方法是没有经过Spring包装的，Spring会把最原始的Session给你，在使用完之后必须自己调用相应的close方法，而且也不会对声明式事务进行相应的管理，一旦没有及时关闭连接，就会导致数据库连接池的连接数溢出；getHibernateTemplate()方法是经过Spring封装的，例如添加相应的声明式事务管理，由Spring管理相应的连接。</p><p>在实际的使用过程中发现的确getHibernateTemplate()比getSession()方法要好很多，但是有些方法在getHibernateTemplate()并没有提供，这时我们用HibernateCallback回调的方法操作数据库（比如对原生sql语句的执行）。</p><p>继承HibernateDaoSupport是可以的，但这种方式还是不太好，还是用到了继承，也就是没有降低所谓的耦合度。解决方案：</p><ul><li><p>Spring为我们提供了一个hibernateTemplate，你只需在配置文件中配置一个bean，并传入一个sessionFactory。</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"hibernateTemplate"</span> 
+    <span class="na">class=</span><span class="s">"com.springframework.orm.hibernate3.HibernateTemplate"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"sessionFactory"</span> <span class="na">ref=</span><span class="s">"sessionFactory"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/bean&gt;</span>
+</pre></table></code></div></div><li><p>然后在使用dao的时候注入该hibernateTemplate的bean即可。通过注解实现，因此<code class="language-plaintext highlighter-rouge">@Component</code>相当于<code class="language-plaintext highlighter-rouge">&lt;bean id="" class=""/&gt;</code></p><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre><td class="rouge-code"><pre><span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserDaoImpl</span> <span class="kd">implements</span> <span class="nc">UserDao</span> <span class="o">{</span>
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="nc">HibernateTemplate</span> <span class="n">hibernateTemplate</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nc">HibernateTemplate</span> <span class="nf">getHibernateTemplate</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">hibernateTemplate</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setHibernateTemplate</span><span class="o">(</span><span class="nc">HibernateTemplate</span> <span class="n">hibernateTemplate</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">hibernateTemplate</span> <span class="o">=</span> <span class="n">hibernateTemplate</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></table></code></div></div><li><p>在方法中直接使用hibernateTemplate提供的get、load、find等方法。</p></ul><li>事务管理，Spring提供的事务管理可以分为两类：编程式、声明式，编程式，其实就是在代码里面来控制，像Hibernate操作数据一样，开启事务，提交事务，这种方式有一定的局限性，所以我们一般是用声明式来配置我们的事务。在Spring和Hibernate整合架构中，声明式事务配置，包括以下三项：<ul><li>事务管理类，我们选择DataSourceTransactionManager或HibernateTransactionManager；<li>以及声明式事务隔离级别及传播特性，我们通过advice通知拦截；（其中包括五部分，重点，难点）<br /> <strong>传播行为</strong><br /> <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\Hibernate\Hibernate-biji\1.jpg" /><br /> <strong>隔离级别</strong> isolation=”default”<div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="nt">&lt;tx:method</span> <span class="na">name=</span><span class="s">"add"</span> <span class="na">propagation=</span><span class="s">"REQUIRED"</span> 
+    <span class="na">isolation=</span><span class="s">"default"</span> <span class="na">read-only=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+</pre></table></code></div></div><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\Hibernate\Hibernate-biji\2.jpg" /><br /> <strong>只读</strong> read-only=”false”<br /> <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\Hibernate\Hibernate-biji\3.jpg" /><br /> <strong>事务超时</strong> timeout=”-1”</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nt">&lt;tx:method</span> <span class="na">name=</span><span class="s">"add"</span> <span class="na">timeout=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
+</pre></table></code></div></div><p><strong>回滚规则</strong> rollback-for=”” / no-rollback-for=””</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nt">&lt;tx:method</span> <span class="na">name=</span><span class="s">"update"</span> <span class="na">no-rollback-for=</span><span class="s">""</span><span class="nt">&gt;</span>
+</pre></table></code></div></div><li>以及哪些类和方法参与事务，我们通过SpringAOP实现。</ul><p>经过以上配置，我们可以实现特定的业务，执行不同的事务策略。程序员只需要关心业务代码实现即可，极大的减轻了程序员额外代码。当然，事务切入点，我们是在sevice层去配置。</p><li><p>Spring配置中定义扫描器，把这些类，纳入Spring容器管理中。</p><div class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre> <span class="c">&lt;!-- 扫描注解类 --&gt;</span>
+ <span class="nt">&lt;context:component-scan</span> <span class="na">base-package=</span><span class="s">"com.bbs"</span><span class="nt">/&gt;</span>
+</pre></table></code></div></div><li><p>至此，我们的整合工作就基本完成了。我们可以通过一个单元测试，验证一下：</p><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre> <span class="nc">ApplicationContext</span> <span class="n">ac</span> <span class="o">=</span> 
+         <span class="k">new</span> <span class="nf">ClassPathXmlApplicationContext</span><span class="o">(</span><span class="s">"applicationContext.xml"</span><span class="o">);</span>
+ <span class="c1">// 如何获取类的实例</span>
+ <span class="nc">UserDao</span> <span class="n">dao1</span> <span class="o">=</span> <span class="o">(</span><span class="nc">UserDao</span><span class="o">)</span> <span class="n">ac</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="s">"userDaoImpl"</span><span class="o">);</span>
+ <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">dao1</span><span class="o">.</span><span class="na">findUserById</span><span class="o">(</span><span class="mi">9</span><span class="o">);</span>
+ <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getUsername</span><span class="o">());</span>
+</pre></table></code></div></div><li><p>业务层service改造，及注解实现：</p><ul><li>@Service用于标注业务层组件，即service层类<li>@Controller用于标注控制层组件（如spingMVC中的控制类）<li>@Repository用于标注数据访问组件，即dao层类<li><p>@Component泛指组件，当组件不好归类的时候，我们可以使用这个注解进行标注。</p><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre><td class="rouge-code"><pre> <span class="nd">@Service</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserService</span> <span class="kd">implements</span> <span class="nc">IuserService</span> <span class="o">{</span>
+   <span class="nd">@Autowired</span>
+   <span class="kd">private</span> <span class="nc">IUserDao</span> <span class="n">userDao</span><span class="o">;</span>
+
+   <span class="kd">public</span> <span class="nc">IUserDao</span> <span class="nf">getUserDao</span><span class="o">()</span> <span class="o">{</span>
+     <span class="k">return</span> <span class="n">userDao</span><span class="o">;</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUserDao</span><span class="o">(</span><span class="nc">IUserDao</span> <span class="n">userDao</span><span class="o">)</span> <span class="o">{</span>
+     <span class="k">this</span><span class="o">.</span><span class="na">userDao</span> <span class="o">=</span> <span class="n">userDao</span><span class="o">;</span>
+   <span class="o">}</span>
+ <span class="o">}</span>
+</pre></table></code></div></div></ul><li><p>控制层改造及实现，及代码片段：使用@controller注解</p><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre><td class="rouge-code"><pre> <span class="nd">@Controller</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">LoginServlet</span> <span class="o">{</span>
+   <span class="nd">@Autowired</span>
+   <span class="nc">IUserService</span> <span class="n">userService</span><span class="o">;</span>
+
+   <span class="kd">public</span> <span class="nc">IUserService</span> <span class="nf">getUserService</span><span class="o">()</span> <span class="o">{</span>
+     <span class="k">return</span> <span class="n">userService</span><span class="o">;</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUserService</span><span class="o">(</span><span class="nc">IUserService</span> <span class="n">userService</span><span class="o">)</span> <span class="o">{</span>
+     <span class="k">this</span><span class="o">.</span><span class="na">userService</span> <span class="o">=</span> <span class="n">uerService</span><span class="o">;</span>
+   <span class="o">}</span>
+   <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span><span class="o">=</span><span class="s">"login"</span><span class="o">,</span> <span class="n">method</span><span class="o">=</span><span class="nc">RequestMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">)</span>
+ <span class="o">}</span>
+</pre></table></code></div></div></ol><h2 id="五bbs论坛项目升级为springmvc30--hibernate30--mysql51--dbcp数据源项目升级项目名sh_bbsv40">五、BBS论坛项目，升级为SpringMVC3.0 + Hibernate3.0 + Mysql5.1 + DBCP数据源项目，升级项目名SH_BBSV4.0</h2><p>具体实现步骤，参考以为配置。</p><h2 id="六hibernate二级缓存">六、Hibernate二级缓存</h2><ul><li>一级缓存及Session缓存，是事务级别的，由Hibernate去管理，一般不去干涉。<li>二级缓存是sessionFactroy缓存，我们可以根据业务访问及修改频次去设置缓存级别，及设置缓存文字。</ul></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/Knowledge/'>Knowledge</a>, <a href='/categories/Hibernate/'>Hibernate</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/Hibernate/" class="post-tag no-text-decoration" >Hibernate</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=Hibernate笔记 - Lemon&url=http://localhost:4000/posts/Hibernate-biji/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=Hibernate笔记 - Lemon&u=http://localhost:4000/posts/Hibernate-biji/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=Hibernate笔记 - Lemon&url=http://localhost:4000/posts/Hibernate-biji/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank"> <i class="fa-fw fab fa-telegram"></i> </a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:4000/posts/Hibernate-biji/" data-toggle="tooltip" data-placement="top" title="Linkedin" target="_blank"> <i class="fa-fw fab fa-linkedin"></i> </a> <a href="http://service.weibo.com/share/share.php?title=Hibernate笔记 - Lemon&url=http://localhost:4000/posts/Hibernate-biji/" data-toggle="tooltip" data-placement="top" title="Weibo" target="_blank"> <i class="fa-fw fab fa-weibo"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/Hibernate-biji/">Hibernate笔记</a><li><a href="/posts/Hibernate-shitilei_shujie-peizhi/">Hibernate实体类注解配置</a><li><a href="/posts/Hibernate-gaishu/">Hibernate概述</a><li><a href="/posts/jingtaidiali-he-dongtaidaili/">Java静态代理与动态代理</a><li><a href="/posts/struts2-zhongde-chongdingxiang/">StrutsMVCDemo6 - Struts2中的重定向（2.2.3）</a></ul></div><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/Struts2/">Struts2</a> <a class="post-tag" href="/tags/RocketMQ/">RocketMQ</a> <a class="post-tag" href="/tags/WebLogic/">WebLogic</a> <a class="post-tag" href="/tags/MySQL/">MySQL</a> <a class="post-tag" href="/tags/Jekyll/">Jekyll</a> <a class="post-tag" href="/tags/Eclipse/">Eclipse</a> <a class="post-tag" href="/tags/Maven/">Maven</a> <a class="post-tag" href="/tags/GitBook/">GitBook</a> <a class="post-tag" href="/tags/CSS/">CSS</a> <a class="post-tag" href="/tags/Servlet/">Servlet</a></div></div></div><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/Hibernate-gaishu/"><div class="card-body"> <span class="timeago small" > Aug 12 <i class="unloaded">2021-08-12T05:23:00+00:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Hibernate概述</h3><div class="text-muted small"><p> 知识点 Hibernate概述 数据持久化、ORM概念及原理、Hibernate编程步骤 Hibernate基础 实体映射、ID生成器、Hibernate数据类型，Hibernate对象生命周期 关联映射 一对一、一对多、多对多 高级映射 组合映射、继承映射、值集合映射 事务管理 事务传播性、事务隔离级别、事务控制 高级查询 Criteria、HQL 一、对象持...</p></div></div></a></div><div class="card"> <a href="/posts/Hibernate-shitilei_shujie-peizhi/"><div class="card-body"> <span class="timeago small" > Aug 12 <i class="unloaded">2021-08-12T05:23:00+00:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Hibernate实体类注解配置</h3><div class="text-muted small"><p> 一、类级别注解 1、@Entity(name=”EntityName”) 必须，name为可选，对应数据库中一的个表。 2、@Table(name=””, catalog=””, schema=””) 可选，通常和@Entity配合使用，只能标注在实体的class定义处，表示实体对应的数据库表的信息。 name：可选，表示表的名称，默认表名和实体名称一致，只有在不一致的情况下才需要指定...</p></div></div></a></div><div class="card"> <a href="/posts/linux-xitongxia-mysql-biaoming-qufen-daxiaoxie-de-wenti/"><div class="card-body"> <span class="timeago small" > Jun 1 <i class="unloaded">2021-06-01T05:47:00+00:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Linux系统下MySQL表名区分大小写的问题</h3><div class="text-muted small"><p> 报错信息 报错原因 因为Linux环境下的MySQL数据库的表名默认是区分大小写的，可以查看Linux上的MySQL的配置文件/etc/my.cnf [root@centos tomcat7]# cat /etc/my.cnf [mysqld] datadir=/var/lib/mysql socket=/var/lib/mysql/mysql.sock user=mysql #...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/jingtaidiali-he-dongtaidaili/" class="btn btn-outline-primary"><p>Java静态代理与动态代理</p></a> <a href="/posts/Hibernate-gaishu/" class="btn btn-outline-primary"><p>Hibernate概述</p></a></div></div></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> <script type="text/javascript"> const imgs = document.querySelectorAll('#post-wrapper img'); const observer = lozad(imgs); observer.observe(); </script> <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\lib/jquery.mousewheel.pack.js?v=3.1.3"></script> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\source/jquery.fancybox.pack.js?v=2.1.5"></script><link rel="stylesheet" type="text/css" href="\assets\plugins\fancybox-2.1.7\source/jquery.fancybox.css?v=2.1.5" media="screen" /><link rel="stylesheet" type="text/css" href="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-buttons.css?v=1.0.5" /> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script><link rel="stylesheet" type="text/css" href="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" /> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-media.js?v=1.0.6"></script> <script> $(document).ready(function() { $("p img").not('.emoji').each(function() { var strA = "<a class='fancybox' data-fancybox-group='gallery' href='" + $(this).attr("data-src") + "'></a>"; $(this).wrapAll(strA); }); $('.fancybox').fancybox(); }); </script><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2021 <a href="https://twitter.com/username">Lemon</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy/">Chirpy</a> theme.</p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-xl-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/tags/Struts2/">Struts2</a> <a class="post-tag" href="/tags/RocketMQ/">RocketMQ</a> <a class="post-tag" href="/tags/WebLogic/">WebLogic</a> <a class="post-tag" href="/tags/MySQL/">MySQL</a> <a class="post-tag" href="/tags/Jekyll/">Jekyll</a> <a class="post-tag" href="/tags/Eclipse/">Eclipse</a> <a class="post-tag" href="/tags/Maven/">Maven</a> <a class="post-tag" href="/tags/GitBook/">GitBook</a> <a class="post-tag" href="/tags/CSS/">CSS</a> <a class="post-tag" href="/tags/Servlet/">Servlet</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"><div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>{categories}</div><div><i class="fa fa-tag fa-fw"></i>{tags}</div></div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>' }); </script>
