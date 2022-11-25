@@ -1,0 +1,17 @@
+<svg width="64" height="16" xmlns="http://www.w3.org/2000/svg" version="1.1" enable-background="new 0 0 64 16" xml:space="preserve">
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_1">
+   <polygon fill="#FFFFFF" points="8,12.6000004 0.3,4.9000001 1.7,3.4000001 8,9.6999998 14.3000002,3.4000001 15.6999998,4.9000001     " id="svg_2"/>
+  </g>
+  <g id="svg_3">
+   <path fill="#fee082" d="m31,3l-6.6,0l-2.7,-2.7c-0.2,-0.2 -0.4,-0.3 -0.7,-0.3l-4,0c-0.6,0 -1,0.4 -1,1l0,14c0,0.6 0.4,1 1,1l14,0c0.6,0 1,-0.4 1,-1l0,-11c0,-0.6 -0.4,-1 -1,-1z" id="svg_4"/>
+  </g>
+  <g id="svg_5">
+   <path fill="#fee082" d="m47.8,7.4c-0.2,-0.2 -0.5,-0.4 -0.8,-0.4l-11,0c-0.4,0 -0.8,0.2 -0.9,0.6l-3,7c-0.2,0.6 0,1.4 0.9,1.4l11,0c0.4,0 0.8,-0.2 0.9,-0.6l3,-7c0.2,-0.3 0.1,-0.7 -0.1,-1z" id="svg_6"/>
+   <path fill="#fee082" d="m33.2,6.8c0.5,-1.1 1.6,-1.8 2.8,-1.8l9,0l0,-2c0,-0.6 -0.4,-1 -1,-1l-5.6,0l-1.7,-1.7c-0.2,-0.2 -0.4,-0.3 -0.7,-0.3l-3,0c-0.6,0 -1,0.4 -1,1l0,8.7l1.2,-2.9z" id="svg_7"/>
+  </g>
+  <text fill="#0078d4" stroke-width="0" x="48.762" y="12.49643" id="svg_10" font-size="24" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve" transform="matrix(1.33877 0 0 1.18829 -18.9111 0.991793)" font-weight="bold">e</text>
+ </g>
+
+</svg>
