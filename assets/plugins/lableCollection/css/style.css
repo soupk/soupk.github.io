@@ -92,11 +92,10 @@ Main Components
   left: 41px;
   background-position: -16px 0;
 }
-.cd-accordion-menu #collection_a::after {
-  /* image icon */
+/*.cd-accordion-menu #collection_a::after {
   left: 36px;
   background: url(../img/cd-icons.svg) no-repeat -48px 0;
-}
+}*/
 .cd-accordion-menu .collection_input[type=checkbox]:checked + #collection_label::before {
   /* rotate arrow */
   -webkit-transform: translateY(-50%);
