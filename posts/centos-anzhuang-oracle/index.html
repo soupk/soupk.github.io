@@ -1,0 +1,451 @@
+<!DOCTYPE html><html lang="en" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>CentOS安装Oracle | Lemon</title><meta name="generator" content="Jekyll v4.1.1" /><meta property="og:title" content="CentOS安装Oracle" /><meta name="author" content="Lemon" /><meta property="og:locale" content="en_US" /><meta name="description" content="一、Oracle安装 1.1 Oracle 11g版本选择 建议下载11.2.0.4版本，11.2.0.1版本有一些BUG会影响安装。CentOS7安装11.2.0.1遇到的坑：" /><meta property="og:description" content="一、Oracle安装 1.1 Oracle 11g版本选择 建议下载11.2.0.4版本，11.2.0.1版本有一些BUG会影响安装。CentOS7安装11.2.0.1遇到的坑：" /><link rel="canonical" href="http://localhost:4000/posts/centos-anzhuang-oracle/" /><meta property="og:url" content="http://localhost:4000/posts/centos-anzhuang-oracle/" /><meta property="og:site_name" content="Lemon" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2023-02-25T17:47:00+00:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="CentOS安装Oracle" /><meta name="twitter:site" content="@twitter_username" /><meta name="twitter:creator" content="@Lemon" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"@type":"BlogPosting","url":"http://localhost:4000/posts/centos-anzhuang-oracle/","dateModified":"2023-02-25T17:47:00+00:00","datePublished":"2023-02-25T17:47:00+00:00","headline":"CentOS安装Oracle","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/centos-anzhuang-oracle/"},"author":{"@type":"Person","name":"Lemon"},"description":"一、Oracle安装 1.1 Oracle 11g版本选择 建议下载11.2.0.4版本，11.2.0.1版本有一些BUG会影响安装。CentOS7安装11.2.0.1遇到的坑：","@context":"https://schema.org"}</script><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon.png"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon-precomposed.png"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/manifest.json"><meta name='msapplication-config' content='/assets/img/favicons/browserconfig.xml'><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/img/favicons/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="cdn.jsdelivr.net"><link rel="dns-prefetch" href="cdn.jsdelivr.net"><link rel="preload" as="style" href="/assets/css/cdn/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin><link rel="stylesheet" href="/assets/css/cdn/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/cdn/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"><link rel="preload" as="style" href="/assets/css/post.css"><link rel="stylesheet" href="/assets/css/post.css"><link rel="preload" as="style" href="/assets/css/lib/bootstrap-toc.min.css"><link rel="stylesheet" href="/assets/css/lib/bootstrap-toc.min.css" /><link rel="preload" as="script" href="/assets/js/cdn/jquery@3.4.1" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"> <script src="/assets/js/cdn/jquery@3.4.1" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <script src="/assets/js/cdn/bootstrap.min.js" async></script> <script src="/assets/js/post.min.js" async></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column"><div id="nav-wrapper"><div id="profile-wrapper" class="d-flex flex-column"><div id="avatar" class="d-flex justify-content-center"> <a href="/" alt="avatar"> <img src="/assets/img/sample/avatar.jpg" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="profile-text mt-3"><div class="site-title"> <a href="/">Lemon</a></div><div class="site-subtitle font-italic"></div></div></div><ul class="nav flex-column"><li class="nav-item d-flex justify-content-center "> <a href="/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/categories/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/tags/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/archives/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/about/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul></div><div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4"> <span id="mode-toggle-wrapper"> <i class="mode-toggle fas fa-sun" dark-mode-invisible></i> <i class="mode-toggle fas fa-moon" light-mode-invisible></i> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } constructor() { if (this.mode != null) { if (this.mode == ModeToggle.DARK_MODE) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } var self = this; /* always follow the system prefers */ this.sysDarkPrefers.addListener(function() { if (self.mode != null) { if (self.mode == ModeToggle.DARK_MODE) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } }); } /* constructor() */ setDark() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_KEY); sessionStorage.removeItem(ModeToggle.MODE_KEY); } get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; } get isLightkMode() { return this.mode == ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } flipMode() { if (this.hasMode) { if (this.isSysDarkPrefer) { if (this.isLightkMode) { this.clearMode(); } else { this.setLight(); } } else { if (this.isDarkMode) { this.clearMode(); } else { this.setDark(); } } } else { if (this.isSysDarkPrefer) { this.setLight(); } else { this.setDark(); } } } /* flipMode() */ } /* ModeToggle */ let toggle = new ModeToggle(); $(".mode-toggle").click(function() { toggle.flipMode(); }); </script> </span> <span class="icon-border"></span> <a href="https://github.com/soupk" target="_blank"> <i class="fab fa-github-alt"></i> </a> <a href="https://twitter.com/twitter_username" target="_blank"> <i class="fab fa-twitter"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['kaiqiang.zhong','foxmail.com'].join('@')" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" > <i class="fas fa-rss"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Posts </a> </span> <span>CentOS安装Oracle</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>CentOS安装Oracle</h1><div class="post-meta text-muted d-flex flex-column"><div> Posted <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Sat, Feb 25, 2023, 5:47 PM +0000" > Feb 25 <i class="unloaded">2023-02-25T17:47:00+00:00</i> </span> by <span class="author"> Lemon </span></div><div> Updated <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="Tue, Feb 28, 2023, 10:02 AM +0800" > Feb 28 <i class="unloaded">2023-02-28T02:02:33+00:00</i> </span></div></div><div class="post-content"><h2 id="一oracle安装">一、Oracle安装</h2><h3 id="11-oracle-11g版本选择">1.1 Oracle 11g版本选择</h3><p>建议下载11.2.0.4版本，11.2.0.1版本有一些BUG会影响安装。CentOS7安装11.2.0.1遇到的坑：</p><ul><li>操作系统内核参数semmni明明设置正确，先决条件检查以然会提示参数不正确。<li>一些程序包，已经安装过了，先决条件检查以然会提示没有安装。<li>安装到68%会报错：<code class="language-plaintext highlighter-rouge">makefile '/home/oracle/app/oracle/product/11.2.0/dbhome_1/ctx/lib/ins_ctx.mk'的目标'install'时出错</code>。</ul><p>另外，11.2.0.4版本普通用户在官网是下载不到的，可以从网盘找资源。</p><h3 id="12-安装和配置vnc">1.2 安装和配置VNC</h3><p>安装VNC图形化的操作环境即可进行VNC远程或者直接本地图形化操作，比静默安装更直观。root执行以下命令，直接整体复制粘贴到终端就行。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre><td class="rouge-code"><pre><span class="c">#图形界面必备`X Window System`</span>
+yum <span class="nt">-y</span> groupinstall <span class="s2">"X Window System"</span>
+<span class="c">#安装epel源</span>
+yum <span class="nt">-y</span> <span class="nb">install </span>epel-release
+<span class="c">#安装VNC+图形需要的软件</span>
+yum <span class="nt">-y</span> <span class="nb">install </span>tigervnc-server openbox xfce4-terminal tint2 cjkuni-ukai-fonts network-manager-applet
+<span class="c">#自动修改/etc/xdg/openbox/autostart配置文件</span>
+<span class="nb">echo</span> <span class="s1">'if which dbus-launch &gt;/dev/null &amp;&amp; test -z "$DBUS_SESSION_BUS_ADDRESS"; then'</span> <span class="o">&gt;</span> /etc/xdg/openbox/autostart
+<span class="nb">echo</span> <span class="s1">'       eval `dbus-launch --sh-syntax --exit-with-session`'</span> <span class="o">&gt;&gt;</span> /etc/xdg/openbox/autostart
+<span class="nb">echo</span> <span class="s1">'fi'</span> <span class="o">&gt;&gt;</span> /etc/xdg/openbox/autostart
+<span class="nb">echo</span> <span class="s1">'tint2 &amp;'</span> <span class="o">&gt;&gt;</span> /etc/xdg/openbox/autostart
+<span class="nb">echo</span> <span class="s1">'nm-applet  &amp;'</span> <span class="o">&gt;&gt;</span> /etc/xdg/openbox/autostart
+<span class="nb">echo</span> <span class="s1">'xfce4-terminal &amp;'</span> <span class="o">&gt;&gt;</span> /etc/xdg/openbox/autostart
+<span class="nb">echo</span> <span class="s1">' '</span> <span class="o">&gt;&gt;</span> /etc/xdg/openbox/autostart
+<span class="c">#防火墙放行VNC端口</span>
+firewall-cmd <span class="nt">--add-port</span><span class="o">=</span>5901/tcp
+firewall-cmd <span class="nt">--add-port</span><span class="o">=</span>5901/tcp <span class="nt">--permanent</span>
+</pre></table></code></div></div><h3 id="13-创建用户">1.3 创建用户</h3><p>为了安全起见，不建议使用root做为vnc用户。单独创建一个用户比较安全。既然安装Oracle，这里用户名我使用oracle。root执行以下命令，直接整体复制粘贴到终端就行。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre><span class="c">#创建database用户组</span>
+groupadd database
+<span class="c">#创建oracle用户并放入database组中</span>
+useradd oracle <span class="nt">-g</span> database
+<span class="c">#设置oracle密码</span>
+passwd oracle 
+<span class="c">#密码我设置的是database@2021</span>
+</pre></table></code></div></div><h3 id="14-开启vnc服务">1.4 开启VNC服务</h3><p>切换到oracle用户。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>su oracle
+<span class="c">#首次运行，生成~/.vnc/xstartup等配置文件</span>
+vncserver :1 <span class="nt">-geometry</span> 1920x1080
+<span class="c">#我这里设置的密码是vnc@2021 </span>
+</pre></table></code></div></div><p>oracle用户执行以下命令，直接整体复制粘贴到终端就行。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre><span class="c">#配置VNC默认启动openbox</span>
+<span class="nb">echo</span> <span class="s2">"openbox-session &amp;"</span> <span class="o">&gt;</span> ~/.vnc/xstartup
+<span class="c"># 停止服务</span>
+vncserver <span class="nt">-kill</span> :1
+<span class="c">#重新开启vnc服务</span>
+vncserver :1 <span class="nt">-geometry</span> 1920x1080
+</pre></table></code></div></div><h3 id="15-客户端连接vnc实现远程控制">1.5 客户端连接VNC实现远程控制</h3><p>使用VNC客户端连接，我用的是<a href="https://www.realvnc.com/en/connect/download/viewer/">VNC Viewer</a> ，我的地址如下：</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>172.16.184.5:5901
+</pre></table></code></div></div><p>然后输入上面设置的连接密码就可以了。我这里设置的密码是<code class="language-plaintext highlighter-rouge">vnc@2021</code>。如果你连接的时候发现没有界面，是黑屏的，只有一个鼠标，那么可以重启一下VNC服务试试。切换到oracle用户<code class="language-plaintext highlighter-rouge">su oracle</code>命令：</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>vncserver <span class="nt">-kill</span> :1
+vncserver :1 <span class="nt">-geometry</span> 1024x768
+</pre></table></code></div></div><h3 id="16-安装中文字体解决中文乱码问题">1.6 安装中文字体解决中文乱码问题</h3><p>默认情况下，因CentOS中缺少中易宋体18030所以会导致中文显示成□□□□□的问题。增加所需字体就行了。下载字体：<a href="https://m.rkxy.com.cn/down.php?id=71266">https://m.rkxy.com.cn/down.php?id=71266</a> ，root执行以下命令：</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="c">#新建文件夹</span>
+<span class="nb">mkdir</span> <span class="nt">-p</span> /usr/share/fonts/zh_CN/TrueType
+<span class="c">#zysong.ttf上传到/usr/share/fonts/zh_CN/TrueType目录并赋权</span>
+<span class="nb">chmod </span>75 /usr/share/fonts/zh_CN/TrueType/zysong.ttf
+</pre></table></code></div></div><p>字体安装完成，这样安装Oracle就不会中文乱码了。如果不想用中文界面安装，安装前运行以下命令，临时使用英文环境。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nv">LANG</span><span class="o">=</span>en_US
+</pre></table></code></div></div><h3 id="17-上传并解压安装包">1.7 上传并解压安装包</h3><p>上传安装包到CentOS7服务器。只需要<code class="language-plaintext highlighter-rouge">*1of7.zip,*2of7.zip</code>两个压缩包即可。我上传到<code class="language-plaintext highlighter-rouge">/home/oracle/</code>目录了。上传以后，文件路径和名称如下：</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="o">[</span>oracle@localhost ~]<span class="nv">$ </span><span class="nb">pwd</span>
+/home/oracle
+<span class="o">[</span>oracle@localhost ~]<span class="nv">$ </span><span class="nb">ls
+</span>p13390677_112040_Linux-x86-64_1of7.zip  
+p13390677_112040_Linux-x86-64_2of7.zip
+</pre></table></code></div></div><p>如果没有unzip工具，安装unzip用于文件解压，root执行以下命令：</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>yum install unzip
+</pre></table></code></div></div><p>oracle用户登录vnc，执行下面命令，解压出database，已备安装使用：</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="c">#解压第1个zip</span>
+unzip p13390677_112040_Linux-x86-64_1of7.zip
+<span class="c">#解压第2个zip</span>
+unzip p13390677_112040_Linux-x86-64_2of7.zip
+</pre></table></code></div></div><p>文件如下：</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="o">[</span>oracle@localhost ~]<span class="nv">$ </span><span class="nb">ls
+</span>database  
+p13390677_112040_Linux-x86-64_1of7.zip  
+p13390677_112040_Linux-x86-64_2of7.zip
+</pre></table></code></div></div><h3 id="18-安装oracle安装程序依赖程序包">1.8 安装Oracle安装程序依赖程序包</h3><p>root用户执行以下命令<code class="language-plaintext highlighter-rouge">su root</code>：</p><p><code class="language-plaintext highlighter-rouge">yum -y install binutils compat-libcap1 compat-libstdc++-33 compat-libstdc++-33*.i686 elfutils-libelf-devel gcc gcc-c++ glibc*.i686 glibc glibc-devel glibc-devel*.i686 ksh libgcc*.i686 libgcc libstdc++ libstdc++*.i686 libstdc++-devel libstdc++-devel*.i686 libaio libaio*.i686 libaio-devel libaio-devel*.i686 make sysstat unixODBC unixODBC*.i686 unixODBC-devel unixODBC-devel*.i686 libXp</code></p><h3 id="19-开始安装oracle">1.9 开始安装Oracle</h3><p>oracle用户登录vnc远程桌面，进入<code class="language-plaintext highlighter-rouge">~/database/</code>目录。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="c">#进入安装目录</span>
+<span class="nb">cd</span> ~/database/
+<span class="c">#运行安装程序</span>
+./runInstaller
+</pre></table></code></div></div><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\11.png" /></p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\12.png" /></p><p>配置安全更新，根据需要设置，我这里就不设置了。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\13.png" /></p><p>下载软件更新，根据个人需要选择，我这里选择跳过软件更新（S）。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\14.png" /></p><p>网络安装选项，选择创建和配置数据库（C）。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\15.png" /></p><p>桌面类or服务器类，描述中已经说的很清楚了，根据自己需要选择。这里我选择的是服务器类（S）。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\16.png" /></p><p>安装类型，我选默认的，单实例数据库安装（S）根据实际需要选择。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\17.png" /></p><p>典型安装，默认典型安装（T）即可。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\18.png" /></p><p>典型安装配置，主要设置一下密码，其他默认即可。这里密码要在大写字母+小写字母+数字组合。比如：我设置的是<code class="language-plaintext highlighter-rouge">Database123</code>。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\19.png" /></p><p>创建产品清单，默认即可。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\20.png" /></p><p>执行先决条件检查，这一步要稍花一些时间处理。每个人的显示可能略有不同。比如：物理内存的检测，我这个1G内存就会提示小于预期。处理方法：</p><ul><li>根据提示信息做处理即可，比如：内存小了，加大内存。<li>执行修补并再次检查（F）可以自动修复<li>以上都解决不了，百度一下基本都是有解决办法的。 没解决之前我的显示如下：</ul><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\21.png" /></p><p>执行修补并再次检查（F），方法上面描述的很清楚。root权限执行：</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>/tmp/CVU_11.2.0.4.0_oracle/runfixup.sh
+</pre></table></code></div></div><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\22.png" /></p><p>执行完后，点击上面对话框中的确定（O）这里发现大部分都修复了。如下：</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\23.png" /></p><p>剩下的警告尽量解决，如果自己知道影响不大直接点右上角☐全部忽略即可。比如：我的虚拟机内存，比预期值差30MB左右，影响不大直接忽略也可以。解决方法也很简单，加大内存即可。</p><ul><li><strong>解决缺失包：pdksh-5.2.14警告</strong></ul><p>这个警告，我猜测直接忽略就行了。因为本机已经安装了<code class="language-plaintext highlighter-rouge">ksh-20120801-142.el7.x86_64</code>。<code class="language-plaintext highlighter-rouge">yum search pdksh</code>中搜索没的搜索到它。只能手动安装了。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="c">#如果没有wget就安装一下 </span>
+yum <span class="nb">install </span>wget
+<span class="c">#下载安装包</span>
+wget  http://vault.centos.org/5.11/os/x86_64/CentOS/pdksh-5.2.14-37.el5_8.1.x86_64.rpm
+</pre></table></code></div></div><p>执行安装操作。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>rpm <span class="nt">-ivh</span> pdksh-5.2.14-37.el5_8.1.x86_64.rpm
+</pre></table></code></div></div><p>执行结果如下，与已经安装的冲突了，安装失败了。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>rpm <span class="nt">-ivh</span> pdksh-5.2.14-37.el5_8.1.x86_64.rpm 
+警告：pdksh-5.2.14-37.el5_8.1.x86_64.rpm: 头V3 DSA/SHA1 Signature, 密钥ID e8562897: NOKEY
+错误：依赖检测失败：
+    pdksh 与 <span class="o">(</span>已安裝<span class="o">)</span> ksh-20120801-142.el7.x86_64 冲突
+</pre></table></code></div></div><p>卸载冲突。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>rpm <span class="nt">-e</span> ksh-20120801-142.el7.x86_64
+</pre></table></code></div></div><p>再次安装。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>rpm <span class="nt">-ivh</span> pdksh-5.2.14-37.el5_8.1.x86_64.rpm
+</pre></table></code></div></div><p>全过程如下：</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre><td class="rouge-code"><pre><span class="o">[</span>root@localhost ~]# rpm <span class="nt">-ivh</span> pdksh-5.2.14-37.el5_8.1.x86_64.rpm 
+警告：pdksh-5.2.14-37.el5_8.1.x86_64.rpm: 头V3 DSA/SHA1 Signature, 密钥ID e8562897: NOKEY
+错误：依赖检测失败：
+    pdksh 与 <span class="o">(</span>已安裝<span class="o">)</span> ksh-20120801-142.el7.x86_64 冲突
+<span class="o">[</span>root@localhost ~]# rpm <span class="nt">-e</span> ksh-20120801-142.el7.x86_64
+<span class="o">[</span>root@localhost ~]# rpm <span class="nt">-ivh</span> pdksh-5.2.14-37.el5_8.1.x86_64.rpm
+警告：pdksh-5.2.14-37.el5_8.1.x86_64.rpm: 头V3 DSA/SHA1 Signature, 密钥ID e8562897: NOKEY
+准备中...                          <span class="c">################################# [100%]</span>
+正在升级/安装...
+1:pdksh-5.2.14-37.el5_8.1          <span class="c">################################# [100%]</span>
+</pre></table></code></div></div><p>重新检测，发现警告消失了。</p><ul><li><strong>Swap分区设置</strong></ul><p>如果Oracle安装文件检查发现Swap空间不足。大小一般设置为内存的1.5倍。root权限查询当时Swap分区设置情况。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>swapon <span class="nt">-s</span>
+</pre></table></code></div></div><p>结果如下：</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="o">[</span>root@localhost ~]# swapon <span class="nt">-m</span>
+文件名         类型       大小   已用   权限
+/dev/dm-1   partition  2097148   0      <span class="nt">-2</span>
+</pre></table></code></div></div><p>或者使用free工具来查看内存和Swap情况。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>free <span class="nt">-m</span>
+</pre></table></code></div></div><p>结果如下单位（MB）：</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="o">[</span>root@localhost ~]# free <span class="nt">-m</span>
+        total   used     free   shared  buff/cache   available
+Mem:    1475     439     171     13         865         877
+Swap:   2047      0      2047
+</pre></table></code></div></div><p>创建Swap文件，接下来我们将在文件系统上创建Swap文件。我们要在根目录<code class="language-plaintext highlighter-rouge">/</code>下创建一个名叫swapfile的文件，当然你也可以选择你喜欢的文件名。该文件分配的空间将等于我们需要的Swap空间。一般为内存的1.5倍以上就好了。也可以根据安装程序的提示来。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\24.png" /></p><p>root执行以下命令，创建swap分区。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\25.png" /></p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre><td class="rouge-code"><pre><span class="c">#创建swap文件 bs=2300的设置的值一般为内存的1.5倍以上 </span>
+<span class="nb">dd </span><span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>/var/swap <span class="nv">bs</span><span class="o">=</span>2500 <span class="nv">count</span><span class="o">=</span>1000000
+<span class="c">#需要更改swap文件的权限，确保只有root才可读</span>
+<span class="nb">chmod </span>600 /var/swap
+<span class="c">#告知系统将该文件用于swap</span>
+mkswap /var/swap
+<span class="c">#开始使用该swap</span>
+swapon /var/swap
+<span class="c">#使Swap文件永久生效,/etc/fstab加入配置</span>
+<span class="nb">echo</span> <span class="s2">"/var/swap   swap    swap    sw  0   0"</span> <span class="o">&gt;&gt;</span> /etc/fstab
+</pre></table></code></div></div><p>如果上面创建后发现大小创建错误了。如何重置呢？<code class="language-plaintext highlighter-rouge">swapoff -a</code> <code class="language-plaintext highlighter-rouge">rm /var/swap</code>上面命令就可以删除了，然后重新创建合适的swap文件就行了。</p><p>经过我们的不断努力，所有警告都消失了。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\26.png" /></p><p>概要，这里显示了安装配置的概要部分，检查一下是否正确。没问题就开始安装。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\27.png" /></p><p>安装产品，上面折腾了这么久终于迎来了真正的安装操作了。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\28.png" /></p><p>进度70% ins_emagent.mk错误弹框。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\29.png" /></p><p>编辑<code class="language-plaintext highlighter-rouge">/home/oracle/app/oracle/product/11.2.0/dbhome_1/sysman/lib/ins_emagent.mk</code>约176行，可以搜索<code class="language-plaintext highlighter-rouge">$(MK_EMAGENT_NMECTL)</code>关键字快速找到。修改后如下：</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\30.png" /></p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre><td class="rouge-code"><pre><span class="c">#===========================</span>
+<span class="c">#  emdctl</span>
+<span class="c">#===========================</span>
+
+<span class="si">$(</span>SYSMANBIN<span class="si">)</span>emdctl:
+	<span class="si">$(</span>MK_EMAGENT_NMECTL<span class="si">)</span> <span class="nt">-lnnz11</span>
+
+<span class="c">#===========================</span>
+<span class="c">#  nmocat</span>
+<span class="c">#===========================</span>
+</pre></table></code></div></div><p>修改完成后，点击重试（R）。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\31.png" /></p><p>复制数据库文件，上面的问题解决后，安装一会儿就会出现如下的界面。耐心等待即可。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\32.png" /></p><p>数据库创建完成，经过一段时间的等待，终于弹出如下界面。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\33.png" /></p><p>执行配置脚本。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\34.png" /></p><p>据上图提示，切换root用户执行上面两个脚本就可以了。执行结果如下：</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre><td class="rouge-code"><pre><span class="o">[</span>root@localhost ~]# /home/oracle/app/oraInventory/orainstRoot.sh 
+更改权限/home/oracle/app/oraInventory.
+添加组的读取和写入权限。
+删除全局的读取, 写入和执行权限。
+
+更改组名/home/oracle/app/oraInventory 到 database.
+脚本的执行已完成。
+<span class="o">[</span>root@localhost ~]# /home/oracle/app/oracle/product/11.2.0/dbhome_1/root.sh 
+Performing root user operation <span class="k">for </span>Oracle 11g 
+
+The following environment variables are <span class="nb">set </span>as:
+    <span class="nv">ORACLE_OWNER</span><span class="o">=</span> oracle
+    <span class="nv">ORACLE_HOME</span><span class="o">=</span>  /home/oracle/app/oracle/product/11.2.0/dbhome_1
+
+Enter the full pathname of the <span class="nb">local </span>bin directory: <span class="o">[</span>/usr/local/bin]: 
+   Copying dbhome to /usr/local/bin ...
+   Copying oraenv to /usr/local/bin ...
+   Copying coraenv to /usr/local/bin ...
+
+
+Creating /etc/oratab file...
+Entries will be added to the /etc/oratab file as needed by
+Database Configuration Assistant when a database is created
+Finished running generic part of root script.
+Now product-specific root actions will be performed.
+Finished product-specific root actions.
+<span class="o">[</span>root@localhost ~]# 
+</pre></table></code></div></div><p>执行完成这两个脚本，点击确定。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\35.png" /></p><p>Oracle Database的安装已成功。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\36.png" /></p><p>点击关闭即可。</p><h3 id="110-防火墙放行1521">1.10 防火墙放行1521</h3><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="c"># 默认端口是1521，防火墙放行1521端口</span>
+firewall-cmd <span class="nt">--add-port</span><span class="o">=</span>1521/tcp
+firewall-cmd <span class="nt">--add-port</span><span class="o">=</span>1521/tcp <span class="nt">--permanent</span>
+</pre></table></code></div></div><h3 id="111-配置环境变量">1.11 配置环境变量</h3><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>su oracle
+</pre></table></code></div></div><p>切换到oracle用户操作。编辑配置文件。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>vi ~/.bash_profile
+</pre></table></code></div></div><p>文件末尾加入以下内容，ORACLE_HOME中换成你实际安装的路径。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="nb">export </span><span class="nv">ORACLE_HOME</span><span class="o">=</span>/home/oracle/app/oracle/product/11.2.0/dbhome_1/
+<span class="nb">export </span><span class="nv">ORACLE_SID</span><span class="o">=</span>orcl
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ORACLE_HOME</span>/bin
+</pre></table></code></div></div><p>使用配置文件立即生效。</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nb">source</span> ~/.bash_profile
+</pre></table></code></div></div><h3 id="112-启动oracle">1.12 启动Oracle</h3><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>su oracle
+sqlplus /nolog
+SQL&gt; connect /as sysdba
+SQL&gt; startup
+</pre></table></code></div></div><h3 id="113-sys用户登录">1.13 sys用户登录</h3><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre><td class="rouge-code"><pre><span class="o">[</span>oracle@localhost ~]<span class="nv">$ </span>sqlplus /nolog
+
+SQL<span class="k">*</span>Plus: Release 11.2.0.4.0 Production on Tue Feb 2 02:59:38 2021
+
+Copyright <span class="o">(</span>c<span class="o">)</span> 1982, 2013, Oracle.  All rights reserved.
+
+SQL&gt; connect as sysdba
+Enter user-name: sys
+Enter password: 
+Connected.
+SQL&gt; <span class="k">select </span>1 from dual<span class="p">;</span>
+
+	 1
+<span class="nt">----------</span>
+	 1
+
+SQL&gt; 
+</pre></table></code></div></div><p>没有问题，说明本地连接Oracle成功。</p><h3 id="114-启动监听">1.14 启动监听</h3><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>lsnrctl start
+</pre></table></code></div></div><h3 id="115-plsql连接测试">1.15 PLSQL连接测试</h3><p>使用其他机器连接我们刚安装好的Oracle进行连接测试。修改配置文件<code class="language-plaintext highlighter-rouge">C:\app\itkey\product\11.2.0\client_1\network\admin\tnsnames.ora</code>（路径根据实际情况来）</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre><td class="rouge-code"><pre>CentOS7ORCL <span class="o">=</span>
+  <span class="o">(</span>DESCRIPTION <span class="o">=</span>
+    <span class="o">(</span>ADDRESS <span class="o">=</span> <span class="o">(</span>PROTOCOL <span class="o">=</span> TCP<span class="o">)(</span>HOST <span class="o">=</span> 172.16.184.5<span class="o">)(</span>PORT <span class="o">=</span> 1521<span class="o">))</span>
+    <span class="o">(</span>CONNECT_DATA <span class="o">=</span>
+      <span class="o">(</span>SERVER <span class="o">=</span> DEDICATED<span class="o">)</span>
+      <span class="o">(</span>SERVICE_NAME <span class="o">=</span> orcl<span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+</pre></table></code></div></div><h2 id="二oracle创建数据库">二、Oracle创建数据库</h2><p>我们很多操作都是可以通过命令行的形式来完成，但是由于不支持图形模式，在一些需要图形界面的时候就很麻烦。本次设置可以在SecureCRT中直接使用<code class="language-plaintext highlighter-rouge">netca\dbca</code>命令，通过xmanager的passive来显示图形界面。设置display变量，设置的IP为安装xmanager的客户端IP, 例如本地ip为：192.168.1.2</p><div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="o">[</span>root@test ~]# <span class="nb">export </span><span class="nv">DISPLAY</span><span class="o">=</span>192.168.1.2:0.0
+</pre></table></code></div></div><p>其次，我们要在客户端启动Xmanager - Passive程序，最后，我们就可以在SecureCRT工具中直接使用命令来启动图形化界面了。以oracle用户登录系统，打开终端输入<code class="language-plaintext highlighter-rouge">dbca</code>，点击下一步</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\1.jpeg" /></p><p>点击创建数据库，下一步</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\2.jpeg" /></p><p>默认即可，下一步</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\3.jpeg" /></p><p>在全局数据库输入你要定义的名称，例如：myoracl，数据库实例名(SID)默认与全局数据库名相同，下一步</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\4.jpeg" /></p><p>不勾选配置Enterprise Manager，下一步</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\5.jpeg" /></p><p>数据库身份证明，可以为不同的账户分别设置不同的管理口令，也可以为所有账户设置同一口令，单击下一步</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\6.jpeg" /></p><p>数据库文件所在位置，默认存储类型：文件系统，存储位置：使用模版中的数据库文件位置，也可以自己指定存储路径，单击下一步</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\7.jpeg" /></p><p>恢复配置，指定快速恢复区，默认即可，有需要的可以配置，下一步</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\8.jpeg" /></p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\9.jpeg" /></p><p>内存、调整大小、字符集、连接模式可以根据自己的需要设置，下一步</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\10.jpeg" /></p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\11.jpeg" /></p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\12.jpeg" /></p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\13.jpeg" /></p><p>数据库存储，控制文件、数据文件、重做日志文件位置设置，单击下一步，创建选项，创建数据库，生成脚本，单击完成，开始创建数据库</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\14.jpeg" /></p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\15.jpeg" /></p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\16.jpeg" /></p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="\assets\img\illustration\Knowledge\CentOS\2023-02-26-centos-anzhuang-oracle\17.jpeg" /></p><p>点击退出即完成数据库创建</p><h2 id="三oracle创建表空间并授权用户">三、Oracle创建表空间并授权用户</h2><div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+</pre><td class="rouge-code"><pre><span class="c1">-- 登录sys用户</span>
+<span class="n">sqlplus</span> <span class="o">/</span> <span class="k">as</span> <span class="n">sysdba</span>
+
+<span class="c1">-- 查询用户表空间文件的路径，然后在此目录下创建新的表空间</span>
+<span class="k">select</span> <span class="n">name</span> <span class="k">from</span> <span class="n">v</span><span class="err">$</span><span class="n">datafile</span><span class="p">;</span> 
+
+<span class="c1">-- 创建表空间，永久性表空间：一般保存表、视图、过程和索引等的数据</span>
+<span class="k">create</span> <span class="n">tablespace</span> <span class="n">TESTSERVICESPACE</span> 
+<span class="n">datafile</span> <span class="s1">'/home/oracle/app/oracle/oradata/orcl/TESTSERVICESPACE.dbf'</span> 
+<span class="k">size</span> <span class="mi">1024</span><span class="n">m</span> 
+<span class="n">autoextend</span> <span class="k">on</span> 
+<span class="k">next</span> <span class="mi">100</span><span class="n">m</span> 
+<span class="n">maxsize</span> <span class="n">unlimited</span><span class="p">;</span>
+
+<span class="c1">-- 查询用户临时表空间文件的路径，然后在此目录下创建新的临时表空间</span>
+<span class="k">select</span> <span class="n">name</span> <span class="k">from</span> <span class="n">v</span><span class="err">$</span><span class="n">tempfile</span><span class="p">;</span>
+
+<span class="c1">-- 创建临时表空间，临时性表空间：只用于保存系统中短期活动的数据，如计算的中间结果等</span>
+<span class="k">create</span> <span class="k">temporary</span> <span class="n">tablespace</span> <span class="n">TESTSERVICESPACE_TEMP</span> 
+<span class="n">tempfile</span> <span class="s1">'/home/oracle/app/oracle/oradata/orcl/TESTSERVICESPACE_TEMP.dbf'</span> 
+<span class="k">size</span> <span class="mi">200</span><span class="n">m</span> 
+<span class="n">autoextend</span> <span class="k">on</span> 
+<span class="k">next</span> <span class="mi">40</span><span class="n">m</span> 
+<span class="n">maxsize</span> <span class="n">unlimited</span><span class="p">;</span>
+
+<span class="c1">-- 创建用户、密码并关联表空间和临时表空间</span>
+<span class="k">create</span> <span class="k">user</span> <span class="n">orauser</span> 
+<span class="n">identified</span> <span class="k">by</span> <span class="nv">"1qaz!QAZ"</span> 
+<span class="k">default</span> <span class="n">tablespace</span> <span class="n">TESTSERVICESPACE</span> 
+<span class="k">temporary</span> <span class="n">tablespace</span> <span class="n">TESTSERVICESPACE_TEMP</span><span class="p">;</span>
+
+<span class="c1">-- 授权，初始建立的用户没有任何权限，不能执行任何数据库操作，因此必须为用户设置权限或者角色</span>
+<span class="k">grant</span> <span class="k">connect</span><span class="p">,</span><span class="n">resource</span> <span class="k">to</span> <span class="n">orauser</span><span class="p">;</span>
+
+<span class="c1">-- 授予远程登录权限</span>
+<span class="k">grant</span> <span class="k">create</span> <span class="k">session</span> <span class="k">to</span> <span class="n">orauser</span><span class="p">;</span>
+
+<span class="c1">-- 给表空间配额</span>
+<span class="k">ALTER</span> <span class="k">USER</span> <span class="n">orauser</span> <span class="n">QUOTA</span> <span class="mi">100</span><span class="n">M</span> <span class="k">ON</span> <span class="n">TESTSERVICESPACE</span><span class="p">;</span>
+<span class="c1">-- 表空间配额（三选一即可）</span>
+<span class="c1">-- 您可以给用户，例如username在xxxx表空间中的无限配额</span>
+<span class="k">ALTER</span> <span class="k">USER</span> <span class="n">orauser</span> <span class="n">QUOTA</span> <span class="n">UNLIMITED</span> <span class="k">ON</span> <span class="n">TESTSERVICESPACE</span><span class="p">;</span>
+<span class="c1">-- 您还可以定义允许用户在表空间上分配的空间最大值</span>
+<span class="k">ALTER</span> <span class="k">USER</span> <span class="n">orauser</span> <span class="n">QUOTA</span> <span class="mi">100</span><span class="n">M</span> <span class="k">ON</span> <span class="n">TESTSERVICESPACE</span><span class="p">;</span>
+<span class="c1">-- 您还可以授予用户UNLIMITED TABLESPACE系统权限</span>
+<span class="c1">-- 这意味着他对数据库中的任何表空间都有无限的配额</span>
+<span class="k">GRANT</span> <span class="n">UNLIMITED</span> <span class="n">TABLESPACE</span> <span class="k">TO</span> <span class="n">orauser</span><span class="p">;</span>
+</pre></table></code></div></div><h2 id="四oracle的重启">四、Oracle的重启</h2><h3 id="41-重启监听">4.1 重启监听</h3><ul><li>以Oracle身份登录数据库：<code class="language-plaintext highlighter-rouge">su - oralce</code><li>进入监听器控制台：<code class="language-plaintext highlighter-rouge">lsnrctl</code><li>关闭监听：<code class="language-plaintext highlighter-rouge">stop</code><li>启动监听：<code class="language-plaintext highlighter-rouge">start</code><li>查看监听状态：<code class="language-plaintext highlighter-rouge">status</code><li>退出监听器控制台：<code class="language-plaintext highlighter-rouge">exit</code></ul><h3 id="42-重启数据库">4.2 重启数据库</h3><ul><li>以Oracle身份登录数据库：<code class="language-plaintext highlighter-rouge">su - oralce</code><li>进入sqlplus控制台：<code class="language-plaintext highlighter-rouge">sqlplus /nolog</code><li>以系统管理员登录：<code class="language-plaintext highlighter-rouge">connect / as sysdba</code><li>关闭数据库：<code class="language-plaintext highlighter-rouge">shutdown immediate</code><ul><li><strong>Normal</strong>：需要等待所有的用户断开连接<li><strong>Immediate</strong>：等待用户完成当前的语句，并不允许新用户连接<li><strong>Transactional</strong>：等待用户完成当前的事务，并不允许新用户连接<li><strong>Abort</strong>：不做任何等待，直接关闭数据库</ul><li>启动数据库：<code class="language-plaintext highlighter-rouge">startup</code><li>退出Sqlplus控制台：<code class="language-plaintext highlighter-rouge">exit</code></ul><h3 id="43-重启实例">4.3 重启实例</h3><ul><li>以Oracle身份登录数据库：<code class="language-plaintext highlighter-rouge">su - oralce</code><li>查看当前实例：<code class="language-plaintext highlighter-rouge">echo $ORACLE_SID</code><li>切换需要启动的数据库实例：<code class="language-plaintext highlighter-rouge">export ORACLE_SID=ORCL</code><li>进入sqlplus控制台：<code class="language-plaintext highlighter-rouge">sqlplus /nolog</code><li>以系统管理员登录：<code class="language-plaintext highlighter-rouge">connect / as sysdba</code><li>关闭实例：<code class="language-plaintext highlighter-rouge">shutdown abort</code><li>启动实例：<code class="language-plaintext highlighter-rouge">startup</code><li>退出Sqlplus控制台：<code class="language-plaintext highlighter-rouge">exit</code></ul><h2 id="五一些问题">五、一些问题</h2><h3 id="51-sqlplus--as-sysdba未找到命令">5.1 sqlplus / as sysdba：未找到命令</h3><ul><li><p><strong>报错原因</strong></p><p>shell环境变量未配置（使用shell远程登录）</p><li><p><strong>解决方法</strong></p><p>切换登录用户环境<code class="language-plaintext highlighter-rouge">su - oracle</code>，为什么普通切换<code class="language-plaintext highlighter-rouge">su oracle</code>仍登录不了，<code class="language-plaintext highlighter-rouge">su</code>命令和<code class="language-plaintext highlighter-rouge">su -</code>命令最大的本质区别就是：前者只是切换了root身份，但Shell环境仍然是普通用户的Shell，而后者连用户和Shell环境一起切换了。只有切换了Shell环境才不会出现PATH环境变量错误。</p><ul><li><code class="language-plaintext highlighter-rouge">su oracle</code>登录：切换到Oracle身份后用户的home目录和PATH仍然是原先用户的home目录和PATH。<li><code class="language-plaintext highlighter-rouge">su - oracle</code>登录：相当于重新登陆，此时用户的home目录和PATH等信息会发生改变。</ul></ul><blockquote><p>参考：<a href="https://github.com/lxyoucan/CentOS7Oracle11gInstallHelper">https://github.com/lxyoucan/CentOS7Oracle11gInstallHelper</a></p></blockquote></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/Knowledge/'>Knowledge</a>, <a href='/categories/CentOS/'>CentOS</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/CentOS/" class="post-tag no-text-decoration" >CentOS</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=CentOS安装Oracle - Lemon&url=http://localhost:4000/posts/centos-anzhuang-oracle/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=CentOS安装Oracle - Lemon&u=http://localhost:4000/posts/centos-anzhuang-oracle/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=CentOS安装Oracle - Lemon&url=http://localhost:4000/posts/centos-anzhuang-oracle/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank"> <i class="fa-fw fab fa-telegram"></i> </a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:4000/posts/centos-anzhuang-oracle/" data-toggle="tooltip" data-placement="top" title="Linkedin" target="_blank"> <i class="fa-fw fab fa-linkedin"></i> </a> <a href="http://service.weibo.com/share/share.php?title=CentOS安装Oracle - Lemon&url=http://localhost:4000/posts/centos-anzhuang-oracle/" data-toggle="tooltip" data-placement="top" title="Weibo" target="_blank"> <i class="fa-fw fab fa-weibo"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/oracle-lianjie-zongshi-zhongduan/">Oracle 连接总是中断</a><li><a href="/posts/linux-changyong-mingling/">Linux常用命令</a><li><a href="/posts/shuqian-shoucangjia/">收藏夹</a><li><a href="/posts/centos-anzhuang-oracle/">CentOS安装Oracle</a><li><a href="/posts/tomcat-shezhi-ipheduankou-fangwen-xiangmu/">Tomcat设置通过IP+PORT访问项目</a></ul></div><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/Struts2/">Struts2</a> <a class="post-tag" href="/tags/RocketMQ/">RocketMQ</a> <a class="post-tag" href="/tags/Maven/">Maven</a> <a class="post-tag" href="/tags/SYSTEM/">SYSTEM</a> <a class="post-tag" href="/tags/Jekyll/">Jekyll</a> <a class="post-tag" href="/tags/Servlet/">Servlet</a> <a class="post-tag" href="/tags/JDBC/">JDBC</a> <a class="post-tag" href="/tags/GitBook/">GitBook</a> <a class="post-tag" href="/tags/CSS/">CSS</a> <a class="post-tag" href="/tags/Tomcat/">Tomcat</a></div></div></div><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/centos-anzhuang-maven/"><div class="card-body"> <span class="timeago small" > Jun 24, 2021 <i class="unloaded">2021-06-24T17:47:00+00:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>CentOS安装Maven</h3><div class="text-muted small"><p> 解压Maven安装包 tar -zxvf apache-maven-3.5.2-bin.tar.gz 配置maven环境变量 vi /etc/profile 添加环境变量 # maven environment export MAVEN_HOME=/var/local/apache-maven-3.5.2 export MAVEN_HOME export PATH=$PATH:$MAV...</p></div></div></a></div><div class="card"> <a href="/posts/centos-anzhuang-jdk/"><div class="card-body"> <span class="timeago small" > Jun 29, 2021 <i class="unloaded">2021-06-29T17:47:00+00:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>CentOS安装JDK</h3><div class="text-muted small"><p> 当前JDK最新版本下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html 历史JDK版本下载地址：http://www.oracle.com/technetwork/java/javase/archive-139210.html Linux上一般会安装Open JDK，关于OpenJDK和JDK的区别：h...</p></div></div></a></div><div class="card"> <a href="/posts/centos-lixian-anzhuang-oracle-yilai/"><div class="card-body"> <span class="timeago small" > Jul 5, 2021 <i class="unloaded">2021-07-05T17:47:00+00:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>CentOS离线安装Oracle依赖</h3><div class="text-muted small"><p> 安装离线下载插件 [root@localhost honcur]# sudo yum install yum-plugin-downloadonly 这个插件可以把依赖包下载到本地。 下载rpm包，保存在本地 [root@localhost ~]# cd /usr/local [root@localhost local]# mkdir oralib [root@localhost lo...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/ifconfig-mingling-wufa-shiyong/" class="btn btn-outline-primary"><p>ifconfig命令无法使用</p></a> <a href="/posts/ant-dabao-bao-neicunyichu/" class="btn btn-outline-primary"><p>Ant打包时报内存溢出</p></a></div></div></div></div><script type="text/javascript" src="/assets/js/cdn/lozad.min.js"></script> <script type="text/javascript"> const imgs = document.querySelectorAll('#post-wrapper img'); const observer = lozad(imgs); observer.observe(); </script> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\lib/jquery.mousewheel.pack.js?v=3.1.3"></script> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\source/jquery.fancybox.pack.js?v=2.1.5"></script><link rel="stylesheet" type="text/css" href="\assets\plugins\fancybox-2.1.7\source/jquery.fancybox.css?v=2.1.5" media="screen" /><link rel="stylesheet" type="text/css" href="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-buttons.css?v=1.0.5" /> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script><link rel="stylesheet" type="text/css" href="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" /> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script> <script type="text/javascript" src="\assets\plugins\fancybox-2.1.7\source/helpers/jquery.fancybox-media.js?v=1.0.6"></script> <script> $(document).ready(function() { $("p img").not('.emoji').each(function() { var strA = "<a class='fancybox' data-fancybox-group='gallery' href='" + $(this).attr("data-src") + "'></a>"; $(this).wrapAll(strA); }); $('.fancybox').fancybox(); }); </script><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2023 <a href="https://twitter.com/username">Lemon</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy/">Chirpy</a> theme.</p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-xl-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/tags/Struts2/">Struts2</a> <a class="post-tag" href="/tags/RocketMQ/">RocketMQ</a> <a class="post-tag" href="/tags/Maven/">Maven</a> <a class="post-tag" href="/tags/SYSTEM/">SYSTEM</a> <a class="post-tag" href="/tags/Jekyll/">Jekyll</a> <a class="post-tag" href="/tags/Servlet/">Servlet</a> <a class="post-tag" href="/tags/JDBC/">JDBC</a> <a class="post-tag" href="/tags/GitBook/">GitBook</a> <a class="post-tag" href="/tags/CSS/">CSS</a> <a class="post-tag" href="/tags/Tomcat/">Tomcat</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="/assets/js/cdn/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"><div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>{categories}</div><div><i class="fa fa-tag fa-fw"></i>{tags}</div></div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>' }); </script>
