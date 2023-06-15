@@ -1,0 +1,263 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Lemon</title>
+  <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
+  <updated>2023-06-15T09:03:59+08:00</updated>
+  <author>
+    <name>lemon</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+  <rights> © 2023 lemon </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Filebeat启动后自动停止的问题</title>
+    <link href="http://localhost:4000/posts/filebeat-zidong-tingzhi-de-wenti/" rel="alternate" type="text/html" title="Filebeat启动后自动停止的问题" />
+    <published>2023-06-14T13:47:00+08:00</published>
+  
+    <updated>2023-06-14T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/filebeat-zidong-tingzhi-de-wenti/</id>
+    <content src="http://localhost:4000/posts/filebeat-zidong-tingzhi-de-wenti/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="Filebeat" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Linux环境部署的Filebeat在启动正常的情况下自动停止运行。启动Filebeat的指令是：
+nohup ./filebeat -e -c filebeat.yml &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 &amp;amp;
+
+通过对nohup的指令了解后发现，当关闭xshell终端时，断开ssh连接，会导致nohup进程同时终止。解决办法：关闭xshell终端前，先exit退出，断开ssh连接，然后就可以关闭终端；或者在原来的启动指令上加上disown参数，这个参数会将nohup进程从当前shell的作业列表中清除，从而避免在关闭xshell时nohup进程接收到SIGHUP信号而停止运行:
+nohup ./filebeat -e -c filebeat.yml &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 &amp;amp; disown
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>宝兰德部署Spring Boot项目</title>
+    <link href="http://localhost:4000/posts/springboot-zhenghe-baolande/" rel="alternate" type="text/html" title="宝兰德部署Spring Boot项目" />
+    <published>2023-05-29T13:47:00+08:00</published>
+  
+    <updated>2023-05-29T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/springboot-zhenghe-baolande/</id>
+    <content src="http://localhost:4000/posts/springboot-zhenghe-baolande/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="BES Web" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      之前在网上找资料看到说Spring Boot部署宝兰德有jar包的改造，这里说明下，如果最终应用要部署在BES单实例或者集群版本的话，即通过控制台部署应用，就不能集成宝兰德的内嵌包，否则会造成jar包冲突。即com单实例或者集群版本的话，即通过控制台部署应用，就不能集成宝兰德的内嵌包，否则会造成jar包冲突，即com.bes.enterprise.logging.internal.Log: Provider com.bes.enterprise.jul.formatter.log.BESASLog not a subtype。BES和Tomcat中间件针对springboot的部署方式是一致的，因此这种情况，不需要做单独的改造。只有单集成宝兰德时，才需要在项目中添加相应的jar包，如下所示（程序包由宝兰德提供）
+
+
+  
+    
+      包名
+      说明
+    
+  
+...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>宝兰德常用命令</title>
+    <link href="http://localhost:4000/posts/baolande-changyong-mingling/" rel="alternate" type="text/html" title="宝兰德常用命令" />
+    <published>2023-05-29T13:47:00+08:00</published>
+  
+    <updated>2023-05-29T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/baolande-changyong-mingling/</id>
+    <content src="http://localhost:4000/posts/baolande-changyong-mingling/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="BES Web" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      登录命令行控制台
+./iastool --passport admin
+
+创建节点
+create --node --host 192.168.92.135 --port 1900 --user admin \
+--password admin --domainname domain1 node136
+
+创建名为domain1的域
+./iastool create --domain --passport admin --user admin \
+--password admin --adminport 1900 domain1
+
+创建名为Node1的节点
+./iastool create --node --passport admin --domainname domain1 Node1
+
+创建名Server1的实例
+./iastool create --instance --pass...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>MySQL查询主键相关</title>
+    <link href="http://localhost:4000/posts/mysql-chaxun-zhujian/" rel="alternate" type="text/html" title="MySQL查询主键相关" />
+    <published>2023-05-25T13:47:00+08:00</published>
+  
+    <updated>2023-05-25T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/mysql-chaxun-zhujian/</id>
+    <content src="http://localhost:4000/posts/mysql-chaxun-zhujian/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="SQL" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      -- 查询数据库中所有表名和表的主键
+select 
+table_name,
+column_name 
+from information_schema.key_column_usage 
+where constraint_name = 'primary' 
+and table_name in (
+select 
+table_name
+from information_schema.tables
+where table_schema = 'testdb' 
+order by table_name)
+and table_schema = 'testdb';
+
+-- 查询数据库中没有主键的表
+SELECT
+    a.TABLE_SCHEMA,
+    a.TABLE_NAME 
+FROM
+    (
+    SELECT
+        TABLE_SCHEMA,
+        TAB...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Redis使用redis-cli连接报错：WRONGPASS invalid username-password pair or user is disabled.</title>
+    <link href="http://localhost:4000/posts/redis-lianjie-baocuo/" rel="alternate" type="text/html" title="Redis使用redis-cli连接报错：WRONGPASS invalid username-password pair or user is disabled." />
+    <published>2023-05-24T13:47:00+08:00</published>
+  
+    <updated>2023-05-24T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/redis-lianjie-baocuo/</id>
+    <content src="http://localhost:4000/posts/redis-lianjie-baocuo/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="Redis" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      报错信息
+使用redis-cli连接Redis时报错，具体为认证失败问题WRONGPASS invalid username-password pair or user is disabled.。之前输入auth pass即可，但此次在终端窗口有提示需要username。
+
+报错原因
+本机Redis为7.0版本。Redis6.0起，支持ACL权限控制，Redis6.0之前的版本只支持验证密码方式的权限控制，格式如下：AUTH &amp;lt;password&amp;gt;。当使用Redis ACLs权限控制时，AUTH 验证格式如下：AUTH &amp;lt;username&amp;gt; &amp;lt;password&amp;gt;，在ACLs模式下，如果传递一个密码参数给AUTH，那么会隐式设置用户名default。
+
+解决方法
+使用auth default &amp;lt;password&amp;gt;验证。
+
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
