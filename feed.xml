@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-06-15T09:03:59+08:00</updated>
+  <updated>2023-08-24T08:49:57+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,208 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Linux和Windows平台Android SDK中build tools的区别</title>
+    <link href="http://localhost:4000/posts/linux-he-win-build-tools-qubie/" rel="alternate" type="text/html" title="Linux和Windows平台Android SDK中build tools的区别" />
+    <published>2023-07-25T13:47:00+08:00</published>
+  
+    <updated>2023-07-25T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/linux-he-win-build-tools-qubie/</id>
+    <content src="http://localhost:4000/posts/linux-he-win-build-tools-qubie/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="Android" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      在linux和Windows平台上，gradle wrapper和gradle依赖的jar都是不区分平台的
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+└── gradlew.bat
+
+一个Android项目gradle结构（看一个基本结构的Android多Moudule（也就是gradle中的多Project Multi-Projects Build）的基本项目结构）
+├── app #Android App目录
+│   ├── app.iml
+│   ├── build #构建输出目录
+│   ├── build.gradle #构建脚本
+│   ├── libs #so相关库
+│   ├── proguard...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Gradle的安装配置及使用</title>
+    <link href="http://localhost:4000/posts/gradle-anzhuang-he-shiyong/" rel="alternate" type="text/html" title="Gradle的安装配置及使用" />
+    <published>2023-07-20T08:47:00+08:00</published>
+  
+    <updated>2023-07-20T08:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/gradle-anzhuang-he-shiyong/</id>
+    <content src="http://localhost:4000/posts/gradle-anzhuang-he-shiyong/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="Gradle" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1、官网下载链接https://gradle.org/releases/，下载后解压
+
+2、新建GRADLE_HOME环境变量指向Gradle解压路径
+
+3、将%GRADLE_HOME%\bin添加到Path环境变量中
+
+4、打开cmd命令行输入gradle -v验证Gradle是否安装成功
+
+5、配置Gradle默认的仓库地址，Gradle和Maven类似也需要配置仓库地址，首先新建一个文件夹，然后新建GRADLE_USER_HOME环境变量指向新建的文件夹
+
+6、配置阿里云镜像，在Gradle安装目录的init.d文件夹中新建一个init.gradle文件并在文件中添加如下配置
+
+allprojects {
+    repositories {
+        mavenLocal()
+        maven { name "Alibaba" ; url "https://m...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>MySQL查询数据库的数据量大小</title>
+    <link href="http://localhost:4000/posts/mysql-chaxun-shujuku-shujuliang-daxiao/" rel="alternate" type="text/html" title="MySQL查询数据库的数据量大小" />
+    <published>2023-07-02T09:47:00+08:00</published>
+  
+    <updated>2023-07-02T09:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/mysql-chaxun-shujuku-shujuliang-daxiao/</id>
+    <content src="http://localhost:4000/posts/mysql-chaxun-shujuku-shujuliang-daxiao/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="MySQL" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      查询数据库最大连接数
+show variables like '%max_connections%';
+
+查询数据库连接超时时间单位(s)
+Show variables like 'wait_timeout';
+
+查询各个数据库量的大小
+select
+  TABLE_SCHEMA,
+  CONCAT(ROUND(SUM(DATA_LENGTH / 1024 / 1024), 2), 'MB') dbsize
+from
+  information_schema.tables
+group by
+  TABLE_SCHEMA;
+
+查询指定数据库量的大小
+select
+  '数据库大小',
+  CONCAT(ROUND(SUM(DATA_LENGTH / 1024 / 1024), 2), 'MB') dbsize
+from
+  information_schema.tables
+where...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>正向代理和反向代理</title>
+    <link href="http://localhost:4000/posts/zhengxiangdaili-he-fanxiangdaili/" rel="alternate" type="text/html" title="正向代理和反向代理" />
+    <published>2023-06-21T13:47:00+08:00</published>
+  
+    <updated>2023-06-21T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/zhengxiangdaili-he-fanxiangdaili/</id>
+    <content src="http://localhost:4000/posts/zhengxiangdaili-he-fanxiangdaili/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Collection" />
+    
+    <category term="Technical" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      正向代理是一个位于客户端和原始服务器之间的服务器。反向代理是指以代理服务器来接受Internet上的连接请求，然后将请求转发给内部网络上的服务器。两者区别在于正向代理代理的对象是客户端，反向代理代理的对象是服务端。
+
+一、正向代理
+举个例子：
+我是一个用户，我访问不了某网站，但是我能访问一个代理服务器，这个代理服务器能访问那个我不能访问的网站，于是我先连上代理服务器，告诉他我需要那个无法访问网站的内容，代理服务器去取回来，然后返回给我。从网站的角度，只在代理服务器来取内容的时候有一次记录，有时候并不知道是用户的请求，也隐藏了用户的资料，这取决于代理告不告诉网站。
+
+客户端必须设置正向代理服务器，当然前提是要知道正向代理服务器的IP地址，还有代理程序的端口。
+
+总结来说：正向代理是一个位于客户端和原始服务器(origin server)之间的服务器，为了从原始服务器取得内容，客户端向代...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -54,204 +256,6 @@ nohup ./filebeat -e -c filebeat.yml &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 &amp;a
 通过对nohup的指令了解后发现，当关闭xshell终端时，断开ssh连接，会导致nohup进程同时终止。解决办法：关闭xshell终端前，先exit退出，断开ssh连接，然后就可以关闭终端；或者在原来的启动指令上加上disown参数，这个参数会将nohup进程从当前shell的作业列表中清除，从而避免在关闭xshell时nohup进程接收到SIGHUP信号而停止运行:
 nohup ./filebeat -e -c filebeat.yml &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 &amp;amp; disown
 
-
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>宝兰德部署Spring Boot项目</title>
-    <link href="http://localhost:4000/posts/springboot-zhenghe-baolande/" rel="alternate" type="text/html" title="宝兰德部署Spring Boot项目" />
-    <published>2023-05-29T13:47:00+08:00</published>
-  
-    <updated>2023-05-29T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/springboot-zhenghe-baolande/</id>
-    <content src="http://localhost:4000/posts/springboot-zhenghe-baolande/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="BES Web" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      之前在网上找资料看到说Spring Boot部署宝兰德有jar包的改造，这里说明下，如果最终应用要部署在BES单实例或者集群版本的话，即通过控制台部署应用，就不能集成宝兰德的内嵌包，否则会造成jar包冲突。即com单实例或者集群版本的话，即通过控制台部署应用，就不能集成宝兰德的内嵌包，否则会造成jar包冲突，即com.bes.enterprise.logging.internal.Log: Provider com.bes.enterprise.jul.formatter.log.BESASLog not a subtype。BES和Tomcat中间件针对springboot的部署方式是一致的，因此这种情况，不需要做单独的改造。只有单集成宝兰德时，才需要在项目中添加相应的jar包，如下所示（程序包由宝兰德提供）
-
-
-  
-    
-      包名
-      说明
-    
-  
-...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>宝兰德常用命令</title>
-    <link href="http://localhost:4000/posts/baolande-changyong-mingling/" rel="alternate" type="text/html" title="宝兰德常用命令" />
-    <published>2023-05-29T13:47:00+08:00</published>
-  
-    <updated>2023-05-29T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/baolande-changyong-mingling/</id>
-    <content src="http://localhost:4000/posts/baolande-changyong-mingling/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="BES Web" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      登录命令行控制台
-./iastool --passport admin
-
-创建节点
-create --node --host 192.168.92.135 --port 1900 --user admin \
---password admin --domainname domain1 node136
-
-创建名为domain1的域
-./iastool create --domain --passport admin --user admin \
---password admin --adminport 1900 domain1
-
-创建名为Node1的节点
-./iastool create --node --passport admin --domainname domain1 Node1
-
-创建名Server1的实例
-./iastool create --instance --pass...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>MySQL查询主键相关</title>
-    <link href="http://localhost:4000/posts/mysql-chaxun-zhujian/" rel="alternate" type="text/html" title="MySQL查询主键相关" />
-    <published>2023-05-25T13:47:00+08:00</published>
-  
-    <updated>2023-05-25T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/mysql-chaxun-zhujian/</id>
-    <content src="http://localhost:4000/posts/mysql-chaxun-zhujian/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="SQL" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      -- 查询数据库中所有表名和表的主键
-select 
-table_name,
-column_name 
-from information_schema.key_column_usage 
-where constraint_name = 'primary' 
-and table_name in (
-select 
-table_name
-from information_schema.tables
-where table_schema = 'testdb' 
-order by table_name)
-and table_schema = 'testdb';
-
--- 查询数据库中没有主键的表
-SELECT
-    a.TABLE_SCHEMA,
-    a.TABLE_NAME 
-FROM
-    (
-    SELECT
-        TABLE_SCHEMA,
-        TAB...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Redis使用redis-cli连接报错：WRONGPASS invalid username-password pair or user is disabled.</title>
-    <link href="http://localhost:4000/posts/redis-lianjie-baocuo/" rel="alternate" type="text/html" title="Redis使用redis-cli连接报错：WRONGPASS invalid username-password pair or user is disabled." />
-    <published>2023-05-24T13:47:00+08:00</published>
-  
-    <updated>2023-05-24T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/redis-lianjie-baocuo/</id>
-    <content src="http://localhost:4000/posts/redis-lianjie-baocuo/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Redis" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      报错信息
-使用redis-cli连接Redis时报错，具体为认证失败问题WRONGPASS invalid username-password pair or user is disabled.。之前输入auth pass即可，但此次在终端窗口有提示需要username。
-
-报错原因
-本机Redis为7.0版本。Redis6.0起，支持ACL权限控制，Redis6.0之前的版本只支持验证密码方式的权限控制，格式如下：AUTH &amp;lt;password&amp;gt;。当使用Redis ACLs权限控制时，AUTH 验证格式如下：AUTH &amp;lt;username&amp;gt; &amp;lt;password&amp;gt;，在ACLs模式下，如果传递一个密码参数给AUTH，那么会隐式设置用户名default。
-
-解决方法
-使用auth default &amp;lt;password&amp;gt;验证。
 
     </summary>
   
