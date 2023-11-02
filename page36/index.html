@@ -586,13 +586,13 @@
 
 <div id="post-list">
   
-    <a href="/posts/jsp-yemian-pinzhuang-xiangmu-dizhi/" class="card-wrapper">
+    <a href="/posts/jira-rest-api-diaoyong-fangfa/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            JSP页面拼装项目地址
+            Jira REST API调用方式
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -603,15 +603,8 @@
 
 
 
-              &amp;lt;%
- String path = request.getContextPath();
- String basePath = request.getScheme()
-    + &quot;://&quot; + request.getServerName()
-    + &quot;:&quot; + request.getServerPort()
-    + path;
-%&amp;gt;
-
-&amp;lt;!-- JSP中引用地址 -...
+              调用Jira REST API时的权限验证采用basic authentication这种验证方式，主要考虑到简单易行、操作方便。具体的操作方法为在请求的http header中添加Authorization参数，取值为Basic base64(username:password)，这里的username和password是企业自己部署的JIRA平台的登陆账号和密码。
+Jira REST A...
             </p>
           </div>
 
@@ -630,11 +623,11 @@
 
 <em
   class=""
-  data-ts="1606715220"
+  data-ts="1606888020"
   data-df="ll"
   
 >
-  Nov 30, 2020
+  Dec  2, 2020
 </em>
 
 
@@ -644,7 +637,7 @@
                 <span class="categories">
                   
                     Knowledge,
-                    JSP
+                    Jira
                 </span>
               
             </div>
@@ -657,13 +650,13 @@
       </div>
     </a>
   
-    <a href="/posts/jingtaibaohan-he-dongtaibaohan/" class="card-wrapper">
+    <a href="/posts/sanzhong-shujuk-jdbc-lianjiefangshi/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            静态包含和动态包含
+            MySQL、SQLServer、Oracle三种数据库的JDBC连接方式
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -674,17 +667,11 @@
 
 
 
-              区别
-
-
-  
-    书写上不同
-静态包含：&amp;lt;%@include file=&quot;1.jsp&quot;%&amp;gt;
-动态包含：&amp;lt;jsp:include page=&quot;1.jsp&quot;&amp;gt;&amp;lt;/jsp:include&amp;gt;
-&amp;lt;%@include file=&quot;1.jsp&quot;%&amp;gt;是指令元素；&amp;lt;jsp:include page=&quot;1.jsp&quot;/&amp;gt;是行为元素。
-  
-  
- ...
+              MySQL
+Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+String url = &quot;jdbc:mysql://localhost:3306/test?characterEncoding=UTF8&quot;;
+Connection connection = DriverManager.getConnection(url, username, password);
+S...
             </p>
           </div>
 
@@ -703,11 +690,11 @@
 
 <em
   class=""
-  data-ts="1606715220"
+  data-ts="1606888020"
   data-df="ll"
   
 >
-  Nov 30, 2020
+  Dec  2, 2020
 </em>
 
 
@@ -717,7 +704,7 @@
                 <span class="categories">
                   
                     Knowledge,
-                    JSP
+                    JDBC
                 </span>
               
             </div>
@@ -730,13 +717,13 @@
       </div>
     </a>
   
-    <a href="/posts/dino/" class="card-wrapper">
+    <a href="/posts/geda-shujuku-lianjiechuan/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            Chrome小恐龙
+            JDBC各大数据库的连接字符串和驱动类
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -747,30 +734,14 @@
 
 
 
-              
-    
-     
-    
-	
+              Oracle
+driverClass：oracle.jdbc.OracleDriver
+url：jdbc:oracle:thin:@localhost:1521:dbname
 
 
-
-    
-         
-    
-    
-        
-            
-        
-        
-            
-            
-            
-                
-                
-                
-            
-       ...
+MySQL
+driverClass：com.mysql.jdbc.Driver
+url：jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;amp;use...
             </p>
           </div>
 
@@ -789,180 +760,11 @@
 
 <em
   class=""
-  data-ts="1606628820"
+  data-ts="1606888020"
   data-df="ll"
   
 >
-  Nov 29, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Games
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/2048/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            2048
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              
-
-
-	
-
-
-
-	
-		
-			2048
-		
-	
-
-	
-		
-			
-				最佳: 
-				
-					0
-				
-			
-			
-				分数: 
-				
-					0
-					
-				
-			
-		
-		
-			
-			游戏结束🙈再试一次
-		
-		
-			重新启动游戏
-			
-		
-	
-	
-
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606628820"
-  data-df="ll"
-  
->
-  Nov 29, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Games
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/guolvqi-fangxing-zhiding-dizhi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Filter拦截中忽略指定url和资源
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              web.xml中的配置
-&amp;lt;filter&amp;gt;
-    &amp;lt;filter-name&amp;gt;SystemAuthorityFilter&amp;lt;/filter-name&amp;gt;
-    &amp;lt;filter-class&amp;gt;platform.filter.SystemAuthorityFilter&amp;lt;/filter-class&amp;gt;
-    &amp;lt;init-param&amp;gt;...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606369620"
-  data-df="ll"
-  
->
-  Nov 26, 2020
+  Dec  2, 2020
 </em>
 
 
@@ -972,7 +774,7 @@
                 <span class="categories">
                   
                     Knowledge,
-                    Servlet
+                    JDBC
                 </span>
               
             </div>
@@ -985,13 +787,13 @@
       </div>
     </a>
   
-    <a href="/posts/git-ruhe-jianchu-he-tijiao-daima/" class="card-wrapper">
+    <a href="/posts/caozuo-shujuku-chuxian-luanma/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            Git检出和提交代码至远程仓库
+            JDBC操作数据库出现中文乱码
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1002,12 +804,15 @@
 
 
 
-              我们使用Git需要先安装Git工具，这里给出下载地址：https://git-for-windows.github.io/
+              通过JDBC操作数据库表时，如果记录中有中文，可能会碰到乱码的问题。主要原因是字符编码（characterEncoding）不正确，包括以下几个方面：
 
-从远程仓库检出代码
-找到自己在GitHub上的代码仓库，点击Clone or dowload会出现一个地址，复制这个地址备用。
-  
-打开我的电脑，选择一个盘，比如F盘，右键空白处点击git bash here，打开命令行。输入如下命令，克隆Test reposito...
+  在数据库服务器上创建表格时没有选择支持中文的编码方式；
+  建立JDBC连接时没有指明支持中文的编码方式；
+
+
+建议在创建表格和建立JDBC连接时都采用utf-8编码。具体方法如下：
+
+  创建数据库表时，选择character与col...
             </p>
           </div>
 
@@ -1026,11 +831,11 @@
 
 <em
   class=""
-  data-ts="1606369620"
+  data-ts="1606888020"
   data-df="ll"
   
 >
-  Nov 26, 2020
+  Dec  2, 2020
 </em>
 
 
@@ -1040,7 +845,7 @@
                 <span class="categories">
                   
                     Knowledge,
-                    Git
+                    JDBC
                 </span>
               
             </div>
@@ -1053,13 +858,13 @@
       </div>
     </a>
   
-    <a href="/posts/java-shiyong-freemarker-shengcheng-word-wendang/" class="card-wrapper">
+    <a href="/posts/docker-dakai-xinchuangkou-baocuo/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            Java中使用FreeMarker导出Word文档
+            Windows下Docker打开新窗口报错
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1070,12 +875,10 @@
 
 
 
-              制作模板
-在制作模板时需要注意的一些问题如下：
-
-  用Microsoft Office Word 2003或以上的版本来制作，不要用WPS做。
-  关于图片，一定要插入一张图片，方便后面找到图片的位置好进行替换。
-  一些需要动态生成的数据，如个人信息，用personInfo（其他字段也行，建议和程序中的VO字段对应）来代替，注意，单词要先用一个文本框写好，再复制黏贴过来，不要在Word上...
+              错误信息
+error during connect: Get http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.26/containers/json: 
+open  //./pipe/docker_engine: The system cannot find the file specified. 
+In the default daemon configur...
             </p>
           </div>
 
@@ -1094,11 +897,11 @@
 
 <em
   class=""
-  data-ts="1606369620"
+  data-ts="1606888020"
   data-df="ll"
   
 >
-  Nov 26, 2020
+  Dec  2, 2020
 </em>
 
 
@@ -1108,7 +911,7 @@
                 <span class="categories">
                   
                     Knowledge,
-                    FreeMarker
+                    Docker
                 </span>
               
             </div>
@@ -1121,13 +924,13 @@
       </div>
     </a>
   
-    <a href="/posts/freemarker-geshihua-shuzi/" class="card-wrapper">
+    <a href="/posts/solr-jingzhun-chaxun/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            FreeMarker如何格式化数字
+            Solr精准查询
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1138,16 +941,12 @@
 
 
 
-              // 如果小数点后不足两位，用&quot;0&quot;代替
-${num?string(&#39;0.00&#39;)} 
+              外面加上双引号，必须是双引号，就可以了。
+UserRealname : 某某家长
+// 改为
+UserRealname : &quot;某某家长&quot; 
 
-// 输出为：1239765.46 
-// 如果小数点后多余两位，就只保留两位，否则输出实际值 
-${num?string(&#39;#.##&#39;)} 
 
-// 输出为：1,239,765.46 
-// 整数部分每三位用&quot;,&quot;分割，并且保证小数点后保留两位，不足用&quot;0&quot;代替
-${num?string(&#39;,###....
             </p>
           </div>
 
@@ -1166,11 +965,11 @@ ${num?string(&#39;,###....
 
 <em
   class=""
-  data-ts="1606369620"
+  data-ts="1606801620"
   data-df="ll"
   
 >
-  Nov 26, 2020
+  Dec  1, 2020
 </em>
 
 
@@ -1180,7 +979,7 @@ ${num?string(&#39;,###....
                 <span class="categories">
                   
                     Knowledge,
-                    FreeMarker
+                    Solr
                 </span>
               
             </div>
@@ -1193,13 +992,13 @@ ${num?string(&#39;,###....
       </div>
     </a>
   
-    <a href="/posts/bitbucket-anzhuang-he-pojie/" class="card-wrapper">
+    <a href="/posts/solr-guanlijiemian-xiangjie/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            Bitbucket-4.10.1安装和破解
+            Solr管理界面详解
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1210,12 +1009,17 @@ ${num?string(&#39;,###....
 
 
 
-              需要安装的环境有：jdk、mysql、git
-安装
-官网下载Bitbucket的安装包atlassian-bitbucket-4.10.1-x64.bin，运行安装程序，系统默认http端口为7990，服务端口为8006，安装时可以根据自己需要重新输入，安装成功后，启动服务，可以通过http://localhost:7990访问。
+              solr服务器管理界面可以查看系统状态、solr设置、分词检测、查询索引、增减core、查看日志等。
 
-破解
-停止服务，并上传文件atlassian-extras...
+1. Dashboard（仪表盘）
+访问http://localhost:8080/solr时，出现该主页面，可查看到Solr运行时间、Solr版本，系统内存、虚拟机内存的使用情况。
+
+
+2. Logging（日志）
+显示Solr运行出现的异常或错误。
+
+
+3. Core Admin（co...
             </p>
           </div>
 
@@ -1234,11 +1038,11 @@ ${num?string(&#39;,###....
 
 <em
   class=""
-  data-ts="1606369620"
+  data-ts="1606801620"
   data-df="ll"
   
 >
-  Nov 26, 2020
+  Dec  1, 2020
 </em>
 
 
@@ -1248,7 +1052,7 @@ ${num?string(&#39;,###....
                 <span class="categories">
                   
                     Knowledge,
-                    Bitbucket
+                    Solr
                 </span>
               
             </div>
@@ -1261,13 +1065,13 @@ ${num?string(&#39;,###....
       </div>
     </a>
   
-    <a href="/posts/weixin-zidong-yingda/" class="card-wrapper">
+    <a href="/posts/solr-fuzhiyu-de-zuoyong/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            微信公众号自动应答的实现
+            Solr复制域的作用
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1278,21 +1082,9 @@ ${num?string(&#39;,###....
 
 
 
-              开发主要分为以下几个步骤：
-
-  申请测试公众号
-  配置服务器地址
-  验证服务器地址的有效性
-  接收消息，回复消息
-
-
-申请测试公众号
-
-
-  记录：不知道如何使用微信公众号进行调试，百度了很多资料，发现微信公众平台提供了相当好的测试工具，这是一个模拟的公众号，我们可以用自己的微信关注该公众号，然后进行接口调试。
-
-
-第一步首先要申请一个测试的微信公众号，便于调试，地址：https:/...
+              复制域常用于多域搜索，如：电商项目中搜索商品，既要在名字域中搜索也要在描述域中搜索，传统的做法需要手工写两次，而solr想发送一次请求，可到两个域中搜索，为此，引入了复制域的概念，将两个域的域名复制到一个text文本域中。
+Solr复制域可以将多个索引字段结合到一起作为查询使用的域，逻辑上拓展了可查询对象的范围。
+将一个字段的值作为复制字段，给其设置新的数据类型，如数值类型，可以作为排序字段...
             </p>
           </div>
 
@@ -1311,11 +1103,11 @@ ${num?string(&#39;,###....
 
 <em
   class=""
-  data-ts="1606283220"
+  data-ts="1606801620"
   data-df="ll"
   
 >
-  Nov 25, 2020
+  Dec  1, 2020
 </em>
 
 
@@ -1325,7 +1117,156 @@ ${num?string(&#39;,###....
                 <span class="categories">
                   
                     Knowledge,
-                    WeChat
+                    Solr
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/solr-chaxun-yuju/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Solr查询语句
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              基本字段查询
+key:中国
+key:*中   // 结束值为“中”的值
+key:中*   // 开始值为“中”的值
+key:*中*  // 含有“中”的值
+
+
+强制不分词
+key:&#39;中国&#39;
+
+
+多字段与或关系 OR/AND
+key:(02 OR 10 OR 11 OR 12 )
+key:(02 AND 10 AND 11 AND 12 )
+key1:01 AND key2:02
+
+
+多字段不...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606801620"
+  data-df="ll"
+  
+>
+  Dec  1, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Solr
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/sql-zhong-esists-de-yongfa/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            SQL中EXISTS的用法
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              功能
+EXISTS用于检查子查询是否至少会返回一行数据，该子查询实际上并不返回任何数据，而是返回值True或False。
+EXISTS指定一个子查询，检测行的存在。
+EXISTS与IN的使用效率的问题，通常情况下采用EXISTS要比IN效率高，因为IN不走索引，但要看实际情况具体使用：IN适合于外表大而内表小的情况；EXISTS适合于外表小而内表大的情况。
+
+用法
+在插入记录前，需要检查这条...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606801620"
+  data-df="ll"
+  
+>
+  Dec  1, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    SQL
                 </span>
               
             </div>
@@ -1970,12 +1911,25 @@ ${num?string(&#39;,###....
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page45"
-        >45</a>
+          href="/page46"
+        >46</a>
       </li>
     
   
@@ -1983,7 +1937,7 @@ ${num?string(&#39;,###....
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>36</span>
-    <span class="text-muted">/ 45</span>
+    <span class="text-muted">/ 46</span>
   </li>
 
   <!-- right arrow -->

@@ -586,13 +586,13 @@
 
 <div id="post-list">
   
-    <a href="/posts/jquery-fasong-post-qingqiu/" class="card-wrapper">
+    <a href="/posts/linux-changyong-mingling/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            JQuery发送POST请求
+            Linux常用命令
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -603,8 +603,75 @@
 
 
 
-              $.post(&quot;/test/test/deleteAction.do&quot;, function(data) {
-    alert(data);
+              ps -ef|grep tomcat                 查看Tomcat进程
+kill -9 进程号                      杀进程
+./startup.sh                       启动Tomcat
+tail -f catalina.out               查看Tomcat日志信息
+echo -n &quot;&quot; &amp;gt; catali...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607406420"
+  data-df="ll"
+  
+>
+  Dec  8, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Linux
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jquery-zai-iframe-zhong-chazhao-yuansu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery在iframe中查找元素
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              $(window).on(&#39;load&#39;, function () {
+    $(&#39;#mainiframe&#39;).contents().find(&#39;#myTab&#39;).remove();
 });
 
 
@@ -626,11 +693,11 @@
 
 <em
   class=""
-  data-ts="1607320020"
+  data-ts="1607406420"
   data-df="ll"
   
 >
-  Dec  7, 2020
+  Dec  8, 2020
 </em>
 
 
@@ -653,13 +720,13 @@
       </div>
     </a>
   
-    <a href="/posts/huoqu-dianji-duixiang-de-shuxing/" class="card-wrapper">
+    <a href="/posts/jquery-wei-input-bangding-chufa-shijian/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            JQuery获取当前点击元素的自定义属性
+            JQuery为input绑定触发事件
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -670,12 +737,17 @@
 
 
 
-              &amp;lt;a onclick=&quot;goTest(this)&quot; myAttr=&quot;${data}&quot;&amp;gt;点击删除&amp;lt;/a&amp;gt;&#39;;
+              输入框正在输入时
+$(&quot;#ipt&quot;).on(&#39;input&#39;, function() {
+    if (!($(&#39;#ipt&#39;).val() == &#39;&#39;)) {
+        $(&quot;.cancle_ico&quot;).removeClass(&#39;hide&#39;);
+    } else {
+        $(&quot;.cancle_ico&quot;).addClass(&#39;hide&#39;);
+    }
+})
 
-传this过去即可
-function goTest(e) {
-    var data = $(e).attr(&quot;myAttr&quot;);
-    $(&quot;form&quot;).attr(&quot;action&quot;, &quot;goTest.do?data=&quot; + data).submit()...
+
+输入框得...
             </p>
           </div>
 
@@ -694,11 +766,11 @@ function goTest(e) {
 
 <em
   class=""
-  data-ts="1607320020"
+  data-ts="1607406420"
   data-df="ll"
   
 >
-  Dec  7, 2020
+  Dec  8, 2020
 </em>
 
 
@@ -721,13 +793,13 @@ function goTest(e) {
       </div>
     </a>
   
-    <a href="/posts/a-biaoqian-zhuanwei-post-fangshi-tijiao/" class="card-wrapper">
+    <a href="/posts/jquery-shiyong-replace-hanshu-tihuan-quanbu-pipeixiang/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            将< a>标签转为POST方式提交
+            JQuery使用Replace函数替换全部匹配项
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -738,10 +810,13 @@ function goTest(e) {
 
 
 
-              点击&amp;lt;a&amp;gt;标签调用JS函数提交，使用Ajax请求后台，发现无法获得ModelAndView返回的View，无法跳转页面，因此将&amp;lt;a&amp;gt;标签跳转改为POST方式提交。
-function goTest(el) {
-    var href = $(el).attr(&quot;href&quot;); // 获取&amp;lt;a&amp;gt;标签的href
-    $(&quot;form&quot;).attr(&quot;acti...
+              JQuery的Replace仅能替换第一个匹配的内容，例如：
+var str = &quot;a&amp;lt;br/&amp;gt;b&amp;lt;br/&amp;gt;c&amp;lt;br/&amp;gt;&quot;;
+var Newstr = str.Replace(&quot;&amp;lt;br/&amp;gt;&quot;, &quot;&quot;);
+alert(Newstr); // 内容为：ab&amp;lt;br/&amp;gt;c&amp;lt;br/&amp;gt;
+
+要替换全部匹配项，可以使用正则表达式：
+va...
             </p>
           </div>
 
@@ -760,11 +835,11 @@ function goTest(el) {
 
 <em
   class=""
-  data-ts="1607320020"
+  data-ts="1607406420"
   data-df="ll"
   
 >
-  Dec  7, 2020
+  Dec  8, 2020
 </em>
 
 
@@ -787,13 +862,13 @@ function goTest(el) {
       </div>
     </a>
   
-    <a href="/posts/jquery-sishewuru-baoliuliangwei-xiaoshu/" class="card-wrapper">
+    <a href="/posts/jquery-jiancha-ziduan-shifou-weikong/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            JQuery四舍五入保留两位小数
+            JQuery检查字段是否为空
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -804,14 +879,85 @@ function goTest(el) {
 
 
 
-              function gettoDecimal(num) {
-    var result = parseFloat(num);
-    if (isNaN(result)) {
+              function checkIsNull() {
+    var flag = false;
+    var test1 = $(&#39;input:radio[name=&quot;test1&quot;]:checked&#39;).val();
+    var test2 = $(&quot;#test2&quot;).val()
+
+    if (test1) {
+        flag = true;
+    } else {
+  ...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607406420"
+  data-df="ll"
+  
+>
+  Dec  8, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jquery-jiancha-shuru-neirong-shifou-baohan-teshu-zifu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery检查输入内容是否包含特殊字符
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              调用函数判断
+function checkNameReg(val) { 
+    var regEn = /[@#$%^&amp;amp;*()[\]]/im,
+        regCn = /[@#￥%……&amp;amp;*[\]]/im;
+    if(regEn.test(val) || regCn.test(val)) {
         return false;
     }
-    result = Math.round(num * 100) / 100;
-    var s_x = result.toString();
-    va...
+    retu...
             </p>
           </div>
 
@@ -830,11 +976,11 @@ function goTest(el) {
 
 <em
   class=""
-  data-ts="1607233620"
+  data-ts="1607406420"
   data-df="ll"
   
 >
-  Dec  6, 2020
+  Dec  8, 2020
 </em>
 
 
@@ -857,13 +1003,13 @@ function goTest(el) {
       </div>
     </a>
   
-    <a href="/posts/jquery-huoqu-dangqian-riqi/" class="card-wrapper">
+    <a href="/posts/$-is-not-defined/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            JQuery获取当前日期
+            $ is not defined
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -874,12 +1020,15 @@ function goTest(el) {
 
 
 
-              function getNowDate(){
-    var myDate = new Date;
-    var year = myDate.getFullYear(); // 获取当前年
-    var mon = myDate.getMonth() + 1; // 获取当前月
-    var date = myDate.getDate(); // 获取当前日
-    var h = m...
+              报错信息
+ReferenceError: $ is not defined [详细了解]
+
+&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+    $(function () {
+        alert(&quot;OK&quot;);
+    });
+&amp;lt;/script&amp;gt;
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery...
             </p>
           </div>
 
@@ -898,11 +1047,11 @@ function goTest(el) {
 
 <em
   class=""
-  data-ts="1607233620"
+  data-ts="1607406420"
   data-df="ll"
   
 >
-  Dec  6, 2020
+  Dec  8, 2020
 </em>
 
 
@@ -925,13 +1074,13 @@ function goTest(el) {
       </div>
     </a>
   
-    <a href="/posts/nodejs-anzhuang/" class="card-wrapper">
+    <a href="/posts/js-shixian-jinzhi-liulanqi-houtui/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            NodeJS安装
+            JS实现禁用浏览器后退
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -942,14 +1091,12 @@ function goTest(el) {
 
 
 
-              下载
-首先去到官网：https://nodejs.org/en/download/下载对应的版本：
-
-接着选择好路径，一路安装即可。新版的NodeJS自带npm ，所以无需重新安装npm，安装结束后，在cmd输入node -v和npm -v即可显示安装成功：
-
-
-配置路径和环境变量
-安装之后，我们需要对路径进行重新配置，如果不重新配置路径，则下载的moudle还是在C盘，例如在安装路径下新建...
+              这种方式，可以消除后退的所有动作，包括键盘、鼠标手势等产生的后退动作。
+&amp;lt;script language=&quot;javascript&quot;&amp;gt;
+    //防止页面后退
+    history.pushState(null, null, document.URL);
+    window.addEventListener(&#39;popstate&#39;, function () {
+        ...
             </p>
           </div>
 
@@ -968,11 +1115,11 @@ function goTest(el) {
 
 <em
   class=""
-  data-ts="1606888020"
+  data-ts="1607320020"
   data-df="ll"
   
 >
-  Dec  2, 2020
+  Dec  7, 2020
 </em>
 
 
@@ -982,7 +1129,7 @@ function goTest(el) {
                 <span class="categories">
                   
                     Knowledge,
-                    NodeJS
+                    JavaScript
                 </span>
               
             </div>
@@ -995,13 +1142,13 @@ function goTest(el) {
       </div>
     </a>
   
-    <a href="/posts/log4j-rizhi-wenjian-luanma/" class="card-wrapper">
+    <a href="/posts/js-changyong-hanshu-zhengli/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            Log4j日志文件乱码
+            JS常用函数
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1012,15 +1159,11 @@ function goTest(el) {
 
 
 
-              在默认语言非中文（或者说默认语言不支持中文的）的Windows、Linux、Unix上，用Log4j打印日志，出现乱码，常见的就是一堆问号。
+              Math.abs()取绝对值
+var a = -20;
+var b = Math.abs(a);
 
-解决方法
-如果是log4j.properties为配置文件，比如
-log4j.appender.A1=org.apache.log4j.RollingFileAppender
-log4j.appender.A1.File=all.log
 
-加入一行
-...
             </p>
           </div>
 
@@ -1039,11 +1182,11 @@ log4j.appender.A1.File=all.log
 
 <em
   class=""
-  data-ts="1606888020"
+  data-ts="1607320020"
   data-df="ll"
   
 >
-  Dec  2, 2020
+  Dec  7, 2020
 </em>
 
 
@@ -1053,7 +1196,7 @@ log4j.appender.A1.File=all.log
                 <span class="categories">
                   
                     Knowledge,
-                    Log4j
+                    JavaScript
                 </span>
               
             </div>
@@ -1066,13 +1209,13 @@ log4j.appender.A1.File=all.log
       </div>
     </a>
   
-    <a href="/posts/jira-rest-api-diaoyong-fangfa/" class="card-wrapper">
+    <a href="/posts/jquery-yemian-jiazai-wanbi-shijian/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            Jira REST API调用方式
+            JQuery的页面加载完毕事件
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1083,8 +1226,17 @@ log4j.appender.A1.File=all.log
 
 
 
-              调用Jira REST API时的权限验证采用basic authentication这种验证方式，主要考虑到简单易行、操作方便。具体的操作方法为在请求的http header中添加Authorization参数，取值为Basic base64(username:password)，这里的username和password是企业自己部署的JIRA平台的登陆账号和密码。
-Jira REST A...
+              第一种
+$(document).ready(function() {
+    // do something
+});
+
+$(document)把原生的document这个DOM对象转换为JQuery对象，转换完成后才能调用。其中ready方法ready(fn)表示的是页面结构被加载完毕后执行传入函数fn。
+
+第二种
+$(function() {
+    // do something
+});...
             </p>
           </div>
 
@@ -1103,11 +1255,11 @@ Jira REST A...
 
 <em
   class=""
-  data-ts="1606888020"
+  data-ts="1607320020"
   data-df="ll"
   
 >
-  Dec  2, 2020
+  Dec  7, 2020
 </em>
 
 
@@ -1117,144 +1269,7 @@ Jira REST A...
                 <span class="categories">
                   
                     Knowledge,
-                    Jira
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/sanzhong-shujuk-jdbc-lianjiefangshi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            MySQL、SQLServer、Oracle三种数据库的JDBC连接方式
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              MySQL
-Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
-String url = &quot;jdbc:mysql://localhost:3306/test?characterEncoding=UTF8&quot;;
-Connection connection = DriverManager.getConnection(url, username, password);
-S...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606888020"
-  data-df="ll"
-  
->
-  Dec  2, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JDBC
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/geda-shujuku-lianjiechuan/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JDBC各大数据库的连接字符串和驱动类
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              Oracle
-driverClass：oracle.jdbc.OracleDriver
-url：jdbc:oracle:thin:@localhost:1521:dbname
-
-
-MySQL
-driverClass：com.mysql.jdbc.Driver
-url：jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;amp;use...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606888020"
-  data-df="ll"
-  
->
-  Dec  2, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JDBC
+                    JQuery
                 </span>
               
             </div>
@@ -1899,12 +1914,25 @@ url：jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;amp;use...
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page45"
-        >45</a>
+          href="/page46"
+        >46</a>
       </li>
     
   
@@ -1912,7 +1940,7 @@ url：jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;amp;use...
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>34</span>
-    <span class="text-muted">/ 45</span>
+    <span class="text-muted">/ 46</span>
   </li>
 
   <!-- right arrow -->

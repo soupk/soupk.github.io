@@ -586,13 +586,13 @@
 
 <div id="post-list">
   
-    <a href="/posts/jquery-huoqu-yuansu-gaodu-de-butong-fangfa/" class="card-wrapper">
+    <a href="/posts/shezhi-shangchuan-wenjian-de-daxiao/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            JQuery获取元素高度不同方法的区别
+            在springmvc-servlet.xml中设置上传文件的大小限制
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -603,12 +603,9 @@
 
 
 
-              $ele = $(&quot;#element&quot;)
-$ele.height() // 纯内高height
-$ele.innerHeight() //  height + padding
-$ele.outerHeight() // height + padding + border
-$ele.outerHeight(True) // height + padding + border + margin
-...
+              &amp;lt;bean id=&quot;multipartResolver&quot; class=&quot;org.springframework.web.multipart.commons.CommonsMultipartResolver&quot;&amp;gt;
+  &amp;lt;!-- 设置上传文件编码 --&amp;gt;
+  &amp;lt;property name=&quot;defaultEncoding&quot; value=&quot;UTF-8&quot;&amp;gt;&amp;lt;/...
             </p>
           </div>
 
@@ -641,7 +638,7 @@ $ele.outerHeight(True) // height + padding + border + margin
                 <span class="categories">
                   
                     Knowledge,
-                    JQuery
+                    Spring
                 </span>
               
             </div>
@@ -654,13 +651,13 @@ $ele.outerHeight(True) // height + padding + border + margin
       </div>
     </a>
   
-    <a href="/posts/fuchuangkou-chuanzhi/" class="card-wrapper">
+    <a href="/posts/xulie-caozuo/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            原生 JS 或 JQuery 实现父窗口传值
+            Oracle 使用SQL语句对序列的操作
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -671,10 +668,21 @@ $ele.outerHeight(True) // height + padding + border + margin
 
 
 
-              做WEB前端开发的过程中，经常会有这样的需求，用户点击【编辑】按钮，弹出一个对话框，在里边修改相应的值，然后把修改后的值显示在原页面，最后点击保存。用window.parent.document.getElementById(&quot;&quot;).setAttribute(&quot;value&quot;, &quot;&quot;)可以很好的解决这个问题。
-父页面中的代码
-&amp;lt;!doctype html&amp;gt;
-&amp;lt;html lan...
+              创建序列
+CREATE SEQUENCE test_seq 
+    MINVALUE 1 
+    MAXVALUE 9999999999 
+    START WITH 100000 
+    INCREMENT BY 1 
+    CACHE 20
+
+
+查询所有序列
+select * from user_sequences;
+
+
+查询特定序列
+select * from user_se...
             </p>
           </div>
 
@@ -707,7 +715,7 @@ $ele.outerHeight(True) // height + padding + border + margin
                 <span class="categories">
                   
                     Knowledge,
-                    JQuery
+                    Oracle
                 </span>
               
             </div>
@@ -720,13 +728,13 @@ $ele.outerHeight(True) // height + padding + border + margin
       </div>
     </a>
   
-    <a href="/posts/yemian-ziduan-kongzhi-jiaoyan/" class="card-wrapper">
+    <a href="/posts/chuangjian-beifenbiao/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            页面字段空值校验
+            Oracle 使用SQL创建备份表
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -737,15 +745,9 @@ $ele.outerHeight(True) // height + padding + border + margin
 
 
 
-              function checkIsNull() {
-    var flag = false;
-    var test1 = $(&#39;input:radio[name=&quot;test1&quot;]:checked&#39;).val();
-    var test2 = $(&quot;#test2&quot;).val()
+              create table a_bak as select * from a;
 
-    if (test1) {
-        flag = true;
-    } else {
-  ...
+
             </p>
           </div>
 
@@ -778,7 +780,7 @@ $ele.outerHeight(True) // height + padding + border + margin
                 <span class="categories">
                   
                     Knowledge,
-                    JQuery
+                    Oracle
                 </span>
               
             </div>
@@ -791,13 +793,13 @@ $ele.outerHeight(True) // height + padding + border + margin
       </div>
     </a>
   
-    <a href="/posts/anniu-zhihui/" class="card-wrapper">
+    <a href="/posts/qu-paixuhou-diyitiao-shuju/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            按钮置灰
+            Oracle 取查询结果排序后的第一条记录
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -808,12 +810,7 @@ $ele.outerHeight(True) // height + padding + border + margin
 
 
 
-              $(document).ready(function() {
-  $(&quot;#button_li&quot;).click(function() {
-	  $(this).css(&quot;pointer-events&quot;, &quot;none&quot;);
-	  $(this).css(&quot;background-color&quot;, &quot;gray&quot;); 
-  });
-});
+              select * from (select t.*, row_number() over(order by id) rn from test_order t) t where rn = 1;
 
 
             </p>
@@ -848,7 +845,7 @@ $ele.outerHeight(True) // height + padding + border + margin
                 <span class="categories">
                   
                     Knowledge,
-                    JQuery
+                    Oracle
                 </span>
               
             </div>
@@ -861,13 +858,13 @@ $ele.outerHeight(True) // height + padding + border + margin
       </div>
     </a>
   
-    <a href="/posts/input-shurukuang-suoding/" class="card-wrapper">
+    <a href="/posts/piliang-shanchu-xulie/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            input输入框锁定
+            Oracle 批量删除表、视图、序列、函数
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -878,9 +875,13 @@ $ele.outerHeight(True) // height + padding + border + margin
 
 
 
-              $(el).find(&quot;input[name=&#39;a&#39;]&quot;).attr(&quot;style&quot;, &quot;background-color:#f6f6f6;cursor:no-drop&quot;);
-$(el).find(&quot;input[name=&#39;a&#39;]&quot;).attr(&quot;readonly&quot;, &quot;readonly&quot;);
-$(el).find(&quot;input[name=&#39;a&#39;]&quot;).attr(&quot;onclick&quot;, &quot;&quot;)...
+              网上有很多利用函数批量删除的例子，但是个人觉得有些复杂，参考Coding迷这位网友的做法，我认为比较简单。批量删除表、视图、序列、函数前，生成对应的SQL执行脚本，然后执行生成对应的脚本即可。
+--删除表
+select &#39;drop table &#39;||table_name||&#39;;&#39; as sqlscript from user_tables; -- drop tables
+
+
+--删除序列
+s...
             </p>
           </div>
 
@@ -913,7 +914,7 @@ $(el).find(&quot;input[name=&#39;a&#39;]&quot;).attr(&quot;onclick&quot;, &quot;
                 <span class="categories">
                   
                     Knowledge,
-                    JQuery
+                    Oracle
                 </span>
               
             </div>
@@ -926,13 +927,13 @@ $(el).find(&quot;input[name=&#39;a&#39;]&quot;).attr(&quot;onclick&quot;, &quot;
       </div>
     </a>
   
-    <a href="/posts/el-panduan-xiangdeng-buxiangdeng/" class="card-wrapper">
+    <a href="/posts/mybatis-zhong-de-teshu-zifu/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            EL表达式判断字符串相等（eq）和不相等（ne）
+            MyBatis的xml文件中如何处理特殊字符
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -943,11 +944,11 @@ $(el).find(&quot;input[name=&#39;a&#39;]&quot;).attr(&quot;onclick&quot;, &quot;
 
 
 
-              &amp;lt;td class=&quot;t1&quot;&amp;gt;
-  &amp;lt;input type=&quot;hidden&quot; class=&quot;name&quot; value=&quot;${name}&quot;&amp;gt;
-  &amp;lt;a class=&quot;c-link fb delete-btn&quot;&amp;gt;删除&amp;lt;/a&amp;gt;
-  &amp;lt;a class=&quot;c-link fb ml10&quot;&amp;gt;记录&amp;lt;/a&amp;gt;
-  &amp;lt;!-- 相等（eq）...
+              &amp;lt;![CDATA[
+   包含SQL特殊字符 
+]]&amp;gt;
+
+
             </p>
           </div>
 
@@ -980,7 +981,7 @@ $(el).find(&quot;input[name=&#39;a&#39;]&quot;).attr(&quot;onclick&quot;, &quot;
                 <span class="categories">
                   
                     Knowledge,
-                    EL
+                    MyBatis
                 </span>
               
             </div>
@@ -993,13 +994,13 @@ $(el).find(&quot;input[name=&#39;a&#39;]&quot;).attr(&quot;onclick&quot;, &quot;
       </div>
     </a>
   
-    <a href="/posts/el-panduan-canshu-shifou-weikong/" class="card-wrapper">
+    <a href="/posts/mybatis-shiyong-mohu-chaxun/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            EL表达式标签判断参数是否为空
+            MyBatis中使用模糊查询
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1010,8 +1011,9 @@ $(el).find(&quot;input[name=&#39;a&#39;]&quot;).attr(&quot;onclick&quot;, &quot;
 
 
 
-              &amp;lt;c:if test=&quot;${empty str}&quot;&amp;gt; str为空 &amp;lt;/c:if&amp;gt;
-&amp;lt;c:if test=&quot;${not empty str}&quot;&amp;gt; str不为空 &amp;lt;/c:if&amp;gt;
+              &amp;lt;if test=&#39;testdata != null and testdata !=&quot;&quot;&#39;&amp;gt;
+    AND T.TEST_DATA LIKE CONCAT(CONCAT(&#39;%&#39;, #{testdata, jdbcType = VARCHAR}), &#39;%&#39;) 
+&amp;lt;/if&amp;gt;
 
 
             </p>
@@ -1046,7 +1048,7 @@ $(el).find(&quot;input[name=&#39;a&#39;]&quot;).attr(&quot;onclick&quot;, &quot;
                 <span class="categories">
                   
                     Knowledge,
-                    EL
+                    MyBatis
                 </span>
               
             </div>
@@ -1059,13 +1061,13 @@ $(el).find(&quot;input[name=&#39;a&#39;]&quot;).attr(&quot;onclick&quot;, &quot;
       </div>
     </a>
   
-    <a href="/posts/dos-mingling-ji/" class="card-wrapper">
+    <a href="/posts/shoudong-commit/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            DOS命令集
+            JavaScript实现submit按钮的功能
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1076,12 +1078,11 @@ $(el).find(&quot;input[name=&#39;a&#39;]&quot;).attr(&quot;onclick&quot;, &quot;
 
 
 
-              .                   C:\DocumentsandSettings\用户名所在文件夹 
-..                  C:\DocumentsandSettings 
-...                 我的电脑 
-\                   C盘 
-C:/windows/fonts    字体
-cmd /k systeminfo   查询系统信...
+              document.forms[0].action = &quot;/demo/test/doSubmit.do?param=0&quot;;
+document.forms[0].method = &quot;post&quot;;
+document.forms[0].submit();	
+
+
             </p>
           </div>
 
@@ -1114,7 +1115,7 @@ cmd /k systeminfo   查询系统信...
                 <span class="categories">
                   
                     Knowledge,
-                    DOS
+                    JavaScript
                 </span>
               
             </div>
@@ -1127,13 +1128,13 @@ cmd /k systeminfo   查询系统信...
       </div>
     </a>
   
-    <a href="/posts/xuanzeqi-de-youxianji/" class="card-wrapper">
+    <a href="/posts/jietu/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            选择器的优先级
+            截图
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1144,11 +1145,12 @@ cmd /k systeminfo   查询系统信...
 
 
 
-              1.最高优先级是 （直接在标签中的设置样式） &amp;lt;div style=&quot;color:Red;&quot;&amp;gt;&amp;lt;/div&amp;gt;
-2.次优先级是（ID选择器 ,假设级别为100） #myDiv{color:Red;}
-3.其次优先级是（类选择器，假设级别为10） .divClass{color:Red;}
-4.最后优先级是 （标签选择器，假设级别是1） div{color:Red;}
-
+              html
+&amp;lt;div class=&quot;demo-container&quot;&amp;gt;
+    &amp;lt;div id=&quot;demo&quot;&amp;gt;
+        &amp;lt;div class=&quot;orange&quot;&amp;gt;
+            &amp;lt;p&amp;gt;如果原来使用百分比设置元素宽高，请更改为px为单位的宽高，避免样式二次计算导致的模糊&amp;lt;/p&amp;gt;
+            &amp;lt;p&amp;gt;如...
             </p>
           </div>
 
@@ -1181,7 +1183,7 @@ cmd /k systeminfo   查询系统信...
                 <span class="categories">
                   
                     Knowledge,
-                    CSS
+                    JavaScript
                 </span>
               
             </div>
@@ -1194,13 +1196,13 @@ cmd /k systeminfo   查询系统信...
       </div>
     </a>
   
-    <a href="/posts/shezhi-textarea-buke-tuodong/" class="card-wrapper">
+    <a href="/posts/iframe-zishiying-gaodu/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            使用CSS设置textarea不可拖动
+            iframe自适应高度
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1211,12 +1213,11 @@ cmd /k systeminfo   查询系统信...
 
 
 
-              默认情况下，我们将鼠标移动到&amp;lt;textarea&amp;gt;的右下角时发现文本域是可以通过拖动的方式改变其大小的，这会影响我们原本的页面布局。
-若想设置其不可拖动，可为其添加如下属性：
+              &amp;lt;iframe src=&quot;backtop.html&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; id=&quot;test&quot; οnlοad=&quot;this.height=100&quot;&amp;gt;&amp;lt;/iframe&amp;gt;
 
-&amp;lt;textarea style=&quot;resize:none;&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
-
-
+&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+function reinitIframe () {
+    var iframe =...
             </p>
           </div>
 
@@ -1249,7 +1250,7 @@ cmd /k systeminfo   查询系统信...
                 <span class="categories">
                   
                     Knowledge,
-                    CSS
+                    JavaScript
                 </span>
               
             </div>
@@ -1893,11 +1894,29 @@ cmd /k systeminfo   查询系统信...
       </li>
     
   
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- show number -->
+      <li class="page-item ">
+        <a
+          class="page-link btn-box-shadow"
+          href="/page46"
+        >46</a>
+      </li>
+    
+  
 
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>44</span>
-    <span class="text-muted">/ 45</span>
+    <span class="text-muted">/ 46</span>
   </li>
 
   <!-- right arrow -->

@@ -586,13 +586,13 @@
 
 <div id="post-list">
   
-    <a href="/posts/caozuo-shujuku-chuxian-luanma/" class="card-wrapper">
+    <a href="/posts/jquery-kongzhi-shuru-ziduan-de-changdu/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            JDBC操作数据库出现中文乱码
+            JQuery控制输入字段的长度
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -603,15 +603,567 @@
 
 
 
-              通过JDBC操作数据库表时，如果记录中有中文，可能会碰到乱码的问题。主要原因是字符编码（characterEncoding）不正确，包括以下几个方面：
+              $(&quot;#TEST&quot;).attr(&quot;onkeyup&quot;, &quot;checkLength(this, 50);&quot;); // 设置触发事件
 
-  在数据库服务器上创建表格时没有选择支持中文的编码方式；
-  建立JDBC连接时没有指明支持中文的编码方式；
+var checkLength = function(dom, maxLength) {
+    var l = 0;
+    for(var i = 0; i &amp;lt; dom.value.length; i++) {
+        if (/[\u4e00-...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
 
 
-建议在创建表格和建立JDBC连接时都采用utf-8编码。具体方法如下：
 
-  创建数据库表时，选择character与col...
+
+
+<em
+  class=""
+  data-ts="1607320020"
+  data-df="ll"
+  
+>
+  Dec  7, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jquery-huoqu-xianglin-yuansu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery获取相邻元素
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              JQuery里我们要获取某个元素的相邻元素时，可以用到的命令有三个：
+
+  next()：用来获取下一个同辈元素。
+  prev()：用来获取上一个同辈元素。
+  siblings()：用来获取所有的同辈元素。
+
+
+下面来看看简单的实例：
+&amp;lt;div&amp;gt;
+    &amp;lt;p id=&quot;1&quot;&amp;gt;1&amp;lt;/p&amp;gt;
+    &amp;lt;p id=&quot;2&quot;&amp;gt;2&amp;lt;/p&amp;gt;
+ ...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607320020"
+  data-df="ll"
+  
+>
+  Dec  7, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jquery-he-dom-yuansu-huzhuan/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery对象和DOM元素的互转
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              JQuery对象转成DOM元素
+id选择器 $(“#id”)[0]
+&amp;lt;input type=&quot;text&quot; id=&quot;tx&quot; value=&quot;44&quot;&amp;gt;
+&amp;lt;script&amp;gt;
+$(function() {
+    // 通过id选择器获取Jquery对象
+    var tx =  $(&quot;#tx&quot;);
+    // 转成dom对象
+    var domObj = tx[0];
+...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607320020"
+  data-df="ll"
+  
+>
+  Dec  7, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jquery-fasong-post-qingqiu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery发送POST请求
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              $.post(&quot;/test/test/deleteAction.do&quot;, function(data) {
+    alert(data);
+});
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607320020"
+  data-df="ll"
+  
+>
+  Dec  7, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/huoqu-dianji-duixiang-de-shuxing/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery获取当前点击元素的自定义属性
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              &amp;lt;a onclick=&quot;goTest(this)&quot; myAttr=&quot;${data}&quot;&amp;gt;点击删除&amp;lt;/a&amp;gt;&#39;;
+
+传this过去即可
+function goTest(e) {
+    var data = $(e).attr(&quot;myAttr&quot;);
+    $(&quot;form&quot;).attr(&quot;action&quot;, &quot;goTest.do?data=&quot; + data).submit()...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607320020"
+  data-df="ll"
+  
+>
+  Dec  7, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/a-biaoqian-zhuanwei-post-fangshi-tijiao/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            将< a>标签转为POST方式提交
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              点击&amp;lt;a&amp;gt;标签调用JS函数提交，使用Ajax请求后台，发现无法获得ModelAndView返回的View，无法跳转页面，因此将&amp;lt;a&amp;gt;标签跳转改为POST方式提交。
+function goTest(el) {
+    var href = $(el).attr(&quot;href&quot;); // 获取&amp;lt;a&amp;gt;标签的href
+    $(&quot;form&quot;).attr(&quot;acti...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607320020"
+  data-df="ll"
+  
+>
+  Dec  7, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jquery-sishewuru-baoliuliangwei-xiaoshu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery四舍五入保留两位小数
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              function gettoDecimal(num) {
+    var result = parseFloat(num);
+    if (isNaN(result)) {
+        return false;
+    }
+    result = Math.round(num * 100) / 100;
+    var s_x = result.toString();
+    va...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607233620"
+  data-df="ll"
+  
+>
+  Dec  6, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jquery-huoqu-dangqian-riqi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery获取当前日期
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              function getNowDate(){
+    var myDate = new Date;
+    var year = myDate.getFullYear(); // 获取当前年
+    var mon = myDate.getMonth() + 1; // 获取当前月
+    var date = myDate.getDate(); // 获取当前日
+    var h = m...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607233620"
+  data-df="ll"
+  
+>
+  Dec  6, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/nodejs-anzhuang/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            NodeJS安装
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              下载
+首先去到官网：https://nodejs.org/en/download/下载对应的版本：
+
+接着选择好路径，一路安装即可。新版的NodeJS自带npm ，所以无需重新安装npm，安装结束后，在cmd输入node -v和npm -v即可显示安装成功：
+
+
+配置路径和环境变量
+安装之后，我们需要对路径进行重新配置，如果不重新配置路径，则下载的moudle还是在C盘，例如在安装路径下新建...
             </p>
           </div>
 
@@ -644,7 +1196,7 @@
                 <span class="categories">
                   
                     Knowledge,
-                    JDBC
+                    NodeJS
                 </span>
               
             </div>
@@ -657,13 +1209,13 @@
       </div>
     </a>
   
-    <a href="/posts/docker-dakai-xinchuangkou-baocuo/" class="card-wrapper">
+    <a href="/posts/log4j-rizhi-wenjian-luanma/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            Windows下Docker打开新窗口报错
+            Log4j日志文件乱码
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -674,10 +1226,15 @@
 
 
 
-              错误信息
-error during connect: Get http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.26/containers/json: 
-open  //./pipe/docker_engine: The system cannot find the file specified. 
-In the default daemon configur...
+              在默认语言非中文（或者说默认语言不支持中文的）的Windows、Linux、Unix上，用Log4j打印日志，出现乱码，常见的就是一堆问号。
+
+解决方法
+如果是log4j.properties为配置文件，比如
+log4j.appender.A1=org.apache.log4j.RollingFileAppender
+log4j.appender.A1.File=all.log
+
+加入一行
+...
             </p>
           </div>
 
@@ -710,567 +1267,7 @@ In the default daemon configur...
                 <span class="categories">
                   
                     Knowledge,
-                    Docker
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/solr-jingzhun-chaxun/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Solr精准查询
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              外面加上双引号，必须是双引号，就可以了。
-UserRealname : 某某家长
-// 改为
-UserRealname : &quot;某某家长&quot; 
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606801620"
-  data-df="ll"
-  
->
-  Dec  1, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Solr
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/solr-guanlijiemian-xiangjie/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Solr管理界面详解
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              solr服务器管理界面可以查看系统状态、solr设置、分词检测、查询索引、增减core、查看日志等。
-
-1. Dashboard（仪表盘）
-访问http://localhost:8080/solr时，出现该主页面，可查看到Solr运行时间、Solr版本，系统内存、虚拟机内存的使用情况。
-
-
-2. Logging（日志）
-显示Solr运行出现的异常或错误。
-
-
-3. Core Admin（co...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606801620"
-  data-df="ll"
-  
->
-  Dec  1, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Solr
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/solr-fuzhiyu-de-zuoyong/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Solr复制域的作用
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              复制域常用于多域搜索，如：电商项目中搜索商品，既要在名字域中搜索也要在描述域中搜索，传统的做法需要手工写两次，而solr想发送一次请求，可到两个域中搜索，为此，引入了复制域的概念，将两个域的域名复制到一个text文本域中。
-Solr复制域可以将多个索引字段结合到一起作为查询使用的域，逻辑上拓展了可查询对象的范围。
-将一个字段的值作为复制字段，给其设置新的数据类型，如数值类型，可以作为排序字段...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606801620"
-  data-df="ll"
-  
->
-  Dec  1, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Solr
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/solr-chaxun-yuju/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Solr查询语句
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              基本字段查询
-key:中国
-key:*中   // 结束值为“中”的值
-key:中*   // 开始值为“中”的值
-key:*中*  // 含有“中”的值
-
-
-强制不分词
-key:&#39;中国&#39;
-
-
-多字段与或关系 OR/AND
-key:(02 OR 10 OR 11 OR 12 )
-key:(02 AND 10 AND 11 AND 12 )
-key1:01 AND key2:02
-
-
-多字段不...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606801620"
-  data-df="ll"
-  
->
-  Dec  1, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Solr
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/sql-zhong-esists-de-yongfa/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            SQL中EXISTS的用法
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              功能
-EXISTS用于检查子查询是否至少会返回一行数据，该子查询实际上并不返回任何数据，而是返回值True或False。
-EXISTS指定一个子查询，检测行的存在。
-EXISTS与IN的使用效率的问题，通常情况下采用EXISTS要比IN效率高，因为IN不走索引，但要看实际情况具体使用：IN适合于外表大而内表小的情况；EXISTS适合于外表小而内表大的情况。
-
-用法
-在插入记录前，需要检查这条...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606801620"
-  data-df="ll"
-  
->
-  Dec  1, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    SQL
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/firefox-ruhe-qiyong-pocket/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Firefox如何启用Pocket for Firefox
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              
-  在地址栏，输入about:config，然后按回车。
-  有时会出现警告页面。点击我了解此风险，请继续！，以打开about:config页面。
-  在偏好列表上面的搜索栏里输入pocket。
-  点击首选项extensions.pocket.enabled旁边的按钮设其值为true。
-  Pocket是Firefox的内置功能。此时，它会在地址栏中添加一个Pocket按钮，在我的足迹菜...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606801620"
-  data-df="ll"
-  
->
-  Dec  1, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    SOFTWARE
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/shujuk-sanfanshi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            数据库三范式
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              三范式解释
-1NF：字段不可分;原子性字段不可再分，否则就不是关系数据库; 
-2NF：有主键，非主键字段依赖主键;唯一性，一个表只说明一个事物;  
-3NF：非主键字段不能相互依赖;每列都与主键有直接关系，不存在传递依赖;
-
-不符合1NF的例子
-表
-字段1，字段2(字段2.1，字段2.2)，字段3 …… (关系数据库中create不出这样的表)
-存在问题
-因为设计不出这样的表，所以没有问题。...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606801620"
-  data-df="ll"
-  
->
-  Dec  1, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Database
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/zhuanfa-he-chongdingxiang-de-canshuchuandi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            转发和重定向的参数传递
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              重定向跳转
-超链接标签&amp;lt;a&amp;gt;就是一种重定向跳转，这样的跳转request对象是传不到下一个页面的，下一个页面得到的request对象是一个新的对象，而不是上一个页面传过来的，得不到上一个页面的数据。
-如果你想通过这种方法跳转的话，那就要用&amp;lt;a href=&quot;a.jsp?参数名=参数值&quot;&amp;gt;传递参数，在下一个页面用request.getParameter(&quot;参数名&quot;)得到值...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606715220"
-  data-df="ll"
-  
->
-  Nov 30, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JSP
+                    Log4j
                 </span>
               
             </div>
@@ -1915,12 +1912,25 @@ EXISTS与IN的使用效率的问题，通常情况下采用EXISTS要比IN效率�
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page45"
-        >45</a>
+          href="/page46"
+        >46</a>
       </li>
     
   
@@ -1928,7 +1938,7 @@ EXISTS与IN的使用效率的问题，通常情况下采用EXISTS要比IN效率�
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>35</span>
-    <span class="text-muted">/ 45</span>
+    <span class="text-muted">/ 46</span>
   </li>
 
   <!-- right arrow -->

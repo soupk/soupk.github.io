@@ -586,13 +586,13 @@
 
 <div id="post-list">
   
-    <a href="/posts/jiemi-shi-baocuo/" class="card-wrapper">
+    <a href="/posts/firefox-ruhe-qiyong-pocket/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            对微信服务器发送来的报文解密时报错：illegal Key Size
+            Firefox如何启用Pocket for Firefox
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -603,11 +603,12 @@
 
 
 
-              问题
-在加密解密时遇到这个问题：java.security.InvalidKeyException:illegal Key Size
-
-问题原因
-这是因为微信在进行数据传输的时候，会进行加密，微信使用的AES加密是256位，Java默认使用的解密包是local_policy.jar和US_export_policy.jar，但是这个默认的只支持128位的解密(java版本在1.8.0_161...
+              
+  在地址栏，输入about:config，然后按回车。
+  有时会出现警告页面。点击我了解此风险，请继续！，以打开about:config页面。
+  在偏好列表上面的搜索栏里输入pocket。
+  点击首选项extensions.pocket.enabled旁边的按钮设其值为true。
+  Pocket是Firefox的内置功能。此时，它会在地址栏中添加一个Pocket按钮，在我的足迹菜...
             </p>
           </div>
 
@@ -626,11 +627,11 @@
 
 <em
   class=""
-  data-ts="1606283220"
+  data-ts="1606801620"
   data-df="ll"
   
 >
-  Nov 25, 2020
+  Dec  1, 2020
 </em>
 
 
@@ -640,7 +641,7 @@
                 <span class="categories">
                   
                     Knowledge,
-                    WeChat
+                    SOFTWARE
                 </span>
               
             </div>
@@ -653,13 +654,13 @@
       </div>
     </a>
   
-    <a href="/posts/shiyong-excel-shengcheng-sql/" class="card-wrapper">
+    <a href="/posts/shujuk-sanfanshi/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            使用Excel生成SQL语句
+            数据库三范式
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -670,9 +671,16 @@
 
 
 
-              &quot;update TEST_TABLE set co1=&#39;&quot;&amp;amp;A1&amp;amp;&quot;&#39;, co2=&#39;&quot;&amp;amp;B1&amp;amp;&quot;&#39;, co3=&#39;&quot;&amp;amp;C1&amp;amp;&quot;&#39; where co4=&#39;&quot;&amp;amp;D1&amp;amp;&quot;&#39;&quot;
+              三范式解释
+1NF：字段不可分;原子性字段不可再分，否则就不是关系数据库; 
+2NF：有主键，非主键字段依赖主键;唯一性，一个表只说明一个事物;  
+3NF：非主键字段不能相互依赖;每列都与主键有直接关系，不存在传递依赖;
 
-
+不符合1NF的例子
+表
+字段1，字段2(字段2.1，字段2.2)，字段3 …… (关系数据库中create不出这样的表)
+存在问题
+因为设计不出这样的表，所以没有问题。...
             </p>
           </div>
 
@@ -691,11 +699,11 @@
 
 <em
   class=""
-  data-ts="1606283220"
+  data-ts="1606801620"
   data-df="ll"
   
 >
-  Nov 25, 2020
+  Dec  1, 2020
 </em>
 
 
@@ -705,7 +713,7 @@
                 <span class="categories">
                   
                     Knowledge,
-                    SQL
+                    Database
                 </span>
               
             </div>
@@ -718,13 +726,13 @@
       </div>
     </a>
   
-    <a href="/posts/chaxun-suoyoubiao-de-suoyou-ziduan/" class="card-wrapper">
+    <a href="/posts/zhuanfa-he-chongdingxiang-de-canshuchuandi/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            查询数据库所有表的所有字段
+            转发和重定向的参数传递
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -735,21 +743,9 @@
 
 
 
-              MySQL数据库
-SELECT
- table_name,
- column_name
-FROM
- information_schema. COLUMNS
-WHERE
- table_schema = &#39;testdb&#39;
-AND table_name IN (
- SELECT
-  TABLE_NAME
- FROM
-  INFORMATION_SCHEMA. TABLES
- WHERE
-  TABLE...
+              重定向跳转
+超链接标签&amp;lt;a&amp;gt;就是一种重定向跳转，这样的跳转request对象是传不到下一个页面的，下一个页面得到的request对象是一个新的对象，而不是上一个页面传过来的，得不到上一个页面的数据。
+如果你想通过这种方法跳转的话，那就要用&amp;lt;a href=&quot;a.jsp?参数名=参数值&quot;&amp;gt;传递参数，在下一个页面用request.getParameter(&quot;参数名&quot;)得到值...
             </p>
           </div>
 
@@ -768,11 +764,11 @@ AND table_name IN (
 
 <em
   class=""
-  data-ts="1606283220"
+  data-ts="1606715220"
   data-df="ll"
   
 >
-  Nov 25, 2020
+  Nov 30, 2020
 </em>
 
 
@@ -782,7 +778,7 @@ AND table_name IN (
                 <span class="categories">
                   
                     Knowledge,
-                    SQL
+                    JSP
                 </span>
               
             </div>
@@ -795,13 +791,13 @@ AND table_name IN (
       </div>
     </a>
   
-    <a href="/posts/linux-duankoujijincheng/" class="card-wrapper">
+    <a href="/posts/jsp-yemian-pinzhuang-xiangmu-dizhi/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            Linux中查看进程的端口号，查看哪个进程占用了该端口
+            JSP页面拼装项目地址
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -812,14 +808,15 @@ AND table_name IN (
 
 
 
-              知道进程，查看进程的端口号
-[root@localhost ~]# ps -ef|grep ssh
-961 ?         00:00:00 sshd
-...
+              &amp;lt;%
+ String path = request.getContextPath();
+ String basePath = request.getScheme()
+    + &quot;://&quot; + request.getServerName()
+    + &quot;:&quot; + request.getServerPort()
+    + path;
+%&amp;gt;
 
-[root@localhost ~]# netstat -anp|grep 961
-tcp   0   0 0.0.0.0:22   0.0.0.0:*   LISTEN   961/sshd         
-...     ...
+&amp;lt;!-- JSP中引用地址 -...
             </p>
           </div>
 
@@ -838,11 +835,11 @@ tcp   0   0 0.0.0.0:22   0.0.0.0:*   LISTEN   961/sshd
 
 <em
   class=""
-  data-ts="1606283220"
+  data-ts="1606715220"
   data-df="ll"
   
 >
-  Nov 25, 2020
+  Nov 30, 2020
 </em>
 
 
@@ -852,7 +849,7 @@ tcp   0   0 0.0.0.0:22   0.0.0.0:*   LISTEN   961/sshd
                 <span class="categories">
                   
                     Knowledge,
-                    Linux
+                    JSP
                 </span>
               
             </div>
@@ -865,13 +862,13 @@ tcp   0   0 0.0.0.0:22   0.0.0.0:*   LISTEN   961/sshd
       </div>
     </a>
   
-    <a href="/posts/linux-chakan-dangqian-muluxia-wenjian-daxiao/" class="card-wrapper">
+    <a href="/posts/jingtaibaohan-he-dongtaibaohan/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            查看当前目录下文件及文件夹的大小
+            静态包含和动态包含
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -882,13 +879,17 @@ tcp   0   0 0.0.0.0:22   0.0.0.0:*   LISTEN   961/sshd
 
 
 
-              # 查看当前目录下各个文件及目录占用空间大小
-du -sh *
-
-# 按兆（M）来排序
-du -sh * | sort -rn
+              区别
 
 
+  
+    书写上不同
+静态包含：&amp;lt;%@include file=&quot;1.jsp&quot;%&amp;gt;
+动态包含：&amp;lt;jsp:include page=&quot;1.jsp&quot;&amp;gt;&amp;lt;/jsp:include&amp;gt;
+&amp;lt;%@include file=&quot;1.jsp&quot;%&amp;gt;是指令元素；&amp;lt;jsp:include page=&quot;1.jsp&quot;/&amp;gt;是行为元素。
+  
+  
+ ...
             </p>
           </div>
 
@@ -907,11 +908,11 @@ du -sh * | sort -rn
 
 <em
   class=""
-  data-ts="1606283220"
+  data-ts="1606715220"
   data-df="ll"
   
 >
-  Nov 25, 2020
+  Nov 30, 2020
 </em>
 
 
@@ -921,7 +922,7 @@ du -sh * | sort -rn
                 <span class="categories">
                   
                     Knowledge,
-                    Linux
+                    JSP
                 </span>
               
             </div>
@@ -934,13 +935,13 @@ du -sh * | sort -rn
       </div>
     </a>
   
-    <a href="/posts/git-qiehuan-yuancheng-cangku-dizhi/" class="card-wrapper">
+    <a href="/posts/dino/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            Git切换远程仓库地址
+            Chrome小恐龙
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -951,13 +952,30 @@ du -sh * | sort -rn
 
 
 
-              Git仓库的服务器IP地址变了，本地代码挺多，重新检出太占时间，可以修改一个什么配置让本地仓库和新的远程仓库建立关联吗， 答案是肯定的！
-方式一：修改远程仓库地址
-git remote -v  # 查看当前远程仓库地址
-git remote set-url origin &amp;lt;new url&amp;gt;  # 修改远程地址为新的地址 &amp;lt;new url&amp;gt; 改为新的地址
+              
+    
+     
+    
+	
 
 
-方式二：先...
+
+    
+         
+    
+    
+        
+            
+        
+        
+            
+            
+            
+                
+                
+                
+            
+       ...
             </p>
           </div>
 
@@ -976,11 +994,248 @@ git remote set-url origin &amp;lt;new url&amp;gt;  # 修改远程地址为新的
 
 <em
   class=""
-  data-ts="1606283220"
+  data-ts="1606628820"
   data-df="ll"
   
 >
-  Nov 25, 2020
+  Nov 29, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Games
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/2048/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            2048
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              
+
+
+	
+
+
+
+	
+		
+			2048
+		
+	
+
+	
+		
+			
+				最佳: 
+				
+					0
+				
+			
+			
+				分数: 
+				
+					0
+					
+				
+			
+		
+		
+			
+			游戏结束🙈再试一次
+		
+		
+			重新启动游戏
+			
+		
+	
+	
+
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606628820"
+  data-df="ll"
+  
+>
+  Nov 29, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Games
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/guolvqi-fangxing-zhiding-dizhi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Filter拦截中忽略指定url和资源
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              web.xml中的配置
+&amp;lt;filter&amp;gt;
+    &amp;lt;filter-name&amp;gt;SystemAuthorityFilter&amp;lt;/filter-name&amp;gt;
+    &amp;lt;filter-class&amp;gt;platform.filter.SystemAuthorityFilter&amp;lt;/filter-class&amp;gt;
+    &amp;lt;init-param&amp;gt;...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606369620"
+  data-df="ll"
+  
+>
+  Nov 26, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Servlet
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/git-ruhe-jianchu-he-tijiao-daima/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Git检出和提交代码至远程仓库
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              我们使用Git需要先安装Git工具，这里给出下载地址：https://git-for-windows.github.io/
+
+从远程仓库检出代码
+找到自己在GitHub上的代码仓库，点击Clone or dowload会出现一个地址，复制这个地址备用。
+  
+打开我的电脑，选择一个盘，比如F盘，右键空白处点击git bash here，打开命令行。输入如下命令，克隆Test reposito...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606369620"
+  data-df="ll"
+  
+>
+  Nov 26, 2020
 </em>
 
 
@@ -1003,13 +1258,13 @@ git remote set-url origin &amp;lt;new url&amp;gt;  # 修改远程地址为新的
       </div>
     </a>
   
-    <a href="/posts/git-push-baocuo/" class="card-wrapper">
+    <a href="/posts/java-shiyong-freemarker-shengcheng-word-wendang/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            Git推送代码时报错：error:src refspec master does not match any
+            Java中使用FreeMarker导出Word文档
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1020,9 +1275,12 @@ git remote set-url origin &amp;lt;new url&amp;gt;  # 修改远程地址为新的
 
 
 
-              将git push origin master 改成git push origin HEAD
-HEAD指向当前工作的branch，master不一定指向当前工作的branch
+              制作模板
+在制作模板时需要注意的一些问题如下：
 
+  用Microsoft Office Word 2003或以上的版本来制作，不要用WPS做。
+  关于图片，一定要插入一张图片，方便后面找到图片的位置好进行替换。
+  一些需要动态生成的数据，如个人信息，用personInfo（其他字段也行，建议和程序中的VO字段对应）来代替，注意，单词要先用一个文本框写好，再复制黏贴过来，不要在Word上...
             </p>
           </div>
 
@@ -1041,11 +1299,11 @@ HEAD指向当前工作的branch，master不一定指向当前工作的branch
 
 <em
   class=""
-  data-ts="1606283220"
+  data-ts="1606369620"
   data-df="ll"
   
 >
-  Nov 25, 2020
+  Nov 26, 2020
 </em>
 
 
@@ -1055,222 +1313,7 @@ HEAD指向当前工作的branch，master不一定指向当前工作的branch
                 <span class="categories">
                   
                     Knowledge,
-                    Git
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/ruhe-fangzhi-youpan-kaobei/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            如何防止U盘拷贝
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              拒绝移动存储权限
-gpedit.msc——用户配置——管理模板——系统——可移动存储访问——所有可移动
-存储类——拒绝所有权限——已启用
-
-隐藏右键send to
-删除SendTo文件夹
-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo
-
-添加磁盘写保护
-HKEY_LOCAL_MACHINE\S...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606196820"
-  data-df="ll"
-  
->
-  Nov 24, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    SECURITY
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/changyong-dos-mingling/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            常用DOS命令
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              calc -----------启动计算器  
-control --------打开控制面板 
-cleanmgr -------磁盘清理
-eventvwr -------事件查看器
-mplayer2 -------简易widnowsmediaplayer  
-Sndvol32 -------音量控制程序 
-mmc ------------打开控制台
-write ----------写字板
-
-...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606196820"
-  data-df="ll"
-  
->
-  Nov 24, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    DOS
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/yanse-dapei/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            颜色搭配
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              
-
-
-
-
-
-
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606196820"
-  data-df="ll"
-  
->
-  Nov 24, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Design,
-                    Mutual
+                    FreeMarker
                 </span>
               
             </div>
@@ -1915,12 +1958,25 @@ write ----------写字板
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page45"
-        >45</a>
+          href="/page46"
+        >46</a>
       </li>
     
   
@@ -1928,7 +1984,7 @@ write ----------写字板
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>37</span>
-    <span class="text-muted">/ 45</span>
+    <span class="text-muted">/ 46</span>
   </li>
 
   <!-- right arrow -->
