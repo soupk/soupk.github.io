@@ -5395,6 +5395,54 @@ man firewall-cmd  <span class="c"># 查看帮助</span>
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8793,7 +8841,7 @@ systemctl status fir...
         
         
         <div class="col">
-          <a href="/posts/linux-chakan-dangqian-muluxia-wenjian-daxiao/" class="card post-preview h-100">
+          <a href="/posts/ifconfig-mingling-wufa-shiyong/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8806,14 +8854,14 @@ systemctl status fir...
 
 <em
   class="small"
-  data-ts="1606283220"
+  data-ts="1677174420"
   data-df="ll"
   
 >
-  Nov 25, 2020
+  Feb 24, 2023
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>查看当前目录下文件及文件夹的大小</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>ifconfig命令无法使用</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8822,13 +8870,21 @@ systemctl status fir...
 
 
 
-                  # 查看当前目录下各个文件及目录占用空间大小
-du -sh *
+                  修改网络配置，末尾的ifcfg-ens33可根据实际情况更改，有的可能为ifcfg-eth0 或者其他，可先切换到上级目录查看
+1
+vi /etc/sysconfig/network-scripts/ifcfg-ens33
 
-# 按兆（M）来排序
-du -sh * | sort -rn
+将ONBOOT=no改为ONBOOT=yes，代表系统启动时，网卡也随之启动
+1
+2
+3
+4
+...
+DEVICE=ens33
+ONBOOT=yes
+...
 
-
+重启网络...
                 </p>
               </div>
             </div>
@@ -11004,7 +11060,7 @@ du -sh * | sort -rn
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span

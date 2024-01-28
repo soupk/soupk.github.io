@@ -3857,6 +3857,54 @@ the option in Preferences -&gt; SQL Editor and reconnect. 0.000 sec
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8558,58 +8606,6 @@ the option in Preferences -&gt; SQL Editor and reconnect. 0.000 sec
         
         
         <div class="col">
-          <a href="/posts/mysql-ruhe-zhongzhi-mima/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1631674020"
-  data-df="ll"
-  
->
-  Sep 15, 2021
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>MySQL如何重置密码</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  
-  
-    修改my.ini文件
-
-    在my.ini文件的[mysqld]栏下添加skip-grant-tables，如下：
-
-     [mysql]
- # 设置MySQL客户端默认字符集
- default-character-set=utf8 
- [mysqld]
- skip-grant-tables
- # 设置3306端口
- port = 3306 
- # 设置MySQL的安...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/error-code-1175/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8653,7 +8649,7 @@ the option in Preferences -&gt; SQL Editor and reconnect. 0.000 sec
         
         
         <div class="col">
-          <a href="/posts/mysql-chaxun-shujuku-shujuliang-daxiao/" class="card post-preview h-100">
+          <a href="/posts/mysql-fenye-chaxun-youhua/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8666,14 +8662,14 @@ the option in Preferences -&gt; SQL Editor and reconnect. 0.000 sec
 
 <em
   class="small"
-  data-ts="1688262420"
+  data-ts="1670035620"
   data-df="ll"
   
 >
-  Jul  2, 2023
+  Dec  3, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>MySQL查询数据库的数据量大小</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>MySQL分页查询优化</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8682,25 +8678,63 @@ the option in Preferences -&gt; SQL Editor and reconnect. 0.000 sec
 
 
 
-                  查询数据库最大连接数
-1
-show variables like &#39;%max_connections%&#39;;
-
-查询数据库连接超时时间单位(s)
-1
-Show variables like &#39;wait_timeout&#39;;
-
-查询各个数据库量的大小
+                  MySQL一般使用LIMIT实现分页，基本语句为：
 1
 2
 3
-4
-5
-6
-7
-select
-  TABLE_SCHEMA,
-  CONCAT(ROUND(SUM(DATA_LENGTH / 1024...
+SELECT ... FROM ... WHERE ... ORDER BY ... LIMIT ...
+-- 分页计算方法
+SELECT ... FROM ... WHERE ... ORDER BY ... (#{pageNum} - 1) * #{pageSize}, #{pageSize}
+
+
+  提示：
+
+  sele...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/feifuwu-moshi-xia-qidong-he-guanbi-mysql/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1605073620"
+  data-df="ll"
+  
+>
+  Nov 11, 2020
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Windows非服务模式下如何启动和关闭MySQL数据库</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  启动
+mysqld --standalone
+
+关闭
+mysqladmin -uroot -proot shutdown
+
+
                 </p>
               </div>
             </div>
@@ -10876,7 +10910,7 @@ select
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span

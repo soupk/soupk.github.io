@@ -586,6 +586,293 @@
 
 <div id="post-list">
   
+    <a href="/posts/solr-guanlijiemian-xiangjie/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Solr管理界面详解
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              solr服务器管理界面可以查看系统状态、solr设置、分词检测、查询索引、增减core、查看日志等。
+
+1. Dashboard（仪表盘）
+访问http://localhost:8080/solr时，出现该主页面，可查看到Solr运行时间、Solr版本，系统内存、虚拟机内存的使用情况。
+
+
+2. Logging（日志）
+显示Solr运行出现的异常或错误。
+
+
+3. Core Admin（co...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606801620"
+  data-df="ll"
+  
+>
+  Dec  1, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Solr
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/solr-fuzhiyu-de-zuoyong/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Solr复制域的作用
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              复制域常用于多域搜索，如：电商项目中搜索商品，既要在名字域中搜索也要在描述域中搜索，传统的做法需要手工写两次，而solr想发送一次请求，可到两个域中搜索，为此，引入了复制域的概念，将两个域的域名复制到一个text文本域中。
+Solr复制域可以将多个索引字段结合到一起作为查询使用的域，逻辑上拓展了可查询对象的范围。
+将一个字段的值作为复制字段，给其设置新的数据类型，如数值类型，可以作为排序字段...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606801620"
+  data-df="ll"
+  
+>
+  Dec  1, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Solr
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/solr-chaxun-yuju/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Solr查询语句
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              基本字段查询
+key:中国
+key:*中   // 结束值为“中”的值
+key:中*   // 开始值为“中”的值
+key:*中*  // 含有“中”的值
+
+
+强制不分词
+key:&#39;中国&#39;
+
+
+多字段与或关系 OR/AND
+key:(02 OR 10 OR 11 OR 12 )
+key:(02 AND 10 AND 11 AND 12 )
+key1:01 AND key2:02
+
+
+多字段不...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606801620"
+  data-df="ll"
+  
+>
+  Dec  1, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Solr
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/sql-zhong-esists-de-yongfa/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            SQL中EXISTS的用法
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              功能
+EXISTS用于检查子查询是否至少会返回一行数据，该子查询实际上并不返回任何数据，而是返回值True或False。
+EXISTS指定一个子查询，检测行的存在。
+EXISTS与IN的使用效率的问题，通常情况下采用EXISTS要比IN效率高，因为IN不走索引，但要看实际情况具体使用：IN适合于外表大而内表小的情况；EXISTS适合于外表小而内表大的情况。
+
+用法
+在插入记录前，需要检查这条...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606801620"
+  data-df="ll"
+  
+>
+  Dec  1, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    SQL
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/firefox-ruhe-qiyong-pocket/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1008,312 +1295,6 @@
                 <span class="categories">
                   
                     Games
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/2048/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            2048
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              
-
-
-	
-
-
-
-	
-		
-			2048
-		
-	
-
-	
-		
-			
-				最佳: 
-				
-					0
-				
-			
-			
-				分数: 
-				
-					0
-					
-				
-			
-		
-		
-			
-			游戏结束🙈再试一次
-		
-		
-			重新启动游戏
-			
-		
-	
-	
-
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606628820"
-  data-df="ll"
-  
->
-  Nov 29, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Games
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/guolvqi-fangxing-zhiding-dizhi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Filter拦截中忽略指定url和资源
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              web.xml中的配置
-&amp;lt;filter&amp;gt;
-    &amp;lt;filter-name&amp;gt;SystemAuthorityFilter&amp;lt;/filter-name&amp;gt;
-    &amp;lt;filter-class&amp;gt;platform.filter.SystemAuthorityFilter&amp;lt;/filter-class&amp;gt;
-    &amp;lt;init-param&amp;gt;...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606369620"
-  data-df="ll"
-  
->
-  Nov 26, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Servlet
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/git-ruhe-jianchu-he-tijiao-daima/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Git检出和提交代码至远程仓库
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              我们使用Git需要先安装Git工具，这里给出下载地址：https://git-for-windows.github.io/
-
-从远程仓库检出代码
-找到自己在GitHub上的代码仓库，点击Clone or dowload会出现一个地址，复制这个地址备用。
-  
-打开我的电脑，选择一个盘，比如F盘，右键空白处点击git bash here，打开命令行。输入如下命令，克隆Test reposito...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606369620"
-  data-df="ll"
-  
->
-  Nov 26, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Git
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/java-shiyong-freemarker-shengcheng-word-wendang/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Java中使用FreeMarker导出Word文档
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              制作模板
-在制作模板时需要注意的一些问题如下：
-
-  用Microsoft Office Word 2003或以上的版本来制作，不要用WPS做。
-  关于图片，一定要插入一张图片，方便后面找到图片的位置好进行替换。
-  一些需要动态生成的数据，如个人信息，用personInfo（其他字段也行，建议和程序中的VO字段对应）来代替，注意，单词要先用一个文本框写好，再复制黏贴过来，不要在Word上...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606369620"
-  data-df="ll"
-  
->
-  Nov 26, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    FreeMarker
                 </span>
               
             </div>
@@ -1971,12 +1952,25 @@
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page46"
-        >46</a>
+          href="/page47"
+        >47</a>
       </li>
     
   
@@ -1984,7 +1978,7 @@
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>37</span>
-    <span class="text-muted">/ 46</span>
+    <span class="text-muted">/ 47</span>
   </li>
 
   <!-- right arrow -->
@@ -6268,7 +6262,7 @@
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span

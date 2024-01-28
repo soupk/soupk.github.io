@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-11-02T19:44:25+08:00</updated>
+  <updated>2024-01-28T07:45:56+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -13,10 +13,177 @@
   <link rel="alternate" type="text/html" hreflang="en"
     href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
-  <rights> © 2023 lemon </rights>
+  <rights> © 2024 lemon </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>GaussDB正则查询</title>
+    <link href="http://localhost:4000/posts/gaussdb-zhengze-chaxun/" rel="alternate" type="text/html" title="GaussDB正则查询" />
+    <published>2024-01-27T13:47:00+08:00</published>
+  
+    <updated>2024-01-27T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/gaussdb-zhengze-chaxun/</id>
+    <content src="http://localhost:4000/posts/gaussdb-zhengze-chaxun/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="GaussDB" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      GaussDB使用正则表达式查询示例：
+-- 查询所有以abc开头的字符串
+select * from table where cloum ~ '^abc'
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>List转String，逗号分割</title>
+    <link href="http://localhost:4000/posts/java-list-zhuan-string-douhao-fenge/" rel="alternate" type="text/html" title="List转String，逗号分割" />
+    <published>2024-01-27T11:47:00+08:00</published>
+  
+    <updated>2024-01-27T11:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/java-list-zhuan-string-douhao-fenge/</id>
+    <content src="http://localhost:4000/posts/java-list-zhuan-string-douhao-fenge/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="Java" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      // 将List转化为逗号分割的字符串
+String str = String.join(",", list);
+String str = StringUtils.json(list.toArray(), ",");
+
+// 将逗号分隔的字符串转换为List
+List&amp;lt;String&amp;gt; list = Arrays.asList(str.split(","));
+List&amp;lt;String&amp;gt; list = Arrays.asList(StringUtils.split(str, ","));
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Mybatis报错，栏位索引超过许可范围</title>
+    <link href="http://localhost:4000/posts/mybatis-baocuo/" rel="alternate" type="text/html" title="Mybatis报错，栏位索引超过许可范围" />
+    <published>2024-01-27T09:47:00+08:00</published>
+  
+    <updated>2024-01-27T09:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/mybatis-baocuo/</id>
+    <content src="http://localhost:4000/posts/mybatis-baocuo/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="MyBatis" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      报错信息
+Caused by: org.postgresql.util.PSQLException: 栏位索引超过许可范围：4，栏位数：3
+
+报错原因
+极有可能是Mybatis的xml文件中的注释格式书写不正确
+
+解决办法
+删除或修正xml中注释
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>分布式情况下synchronized锁失效</title>
+    <link href="http://localhost:4000/posts/fenbushi-xia-synchronized-suo-shixiao/" rel="alternate" type="text/html" title="分布式情况下synchronized锁失效" />
+    <published>2023-12-12T11:47:00+08:00</published>
+  
+    <updated>2023-12-12T11:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/fenbushi-xia-synchronized-suo-shixiao/</id>
+    <content src="http://localhost:4000/posts/fenbushi-xia-synchronized-suo-shixiao/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="Java" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+  参考：IDEA启动两个Tomcat服务的方式 &amp;amp; 使用nginx进行反向代理 &amp;amp; JMeter测试分布式情况下synchronized锁失效
+
+
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -70,201 +237,6 @@ AD快消：https://www.magisk.cool/2020/10/11/adkuaixiao.html
 
 Magisk细安装教程：https://momeis.net/post-65473.html
 
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>UnsupportedOperationException异常</title>
-    <link href="http://localhost:4000/posts/UnsupportedOperationException-yichang/" rel="alternate" type="text/html" title="UnsupportedOperationException异常" />
-    <published>2023-10-31T11:47:00+08:00</published>
-  
-    <updated>2023-10-31T11:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/UnsupportedOperationException-yichang/</id>
-    <content src="http://localhost:4000/posts/UnsupportedOperationException-yichang/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Java" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      报错信息
-
-java.lang.UnsupportedOperationException: null
-    at java.util.AbstractList.add(AbstractList.java:148) ~[?:1.8.0_131]
-    at java.util.AbstractList.add(AbstractList.java:108) ~[?:1.8.0_131]
-
-
-报错原因
-
-public class test {
-  public static void main(String[] args) {
-    //定义一个字符长度为5的字符串
-    String[] strings = new String[5];
-    strings[0] = "a";
-    strings[1] = "b";
-    strings[2] = "c";
-    s...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Java多线程共享Map</title>
-    <link href="http://localhost:4000/posts/java-duoxiancheng-gongxiang-map/" rel="alternate" type="text/html" title="Java多线程共享Map" />
-    <published>2023-10-25T11:47:00+08:00</published>
-  
-    <updated>2023-10-25T11:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/java-duoxiancheng-gongxiang-map/</id>
-    <content src="http://localhost:4000/posts/java-duoxiancheng-gongxiang-map/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Java" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      在Java编程中，多线程是一种常见的并发编程模型，可以有效地提高程序的性能和响应能力。然而，在多线程环境下，共享数据的访问可能会导致问题，特别是在操作共享的数据结构时。本文将介绍如何在多线程环境下共享Map，并提供相应的代码示例和解释。我们将通过使用ConcurrentHashMap来实现多线程共享的Map，它是Java中线程安全的Hash表实现。它是通过使用锁分段技术来实现高效的并发访问。下面是一个示例代码，演示了如何使用ConcurrentHashMap来实现线程安全的Map。
-
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
-public class SharedMapExample {
-
-    private static Map&amp;lt;String, Integer&amp;gt; sha...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>GaussDB去重</title>
-    <link href="http://localhost:4000/posts/gaussdb-quchong/" rel="alternate" type="text/html" title="GaussDB去重" />
-    <published>2023-10-24T13:47:00+08:00</published>
-  
-    <updated>2023-10-24T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/gaussdb-quchong/</id>
-    <content src="http://localhost:4000/posts/gaussdb-quchong/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="GaussDB" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      1、示例场景描述
-以保险行业的客户信息去重为例，为防止坐席重复联系客户，需要将客户进行唯一身份识别。存在以下两种情况，需要将其识别成一个人，这时候就需要进行数据去重的动作。
-
-
-  情况一：同一个客户有不同的来源渠道：客户即购买了寿险、又购买了产险（两个不同的来源系统）；
-  情况二：同一个客户多次回流：客户在同一个渠道多次购买（续保或者购买同一险种的不同产品）。
-
-
-2、定义重复数据
-通过姓名+证件类型+证件号将其识别为一个人，即只要这三个字段重复，就认为这些数据行为重复数据。
-
-3、制定去重规则
-
-  多选一
-随机：根据去重规则，随机保留一条数据。
-优先级：根据去重规则 + 业务逻辑，保留优先需要的一条数据。例如优先保留“是否有房、是否有车”。
-  多合一
-将重复数据合并成一条数据，合并规则根据业务逻辑确定。
-
-
-4、创建测试数据（GaussDB）
-客户信息字段主要包含姓名、性别...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>NoClassDefFoundError：javax/servlet/ServletOutputStream报错解决</title>
-    <link href="http://localhost:4000/posts/java-servlet-api-baocuo/" rel="alternate" type="text/html" title="NoClassDefFoundError：javax/servlet/ServletOutputStream报错解决" />
-    <published>2023-10-08T01:47:00+08:00</published>
-  
-    <updated>2023-10-08T01:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/java-servlet-api-baocuo/</id>
-    <content src="http://localhost:4000/posts/java-servlet-api-baocuo/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Java" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      报错信息
-java.lang.NoClassDefFoundError: javax/servlet/ServletOutputStream
-at java.lang.Class.getDeclaredMethods0(Native Method)
-at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
-at java.lang.Class.privateGetMethodRecursive(Class.java:3048)
-at java.lang.Class.getMethod0(Class.java:3018)
-at java.lang.Class.getMethod(Class.java:1784)
-at sun.launcher.LauncherHelper.validateMainClass(Launch...
     </summary>
   
 

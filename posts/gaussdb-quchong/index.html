@@ -3358,6 +3358,54 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8827,7 +8875,7 @@
         
         
         <div class="col">
-          <a href="/posts/mysql-ruhe-zhongzhi-mima/" class="card post-preview h-100">
+          <a href="/posts/gaussdb-zhengze-chaxun/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8840,14 +8888,14 @@
 
 <em
   class="small"
-  data-ts="1631674020"
+  data-ts="1706334420"
   data-df="ll"
   
 >
-  Sep 15, 2021
+  Jan 27, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>MySQL如何重置密码</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>GaussDB正则查询</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8856,20 +8904,13 @@
 
 
 
-                  
-  
-    修改my.ini文件
+                  GaussDB使用正则表达式查询示例：
+1
+2
+-- 查询所有以abc开头的字符串
+select * from table where cloum ~ &#39;^abc&#39;
 
-    在my.ini文件的[mysqld]栏下添加skip-grant-tables，如下：
 
-     [mysql]
- # 设置MySQL客户端默认字符集
- default-character-set=utf8 
- [mysqld]
- skip-grant-tables
- # 设置3306端口
- port = 3306 
- # 设置MySQL的安...
                 </p>
               </div>
             </div>
@@ -8879,7 +8920,7 @@
         
         
         <div class="col">
-          <a href="/posts/jiang-shijian-zhuanwei-hanzishifenmiao/" class="card post-preview h-100">
+          <a href="/posts/jira-xiugai-moren-shijian-geshi/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8892,14 +8933,14 @@
 
 <em
   class="small"
-  data-ts="1633888020"
+  data-ts="1633913220"
   data-df="ll"
   
 >
   Oct 11, 2021
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>将时间转化为天小时分秒字符串</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Jira修改默认时间格式</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8908,11 +8949,25 @@
 
 
 
-                  public String formatSeconds(String secondsStr) {
-    Long seconds = new BigDecimal(secondsStr).longValue();
-    String timeStr = seconds + &quot;秒&quot;;
-    if (seconds &amp;gt; 60) {
-        long second = seco...
+                  日期显示格式
+
+
+
+我们希望看到2017-10-10、2017-10-05 01:34这样的格式，可以如下设置：管理-系统-外观，找到日期时间格式设置，如下图：
+
+
+
+修改保存后再次查看，会发现样式已修改：
+
+
+
+提示时间
+
+
+
+
+  服务端进入Jira的安装目录，默认为/opt/atlassian/jira/atlassian-jira/WEB-INF/classes文件夹
+  找到jpm...
                 </p>
               </div>
             </div>
@@ -8922,7 +8977,7 @@
         
         
         <div class="col">
-          <a href="/posts/oracle-ruhe-chakan-banben/" class="card post-preview h-100">
+          <a href="/posts/excel-duoding-hanghelie/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8935,14 +8990,14 @@
 
 <em
   class="small"
-  data-ts="1633888020"
+  data-ts="1638942420"
   data-df="ll"
   
 >
-  Oct 11, 2021
+  Dec  8, 2021
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Oracle 如何查看版本信息</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>如何在Excel中锁定行和列</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8951,8 +9006,16 @@
 
 
 
-                  首先打开PLSQL并登录Oracle，新建一个SQL窗口输入select * from v$version，执行查询即可。
+                  首先确定要锁定的行和列（图片中蓝色框住的部分），然后选定行和列所交接的单元格（图片中用红色框住的部分）
 
+
+
+然后选定菜单栏窗口—&amp;gt;冻结窗口（如图）
+
+
+
+
+  参考：如何在excel中锁定行和列
 
 
                 </p>
@@ -11130,7 +11193,7 @@
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span

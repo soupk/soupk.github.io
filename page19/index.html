@@ -586,6 +586,293 @@
 
 <div id="post-list">
   
+    <a href="/posts/oracle-jisuan-shijiancha/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 计算时间差
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              SELECT
+    param1,
+    param2,
+    param3
+FROM
+    TEST T
+WHERE
+    TO_NUMBER (
+        TO_DATE (
+            TO_CHAR (T.modifydate, &#39;yyyy-mm-dd hh24:mi:ss&#39;),
+            &#39;yyyy-mm-dd hh24:mi:ss&#39;
+  ...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1624513620"
+  data-df="ll"
+  
+>
+  Jun 24, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/oracle-huifu-shuju/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 误删数据的恢复方法
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              DELETE误删数据
+利用Oracle提供的闪回方法，如果在删除数据后还没做大量的操作（只要保证被删除数据的块没被覆写），就可以利用闪回方式直接找回删除的数据
+
+  确定删除数据的时间（在删除数据之前的时间就行，不过最好是删除数据的时间点）
+  
+    用以下语句找出删除的数据
+
+     select
+ *
+ from
+ TEST as of timestamp to_timestamp...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1624513620"
+  data-df="ll"
+  
+>
+  Jun 24, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/js-shengming-quanjubianliang/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JS声明全局变量
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              
+  使用var + 变量名的方式在function外部声明，即为全局变量，否则在function内部声明的是局部变量。
+  没有使用var，直接给标识符test赋值，这样会隐式的声明了全局变量test。即使该语句是在一个function内，当该function被执行后test变成了全局变量。
+  使用window全局对象window.test;来声明，全局对象的属性对应也是全局变量。
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1624513620"
+  data-df="ll"
+  
+>
+  Jun 24, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JavaScript
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/js-jiexi-json/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JS解析JSON
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              JS是无法直接接收和使用JSON的数据，会出现undefined，所以要解析才能使用。
+
+方式一
+
+var str = &#39;{&quot;rows&quot;:[{&quot;ID&quot;:0,&quot;登录账号&quot;:&quot;admin&quot;,&quot;登录时间&quot;:&quot;2018-04-05&quot;}]}&#39;;
+var obj = eval(&quot;(&quot; + str + &quot;)&quot;);
+console.log(obj);
+
+var rows = obj[&quot;rows&quot;];
+for...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1624513620"
+  data-df="ll"
+  
+>
+  Jun 24, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JavaScript
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/js-jiang-zifuchuan-zhuanhuanwei-riqi/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1006,326 +1293,6 @@ vi /etc/sysconfig/network-scripts/ifcfg-eth0
                   
                     Knowledge,
                     Linux
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/linux-ruhe-kaifang-duankou/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Linux如何开放端口
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              在CentOS 7或RHEL 7或Fedora中防火墙由firewalld来管理，如果要添加范围例外端口，如1000-2000语法命令如下：启用区域端口和协议组合
-
-firewall-cmd [--zone=&amp;lt;zone&amp;gt;] --add-port=&amp;lt;port&amp;gt;[-&amp;lt;port&amp;gt;]/&amp;lt;protocol&amp;gt; [--timeout=&amp;lt;s&amp;gt;]
-
-...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1624470420"
-  data-df="ll"
-  
->
-  Jun 24, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Linux
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/linux-chmod-mingling/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Linux chmod命令
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              在Linux中要修改一个文件夹或文件的权限要用到chmod命令，语法如下：
-
-chmod [who] [+ | - | =] [mode] 文件名
-
-
-各选项含义
-
-
-  who
-    
-      u 表示“用户（user）”，即文件或目录的所有者
-      g 表示“同组（group）用户”，即与文件属主有相同组ID的所有用户
-      o 表示“其他（others）用户”
-   ...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1624470420"
-  data-df="ll"
-  
->
-  Jun 24, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Linux
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/eclipse-genghuan-kongjian/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Eclipse更换工作空间的步骤
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              一、指定新工作空间位置
-
-
-
-二、设置编码
-1. 设置工作空间编码UTF-8
-
-
-
-2. 设置JSP编码
-
-
-
-三、指定JDK位置
-
-
-
-四、配置Tomcat
-1. Tomcat发布位置设置
-
-
-
-
-
-五、切换Java视图
-
-六、使用Package Explorer视图
-
-七、添加工作集视图
-
-
-
-八、指定Maven插件
-1. 指定Maven插件
-
-
-
-2. 指定Maven仓库
-
-
-
-九、查...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1624470420"
-  data-df="ll"
-  
->
-  Jun 24, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Eclipse
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/eclipse-anzhuang-jadclipse/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Eclipse配置反编译工具JadClipse
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              当运行引用了第三方jar包项目时，突然报出了jar包中的某个类的某一行出现异常。我们想看一下这个class文件的代码时，经常出现了如下图所示的场景：
-
-
-
-去找源码很浪费时间（除非是Maven项目，在pom.xml中引入依赖jar包会连同源文件下载下来）。在Eclipse中配置反编译工具，就可以随时查看class文件的内容了。
-
-下面就以JadClipse为例，讲述一下配置过程。
-
-
-  
-...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1624427220"
-  data-df="ll"
-  
->
-  Jun 23, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Eclipse
                 </span>
               
             </div>
@@ -1983,12 +1950,25 @@ chmod [who] [+ | - | =] [mode] 文件名
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page46"
-        >46</a>
+          href="/page47"
+        >47</a>
       </li>
     
   
@@ -1996,7 +1976,7 @@ chmod [who] [+ | - | =] [mode] 文件名
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>19</span>
-    <span class="text-muted">/ 46</span>
+    <span class="text-muted">/ 47</span>
   </li>
 
   <!-- right arrow -->
@@ -6280,7 +6260,7 @@ chmod [who] [+ | - | =] [mode] 文件名
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span

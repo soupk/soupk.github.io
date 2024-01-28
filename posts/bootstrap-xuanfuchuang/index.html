@@ -8004,6 +8004,54 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8589,7 +8637,7 @@
         
         
         <div class="col">
-          <a href="/posts/mysql-ruhe-zhongzhi-mima/" class="card post-preview h-100">
+          <a href="/posts/jira-xiugai-moren-shijian-geshi/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8602,14 +8650,14 @@
 
 <em
   class="small"
-  data-ts="1631674020"
+  data-ts="1633913220"
   data-df="ll"
   
 >
-  Sep 15, 2021
+  Oct 11, 2021
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>MySQL如何重置密码</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Jira修改默认时间格式</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8618,34 +8666,25 @@
 
 
 
-                  
-  
-    修改my.ini文件
+                  日期显示格式
 
-    在my.ini文件的[mysqld]栏下添加skip-grant-tables，如下：
 
-    1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
- [mysql]
- # 设置MySQL客户端默认字符集
- default-character-set=utf8 
- [mysqld]
- skip-grant-tab...
+
+我们希望看到2017-10-10、2017-10-05 01:34这样的格式，可以如下设置：管理-系统-外观，找到日期时间格式设置，如下图：
+
+
+
+修改保存后再次查看，会发现样式已修改：
+
+
+
+提示时间
+
+
+
+
+  服务端进入Jira的安装目录，默认为/opt/atlassian/jira/atlassian-jira/WEB-INF/classes文件夹
+  找到jpm...
                 </p>
               </div>
             </div>
@@ -8655,7 +8694,7 @@
         
         
         <div class="col">
-          <a href="/posts/jiang-shijian-zhuanwei-hanzishifenmiao/" class="card post-preview h-100">
+          <a href="/posts/excel-duoding-hanghelie/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8668,14 +8707,14 @@
 
 <em
   class="small"
-  data-ts="1633888020"
+  data-ts="1638942420"
   data-df="ll"
   
 >
-  Oct 11, 2021
+  Dec  8, 2021
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>将时间转化为天小时分秒字符串</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>如何在Excel中锁定行和列</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8684,53 +8723,18 @@
 
 
 
-                  1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-public String formatSeconds(String secondsStr) {
-    Long seconds = new...
+                  首先确定要锁定的行和列（图片中蓝色框住的部分），然后选定行和列所交接的单元格（图片中用红色框住的部分）
+
+
+
+然后选定菜单栏窗口—&amp;gt;冻结窗口（如图）
+
+
+
+
+  参考：如何在excel中锁定行和列
+
+
                 </p>
               </div>
             </div>
@@ -8740,7 +8744,7 @@ public String formatSeconds(String secondsStr) {
         
         
         <div class="col">
-          <a href="/posts/oracle-ruhe-chakan-banben/" class="card post-preview h-100">
+          <a href="/posts/git-shiyong-guifan/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8753,14 +8757,14 @@ public String formatSeconds(String secondsStr) {
 
 <em
   class="small"
-  data-ts="1633888020"
+  data-ts="1638942420"
   data-df="ll"
   
 >
-  Oct 11, 2021
+  Dec  8, 2021
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Oracle 如何查看版本信息</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Git使用规范</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8769,10 +8773,12 @@ public String formatSeconds(String secondsStr) {
 
 
 
-                  首先打开PLSQL并登录Oracle，新建一个SQL窗口输入select * from v$version，执行查询即可。
+                  Git分支命名规范
+Git分支分为集成分支、功能分支和修复分支，分别命名为develop、feature和hotfix，均为单数。不可使用features、future、hotfixes、hotfixs等错误名称。
 
 
-
+  master（主分支，永远是可用的稳定版本，不能直接在该分支上开发）
+  develop（开发主分支，所有新功能以这个分支来创建自己的开发分支，该分支只做只合并操作，不能...
                 </p>
               </div>
             </div>
@@ -10948,7 +10954,7 @@ public String formatSeconds(String secondsStr) {
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span

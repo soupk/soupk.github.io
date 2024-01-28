@@ -3167,6 +3167,54 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8576,58 +8624,6 @@
         
         
         <div class="col">
-          <a href="/posts/mysql-ruhe-zhongzhi-mima/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1631674020"
-  data-df="ll"
-  
->
-  Sep 15, 2021
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>MySQL如何重置密码</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  
-  
-    修改my.ini文件
-
-    在my.ini文件的[mysqld]栏下添加skip-grant-tables，如下：
-
-     [mysql]
- # 设置MySQL客户端默认字符集
- default-character-set=utf8 
- [mysqld]
- skip-grant-tables
- # 设置3306端口
- port = 3306 
- # 设置MySQL的安...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/error-code-1175/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8707,6 +8703,53 @@ update activity set type = 1 where title = &#39;aa&#39;
  
 Error Code: 1175. You are using safe update mode and you tried to update a 
 table without a WHERE that...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/mysql-fenye-chaxun-youhua/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1670035620"
+  data-df="ll"
+  
+>
+  Dec  3, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>MySQL分页查询优化</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  MySQL一般使用LIMIT实现分页，基本语句为：
+SELECT ... FROM ... WHERE ... ORDER BY ... LIMIT ...
+-- 分页计算方法
+SELECT ... FROM ... WHERE ... ORDER BY ... (#{pageNum} - 1) * #{pageSize}, #{pageSize}
+
+
+  提示：
+
+  select fro...
                 </p>
               </div>
             </div>
@@ -10882,7 +10925,7 @@ table without a WHERE that...
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span

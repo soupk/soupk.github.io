@@ -586,6 +586,289 @@
 
 <div id="post-list">
   
+    <a href="/posts/java-servlet-api-baocuo/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            NoClassDefFoundError：javax/servlet/ServletOutputStream报错解决
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              报错信息
+java.lang.NoClassDefFoundError: javax/servlet/ServletOutputStream
+at java.lang.Class.getDeclaredMethods0(Native Method)
+at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+at java.la...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1696700820"
+  data-df="ll"
+  
+>
+  Oct  8, 2023
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Java
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/mybatis-plus-jinxing-update-de-3zhong-fangshi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Mybatis-Plus进行update的三种方式
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              第一种：主键updateById
+User user = new User();
+// 这个id是主键
+user.setId(4L);
+user.setPhone(&quot;119&quot;);
+// getBaseMapper是mybatis-plus方法
+getBaseMapper().updateById(user);
+
+
+第二种：通过实体类筛选进行update
+// 作为查询条件
+UpdateWra...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1696643220"
+  data-df="ll"
+  
+>
+  Oct  7, 2023
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    MyBatis
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/linux-he-win-build-tools-qubie/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Linux和Windows平台Android SDK中build tools的区别
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              在linux和Windows平台上，gradle wrapper和gradle依赖的jar都是不区分平台的
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+└── gradlew.bat
+
+一个Android项目gradle结...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1690264020"
+  data-df="ll"
+  
+>
+  Jul 25, 2023
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Android
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/gradle-anzhuang-he-shiyong/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Gradle的安装配置及使用
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              1、官网下载链接https://gradle.org/releases/，下载后解压
+
+2、新建GRADLE_HOME环境变量指向Gradle解压路径
+
+3、将%GRADLE_HOME%\bin添加到Path环境变量中
+
+4、打开cmd命令行输入gradle -v验证Gradle是否安装成功
+
+5、配置Gradle默认的仓库地址，Gradle和Maven类似也需要配置仓库地址，首先新建一个文...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1689814020"
+  data-df="ll"
+  
+>
+  Jul 20, 2023
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Gradle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/mysql-chaxun-shujuku-shujuliang-daxiao/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -985,281 +1268,6 @@ from information_schema.table...
                   
                     Knowledge,
                     SQL
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/redis-lianjie-baocuo/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Redis使用redis-cli连接报错：WRONGPASS invalid username-password pair or user is disabled.
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              报错信息
-使用redis-cli连接Redis时报错，具体为认证失败问题WRONGPASS invalid username-password pair or user is disabled.。之前输入auth pass即可，但此次在终端窗口有提示需要username。
-
-报错原因
-本机Redis为7.0版本。Redis6.0起，支持ACL权限控制，Redis6.0之前的版本只支持验证密码...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1684907220"
-  data-df="ll"
-  
->
-  May 24, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Redis
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/nginx-tianjia-ssl-mokuai/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Nginx添加ssl模块
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              一、在安装时添加ssl模块
-1、进入源码包所在的目录，进行编译，编译时添加参数–with-http_stub_status_module --with-http_ssl_module
-cd /usr/local/nginx-1.20.2
-./configure --with-http_stub_status_module --with-http_ssl_module
-
-2、进行编译与编译安装...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1684820820"
-  data-df="ll"
-  
->
-  May 23, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Nginx
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/nginx-peizhi-xiangjie/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Nginx配置详解
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              一、main：全局配置
-#user  nobody;
-worker_processes  1;
-
-#error_log  logs/error.log;
-#error_log  logs/error.log  notice;
-#error_log  logs/error.log  info;
-
-#pid        logs/nginx.pid;
-
-上述配置都是存放在main全局配置模块中...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1684820820"
-  data-df="ll"
-  
->
-  May 23, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Nginx
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/nginx-zhengchang-qidong-duankou-meiyou-jianting/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Nginx正常启动，端口没有被监听
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              启动nginx服务：
-/usr/local/nginx/sbin/nginx -c conf/nginx.conf
-
-启动完成也没有报错，ps看进程也正常，netstat发现端口没有被监听，也没有错误日志，找了半天最后才发现，conf/nginx.conf使用的是安装目录下面的Nginx配置，没有使用我们制定的配置，也就是说我们要用绝对路径制定Nginx配置，如下：
-/usr/local/n...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1684734420"
-  data-df="ll"
-  
->
-  May 22, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Nginx
                 </span>
               
             </div>
@@ -1907,12 +1915,25 @@ worker_processes  1;
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page46"
-        >46</a>
+          href="/page47"
+        >47</a>
       </li>
     
   
@@ -1920,7 +1941,7 @@ worker_processes  1;
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>2</span>
-    <span class="text-muted">/ 46</span>
+    <span class="text-muted">/ 47</span>
   </li>
 
   <!-- right arrow -->
@@ -6204,7 +6225,7 @@ worker_processes  1;
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span

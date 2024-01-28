@@ -3064,6 +3064,54 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8569,49 +8617,6 @@
         
         
         <div class="col">
-          <a href="/posts/zhengxiangdaili-he-fanxiangdaili/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1687326420"
-  data-df="ll"
-  
->
-  Jun 21, 2023
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>正向代理和反向代理</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  正向代理是一个位于客户端和原始服务器之间的服务器。反向代理是指以代理服务器来接受Internet上的连接请求，然后将请求转发给内部网络上的服务器。两者区别在于正向代理代理的对象是客户端，反向代理代理的对象是服务端。
-
-一、正向代理
-举个例子：
-我是一个用户，我访问不了某网站，但是我能访问一个代理服务器，这个代理服务器能访问那个我不能访问的网站，于是我先连上代理服务器，告诉他我需要那个无法访问...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/paas-iaas-saas/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8705,6 +8710,45 @@
           </a>
         </div>
       
+        
+        
+        <div class="col">
+          <a href="/posts/snat-he-dnat/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1680500820"
+  data-df="ll"
+  
+>
+  Apr  3, 2023
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>SNAT和DNAT的区别</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  SNAT是原地址转换，DNAT是目标地址转换。区分这两个功能可以简单的由服务的发起者是谁来区分，内部地址要访问公网上的服务时，内部地址会主动发起连接，将内部地址转换成公有IP，网关这个地址转换称为SNAT。当内部需要对外提供服务时，外部发起主动连接，路由器或者防火墙的网关接收到这个连接，然后把连接转换到内部，此过程是由带公有IP的网关代替内部服务来接收外部的连接，然后在内部做地址转换，此转换...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
     </div>
     <!-- .card-deck -->
   </div>
@@ -8727,12 +8771,13 @@
   
 
   
-    <div
-      class="btn btn-outline-primary disabled"
+    <a
+      href="/posts/fenbushi-xia-synchronized-suo-shixiao/"
+      class="btn btn-outline-primary"
       prompt="Newer"
     >
-      <p>-</p>
-    </div>
+      <p>分布式情况下synchronized锁失效</p>
+    </a>
   
 </div>
 
@@ -10873,7 +10918,7 @@
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span

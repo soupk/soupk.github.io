@@ -586,6 +586,286 @@
 
 <div id="post-list">
   
+    <a href="/posts/ora-12560/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            PLSQL连接数据库时报ORA-12560:TNS:协议适配器错误
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              造成ORA-12560:TNS:协议适配器错误的问题的原因有三个：
+
+
+  监听服务没有启起来。
+Windows平台可以如下操作：开始—程序—管理工具—服务，打开服务面板，启动OracleOraDb11g_home1TNSlistener服务。
+  database instance没有起起来。
+Windows平台如下操作：开始—程序—管理工具—服务，打开服务面板，启动OracleServi...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1610862420"
+  data-df="ll"
+  
+>
+  Jan 17, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    PLSQL
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/mybatis-chaxun-jieguo-weinull-shi-baoyichang/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            MyBatis查询结果为NULL时报异常的解决方法
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              异常信息
+org.apache.ibatis.binding.BindingException: Mapper 
+method &#39;com.XXXXX&#39; attempted toreturn null from a 
+method with a primitive return type (int).
+
+
+源代码
+&amp;lt;select id=&quot;selectPageviews&quot; resultTy...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1610862420"
+  data-df="ll"
+  
+>
+  Jan 17, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    MyBatis
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/mybatis-charu-shuju-shi-fanhui-zhujian/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Mybatis插入数据时返回主键
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              方式一
+&amp;lt;insert id=&quot;insertAndGetId&quot; useGeneratedKeys=&quot;true&quot; keyProperty=&quot;userId&quot; 
+        parameterType=&quot;com.chenzhou.mybatis.User&quot;&amp;gt;
+    insert into user(userName, password, comment)
+    values(#...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1610862420"
+  data-df="ll"
+  
+>
+  Jan 17, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    MyBatis
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jira-de-yixie-chaxun/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Jira 的一些查询
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              1. 查询Jira问题的固定或级联字段
+
+SELECT
+  jiraissue.*
+FROM
+  jiraissue,
+  OS_HISTORYSTEP,
+  customfieldvalue,
+  customfieldoption
+WHERE
+  OS_HISTORYSTEP.ENTRY_ID = jiraissue.id
+  AND OS_HISTORYSTEP.ACTION_ID =...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1610862420"
+  data-df="ll"
+  
+>
+  Jan 17, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Jira
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/jira-de-anzhuang-he-peizhi/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1026,292 +1306,6 @@ import o...
                   
                     Knowledge,
                     JSTL
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/gei-github-zhuye-tianjia-tongjimianban/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            给GitHub主页添加统计图
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              本文添加的统计图来源于这个仓库https://github.com/anuraghazra/github-readme-stats
-
-创建仓库
-登录你的Github帐号，然后创建一个与你的用户名同名的仓库。注意事项：
-
-  仓库名与用户名必须一样；
-  仓库必须公开；
-  仓库里需要有一个README文件；
-
-
-修改README的内容
-以下是我的配置：
-&amp;lt;img align=&quot;righ...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610344020"
-  data-df="ll"
-  
->
-  Jan 11, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    GitHub
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/wei-jekyll-tianjia-gongneng/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            为Jekyll添加功能
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              Jekyll本身插件的安装
-一共3种方式:
-
-  在根目录下新建_plugins文件夹, 然后把对应的*.rb插件文件放进去即可;
-  在_config.yml文件中增加一个gems关键字, 然后把要引用的插件用数组形式存储其中即可;
-  在Gemfile中添加相关的插件;
-
-
-使用kramdown自动生成目录树
-启用kramdown，即在_config.yml中添加markdown: kr...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610296440"
-  data-df="ll"
-  
->
-  Jan 11, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Index,
-                    Jekyll
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/wei-jekyll-boke-tianjia-fangwenliang-tongji/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            给Jekyll博客添加访问量统计
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              给Jekyll博客添加访问量统计需要使用不蒜子插件，在需要统计浏览量的页面引入busuanzi.js：
-
-&amp;lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-
-添加站点的访问量：
-
-
-  
-    pv的方式
-
-      &amp;lt;!-- 单个...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610296440"
-  data-df="ll"
-  
->
-  Jan 11, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Index,
-                    Jekyll
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/git-huoqu-wenjian-de-commit-riqi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Git获取文件commit的日期
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              git log -1 --pretty=%ad --date=iso test.html
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610171220"
-  data-df="ll"
-  
->
-  Jan  9, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Git
                 </span>
               
             </div>
@@ -1969,12 +1963,25 @@ import o...
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page46"
-        >46</a>
+          href="/page47"
+        >47</a>
       </li>
     
   
@@ -1982,7 +1989,7 @@ import o...
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>26</span>
-    <span class="text-muted">/ 46</span>
+    <span class="text-muted">/ 47</span>
   </li>
 
   <!-- right arrow -->
@@ -6266,7 +6273,7 @@ import o...
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span

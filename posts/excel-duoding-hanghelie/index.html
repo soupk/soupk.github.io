@@ -4255,6 +4255,54 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8690,7 +8738,7 @@
         
         
         <div class="col">
-          <a href="/posts/mysql-ruhe-zhongzhi-mima/" class="card post-preview h-100">
+          <a href="/posts/jira-xiugai-moren-shijian-geshi/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8703,14 +8751,14 @@
 
 <em
   class="small"
-  data-ts="1631674020"
+  data-ts="1633913220"
   data-df="ll"
   
 >
-  Sep 15, 2021
+  Oct 11, 2021
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>MySQL如何重置密码</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Jira修改默认时间格式</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8719,20 +8767,25 @@
 
 
 
-                  
-  
-    修改my.ini文件
+                  日期显示格式
 
-    在my.ini文件的[mysqld]栏下添加skip-grant-tables，如下：
 
-     [mysql]
- # 设置MySQL客户端默认字符集
- default-character-set=utf8 
- [mysqld]
- skip-grant-tables
- # 设置3306端口
- port = 3306 
- # 设置MySQL的安...
+
+我们希望看到2017-10-10、2017-10-05 01:34这样的格式，可以如下设置：管理-系统-外观，找到日期时间格式设置，如下图：
+
+
+
+修改保存后再次查看，会发现样式已修改：
+
+
+
+提示时间
+
+
+
+
+  服务端进入Jira的安装目录，默认为/opt/atlassian/jira/atlassian-jira/WEB-INF/classes文件夹
+  找到jpm...
                 </p>
               </div>
             </div>
@@ -8742,7 +8795,7 @@
         
         
         <div class="col">
-          <a href="/posts/jiang-shijian-zhuanwei-hanzishifenmiao/" class="card post-preview h-100">
+          <a href="/posts/git-shiyong-guifan/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8755,14 +8808,14 @@
 
 <em
   class="small"
-  data-ts="1633888020"
+  data-ts="1638942420"
   data-df="ll"
   
 >
-  Oct 11, 2021
+  Dec  8, 2021
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>将时间转化为天小时分秒字符串</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Git使用规范</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8771,11 +8824,12 @@
 
 
 
-                  public String formatSeconds(String secondsStr) {
-    Long seconds = new BigDecimal(secondsStr).longValue();
-    String timeStr = seconds + &quot;秒&quot;;
-    if (seconds &amp;gt; 60) {
-        long second = seco...
+                  Git分支命名规范
+Git分支分为集成分支、功能分支和修复分支，分别命名为develop、feature和hotfix，均为单数。不可使用features、future、hotfixes、hotfixs等错误名称。
+
+
+  master（主分支，永远是可用的稳定版本，不能直接在该分支上开发）
+  develop（开发主分支，所有新功能以这个分支来创建自己的开发分支，该分支只做只合并操作，不能...
                 </p>
               </div>
             </div>
@@ -10951,7 +11005,7 @@
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span

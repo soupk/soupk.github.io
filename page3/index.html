@@ -586,6 +586,281 @@
 
 <div id="post-list">
   
+    <a href="/posts/redis-lianjie-baocuo/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Redis使用redis-cli连接报错：WRONGPASS invalid username-password pair or user is disabled.
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              报错信息
+使用redis-cli连接Redis时报错，具体为认证失败问题WRONGPASS invalid username-password pair or user is disabled.。之前输入auth pass即可，但此次在终端窗口有提示需要username。
+
+报错原因
+本机Redis为7.0版本。Redis6.0起，支持ACL权限控制，Redis6.0之前的版本只支持验证密码...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1684907220"
+  data-df="ll"
+  
+>
+  May 24, 2023
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Redis
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/nginx-tianjia-ssl-mokuai/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Nginx添加ssl模块
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              一、在安装时添加ssl模块
+1、进入源码包所在的目录，进行编译，编译时添加参数–with-http_stub_status_module --with-http_ssl_module
+cd /usr/local/nginx-1.20.2
+./configure --with-http_stub_status_module --with-http_ssl_module
+
+2、进行编译与编译安装...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1684820820"
+  data-df="ll"
+  
+>
+  May 23, 2023
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Nginx
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/nginx-peizhi-xiangjie/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Nginx配置详解
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              一、main：全局配置
+#user  nobody;
+worker_processes  1;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+
+#pid        logs/nginx.pid;
+
+上述配置都是存放在main全局配置模块中...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1684820820"
+  data-df="ll"
+  
+>
+  May 23, 2023
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Nginx
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/nginx-zhengchang-qidong-duankou-meiyou-jianting/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Nginx正常启动，端口没有被监听
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              启动nginx服务：
+/usr/local/nginx/sbin/nginx -c conf/nginx.conf
+
+启动完成也没有报错，ps看进程也正常，netstat发现端口没有被监听，也没有错误日志，找了半天最后才发现，conf/nginx.conf使用的是安装目录下面的Nginx配置，没有使用我们制定的配置，也就是说我们要用绝对路径制定Nginx配置，如下：
+/usr/local/n...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1684734420"
+  data-df="ll"
+  
+>
+  May 22, 2023
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Nginx
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/shiyong-ssh-fangshi-lianjie-redis/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -998,283 +1273,6 @@ git config –system –unset credential.helper
                   
                     Collection,
                     Technical
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/snat-he-dnat/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            SNAT和DNAT的区别
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              SNAT是原地址转换，DNAT是目标地址转换。区分这两个功能可以简单的由服务的发起者是谁来区分，内部地址要访问公网上的服务时，内部地址会主动发起连接，将内部地址转换成公有IP，网关这个地址转换称为SNAT。当内部需要对外提供服务时，外部发起主动连接，路由器或者防火墙的网关接收到这个连接，然后把连接转换到内部，此过程是由带公有IP的网关代替内部服务来接收外部的连接，然后在内部做地址转换，此转换...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1680500820"
-  data-df="ll"
-  
->
-  Apr  3, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Collection,
-                    Technical
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/mysql-xiugai-mima-tishi-error/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            MySQL修改密码提示ERROR 1054
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              报错信息
-执行update mysql.user set password=password(&#39;password&#39;) where user=&#39;root&#39;;会出现以下错误ERROR 1054 (42S22): Unknown column &#39;password&#39; in &#39;field list&#39;。
-
-报错原因
-MySQL数据库下已经没有password这个字段了，password字段改成了auth...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1680140820"
-  data-df="ll"
-  
->
-  Mar 30, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    MySQL
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/mysql-shujuku-kasi-zenmeban/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            MySQL进行删除等操作时卡死
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              报错信息
-删除MySQL数据库中一个库出现卡死情况。
-
-解决办法
-进入MySQL使用命令show full processlist;查看当前的操作process，然后执行kill processid;删除对应id的process（都删了，或者删除waiting的就行）。
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1680140820"
-  data-df="ll"
-  
->
-  Mar 30, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    MySQL
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/centos-anzhuang-redis/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            CentOS安装Redis
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              1. 下载Redis安装包
-https://redis.io/download/
-
-
-2. 安装依赖
-yum install -y gcc gcc-c++
-
-
-3. 解压并安装redis
-tar -zxvf redis-7.0.11.tar.gz
-cd redis-7.0.11
-make
-cd src
-make install PREFIX=/usr/local/redis
-
-
-4. 整理文...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1677779220"
-  data-df="ll"
-  
->
-  Mar  3, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    CentOS
                 </span>
               
             </div>
@@ -1927,12 +1925,25 @@ make install PREFIX=/usr/local/redis
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page46"
-        >46</a>
+          href="/page47"
+        >47</a>
       </li>
     
   
@@ -1940,7 +1951,7 @@ make install PREFIX=/usr/local/redis
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>3</span>
-    <span class="text-muted">/ 46</span>
+    <span class="text-muted">/ 47</span>
   </li>
 
   <!-- right arrow -->
@@ -6224,7 +6235,7 @@ make install PREFIX=/usr/local/redis
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span

@@ -4262,6 +4262,54 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8622,63 +8670,6 @@
         
         
         <div class="col">
-          <a href="/posts/mysql-chaxun-shujuku-shujuliang-daxiao/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1688262420"
-  data-df="ll"
-  
->
-  Jul  2, 2023
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>MySQL查询数据库的数据量大小</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  查询数据库最大连接数
-1
-show variables like &#39;%max_connections%&#39;;
-
-查询数据库连接超时时间单位(s)
-1
-Show variables like &#39;wait_timeout&#39;;
-
-查询各个数据库量的大小
-1
-2
-3
-4
-5
-6
-7
-select
-  TABLE_SCHEMA,
-  CONCAT(ROUND(SUM(DATA_LENGTH / 1024...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/mysql-anquan-moshi/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8720,6 +8711,56 @@ update activity set type = 1 where title = &#39;aa&#39;
  
 Error Code: 1175. You are using safe update mode and you tried to update a 
 table without a ...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/mysql-fenye-chaxun-youhua/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1670035620"
+  data-df="ll"
+  
+>
+  Dec  3, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>MySQL分页查询优化</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  MySQL一般使用LIMIT实现分页，基本语句为：
+1
+2
+3
+SELECT ... FROM ... WHERE ... ORDER BY ... LIMIT ...
+-- 分页计算方法
+SELECT ... FROM ... WHERE ... ORDER BY ... (#{pageNum} - 1) * #{pageSize}, #{pageSize}
+
+
+  提示：
+
+  sele...
                 </p>
               </div>
             </div>
@@ -10895,7 +10936,7 @@ table without a ...
       </p>
 
       <p>©
-        2023
+        2024
         <a href="https://twitter.com/username">lemon</a>.
         
           <span
