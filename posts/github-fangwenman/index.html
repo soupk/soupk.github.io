@@ -3458,6 +3458,42 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8678,7 +8714,7 @@
         
         
         <div class="col">
-          <a href="/posts/jira-xiugai-moren-shijian-geshi/" class="card post-preview h-100">
+          <a href="/posts/powerdesigner-cong-yuancheng-oracle-daochu-pdm/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8691,14 +8727,14 @@
 
 <em
   class="small"
-  data-ts="1633913220"
+  data-ts="1639374420"
   data-df="ll"
   
 >
-  Oct 11, 2021
+  Dec 13, 2021
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Jira修改默认时间格式</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>PowerDesigner 16.5逆向工程，从远程Oracle 11g数据库导出PDM</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8707,25 +8743,35 @@
 
 
 
-                  日期显示格式
+                  本文使用工具：
+
+  Oracle 11g
+  PowerDesigner 16.5
+
+
+第一步
+首先打开PowerDesigner，点击新建模型
 
 
 
-我们希望看到2017-10-10、2017-10-05 01:34这样的格式，可以如下设置：管理-系统-外观，找到日期时间格式设置，如下图：
+输入模型名称并选择数据库Oracle
 
 
 
-修改保存后再次查看，会发现样式已修改：
+第二步
+选中当前模型，然后在菜单栏database -&amp;gt; configure Connections
 
 
 
-提示时间
+在弹出窗口，点击Add Data Source按钮
 
 
 
+选择系统数据源
 
-  服务端进入Jira的安装目录，默认为/opt/atlassian/jira/atlassian-jira/WEB-INF/classes文件夹
-  找到jpm...
+
+
+选...
                 </p>
               </div>
             </div>
@@ -8735,7 +8781,7 @@
         
         
         <div class="col">
-          <a href="/posts/excel-duoding-hanghelie/" class="card post-preview h-100">
+          <a href="/posts/powerdesigner-zhong-namehecomment-xianghu-zhuanhuan/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8748,14 +8794,14 @@
 
 <em
   class="small"
-  data-ts="1638942420"
+  data-ts="1639374420"
   data-df="ll"
   
 >
-  Dec  8, 2021
+  Dec 13, 2021
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>如何在Excel中锁定行和列</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>PowerDesigner中name和comment的互相转换</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8764,18 +8810,11 @@
 
 
 
-                  首先确定要锁定的行和列（图片中蓝色框住的部分），然后选定行和列所交接的单元格（图片中用红色框住的部分）
+                  在【Tools】-【Execute Commands】-【Edit/Run Script】下。输入下面你要选择的语句即可，也可以保存起来，以便下次使用，后缀为.vbs。需要注意的问题是：运行语句时必须在Module模式下，如果是导出报表时执行会出现错误提示。
 
+name转到comment注释字段
 
-
-然后选定菜单栏窗口—&amp;gt;冻结窗口（如图）
-
-
-
-
-  参考：如何在excel中锁定行和列
-
-
+&#39;如果comment为空，则填入name；如果不为空，则保留不变，这样可以避免已有的注释丢失。...
                 </p>
               </div>
             </div>

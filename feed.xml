@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-01-28T07:45:56+08:00</updated>
+  <updated>2024-04-01T04:04:15+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,139 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>AES加密异常</title>
+    <link href="http://localhost:4000/posts/aes-jiami-yichang/" rel="alternate" type="text/html" title="AES加密异常" />
+    <published>2024-03-21T11:47:00+08:00</published>
+  
+    <updated>2024-03-21T11:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/aes-jiami-yichang/</id>
+    <content src="http://localhost:4000/posts/aes-jiami-yichang/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="Java" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      报错信息
+Java实现AES加密，抛出异常如下：java.security.InvalidKeyException: Illegal key size
+
+报错原因
+Illegal key size or default parameters是指密钥长度受限制，Java运行时环境读到的是受限的policy文件。policy文件位于${java_home}/jre/lib/security 目录下。这种限制是因为美国对软件出口的控制。
+
+解决方法
+去除该限制只需下载Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files，覆盖上述目录下的对应jar文件local_policy.jar, US_export_policy.jar即可。
+
+下载地址：
+
+  JDK6：Java Cryptogr...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>数据库常用查询和函数</title>
+    <link href="http://localhost:4000/posts/shujuku-changyong-hanshu/" rel="alternate" type="text/html" title="数据库常用查询和函数" />
+    <published>2024-02-22T08:47:00+08:00</published>
+  
+    <updated>2024-02-22T08:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/shujuku-changyong-hanshu/</id>
+    <content src="http://localhost:4000/posts/shujuku-changyong-hanshu/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="Database" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      MySQL
+-- 字符串转数字
+-- 1、+0
+select '00123' + 0;
+-- 2、cast('字符串' as 数值类型)
+-- 整数 SIGNED，无符号整数 UNSIGNED，浮点数 DECIMAL
+select cast('000123' as SIGNED);
+-- 3、convert('字符串', 数值类型)
+-- 整数 SIGNED，无符号整数 UNSIGNED，浮点数 DECIMAL
+select convert('000123' as SIGNED);
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Mybatis分页计算公式</title>
+    <link href="http://localhost:4000/posts/mybatis-fenye-jisuan-gongshi/" rel="alternate" type="text/html" title="Mybatis分页计算公式" />
+    <published>2024-02-21T09:47:00+08:00</published>
+  
+    <updated>2024-02-21T09:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/mybatis-fenye-jisuan-gongshi/</id>
+    <content src="http://localhost:4000/posts/mybatis-fenye-jisuan-gongshi/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="MyBatis" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      -- n为页码，m为每页数据条数
+select * from 表名 limit(n-1)*m, m
+
+
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -96,146 +229,6 @@ String str = StringUtils.json(list.toArray(), ",");
 List&amp;lt;String&amp;gt; list = Arrays.asList(str.split(","));
 List&amp;lt;String&amp;gt; list = Arrays.asList(StringUtils.split(str, ","));
 
-
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Mybatis报错，栏位索引超过许可范围</title>
-    <link href="http://localhost:4000/posts/mybatis-baocuo/" rel="alternate" type="text/html" title="Mybatis报错，栏位索引超过许可范围" />
-    <published>2024-01-27T09:47:00+08:00</published>
-  
-    <updated>2024-01-27T09:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/mybatis-baocuo/</id>
-    <content src="http://localhost:4000/posts/mybatis-baocuo/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="MyBatis" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      报错信息
-Caused by: org.postgresql.util.PSQLException: 栏位索引超过许可范围：4，栏位数：3
-
-报错原因
-极有可能是Mybatis的xml文件中的注释格式书写不正确
-
-解决办法
-删除或修正xml中注释
-
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>分布式情况下synchronized锁失效</title>
-    <link href="http://localhost:4000/posts/fenbushi-xia-synchronized-suo-shixiao/" rel="alternate" type="text/html" title="分布式情况下synchronized锁失效" />
-    <published>2023-12-12T11:47:00+08:00</published>
-  
-    <updated>2023-12-12T11:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/fenbushi-xia-synchronized-suo-shixiao/</id>
-    <content src="http://localhost:4000/posts/fenbushi-xia-synchronized-suo-shixiao/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Java" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-  参考：IDEA启动两个Tomcat服务的方式 &amp;amp; 使用nginx进行反向代理 &amp;amp; JMeter测试分布式情况下synchronized锁失效
-
-
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>使用Magisk获取root权限相关</title>
-    <link href="http://localhost:4000/posts/Magisk/" rel="alternate" type="text/html" title="使用Magisk获取root权限相关" />
-    <published>2023-10-31T13:47:00+08:00</published>
-  
-    <updated>2023-10-31T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/Magisk/</id>
-    <content src="http://localhost:4000/posts/Magisk/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Collection" />
-    
-    <category term="Technical" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      官方网址
-
-Shizuku：https://shizuku.rikka.app/zh-hans/
-
-小黑屋：https://stopapp.https.gs/
-
-Magisk中文网：https://magiskcn.com/
-
-固件
-
-ColorOS官方固件：https://www.coloros.com/rom
-
-Magisk插件
-
-AD快消：https://www.magisk.cool/2020/10/11/adkuaixiao.html
-
-隐藏root( rootcloak)：https://www.magisk.cool/2020/09/23/yincangroot-rootcloak.html#google_vignette
-
-安装教程
-
-Magisk细安装教程：https://momeis.net/post-65473.html
 
     </summary>
   

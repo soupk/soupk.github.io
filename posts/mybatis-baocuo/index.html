@@ -3063,6 +3063,42 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8592,56 +8628,6 @@
         
         
         <div class="col">
-          <a href="/posts/mybatis-plus-jinxing-update-de-3zhong-fangshi/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1696643220"
-  data-df="ll"
-  
->
-  Oct  7, 2023
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Mybatis-Plus进行update的三种方式</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  第一种：主键updateById
-User user = new User();
-// 这个id是主键
-user.setId(4L);
-user.setPhone(&quot;119&quot;);
-// getBaseMapper是mybatis-plus方法
-getBaseMapper().updateById(user);
-
-
-第二种：通过实体类筛选进行update
-// 作为查询条件
-UpdateWra...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/mybatis-baocuo-wuxiao-de-liesuoyin/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8717,6 +8703,49 @@ mode=IN, javaType=class java.lang.Object, jdbcType=null,
                   &amp;lt;if test=&#39;testdata != null and testdata !=&quot;&quot;&#39;&amp;gt;
     AND T.TEST_DATA LIKE CONCAT(CONCAT(&#39;%&#39;, #{testdata, jdbcType = VARCHAR}), &#39;%&#39;) 
 &amp;lt;/if&amp;gt;
+
+
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/mybatis-zhong-de-teshu-zifu/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1603691220"
+  data-df="ll"
+  
+>
+  Oct 26, 2020
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>MyBatis的xml文件中如何处理特殊字符</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  &amp;lt;![CDATA[
+   包含SQL特殊字符 
+]]&amp;gt;
 
 
                 </p>

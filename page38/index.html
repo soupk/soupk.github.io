@@ -586,6 +586,235 @@
 
 <div id="post-list">
   
+    <a href="/posts/jsp-yemian-pinzhuang-xiangmu-dizhi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JSP页面拼装项目地址
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              &amp;lt;%
+ String path = request.getContextPath();
+ String basePath = request.getScheme()
+    + &quot;://&quot; + request.getServerName()
+    + &quot;:&quot; + request.getServerPort()
+    + path;
+%&amp;gt;
+
+&amp;lt;!-- JSP中引用地址 -...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606715220"
+  data-df="ll"
+  
+>
+  Nov 30, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JSP
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jingtaibaohan-he-dongtaibaohan/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            静态包含和动态包含
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              区别
+
+
+  
+    书写上不同
+静态包含：&amp;lt;%@include file=&quot;1.jsp&quot;%&amp;gt;
+动态包含：&amp;lt;jsp:include page=&quot;1.jsp&quot;&amp;gt;&amp;lt;/jsp:include&amp;gt;
+&amp;lt;%@include file=&quot;1.jsp&quot;%&amp;gt;是指令元素；&amp;lt;jsp:include page=&quot;1.jsp&quot;/&amp;gt;是行为元素。
+  
+  
+ ...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606715220"
+  data-df="ll"
+  
+>
+  Nov 30, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JSP
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/dino/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Chrome小恐龙
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              
+    
+     
+    
+	
+
+
+
+    
+         
+    
+    
+        
+            
+        
+        
+            
+            
+            
+                
+                
+                
+            
+       ...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606628820"
+  data-df="ll"
+  
+>
+  Nov 29, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Games
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/2048/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1097,215 +1326,6 @@ ${num?string(&#39;,###....
                   
                     Knowledge,
                     WeChat
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/jiemi-shi-baocuo/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            对微信服务器发送来的报文解密时报错：illegal Key Size
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              问题
-在加密解密时遇到这个问题：java.security.InvalidKeyException:illegal Key Size
-
-问题原因
-这是因为微信在进行数据传输的时候，会进行加密，微信使用的AES加密是256位，Java默认使用的解密包是local_policy.jar和US_export_policy.jar，但是这个默认的只支持128位的解密(java版本在1.8.0_161...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606283220"
-  data-df="ll"
-  
->
-  Nov 25, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    WeChat
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/shiyong-excel-shengcheng-sql/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            使用Excel生成SQL语句
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              &quot;update TEST_TABLE set co1=&#39;&quot;&amp;amp;A1&amp;amp;&quot;&#39;, co2=&#39;&quot;&amp;amp;B1&amp;amp;&quot;&#39;, co3=&#39;&quot;&amp;amp;C1&amp;amp;&quot;&#39; where co4=&#39;&quot;&amp;amp;D1&amp;amp;&quot;&#39;&quot;
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606283220"
-  data-df="ll"
-  
->
-  Nov 25, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    SQL
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/chaxun-suoyoubiao-de-suoyou-ziduan/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            查询数据库所有表的所有字段
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              MySQL数据库
-SELECT
- table_name,
- column_name
-FROM
- information_schema. COLUMNS
-WHERE
- table_schema = &#39;testdb&#39;
-AND table_name IN (
- SELECT
-  TABLE_NAME
- FROM
-  INFORMATION_SCHEMA. TABLES
- WHERE
-  TABLE...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606283220"
-  data-df="ll"
-  
->
-  Nov 25, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    SQL
                 </span>
               
             </div>

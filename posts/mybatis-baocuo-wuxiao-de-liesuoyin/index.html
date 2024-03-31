@@ -3895,6 +3895,42 @@ java.sql.SQL Exception:无效的列索引
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8620,7 +8656,7 @@ java.sql.SQL Exception:无效的列索引
         
         
         <div class="col">
-          <a href="/posts/mybatis-plus-jinxing-update-de-3zhong-fangshi/" class="card post-preview h-100">
+          <a href="/posts/mybatis-baocuo/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8633,14 +8669,14 @@ java.sql.SQL Exception:无效的列索引
 
 <em
   class="small"
-  data-ts="1696643220"
+  data-ts="1706320020"
   data-df="ll"
   
 >
-  Oct  7, 2023
+  Jan 27, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Mybatis-Plus进行update的三种方式</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Mybatis报错，栏位索引超过许可范围</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8649,26 +8685,15 @@ java.sql.SQL Exception:无效的列索引
 
 
 
-                  第一种：主键updateById
-1
-2
-3
-4
-5
-6
-User user = new User();
-// 这个id是主键
-user.setId(4L);
-user.setPhone(&quot;119&quot;);
-// getBaseMapper是mybatis-plus方法
-getBaseMapper().updateById(user);
+                  报错信息
+Caused by: org.postgresql.util.PSQLException: 栏位索引超过许可范围：4，栏位数：3
 
+报错原因
+极有可能是Mybatis的xml文件中的注释格式书写不正确
 
-第二种：通过实体类筛选进行update
-1
-2
-3
-4...
+解决办法
+删除或修正xml中注释
+
                 </p>
               </div>
             </div>

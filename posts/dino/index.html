@@ -7620,6 +7620,42 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8845,7 +8881,7 @@
         
         
         <div class="col">
-          <a href="/posts/gaussdb-zhengze-chaxun/" class="card post-preview h-100">
+          <a href="/posts/aes-jiami-yichang/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8858,14 +8894,14 @@
 
 <em
   class="small"
-  data-ts="1706334420"
+  data-ts="1710992820"
   data-df="ll"
   
 >
-  Jan 27, 2024
+  Mar 21, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>GaussDB正则查询</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>AES加密异常</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8874,13 +8910,11 @@
 
 
 
-                  GaussDB使用正则表达式查询示例：
-1
-2
--- 查询所有以abc开头的字符串
-select * from table where cloum ~ &#39;^abc&#39;
+                  报错信息
+Java实现AES加密，抛出异常如下：java.security.InvalidKeyException: Illegal key size
 
-
+报错原因
+Illegal key size or default parameters是指密钥长度受限制，Java运行时环境读到的是受限的policy文件。policy文件位于${java_home}/jre/lib/security 目录...
                 </p>
               </div>
             </div>
@@ -8890,7 +8924,7 @@ select * from table where cloum ~ &#39;^abc&#39;
         
         
         <div class="col">
-          <a href="/posts/java-list-zhuan-string-douhao-fenge/" class="card post-preview h-100">
+          <a href="/posts/shujuku-changyong-hanshu/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8903,14 +8937,14 @@ select * from table where cloum ~ &#39;^abc&#39;
 
 <em
   class="small"
-  data-ts="1706327220"
+  data-ts="1708562820"
   data-df="ll"
   
 >
-  Jan 27, 2024
+  Feb 22, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>List转String，逗号分割</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>数据库常用查询和函数</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8919,19 +8953,24 @@ select * from table where cloum ~ &#39;^abc&#39;
 
 
 
-                  1
+                  MySQL
+1
 2
 3
 4
 5
 6
 7
-// 将List转化为逗号分割的字符串
-String str = String.join(&quot;,&quot;, list);
-String str = StringUtils.json(list.toArray(), &quot;,&quot;);
-
-// 将逗号分隔的字符串转换为List
-List&amp;lt;String&amp;gt; list = Arrays.asList(str.split(&quot;,&quot;...
+8
+9
+-- 字符串转数字
+-- 1、+0
+select &#39;00123&#39; + 0;
+-- 2、cast(&#39;字符串&#39; as 数值类型)
+-- 整数 SIGNED，无符号整数 UNSIGNED，浮点数 DECIMAL
+select cast(&#39;000123&#39; as SIGNED);
+-- 3、convert(&#39;字符串&#39;, 数值类型)
+-- 整数 SIGNE...
                 </p>
               </div>
             </div>
