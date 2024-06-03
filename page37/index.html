@@ -586,6 +586,207 @@
 
 <div id="post-list">
   
+    <a href="/posts/jira-rest-api-diaoyong-fangfa/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Jira REST API调用方式
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              调用Jira REST API时的权限验证采用basic authentication这种验证方式，主要考虑到简单易行、操作方便。具体的操作方法为在请求的http header中添加Authorization参数，取值为Basic base64(username:password)，这里的username和password是企业自己部署的JIRA平台的登陆账号和密码。
+Jira REST A...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606888020"
+  data-df="ll"
+  
+>
+  Dec  2, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Jira
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/sanzhong-shujuk-jdbc-lianjiefangshi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            MySQL、SQLServer、Oracle三种数据库的JDBC连接方式
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              MySQL
+Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+String url = &quot;jdbc:mysql://localhost:3306/test?characterEncoding=UTF8&quot;;
+Connection connection = DriverManager.getConnection(url, username, password);
+S...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606888020"
+  data-df="ll"
+  
+>
+  Dec  2, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JDBC
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/geda-shujuku-lianjiechuan/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JDBC各大数据库的连接字符串和驱动类
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              Oracle
+driverClass：oracle.jdbc.OracleDriver
+url：jdbc:oracle:thin:@localhost:1521:dbname
+
+
+MySQL
+driverClass：com.mysql.jdbc.Driver
+url：jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;amp;use...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606888020"
+  data-df="ll"
+  
+>
+  Dec  2, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JDBC
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/caozuo-shujuku-chuxian-luanma/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1066,211 +1267,6 @@ EXISTS与IN的使用效率的问题，通常情况下采用EXISTS要比IN效率�
                   
                     Knowledge,
                     SQL
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/firefox-ruhe-qiyong-pocket/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Firefox如何启用Pocket for Firefox
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              
-  在地址栏，输入about:config，然后按回车。
-  有时会出现警告页面。点击我了解此风险，请继续！，以打开about:config页面。
-  在偏好列表上面的搜索栏里输入pocket。
-  点击首选项extensions.pocket.enabled旁边的按钮设其值为true。
-  Pocket是Firefox的内置功能。此时，它会在地址栏中添加一个Pocket按钮，在我的足迹菜...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606801620"
-  data-df="ll"
-  
->
-  Dec  1, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    SOFTWARE
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/shujuk-sanfanshi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            数据库三范式
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              三范式解释
-1NF：字段不可分;原子性字段不可再分，否则就不是关系数据库; 
-2NF：有主键，非主键字段依赖主键;唯一性，一个表只说明一个事物;  
-3NF：非主键字段不能相互依赖;每列都与主键有直接关系，不存在传递依赖;
-
-不符合1NF的例子
-表
-字段1，字段2(字段2.1，字段2.2)，字段3 …… (关系数据库中create不出这样的表)
-存在问题
-因为设计不出这样的表，所以没有问题。...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606801620"
-  data-df="ll"
-  
->
-  Dec  1, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Database
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/zhuanfa-he-chongdingxiang-de-canshuchuandi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            转发和重定向的参数传递
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              重定向跳转
-超链接标签&amp;lt;a&amp;gt;就是一种重定向跳转，这样的跳转request对象是传不到下一个页面的，下一个页面得到的request对象是一个新的对象，而不是上一个页面传过来的，得不到上一个页面的数据。
-如果你想通过这种方法跳转的话，那就要用&amp;lt;a href=&quot;a.jsp?参数名=参数值&quot;&amp;gt;传递参数，在下一个页面用request.getParameter(&quot;参数名&quot;)得到值...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606715220"
-  data-df="ll"
-  
->
-  Nov 30, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JSP
                 </span>
               
             </div>

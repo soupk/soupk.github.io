@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-04-01T04:04:15+08:00</updated>
+  <updated>2024-06-03T19:27:39+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,169 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>自定义启动banner</title>
+    <link href="http://localhost:4000/posts/zidingyi-qidong-banner/" rel="alternate" type="text/html" title="自定义启动banner" />
+    <published>2024-06-03T13:47:00+08:00</published>
+  
+    <updated>2024-06-03T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/zidingyi-qidong-banner/</id>
+    <content src="http://localhost:4000/posts/zidingyi-qidong-banner/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="Spring Boot" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Spring Boot启动的时候默认的banner是spring的字样，看多了觉得挺单调的，Spring Boot为我们提供了自定义banner的功能。自定义banner只需要在resource下新建一个banner.txt文件，将我们需要的banner字样放进去，启动的时候就会去读取使用这个文本文件中的banner。
+
+控制banner样式
+Spring提供了三个枚举类来设定字符的颜色，分别是：
+
+  AnsiColor： 用来设定字符的前景色
+  AnsiBackground： 用来设定字符的背景色
+  AnsiStyle： 用来控制加粗、斜体、下划线等等
+使用${AnsiFoo.Bar}来指定样式，这个颜色的设置是可以变的，也就是说同一个屏幕可以指定多个${AnsiColor.FooColor}这种，指定了颜色之后直到下次指定之前的字符都是FooColor颜色的
+
+
+${Ans...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>MyBatis Generator配置详解</title>
+    <link href="http://localhost:4000/posts/mybatis-generator-peizhi-xiangjie/" rel="alternate" type="text/html" title="MyBatis Generator配置详解" />
+    <published>2024-05-31T09:47:00+08:00</published>
+  
+    <updated>2024-05-31T09:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/mybatis-generator-peizhi-xiangjie/</id>
+    <content src="http://localhost:4000/posts/mybatis-generator-peizhi-xiangjie/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="MyBatis" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、添加MyBatis和数据库驱动依赖
+&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;1.3.2&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;8.0.28&amp;lt;/version&amp;gt;
+&amp;lt;/...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>GaussDB查进程锁和杀进程</title>
+    <link href="http://localhost:4000/posts/gaussdb-shajincheng/" rel="alternate" type="text/html" title="GaussDB查进程锁和杀进程" />
+    <published>2024-05-10T13:47:00+08:00</published>
+  
+    <updated>2024-05-10T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/gaussdb-shajincheng/</id>
+    <content src="http://localhost:4000/posts/gaussdb-shajincheng/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="GaussDB" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      通过以下SQL就能确认当前的连接用户、连接地址、连接应用、状态、是否等待锁、排队状态以及线程id
+SELECT
+  usename,
+  client_addr,
+  application_name,
+  state,
+  waiting,
+  enqueue,
+  pid
+FROM
+  PG_STAT_ACTIVITY;
+
+
+中止某个会话连接
+SELECT PG_TERMINATE_BACKEND(pid);
+
+
+查看当前处于阻塞状态的查询语句
+SELECT
+  pid,
+  datname,
+  usename,
+  state,
+  query
+FROM
+  PG_STAT_ACTIVITY
+WHERE
+  state &amp;lt;&amp;gt; 'idle'
+  and waiting = true;
+
+
+查看事务有没有持有锁
+select
+  datname,
+  usename,...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -105,129 +268,6 @@ select cast('000123' as SIGNED);
 -- 3、convert('字符串', 数值类型)
 -- 整数 SIGNED，无符号整数 UNSIGNED，浮点数 DECIMAL
 select convert('000123' as SIGNED);
-
-
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Mybatis分页计算公式</title>
-    <link href="http://localhost:4000/posts/mybatis-fenye-jisuan-gongshi/" rel="alternate" type="text/html" title="Mybatis分页计算公式" />
-    <published>2024-02-21T09:47:00+08:00</published>
-  
-    <updated>2024-02-21T09:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/mybatis-fenye-jisuan-gongshi/</id>
-    <content src="http://localhost:4000/posts/mybatis-fenye-jisuan-gongshi/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="MyBatis" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      -- n为页码，m为每页数据条数
-select * from 表名 limit(n-1)*m, m
-
-
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>GaussDB正则查询</title>
-    <link href="http://localhost:4000/posts/gaussdb-zhengze-chaxun/" rel="alternate" type="text/html" title="GaussDB正则查询" />
-    <published>2024-01-27T13:47:00+08:00</published>
-  
-    <updated>2024-01-27T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/gaussdb-zhengze-chaxun/</id>
-    <content src="http://localhost:4000/posts/gaussdb-zhengze-chaxun/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="GaussDB" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      GaussDB使用正则表达式查询示例：
--- 查询所有以abc开头的字符串
-select * from table where cloum ~ '^abc'
-
-
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>List转String，逗号分割</title>
-    <link href="http://localhost:4000/posts/java-list-zhuan-string-douhao-fenge/" rel="alternate" type="text/html" title="List转String，逗号分割" />
-    <published>2024-01-27T11:47:00+08:00</published>
-  
-    <updated>2024-01-27T11:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/java-list-zhuan-string-douhao-fenge/</id>
-    <content src="http://localhost:4000/posts/java-list-zhuan-string-douhao-fenge/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Java" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      // 将List转化为逗号分割的字符串
-String str = String.join(",", list);
-String str = StringUtils.json(list.toArray(), ",");
-
-// 将逗号分隔的字符串转换为List
-List&amp;lt;String&amp;gt; list = Arrays.asList(str.split(","));
-List&amp;lt;String&amp;gt; list = Arrays.asList(StringUtils.split(str, ","));
 
 
     </summary>

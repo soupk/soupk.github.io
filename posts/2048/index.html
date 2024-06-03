@@ -7495,6 +7495,42 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8690,7 +8726,7 @@
         
         
         <div class="col">
-          <a href="/posts/aes-jiami-yichang/" class="card post-preview h-100">
+          <a href="/posts/zidingyi-qidong-banner/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8703,14 +8739,14 @@
 
 <em
   class="small"
-  data-ts="1710992820"
+  data-ts="1717393620"
   data-df="ll"
   
 >
-  Mar 21, 2024
+  Jun  3, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>AES加密异常</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>自定义启动banner</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8719,11 +8755,10 @@
 
 
 
-                  报错信息
-Java实现AES加密，抛出异常如下：java.security.InvalidKeyException: Illegal key size
+                  Spring Boot启动的时候默认的banner是spring的字样，看多了觉得挺单调的，Spring Boot为我们提供了自定义banner的功能。自定义banner只需要在resource下新建一个banner.txt文件，将我们需要的banner字样放进去，启动的时候就会去读取使用这个文本文件中的banner。
 
-报错原因
-Illegal key size or default parameters是指密钥长度受限制，Java运行时环境读到的是受限的policy文件。policy文件位于${java_home}/jre/lib/security 目录...
+控制banner样式
+Spring提供了三个枚举类来设定字符的颜色，分...
                 </p>
               </div>
             </div>
@@ -8733,7 +8768,7 @@ Illegal key size or default parameters是指密钥长度受限制，Java运行�
         
         
         <div class="col">
-          <a href="/posts/shujuku-changyong-hanshu/" class="card post-preview h-100">
+          <a href="/posts/mybatis-generator-peizhi-xiangjie/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8746,14 +8781,14 @@ Illegal key size or default parameters是指密钥长度受限制，Java运行�
 
 <em
   class="small"
-  data-ts="1708562820"
+  data-ts="1717120020"
   data-df="ll"
   
 >
-  Feb 22, 2024
+  May 31, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>数据库常用查询和函数</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>MyBatis Generator配置详解</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8762,7 +8797,7 @@ Illegal key size or default parameters是指密钥长度受限制，Java运行�
 
 
 
-                  MySQL
+                  一、添加MyBatis和数据库驱动依赖
 1
 2
 3
@@ -8772,14 +8807,11 @@ Illegal key size or default parameters是指密钥长度受限制，Java运行�
 7
 8
 9
--- 字符串转数字
--- 1、+0
-select &#39;00123&#39; + 0;
--- 2、cast(&#39;字符串&#39; as 数值类型)
--- 整数 SIGNED，无符号整数 UNSIGNED，浮点数 DECIMAL
-select cast(&#39;000123&#39; as SIGNED);
--- 3、convert(&#39;字符串&#39;, 数值类型)
--- 整数 SIGNE...
+10
+&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+    &amp;lt;v...
                 </p>
               </div>
             </div>

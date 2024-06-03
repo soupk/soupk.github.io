@@ -586,6 +586,212 @@
 
 <div id="post-list">
   
+    <a href="/posts/js-zhong-huoqu-alert-weizhi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JS中获取alert代码的位置
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              找到弹窗出现的页面，在浏览器控制台输入：
+var oalert = window.alert
+window.alert = (...args) =&amp;gt; { oalert(...args); console.error(new Error(&#39;someone alerted&#39;))}
+
+然后复现弹窗，即可在控制台看到alert代码的位置。
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1669862820"
+  data-df="ll"
+  
+>
+  Dec  1, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JavaScript
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/js-fasong-postjson-geshi-qingqiu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JS发送POST JSON格式请求
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              var xhr = new XMLHttpRequest();
+var sendData = {name:&quot;abc&quot;};
+xhr.open(&quot;POST&quot;, &quot;/service/hello&quot;, true);
+xhr.setRequestHeader(&#39;content-type&#39;, &#39;application/json&#39;);
+// 将用户输入值序列化成字符串
+xhr.send(JSON.strin...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1669862820"
+  data-df="ll"
+  
+>
+  Dec  1, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JavaScript
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/log4j-loudong-xiufu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Log4j漏洞修复
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              升级官方版本（推荐）
+目前Apache官方已发布最新版升级包，Java7版本升级至log4j-2.12.4版本，Java8及以上版本升级至log4j-2.17.0版本，升级包中移除了对lookup功能的支持，默认禁用了JNDI方法。
+
+移除Log4j包中JndiLookup类（可能存在未知影响）
+移除log4j-core包中JndiLookup类文件，并重启服务，具体方法如下：
+
+
+  Li...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1664344020"
+  data-df="ll"
+  
+>
+  Sep 28, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Log4j
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/eclipse-genghuan-gongzuokongjian-buzhou/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1106,210 +1312,6 @@ systemctl start firewalld
                   
                     Knowledge,
                     SYSTEM
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/linux-vi-xia-ruhe-sousuo-zifu/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            vi/vim下如何搜索字符串
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              
-  命令模式下，输入/字符串，比如搜索user，输入/user，按下回车之后，可以看到vim已经把光标移动到该字符处和高亮了匹配的字符串
-  查看下一个匹配，按下n（小写n）
-  跳转到上一个匹配，按下N（大写N）
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1662659220"
-  data-df="ll"
-  
->
-  Sep  9, 2022
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Linux
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/eclipse-zhong-jiangxiangmu-zhuanwei-webxiangmu-de-fangfa/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Eclipse中将Java项目转换成Web项目的方法
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              用Eclipse开发项目的时候，把一个Web项目导入到Eclipse里会变成一个Java工程，将无法在Tomcat中进行部署运行，所以要转为Web项目。
-
-
-  
-    找到.project文件，找到里面的&amp;lt;natures&amp;gt;标签，查看是否有下面的代码，没有则复制进去，如果Properties配置中有Project Facets选项则忽略此步骤。
-
-     &amp;lt;nature...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1662659220"
-  data-df="ll"
-  
->
-  Sep  9, 2022
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Eclipse
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/eclipse-yiijng-daoru-jarbao-danhaishi-xianshi-classnotfound/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Eclipse已经导入jar包，但还是出现ClassNotFound异常
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              问题描述
-最近在部署一个Web项目，jar包在lib目录下新建了子目录放置，在Java类中直接通过import能导入使用，并且单独运行一个Java类的main方法可以正常运行，但是在运行Web项目时却会报ClassNotFound的错误。
-
-问题原因
-对于普通的Java类，编译jar包时，就直接在导入的包中查找就可以了，但是对于Web项目，由于它们是借助了Tomcat或者其他的容器发布，基于...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1662659220"
-  data-df="ll"
-  
->
-  Sep  9, 2022
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Eclipse
                 </span>
               
             </div>

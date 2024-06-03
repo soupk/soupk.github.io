@@ -3233,6 +3233,42 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8678,49 +8714,6 @@
         
         
         <div class="col">
-          <a href="/posts/mybatis-baocuo-wuxiao-de-liesuoyin/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1658382420"
-  data-df="ll"
-  
->
-  Jul 21, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>MyBatis报错，无效的列索引</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  报错信息
-nested exception is org.apache.ibatis.type.TypeException: 
-Could not set parameters for mapping: ParameterMapping{property= ‘groupid’,
-mode=IN, javaType=class java.lang.Object, jdbcType=null,
-...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/mybatis-baocuo/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8768,7 +8761,7 @@ Caused by: org.postgresql.util.PSQLException: 栏位索引超过许可范围：4
         
         
         <div class="col">
-          <a href="/posts/mybatis-shiyong-mohu-chaxun/" class="card post-preview h-100">
+          <a href="/posts/mybatis-baocuo-wuxiao-de-liesuoyin/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8781,14 +8774,14 @@ Caused by: org.postgresql.util.PSQLException: 栏位索引超过许可范围：4
 
 <em
   class="small"
-  data-ts="1603691220"
+  data-ts="1658382420"
   data-df="ll"
   
 >
-  Oct 26, 2020
+  Jul 21, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>MyBatis中使用模糊查询</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>MyBatis报错，无效的列索引</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8797,9 +8790,53 @@ Caused by: org.postgresql.util.PSQLException: 栏位索引超过许可范围：4
 
 
 
-                  &amp;lt;if test=&#39;testdata != null and testdata !=&quot;&quot;&#39;&amp;gt;
-    AND T.TEST_DATA LIKE CONCAT(CONCAT(&#39;%&#39;, #{testdata, jdbcType = VARCHAR}), &#39;%&#39;) 
-&amp;lt;/if&amp;gt;
+                  报错信息
+nested exception is org.apache.ibatis.type.TypeException: 
+Could not set parameters for mapping: ParameterMapping{property= ‘groupid’,
+mode=IN, javaType=class java.lang.Object, jdbcType=null,
+...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/mybatis-fenye-jisuan-gongshi/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1708480020"
+  data-df="ll"
+  
+>
+  Feb 21, 2024
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Mybatis分页计算公式</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  1
+2
+-- n为页码，m为每页数据条数
+select * from 表名 limit(n-1)*m, m
 
 
                 </p>
