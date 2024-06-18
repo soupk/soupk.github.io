@@ -586,6 +586,75 @@
 
 <div id="post-list">
   
+    <a href="/posts/java-list-zhuan-string-douhao-fenge/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            List转String，逗号分割
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              // 将List转化为逗号分割的字符串
+String str = String.join(&quot;,&quot;, list);
+String str = StringUtils.json(list.toArray(), &quot;,&quot;);
+
+// 将逗号分隔的字符串转换为List
+List&amp;lt;String&amp;gt; list = Arrays.asList(str.split(&quot;,&quot;));
+List&amp;lt;St...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1706327220"
+  data-df="ll"
+  
+>
+  Jan 27, 2024
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Java
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/mybatis-baocuo/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1204,77 +1273,6 @@ UpdateWra...
                   
                     Knowledge,
                     Android
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/gradle-anzhuang-he-shiyong/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Gradle的安装配置及使用
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              1、官网下载链接https://gradle.org/releases/，下载后解压
-
-2、新建GRADLE_HOME环境变量指向Gradle解压路径
-
-3、将%GRADLE_HOME%\bin添加到Path环境变量中
-
-4、打开cmd命令行输入gradle -v验证Gradle是否安装成功
-
-5、配置Gradle默认的仓库地址，Gradle和Maven类似也需要配置仓库地址，首先新建一个文...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1689814020"
-  data-df="ll"
-  
->
-  Jul 20, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Gradle
                 </span>
               
             </div>

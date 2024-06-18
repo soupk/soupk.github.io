@@ -586,6 +586,147 @@
 
 <div id="post-list">
   
+    <a href="/posts/nodejs-anzhuang/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            NodeJS安装
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              下载
+首先去到官网：https://nodejs.org/en/download/下载对应的版本：
+
+接着选择好路径，一路安装即可。新版的NodeJS自带npm ，所以无需重新安装npm，安装结束后，在cmd输入node -v和npm -v即可显示安装成功：
+
+
+配置路径和环境变量
+安装之后，我们需要对路径进行重新配置，如果不重新配置路径，则下载的moudle还是在C盘，例如在安装路径下新建...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606888020"
+  data-df="ll"
+  
+>
+  Dec  2, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    NodeJS
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/log4j-rizhi-wenjian-luanma/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Log4j日志文件乱码
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              在默认语言非中文（或者说默认语言不支持中文的）的Windows、Linux、Unix上，用Log4j打印日志，出现乱码，常见的就是一堆问号。
+
+解决方法
+如果是log4j.properties为配置文件，比如
+log4j.appender.A1=org.apache.log4j.RollingFileAppender
+log4j.appender.A1.File=all.log
+
+加入一行
+...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606888020"
+  data-df="ll"
+  
+>
+  Dec  2, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Log4j
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/jira-rest-api-diaoyong-fangfa/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1118,155 +1259,6 @@ Solr复制域可以将多个索引字段结合到一起作为查询使用的域�
                   
                     Knowledge,
                     Solr
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/solr-chaxun-yuju/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Solr查询语句
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              基本字段查询
-key:中国
-key:*中   // 结束值为“中”的值
-key:中*   // 开始值为“中”的值
-key:*中*  // 含有“中”的值
-
-
-强制不分词
-key:&#39;中国&#39;
-
-
-多字段与或关系 OR/AND
-key:(02 OR 10 OR 11 OR 12 )
-key:(02 AND 10 AND 11 AND 12 )
-key1:01 AND key2:02
-
-
-多字段不...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606801620"
-  data-df="ll"
-  
->
-  Dec  1, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Solr
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/sql-zhong-esists-de-yongfa/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            SQL中EXISTS的用法
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              功能
-EXISTS用于检查子查询是否至少会返回一行数据，该子查询实际上并不返回任何数据，而是返回值True或False。
-EXISTS指定一个子查询，检测行的存在。
-EXISTS与IN的使用效率的问题，通常情况下采用EXISTS要比IN效率高，因为IN不走索引，但要看实际情况具体使用：IN适合于外表大而内表小的情况；EXISTS适合于外表小而内表大的情况。
-
-用法
-在插入记录前，需要检查这条...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606801620"
-  data-df="ll"
-  
->
-  Dec  1, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    SQL
                 </span>
               
             </div>

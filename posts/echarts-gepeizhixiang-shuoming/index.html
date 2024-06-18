@@ -10244,6 +10244,30 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -10260,95 +10284,6 @@
       Further Reading
     </h3>
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-      
-        
-        
-        <div class="col">
-          <a href="/posts/win10-xia-dangqian-mulu-youjian-tianjia-cmd-kuaijiefangshi/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1640238420"
-  data-df="ll"
-  
->
-  Dec 23, 2021
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Windows10下当前目录右键添加CMD快捷方式</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  Win10下Shift + 右键不能打开CMD，只能打开PowerShell。首先，在桌面新建一个文本文档。
-Windows Registry Editor Version 5.00
-[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell\cmd_here]
-@=&quot;在此处打开命令行&quot;
-&quot;Icon&quot;=&quot;cmd.exe&quot;
-[...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
-          <a href="/posts/java-zhong-url-zhuan-erweima/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1640281620"
-  data-df="ll"
-  
->
-  Dec 24, 2021
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Java工具类把URL转换成二维码</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  &amp;lt;dependency&amp;gt;
-    &amp;lt;groupId&amp;gt;com.google.zxing&amp;lt;/groupId&amp;gt;
-    &amp;lt;artifactId&amp;gt;core&amp;lt;/artifactId&amp;gt;
-    &amp;lt;version&amp;gt;3.1.0&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;
-
-import java.awt.im...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
       
         
         
@@ -10387,6 +10322,95 @@ import java.awt.im...
     String fileContentBase64 = null;
     String base64Str = &quot;data:&quot; + fileType + &quot;;base64,&quot;;
     Strin...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/zaijingtaifangfa-zhong-diaoyong-spring-zhuru-de-lei/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1640281620"
+  data-df="ll"
+  
+>
+  Dec 24, 2021
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>在静态方法中调用Spring注入的类</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  @Component
+public class FileUtil {
+    @Autowired
+    FileConfig fileConfig;
+
+    @Autowired
+    private static FileConfig staticFileConfig;
+
+    @PostConstruct
+    public void init() {
+        sta...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/biaodan-zhong-name-xiangtong-ruhe-zaihoutai-huoqu-shuju/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1642700820"
+  data-df="ll"
+  
+>
+  Jan 21, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>表单中name相同的元素在后台如何获取</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  name相同的多个元素只需要在后台用String[] param = request.getParameterValues(&quot;param&quot;)就可以了。
+
                 </p>
               </div>
             </div>
