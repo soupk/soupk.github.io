@@ -586,6 +586,79 @@
 
 <div id="post-list">
   
+    <a href="/posts/ifconfig-mingling-wufa-shiyong/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            ifconfig命令无法使用
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              修改网络配置，末尾的ifcfg-ens33可根据实际情况更改，有的可能为ifcfg-eth0 或者其他，可先切换到上级目录查看
+vi /etc/sysconfig/network-scripts/ifcfg-ens33
+
+将ONBOOT=no改为ONBOOT=yes，代表系统启动时，网卡也随之启动
+...
+DEVICE=ens33
+ONBOOT=yes
+...
+
+重启网络服务
+service...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1677174420"
+  data-df="ll"
+  
+>
+  Feb 24, 2023
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Linux
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/weblogic-bushu-xiangmu/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1204,70 +1277,6 @@ SpringMVC是一个基于Java的实现了MVC设计模式的请求驱动类型的�
                   
                     Knowledge,
                     SpringMVC
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/jdk-he-jre/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JDK和JRE
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              JDK是整个Java的核心，包括了Java运行环境JRE、Java开发工具和Java基础类库。利用JDK（调用JAVA API）开发了属于我们自己的Java程序后，通过JDK中的编译程序（javac）将我们的Java文件编译成Java字节码，在JRE上运行这些Java字节码，JVM解析这些字节码，映射到CPU指令集或OS的系统调用。
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1669960020"
-  data-df="ll"
-  
->
-  Dec  2, 2022
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JDK
                 </span>
               
             </div>
@@ -1938,12 +1947,25 @@ SpringMVC是一个基于Java的实现了MVC设计模式的请求驱动类型的�
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page47"
-        >47</a>
+          href="/page48"
+        >48</a>
       </li>
     
   
@@ -1951,7 +1973,7 @@ SpringMVC是一个基于Java的实现了MVC设计模式的请求驱动类型的�
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>6</span>
-    <span class="text-muted">/ 47</span>
+    <span class="text-muted">/ 48</span>
   </li>
 
   <!-- right arrow -->
@@ -3989,11 +4011,6 @@ SpringMVC是一个基于Java的实现了MVC设计模式的请求驱动类型的�
     
     
       
-    
-  
-    
-    
-    
     
   
     
@@ -6108,11 +6125,6 @@ SpringMVC是一个基于Java的实现了MVC设计模式的请求驱动类型的�
     
     
       
-    
-  
-    
-    
-    
     
   
     

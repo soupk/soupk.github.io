@@ -586,6 +586,79 @@
 
 <div id="post-list">
   
+    <a href="/posts/oracle-huifu-shuju/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 误删数据的恢复方法
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              DELETE误删数据
+利用Oracle提供的闪回方法，如果在删除数据后还没做大量的操作（只要保证被删除数据的块没被覆写），就可以利用闪回方式直接找回删除的数据
+
+  确定删除数据的时间（在删除数据之前的时间就行，不过最好是删除数据的时间点）
+  
+    用以下语句找出删除的数据
+
+     select
+ *
+ from
+ TEST as of timestamp to_timestamp...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1624513620"
+  data-df="ll"
+  
+>
+  Jun 24, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/js-shengming-quanjubianliang/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1180,82 +1253,6 @@ vi /etc/sysconfig/network-scripts/ifcfg-eth0
 firewall-cmd [--zone=&amp;lt;zone&amp;gt;] --add-port=&amp;lt;port&amp;gt;[-&amp;lt;port&amp;gt;]/&amp;lt;protocol&amp;gt; [--timeout=&amp;lt;s&amp;gt;]
 
 ...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1624470420"
-  data-df="ll"
-  
->
-  Jun 24, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Linux
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/linux-chmod-mingling/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Linux chmod命令
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              在Linux中要修改一个文件夹或文件的权限要用到chmod命令，语法如下：
-
-chmod [who] [+ | - | =] [mode] 文件名
-
-
-各选项含义
-
-
-  who
-    
-      u 表示“用户（user）”，即文件或目录的所有者
-      g 表示“同组（group）用户”，即与文件属主有相同组ID的所有用户
-      o 表示“其他（others）用户”
-   ...
             </p>
           </div>
 
@@ -1959,12 +1956,25 @@ chmod [who] [+ | - | =] [mode] 文件名
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page47"
-        >47</a>
+          href="/page48"
+        >48</a>
       </li>
     
   
@@ -1972,7 +1982,7 @@ chmod [who] [+ | - | =] [mode] 文件名
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>20</span>
-    <span class="text-muted">/ 47</span>
+    <span class="text-muted">/ 48</span>
   </li>
 
   <!-- right arrow -->
@@ -4010,11 +4020,6 @@ chmod [who] [+ | - | =] [mode] 文件名
     
     
       
-    
-  
-    
-    
-    
     
   
     
@@ -6129,11 +6134,6 @@ chmod [who] [+ | - | =] [mode] 文件名
     
     
       
-    
-  
-    
-    
-    
     
   
     

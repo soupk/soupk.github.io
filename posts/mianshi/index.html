@@ -1038,6 +1038,66 @@
       
 
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
 
     
 
@@ -1136,9 +1196,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="6861 words"
+  title="9476 words"
 >
-  <em>38 min</em> read</span>
+  <em>52 min</em> read</span>
 
     </div>
 
@@ -1172,8 +1232,14 @@
 
 <h3 id="分布式事务"><span class="me-2">分布式事务</span><a href="#分布式事务" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<blockquote class="prompt-warning">
-  <p>.</p>
+<blockquote class="prompt-tip">
+  <p>分布式系统环境下由不同的服务之间通过网络远程协作完成事务称之为分布式事务。分布式事务的四种方案包括两阶段提交（2PC）、补偿事务（TCC）、本地消息表（异步确保）和最大努力通知。</p>
+  <ul>
+    <li>两阶段提交（2PC）：这是一种通过引入协调者来协调参与者行为，并最终决定这些参与者是否要真正执行事务的方案。它分为两个阶段：准备阶段和提交阶段。在准备阶段，协调者询问参与者事务是否执行成功，参与者发回事务执行结果。如果事务在每个参与者上都执行成功，协调者发送通知让参与者提交事务；否则，协调者发送通知让参与者回滚事务。存在的问题包括同步阻塞、单点问题、数据不一致和太过保守。</li>
+    <li>补偿事务（TCC）：这是一种针对每个操作注册一个与其对应的确认和补偿（撤销）操作的方案。它分为三个阶段：Try阶段主要是对业务系统做检测及资源预留；Confirm阶段主要是对业务系统做确认提交；Cancel阶段主要是在业务执行错误，需要回滚的状态下执行的业务取消，预留资源释放。优点是跟2PC比起来，实现以及流程相对简单了一些，但数据的一致性比2PC也要差一些。缺点是比较明显的，在2,3步中都有可能失败。</li>
+    <li>本地消息表（异步确保）：这是一种在分布式事务操作的一方完成写业务数据的操作之后向本地消息表发送一个消息的方案。本地事务能保证这个消息一定会被写入本地消息表中。之后将本地消息表中的消息转发到Kafka等消息队列中，如果转发成功则将消息从本地消息表中删除，否则继续重新转发。在分布式事务操作的另一方从消息队列中读取一个消息，并执行消息中的操作。优点是一种非常经典的实现，避免了分布式事务，实现了最终一致性。</li>
+    <li>最大努力通知：这是一种基于可靠消息服务的分布式事务解决方案，通过定期校对的方式处理任务完成后发送消息的情况。它通过最大努力通知机制来确保消息的传递和可靠性。</li>
+  </ul>
 </blockquote>
 
 <h3 id="spring-cloud五大组件"><span class="me-2">Spring Cloud五大组件</span><a href="#spring-cloud五大组件" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
@@ -1198,8 +1264,9 @@
 
 <blockquote class="prompt-tip">
   <ul>
-    <li>Oracle是大型数据库而MySQL是中小型数据库，Oracle市场占有率达40%，Mysql只有20%左右，同时MySQL是开源的而Oracle价格非常高。</li>
-    <li>Oracle支持大并发，大访问量，是OLTP最好的工具。</li>
+    <li>Oracle是大型数据库，MySQL是中小型数据库</li>
+    <li>MySQL是开源的，Oracle价格非常高</li>
+    <li>Oracle支持大并发，大访问量，是OLTP最好的工具</li>
     <li>安装所用的空间差别也是很大的，MySQL安装完后才152M而Oracle有3G左右，且使用的时候Oracle占用特别大的内存空间和其他机器性能。</li>
   </ul>
 </blockquote>
@@ -1216,8 +1283,15 @@
 
 <h3 id="微服务如何划分模块"><span class="me-2">微服务如何划分模块</span><a href="#微服务如何划分模块" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<blockquote class="prompt-warning">
-  <p>.</p>
+<blockquote class="prompt-tip">
+  <ul>
+    <li>单一责任原则（SRP）：每个微服务应只负责一个特定的功能或领域，避免多职责混合。</li>
+    <li>松耦合：不同微服务之间应尽量减少直接依赖，通过异步通信机制如消息队列或事件总线来解耦服务之间的直接依赖。</li>
+    <li>基于业务功能划分：按照业务功能进行模块划分，例如投放服务、营销活动服务、呼叫服务等。这种方法有助于保持服务的独立性和可维护性。</li>
+    <li>基于流程架构和业务架构：从跨系统交互流程出发，分析业务交互接口点，识别关键的业务服务能力。这种方法有助于确保每个微服务都能独立完成其业务逻辑。</li>
+    <li>数据驱动：基于数据架构进行模块划分，确保每个微服务能够独立处理其数据。这种方法有助于提高数据处理的效率和准确性。</li>
+    <li>合理划分模块数量：传统的大业务系统在划分微服务模块时，建议划分到6到8个模块比较合适，随着IT成熟度的提高，可以进一步细化。</li>
+  </ul>
 </blockquote>
 
 <h3 id="hashmap和hashtable的区别"><span class="me-2">HashMap和HashTable的区别</span><a href="#hashmap和hashtable的区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
@@ -1232,8 +1306,26 @@
 
 <h3 id="cookie和session的区别"><span class="me-2">Cookie和Session的区别</span><a href="#cookie和session的区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<blockquote class="prompt-warning">
-  <p>.</p>
+<blockquote class="prompt-tip">
+  <p>Cookie和Session是两种常见的用于存储用户数据的技术手段，它们在实现机制、安全性、存储位置等方面存在显著区别。</p>
+
+  <ul>
+    <li>存储位置 <br />
+Cookie：存储在客户端（浏览器）上。<br />
+Session：存储在服务器端。</li>
+    <li>安全性<br />
+Cookie：相对不安全，因为数据存储在客户端，容易被篡改或窃取。<br />
+Session：更安全，因为数据存储在服务器端，并且通常会进行加密处理。</li>
+    <li>数据类型<br />
+Cookie：只能存储字符串类型的数据，如果需要存储非ASCII字符，还需要进行编码。<br />
+Session：可以存储任何类型的数据，是一个容器，可以存储更复杂的数据结构。</li>
+    <li>有效期<br />
+Cookie：有效期取决于浏览器的设置，可以是永久性的，也可以是有限期的。<br />
+Session：通常在会话结束或者浏览器关闭时结束，或者在一定时间内无活动后自动结束。</li>
+    <li>依赖关系<br />
+Cookie：不一定依赖于Session，但Session可以通过Cookie来识别用户身份。<br />
+Session：依赖于Cookie来传递会话ID，以便服务器能够识别用户。</li>
+  </ul>
 </blockquote>
 
 <h3 id="hashmap和hashtable的线程安全性"><span class="me-2">HashMap和HashTable的线程安全性</span><a href="#hashmap和hashtable的线程安全性" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
@@ -1258,10 +1350,20 @@
   <p>persistence是你想要查找的jar包的名字的一部分。</p>
 </blockquote>
 
-<h3 id="docker和k8s的区"><span class="me-2">Docker和K8S的区</span><a href="#docker和k8s的区" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="docker和k8s的区别"><span class="me-2">Docker和K8S的区别</span><a href="#docker和k8s的区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<blockquote class="prompt-warning">
-  <p>.</p>
+<blockquote class="prompt-tip">
+  <ol>
+    <li>抽象层次不同：Docker提供了一种容器化的技术，而Kubernetes提供了一个容器编排和管理的平台。Docker更关注如何构建和打包容器，而Kubernetes更关注如何在集群上管理和运行这些容器。</li>
+    <li>管理范围不同：Docker主要用于本地开发和单主机环境中的容器管理，而Kubernetes适用于多主机或云环境中的容器编排和调度。</li>
+    <li>功能不同：Docker提供了基本的容器操作，如启动、停止和删除容器。而Kubernetes提供了更高级和复杂的功能，如自动伸缩、负载均衡和服务发现。</li>
+    <li>应用程序生命周期管理：Kubernetes更关注整个应用程序的生命周期管理，包括部署、自动扩展、更新和回滚。而Docker更注重容器本身的构建和管理。</li>
+    <li>缩放能力：Kubernetes提供了自动伸缩功能，可以根据应用程序的负载情况自动调整容器的数量。Docker只能手动进行缩放操作。</li>
+    <li>高可用性：Kubernetes提供了高可用性的能力，可以在集群中的不同节点上运行容器，并根据需要重新启动或迁移容器。Docker只能在单个主机上运行容器。</li>
+  </ol>
+
+  <p>需要注意的是，Docker和Kubernetes并不是互斥的，而是可以互补使用的。在实际应用中，通常使用Docker来构建和打包应用程序的容器镜像，然后使用Kubernetes来管理和调度这些容器。这两个工具可以一起使用，以便获得更好的容器化和应用程序管理体验。<br />
+总而言之，Kubernetes和Docker在容器化技术中发挥着不同的角色。Docker提供了容器化的基本功能，而Kubernetes提供了容器编排和管理的高级功能。它们可以一起使用，以便帮助开发人员更好地构建、部署和管理应用程序。</p>
 </blockquote>
 
 <h2 id="三面试技巧"><span class="me-2">三、面试技巧</span><a href="#三面试技巧" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
@@ -1642,11 +1744,48 @@
 
 <h2 id="五技术面"><span class="me-2">五、技术面</span><a href="#五技术面" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
+<h3 id="arraylist和linkedlist底层"><span class="me-2">ArrayList和LinkedList底层</span><a href="#arraylist和linkedlist底层" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>ArrayList的底层是一个Object类型的数组，初始时，数组的长度为0。当添加元素时，数组会根据需要自动扩容。当ArrayList中的元素数量超过当前数组的容量时，ArrayList会创建一个新的更大的数组，并将原数组中的元素复制到新数组中。默认情况下，ArrayList会将数组的大小扩大为当前容量的1.5倍。ArrayList通过索引来访问元素，ArrayList在随机访问元素时效率很高。当插入或删除元素时，ArrayList需要移动其他元素以保持数组的连续性，在需要频繁插入和删除元素的情况下，建议使用LinkedList。<br />
+LinkedList底层的数据结构是基于双向循环链表的，且头结点中不存放数据。由于LinkedList是基于链表的结构，访问元素时需要从头节点开始遍历链表，直到找到目标元素。因此，访问效率比ArrayList要低。在链表中插入或删除元素时，只需要修改相应节点的引用即可，不需要像数组那样移动其他元素。因此，插入和删除元素的操作比ArrayList高效。</p>
+</blockquote>
+
+<h3 id="mybatis中与的区别"><span class="me-2">MyBatis中#与$的区别</span><a href="#mybatis中与的区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <ol>
+    <li>#是预编译处理，$是字符串替换。</li>
+    <li>MyBatis在处理#时，会将SQL中的#替换为?号，使用PreparedStatement的set方法来赋值；在处理$时，就是把$替换成变量的值。</li>
+    <li>使用#可以有效的防止SQL注入，提高系统安全性。</li>
+  </ol>
+</blockquote>
+
+<h3 id="callable和runnable的区别"><span class="me-2">Callable和Runnable的区别</span><a href="#callable和runnable的区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <ol>
+    <li>最大的区别，Runnable没有返回值，而实现Callable接口的任务线程能返回执行结果。</li>
+    <li>Callable接口实现类中的run方法允许异常向上抛出，可以在内部外理try catch，但是Runnable接口实现类中run方法的异常必须在内部处理，不能抛出。</li>
+  </ol>
+</blockquote>
+
+<h3 id="重写和重载的区别"><span class="me-2">重写和重载的区别</span><a href="#重写和重载的区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <ol>
+    <li>定义不同：重载是定义相同的方法名、参数不同，重写是子类重写父类的方法</li>
+    <li>范围不同：重载是在一个类中，重写是子类与父类之间的</li>
+    <li>多态不同：重载是编译时的多态性，重写是运行时的多态性</li>
+    <li>参数不同：重载的参数个数、参数类型、参数的顺序可以不同，重写父类子方法参数必须相同</li>
+    <li>修饰不同：重载对修饰范围没有要求，重写要求重写方法的修饰范围大于被重写方法的修饰范围</li>
+  </ol>
+</blockquote>
+
+<h3 id="git-pull和fetch"><span class="me-2">git pull和fetch</span><a href="#git-pull和fetch" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>git fetch是下载远程仓库的最新更新，但不会自动合并，git pull是下载远程仓库的最新更新并自动合并。</p>
+</blockquote>
+
 <blockquote class="prompt-warning">
   <ul>
-    <li>介绍一下自己</li>
     <li>项目参与的核心设计有哪些</li>
-    <li>ArrayList和LinkedList底层</li>
     <li>HashMap及线程安全的ConcurrentHashMap，以及各自优劣势</li>
     <li>Java如何实现线程安全</li>
     <li>Synchronized和Lock哪个更好</li>
@@ -1664,7 +1803,6 @@
     <li>两个10G的文件，里面是一些URL，内存只有1G，如何将这两个文件合并，找到相同的URL</li>
     <li>1000个多并发线程，10台机器，每台机器4核的，设计线程池大小</li>
     <li>代码题：两个有序数组，数组中存在重复数字，合并成一个有序数组，去除重复数字</li>
-    <li>说一下自己的优点</li>
     <li>JVM性能调优都做了什么</li>
     <li>数据库性能调优如何做</li>
     <li>分布式系统原理：CAP，最终一致性，幂等操作等</li>
@@ -3890,11 +4028,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -3982,6 +4115,30 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -11820,11 +11977,6 @@
     
     
       
-    
-  
-    
-    
-    
     
   
     

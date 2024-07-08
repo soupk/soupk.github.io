@@ -586,6 +586,74 @@
 
 <div id="post-list">
   
+    <a href="/posts/eclipse-bao-permgen-space-yichang/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Eclipse报PermGen space异常
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              修改catalina.bat
+在Tomcat/bin目录下的catalina.bat
+rem ----- Execute The Requested Command ----------------------
+
+下面加入
+JAVA_OPTS=&quot;-server -Xms800m -Xmx800m -XXNewSize=256M -XX:PermSize=256M -XX:MaxNewSize...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1624340820"
+  data-df="ll"
+  
+>
+  Jun 22, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Eclipse
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/ruhe-rangtupian-anbili-xiangyingshi-suofang/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1168,79 +1236,6 @@ url: jdbc:oracle:thin@10.112.129.9:1521:jira
 修改为：
 
 url: jdbc:oracle:thin:@//10.112.129.9:1521/jira
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1621403220"
-  data-df="ll"
-  
->
-  May 19, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Oracle
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/oracle-tihuan-zifuchuan/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Oracle 替换字符串
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              replace(strSource, str1, str2)将strSource中的str1替换成str2
-
-
-  strSource：源字符串
-  str1: 要替换的字符串
-  str2: 替换后的字符串
-
-
-select &#39;替换字符串&#39; as oldStr, replace(&#39;替换字符串&#39;, &#39;替换&#39;, &#39;修改&#39;) as newStr from dual
 
 
             </p>
@@ -1946,12 +1941,25 @@ select &#39;替换字符串&#39; as oldStr, replace(&#39;替换字符串&#39;, &
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page47"
-        >47</a>
+          href="/page48"
+        >48</a>
       </li>
     
   
@@ -1959,7 +1967,7 @@ select &#39;替换字符串&#39; as oldStr, replace(&#39;替换字符串&#39;, &
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>22</span>
-    <span class="text-muted">/ 47</span>
+    <span class="text-muted">/ 48</span>
   </li>
 
   <!-- right arrow -->
@@ -3997,11 +4005,6 @@ select &#39;替换字符串&#39; as oldStr, replace(&#39;替换字符串&#39;, &
     
     
       
-    
-  
-    
-    
-    
     
   
     
@@ -6116,11 +6119,6 @@ select &#39;替换字符串&#39; as oldStr, replace(&#39;替换字符串&#39;, &
     
     
       
-    
-  
-    
-    
-    
     
   
     

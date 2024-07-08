@@ -586,6 +586,76 @@
 
 <div id="post-list">
   
+    <a href="/posts/oracle-shijian-jisuan/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 当前时间加一天、一分钟......
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              sysdate+1 -- 加1天
+sysdate+1/24 -- 加1小时
+sysdate+1/(24*60) -- 加1分钟
+sysdate+1/(24*60*60) -- 加1秒钟
+
+-- 加法 
+select add_months(sysdate, 12) from dual; -- 加1年 
+select add_months(sysdate, 1) from dual; -- 加1...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1633888020"
+  data-df="ll"
+  
+>
+  Oct 11, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/oracle-ruhe-chakan-banben/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1203,76 +1273,6 @@ Criteria、HQL
                   
                     Knowledge,
                     Java
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/struts2-zhongde-tongpei/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Struts2中通配的使用
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              在struts.xml文件（配置PersonAction的配置文件）中修改成如下：
-
-
-
-第一个*的意思是调用的类，第二个*的意思是所用的类中的方法，花括号内的数字就是所用的第几个*。
-
-例如请求地址：http://localhost:8080/Struts2MVCDemo/Person_liming?name=liming，代表调用PersonAction类中的lingming()方法。
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1628488020"
-  data-df="ll"
-  
->
-  Aug  9, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Struts2
                 </span>
               
             </div>
@@ -1943,12 +1943,25 @@ Criteria、HQL
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page47"
-        >47</a>
+          href="/page48"
+        >48</a>
       </li>
     
   
@@ -1956,7 +1969,7 @@ Criteria、HQL
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>12</span>
-    <span class="text-muted">/ 47</span>
+    <span class="text-muted">/ 48</span>
   </li>
 
   <!-- right arrow -->
@@ -3994,11 +4007,6 @@ Criteria、HQL
     
     
       
-    
-  
-    
-    
-    
     
   
     
@@ -6113,11 +6121,6 @@ Criteria、HQL
     
     
       
-    
-  
-    
-    
-    
     
   
     

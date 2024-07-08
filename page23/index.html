@@ -586,6 +586,79 @@
 
 <div id="post-list">
   
+    <a href="/posts/oracle-tihuan-zifuchuan/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 替换字符串
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              replace(strSource, str1, str2)将strSource中的str1替换成str2
+
+
+  strSource：源字符串
+  str1: 要替换的字符串
+  str2: 替换后的字符串
+
+
+select &#39;替换字符串&#39; as oldStr, replace(&#39;替换字符串&#39;, &#39;替换&#39;, &#39;修改&#39;) as newStr from dual
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1621403220"
+  data-df="ll"
+  
+>
+  May 19, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/oracle-substr-hanshu-he-instr-hanshu/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1198,84 +1271,6 @@ OracleDBConsoleorcl
 OracleJobSchedulerORCL
 OracleMTSRecoveryService
 OracleOraDb11g_home1ClrAge...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1621316820"
-  data-df="ll"
-  
->
-  May 18, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Oracle
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/oracle-chaxun-biaozhong-chongfu-shuju/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Oracle 查询表中重复数据
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              1、查找表中的重复记录，重复记录是根据单个字段（peopleId）来判断
-
-SELECT
-  *
-FROM
-  people
-WHERE
-  peopleId IN (
-    SELECT
-      peopleId
-    FROM
-      people
-    GROUP BY
-      peopleId
-    HAVING
-      count(peopleId) &amp;gt...
             </p>
           </div>
 
@@ -1979,12 +1974,25 @@ WHERE
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page47"
-        >47</a>
+          href="/page48"
+        >48</a>
       </li>
     
   
@@ -1992,7 +2000,7 @@ WHERE
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>23</span>
-    <span class="text-muted">/ 47</span>
+    <span class="text-muted">/ 48</span>
   </li>
 
   <!-- right arrow -->
@@ -4030,11 +4038,6 @@ WHERE
     
     
       
-    
-  
-    
-    
-    
     
   
     
@@ -6149,11 +6152,6 @@ WHERE
     
     
       
-    
-  
-    
-    
-    
     
   
     

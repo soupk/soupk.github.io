@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-06-21T15:16:18+08:00</updated>
+  <updated>2024-07-09T01:44:31+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,80 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Windows11关闭BitLocker加密</title>
+    <link href="http://localhost:4000/posts/win11-guanbi-bitlocker-jiami/" rel="alternate" type="text/html" title="Windows11关闭BitLocker加密" />
+    <published>2024-06-25T13:47:00+08:00</published>
+  
+    <updated>2024-06-25T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/win11-guanbi-bitlocker-jiami/</id>
+    <content src="http://localhost:4000/posts/win11-guanbi-bitlocker-jiami/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="SYSTEM" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      使用manage-bde.exe -off E:命令对E区的数据进行解密。
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Windows11安装跳过联网</title>
+    <link href="http://localhost:4000/posts/win11-anzhuang-tiaoguo-wangluopeizhi/" rel="alternate" type="text/html" title="Windows11安装跳过联网" />
+    <published>2024-06-25T13:47:00+08:00</published>
+  
+    <updated>2024-06-25T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/win11-anzhuang-tiaoguo-wangluopeizhi/</id>
+    <content src="http://localhost:4000/posts/win11-anzhuang-tiaoguo-wangluopeizhi/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="SYSTEM" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      使用快捷键Shift + F10调出命令提示符窗口，然后输入OOBE\BYPASSNRO，重启电脑，在重启后的Win11联网界面中，选择“我没有Internet连接”的选项，并继续执行受限设置，这样可以跳过联网激活环节。
+
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -176,100 +250,6 @@ WHERE
 select
   datname,
   usename,...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>AES加密异常</title>
-    <link href="http://localhost:4000/posts/aes-jiami-yichang/" rel="alternate" type="text/html" title="AES加密异常" />
-    <published>2024-03-21T11:47:00+08:00</published>
-  
-    <updated>2024-03-21T11:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/aes-jiami-yichang/</id>
-    <content src="http://localhost:4000/posts/aes-jiami-yichang/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Java" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      报错信息
-Java实现AES加密，抛出异常如下：java.security.InvalidKeyException: Illegal key size
-
-报错原因
-Illegal key size or default parameters是指密钥长度受限制，Java运行时环境读到的是受限的policy文件。policy文件位于${java_home}/jre/lib/security 目录下。这种限制是因为美国对软件出口的控制。
-
-解决方法
-去除该限制只需下载Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files，覆盖上述目录下的对应jar文件local_policy.jar, US_export_policy.jar即可。
-
-下载地址：
-
-  JDK6：Java Cryptogr...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>数据库常用查询和函数</title>
-    <link href="http://localhost:4000/posts/shujuku-changyong-hanshu/" rel="alternate" type="text/html" title="数据库常用查询和函数" />
-    <published>2024-02-22T08:47:00+08:00</published>
-  
-    <updated>2024-02-22T08:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/shujuku-changyong-hanshu/</id>
-    <content src="http://localhost:4000/posts/shujuku-changyong-hanshu/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Database" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      MySQL
--- 字符串转数字
--- 1、+0
-select '00123' + 0;
--- 2、cast('字符串' as 数值类型)
--- 整数 SIGNED，无符号整数 UNSIGNED，浮点数 DECIMAL
-select cast('000123' as SIGNED);
--- 3、convert('字符串', 数值类型)
--- 整数 SIGNED，无符号整数 UNSIGNED，浮点数 DECIMAL
-select convert('000123' as SIGNED);
-
-
     </summary>
   
 
