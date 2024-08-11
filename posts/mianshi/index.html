@@ -1158,6 +1158,78 @@
       
 
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
 
     
 
@@ -1170,6 +1242,65 @@
 
   
   
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
 
   
 
@@ -1256,9 +1387,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="10984 words"
+  title="13288 words"
 >
-  <em>61 min</em> read</span>
+  <em>73 min</em> read</span>
 
     </div>
 
@@ -1452,7 +1583,33 @@
 <h3 id="事务的隔离级别"><span class="me-2">事务的隔离级别</span><a href="#事务的隔离级别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <blockquote class="prompt-tip">
-  <p>读未提交、读提交、可重复读取、串行化。</p>
+  <p>由低到高：读未提交、读已提交、重复读、串行化。</p>
+
+  <p>读现象是在多个事务并发执行时，在读取数据方面可能碰到的问题。包括脏读、不可重复读、幻读。</p>
+  <ul>
+    <li>脏读：读到了脏数据，即无效数据。</li>
+    <li>不可重复读：是指在数据库访问中，一个事务内的多次相同查询却返回了不同数据。</li>
+    <li>幻读：指同一个事务内多次查询返回的结果集不一样，比如增加了行记录。</li>
+  </ul>
+
+  <p>备注：不可重复读对应的是修改，即update操作。幻读对应的是插入操作。幻读是不可重复读的一种特殊场景。要想解决脏读、不可重复读、幻读等读现象，那么就需要提高事务的隔离级别。但是随之带来的，隔离级别越高，并发能力越低。所以，需要根据业务去进行衡量，具体场景应该使用哪种隔离级别。</p>
+
+  <h5 id="read-uncommitted读未提交"><span class="me-2">Read uncommitted(读未提交)</span><a href="#read-uncommitted读未提交" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+  <p>提供了事务间最小限度的隔离。就是一个事务可以读取另一个未提交事务的数据。<br />
+<strong>示例</strong>：小明去商店买衣服，付款的时候，小明正常付款，钱已经打到商店老板账户，但是小明发起的事务还没有提交。就在这时，商店老板查看自己账户，发现钱已到账，于是小明正常离开。小明在走出商店后，马上回滚差点提交的事务，撤销了本次交易。<br />
+<strong>结果</strong>：小明未付钱买到了衣服，商店老板实际未收到小明的付款。<br />
+<strong>分析</strong>：商店老板查看自己的资金账户，这个时候看到的是小明还没有提交事务的付款。这就是脏读。<br />
+<strong>注意</strong>：处于该隔离级别的事务A与B，如果事务A使用事务B不提交的变化作为计算的基础，然后哪些未提交的变化被事务A撤销，这就导致了大是的数据错误变化。</p>
+  <h5 id="read-committed读已提交"><span class="me-2">Read committed(读已提交)</span><a href="#read-committed读已提交" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+  <p>该级别的事务可以看到其他事务对数据的修改。也就是说，在事务处理期间，如果其他事务修改了相应的表，那么同一个事务的同一SQL在其他事务执行前后返回的是不同的结果。一个事务要等另一个事务提交后才能读取数据。<br />
+<strong>示例</strong>：小明卡里有1000元，准备与几个朋友聚餐消费，消费1000元，当他买单时(事务开启)，收费系统检测到他卡里有1000元。就在检测完毕的时候，小明女朋友发现小明有私房钱，全部转走并提交。当收费系统准备扣款时，再检查小明卡里的金额，发现已经没钱了，付款不成功。小明此时就会很纳闷，明明有钱的呀，钱呢?<br />
+<strong>分析</strong>：该示例中同一个事务范围内两个相同的查询却返回了不同数据，这就是不可重复读。该隔离级别可以解决脏读问题。</p>
+  <h5 id="repeatable-read重复读"><span class="me-2">Repeatable read(重复读)</span><a href="#repeatable-read重复读" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+  <p>在开始读取数据(事务开启)时，不再允许修改操作<br />
+<strong>示例</strong>：还是小明有1000元，准备跟朋友聚餐消费这个场景，当他买单(事务开启)时，收费系统检测到他卡里有1000元，这个时候，他的女朋友不能转出金额。接下来，收费系统就可以扣款成功了。<br />
+<strong>分析</strong>：重复读可以解决不可重复读的问题。</p>
+  <h5 id="serializable序列化"><span class="me-2">Serializable(序列化)</span><a href="#serializable序列化" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+  <p>数据库事务的最高隔离级别。在此级别下，事务串行执行。可以避免脏读、不可重复读、幻读等读现象。但是效率低下耗费数据库性能，不推荐使用。</p>
 </blockquote>
 
 <h3 id="事务的特征"><span class="me-2">事务的特征</span><a href="#事务的特征" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
@@ -1478,7 +1635,7 @@
 <blockquote class="prompt-tip">
   <ul>
     <li><strong>Eureka</strong>：该系统下还分为Eureka服务端和Eureka客户端，Eureka服务端用作服务注册中心，支持集群部署。Eureka客户端是一个Java客户端，用来处理服务注册与发现。</li>
-    <li><strong>Ribbon</strong>：基于HTTP和TCP的客户端负载均衡，使得面向REST请求时变换为客户端的负载服务调用，提供客户端的软件负载均衡算法。</li>
+    <li><strong>Ribbon</strong>：客户端负载均衡，提供客户端的软件负载均衡算法。</li>
     <li><strong>Hystrix</strong>：断路器，它的作用是保护系统，控制故障范围。</li>
     <li><strong>Zuul</strong>：提供API网关，路由，负载均衡等作用。</li>
     <li><strong>Spring Cloud Config</strong>：分布式配置，提供服务端和客户端，服务器存储后端的默认实现使用Git。</li>
@@ -1513,7 +1670,8 @@
 
 <blockquote class="prompt-tip">
   <ul>
-    <li>选取最适用的字段属性。MySQL可以支持大数据量的存取，但是数据库中的表越小，在上面执行的查询就越快。所以可以将表中的字段宽度设置的尽可能小</li>
+    <li>选取最适用的字段属性，减少类型间的转换</li>
+    <li>将表中的字段宽度设置的尽可能小</li>
     <li>使用连接来代替子查询</li>
     <li>使用联合（UNION）来代替手动创建的临时表</li>
   </ul>
@@ -2000,7 +2158,7 @@ LinkedList底层的数据结构是基于双向循环链表的，且头结点中�
 <h3 id="callable和runnable的区别"><span class="me-2">Callable和Runnable的区别</span><a href="#callable和runnable的区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <blockquote class="prompt-tip">
   <ol>
-    <li>最大的区别，Runnable没有返回值，而实现Callable接口的任务线程能返回执行结果。</li>
+    <li>Runnable没有返回值，而实现Callable接口的任务线程能返回执行结果。</li>
     <li>Callable接口实现类中的run方法允许异常向上抛出，可以在内部外理try catch，但是Runnable接口实现类中run方法的异常必须在内部处理，不能抛出。</li>
   </ol>
 </blockquote>
@@ -2030,6 +2188,69 @@ LinkedList底层的数据结构是基于双向循环链表的，且头结点中�
     <li>数组存在越界风险，链表无越界风险</li>
     <li>数组通过下标访问，访问效率高，链表从头遍历，访问效率低</li>
     <li>数组的使用场景：当线性表的操作操作主要是进行查找，很少插入和删除时使用，链表的使用场景：当线性表要求频繁插入和删除时使用</li>
+  </ul>
+</blockquote>
+
+<h3 id="spring-boot的核心功能"><span class="me-2">Spring Boot的核心功能</span><a href="#spring-boot的核心功能" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>Spring Boot最核心的功能就是自动配置，这一切都基于约定优于配置的原则，使用Spring Boot时我们只需引入对应的Starters，Spring Boot启动时便会自动加载相关依赖，配置相应的初始化参数，以最快捷简单的形式对第三方软件进行集成，这便是Spring Boot的自动配置功能。</p>
+</blockquote>
+
+<h3 id="extends和implements区别"><span class="me-2">extends和implements区别</span><a href="#extends和implements区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>extends是继承某个类，继承之后可以使用父类方法，也可以重写弗父类方法，
+implements是实现一个或多个接口，实现一个接口就是要实现该接口的所有方法，抽象类除外</p>
+</blockquote>
+
+<h3 id="tcp与udp区别"><span class="me-2">TCP与UDP区别</span><a href="#tcp与udp区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>TCP是一种面向连接的、可靠的、基于字节流的传输层通信协议，适用于要求可靠传输的应用。UDP是一种无连接的、不可靠的、基于数据报文的传输层协议，适用于实时应用。</p>
+</blockquote>
+
+<h3 id="设计模式"><span class="me-2">设计模式</span><a href="#设计模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <ul>
+    <li>单例模式
+      <ul>
+        <li>懒汉式：为了不让其他类直接访问该成员，懒汉式单例在使用时创建对象。懒汉式如果在创建实例对象时不加上synchronized则会导致对对象的访问不是线程安全的。</li>
+        <li>饿汉式：在类加载时创建一个对象。饿汉式是线程安全的，在类创建的同时就已经创建好一个静态的对象供系统使用，以后不在改变。</li>
+      </ul>
+    </li>
+    <li>工厂模式
+      <ul>
+        <li>简单工厂模式：对于简单工厂，用于生产同一结构中的任意产品，对于新增产品不适用。以生产“电风扇”为例，只能批量生产电风扇。</li>
+        <li>工厂方法模式：对于工厂方法，在简单工厂的基础上，生产同一等级结构中笃定产品，可以支持新增产品。以生产汽车为例，可以通过此工厂生产各种类型的汽车。</li>
+        <li>抽象工厂模式：用于生产不同种类（品牌）的相同类型（迷你，SUV），对于新增品牌可以，不支持新增类型。用于生产不同种类（品牌）的相同类型。</li>
+      </ul>
+    </li>
+    <li>适配器模式：适配器模式将某个类的接口转换成客户端期望的另一个接口表示，目的是消除由于接口不匹配所造成的类的兼容性问题。主要分为三类：类的适配器模式、对象的适配器模式、接口的适配器模式。</li>
+    <li>装饰模式：应用场景:1.需要扩展一个类的功能；2.动态的为一个对象增加功能，而且还能动态撤销(继承不能做到这一点，继承的功能是静态的，不能动态增加)。缺点:产生过多相似的对象，不易排错。</li>
+    <li>代理模式：应用场景：如果已有的方法在使用的时候需要对原有的方法进行改进，采用一个代理类调用原有的方法，且对产生的结果进行控制，这种方法就是代理模式。使用代理模式，可以将功能划分的更加清晰，有助于后期维护。</li>
+    <li>观察者模式：多个对象间存在一对多关系，当一个对象发生改变时，会把这种改变通知给其他多个对象，从而影响其他对象的行为。</li>
+  </ul>
+</blockquote>
+
+<h3 id="mysql的四种搜索引擎"><span class="me-2">MySQL的四种搜索引擎</span><a href="#mysql的四种搜索引擎" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <ul>
+    <li>InnoDB：如果要提供提交、回滚、崩溃恢复能力的事物安全(ACID兼容)能力，并要求实现并发控制，InnoDB是一个好的选择</li>
+    <li>MyISAM：如果数据表主要用来插入和查询记录，读操作明显多于写操作，存储量较大，则MyISAM引辈能提供较高的处理效率</li>
+    <li>Memory：如果只是临时存放数据，数据量不大，并且不需要较高的数据安全性，可以选择将数据保存在内存中的Memory引擎，MySQL中使用该引擎作为临时表，存放查询的中间结果</li>
+    <li>Archive：如果只有INSERT和SELECT操作，可以选择Archive，Archive支持高并发的插入操作，但是本身不是事务安全的。Archive非常适合存储归档数据，如记录日志信息可以使用Archive</li>
+  </ul>
+
+  <p>使用哪一种引学需要灵活选择，一个数据库中多个表可以使用不同引擎以满足各种性能和实际需求，使用合适的存储引擎，将会提高整个数据库的性能</p>
+</blockquote>
+
+<h3 id="java性能调优"><span class="me-2">Java性能调优</span><a href="#java性能调优" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>主要从这几个方面进行考虑</p>
+
+  <ul>
+    <li>减少cookie的使用</li>
+    <li>使用Nginx静态资源缓存处理</li>
+    <li>文件进行压缩传输处理</li>
+    <li>JVM进程大小设置</li>
   </ul>
 </blockquote>
 
