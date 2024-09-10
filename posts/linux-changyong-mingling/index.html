@@ -658,9 +658,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="503 words"
+  title="594 words"
 >
-  <em>2 min</em> read</span>
+  <em>3 min</em> read</span>
 
     </div>
 
@@ -777,6 +777,7 @@ ps <span class="nt">-ef</span>|grep tomcat|grep <span class="nt">-v</span> <span
 10
 11
 12
+13
 </pre></td><td class="rouge-code"><pre><span class="c"># 查看操作操作系统版本、内存等信息</span>
 <span class="nb">uname</span> －a
 <span class="c"># 查看版本当前操作系统内核信息</span>
@@ -789,6 +790,35 @@ ps <span class="nt">-ef</span>|grep tomcat|grep <span class="nt">-v</span> <span
 <span class="nb">cat</span> /etc/redhat-release
 <span class="c"># 查看当前系统的发行版本信息</span>
 lsb_release <span class="nt">-a</span>
+
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="c"># 查看当前所有的TCP端口</span>
+netstat <span class="nt">-ntlp</span> 
+<span class="c"># 查看所有80端口的使用情况</span>
+netstat <span class="nt">-ntulp</span> | <span class="nb">grep </span>80
+<span class="c"># 查看某一端口的链接客户端IP</span>
+netstat <span class="nt">-anp</span> |grep 80
+<span class="c"># 查看某一端口的连接数量</span>
+netstat <span class="nt">-pnt</span> |grep :80 |wc
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c"># 查看进程的线程数量</span>
+ps <span class="nt">-o</span> nlwp &lt;pid&gt;
 </pre></td></tr></tbody></table></code></div></div>
 
 </div>
@@ -3091,6 +3121,18 @@ lsb_release <span class="nt">-a</span>
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 

@@ -5266,6 +5266,18 @@ init test1 null
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8894,46 +8906,6 @@ init test1 null
         
         
         <div class="col">
-          <a href="/posts/biaodan-zhong-name-xiangtong-ruhe-zaihoutai-huoqu-shuju/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1642700820"
-  data-df="ll"
-  
->
-  Jan 21, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>表单中name相同的元素在后台如何获取</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  name相同的多个元素只需要在后台用String[] param = request.getParameterValues(&quot;param&quot;)就可以了。
-
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/qianduan-dao-houtai-400-cuowu/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8971,6 +8943,61 @@ init test1 null
 The server cannot or will not process the request due to something that 
 is perceived to be a client error (e.g., malformed request syntax, invalid 
 request message framing, or deceptiv...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/qudiao-json-hong-wei-null-de-yuansu/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1645120020"
+  data-df="ll"
+  
+>
+  Feb 18, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Java去掉JSON数据中值为null的属性字段</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  1
+@JsonInclude(JsonInclude.Include.NON_NULL) 
+
+此方法集成于Springboot2.0中，此方法的配置意在实体类与JSON互转的时候属性值为null的不参与序列化。使用时用注解的方式：
+
+放在标记类
+
+1
+2
+3
+4
+5
+6
+7
+8
+@JsonInclude(JsonInclude.Include.NON_NULL) 
+public class ...
                 </p>
               </div>
             </div>

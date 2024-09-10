@@ -4010,6 +4010,18 @@ java.sql.SQL Exception:无效的列索引
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8764,12 +8776,23 @@ java.sql.SQL Exception:无效的列索引
 
 
 
-                  1
+                  MySQL
+1
 2
 -- n为页码，m为每页数据条数
-select * from 表名 limit(n-1)*m, m
+select * from table_name limit (n-1)*m, m
 
-
+Oracle
+1
+2
+3
+4
+5
+-- n为页码，m为每页数据条数
+select a.* from (
+  select b.*,rownum as rn from table_name b
+) a
+where a.rn between (n-1)*m+...
                 </p>
               </div>
             </div>

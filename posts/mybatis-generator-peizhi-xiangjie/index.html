@@ -3592,6 +3592,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9301,8 +9313,17 @@ mode=IN, javaType=class java.lang.Object, jdbcType=null,
 
 
 
-                  -- n为页码，m为每页数据条数
-select * from 表名 limit(n-1)*m, m
+                  MySQL
+-- n为页码，m为每页数据条数
+select * from table_name limit (n-1)*m, m
+
+Oracle
+-- n为页码，m为每页数据条数
+select a.* from (
+  select b.*,rownum as rn from table_name b
+) a
+where a.rn between (n-1)*m+1 and n*m  
+
 
 
                 </p>

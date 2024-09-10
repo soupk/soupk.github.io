@@ -1230,6 +1230,102 @@
       
 
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
 
     
 
@@ -1387,9 +1483,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="13288 words"
+  title="14459 words"
 >
-  <em>73 min</em> read</span>
+  <em>80 min</em> read</span>
 
     </div>
 
@@ -2254,6 +2350,83 @@ implements是实现一个或多个接口，实现一个接口就是要实现该�
   </ul>
 </blockquote>
 
+<h3 id="restcontroller和controller的区别"><span class="me-2">@RestController和@Controller的区别</span><a href="#restcontroller和controller的区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <ul>
+    <li>@RestController相当于@Controller和@ResponseBody合在一起的作用</li>
+    <li>如果使用@RestController则返回的是return里面的内容，无法返回到指定的页面</li>
+    <li>如果要返回到指定的页面，则需要用@Controller配合视图解析器</li>
+    <li>如果需要返回JSON等内容，则需要在对应的方法上加上@ResponseBody注解</li>
+  </ul>
+</blockquote>
+
+<h3 id="http与https区别"><span class="me-2">http与https区别</span><a href="#http与https区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <ul>
+    <li>https协议需要到CA申请证书，需要交费</li>
+    <li>http是明文传输，数据未加密，安全性差，https则是具有安全性的SSL加密传输协议，安全性好</li>
+    <li>http端口是80，https端口是443</li>
+    <li>http相应速度快，https比http更耗费服务器资源</li>
+  </ul>
+</blockquote>
+
+<h3 id="消息队列如何防止重复消费"><span class="me-2">消息队列如何防止重复消费</span><a href="#消息队列如何防止重复消费" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>利用幂等性的思想</p>
+  <ul>
+    <li>消息全局ID或者生成一个唯一标识（如时间戳、UUID等），作为数据库主键，每次消费消息之前根据消息ID去判断该消息是否已消费过，如果已经消费过，则不处理这条消息，否则正常消费消息，并且进行入库操作。</li>
+    <li>利用Redis的setnx命令，给消息分配一个全局ID，消费该消息时，先去Redis中查询有没有消费记录，无则以键值对的形式写入Redis，有则不消费该消息。</li>
+  </ul>
+</blockquote>
+
+<h3 id="spring-ioc和aop"><span class="me-2">Spring Ioc和Aop</span><a href="#spring-ioc和aop" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <ul>
+    <li>Ioc：容器来处理创建对象、管理对象、管理之间的依赖</li>
+    <li>Aop：对对象行为的一个监督与控制，主要是事务和日志</li>
+  </ul>
+</blockquote>
+
+<h3 id="synchronized代码块和方法的区别"><span class="me-2">synchronized代码块和方法的区别</span><a href="#synchronized代码块和方法的区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>synchronized代码块比方法范围更小，更能精确地控制冲突限制访问区域，更高效。</p>
+</blockquote>
+
+<h3 id="nginx"><span class="me-2">Nginx</span><a href="#nginx" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>Nginx的特点</p>
+  <ul>
+    <li>高并发、高性能、高稳定性、低资源消耗、配置简单</li>
+    <li>模块化架构使得它的扩展性非常好</li>
+    <li>异步非阻塞的事件驱动模型这点和Node.js相似</li>
+    <li>无需重启可不间断运行</li>
+    <li>热部署、平滑升级</li>
+    <li>完全开源，生态好</li>
+  </ul>
+
+  <p>Nginx最重要的几个使用场景</p>
+  <ul>
+    <li>静态资源服务</li>
+    <li>反向代理服务，包括缓存、负载均衡等</li>
+    <li>API服务</li>
+  </ul>
+
+  <p>Nginx的优点</p>
+  <ul>
+    <li>1、作为Web服务器，Nginx处理静态文件、索引文件、自动索引的效率非常高</li>
+    <li>2、作为代理服务器，Nginx可以实现无缓存的反向代理加速，提高网站运行速度</li>
+    <li>3、作为负载均衡服务器，Nginx既可以在内部直接支持Railsi和PHP，也可以支持HTTP代理服务器对外进行服务，同时还支持简单的容错和利用算法进行负载均衡</li>
+    <li>4、在性能方面，Nginx是专门为性能优化而开发的，实现上非常注重效率。它采用内核Poll模型，可以支持更多的并发连接，最大可以支持对5万个并发连接数的响应，而且只占用很低的内存资源</li>
+    <li>5、在稳定性方面，Nginx采取了分阶段资源分配技术，使得CPU与内存的占用率非常低</li>
+    <li>6、在高可用方面，Nginx支持热部署，启动速度特别迅速，因此可以在不间断服务的情况下，对软件版本或者配置进行升级，即使运行数月也无需重新启动，几乎可以做到7x24小时不间断地运行</li>
+  </ul>
+</blockquote>
+
+<h3 id="loadbalanced的作用是什么"><span class="me-2">@LoadBalanced的作用是什么</span><a href="#loadbalanced的作用是什么" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>描述RestTemplate对象，用于告诉Spring框架，在使用RestTempalte进行服务调用时，这个调用过程会被一个拦截器进行拦截，然后在拦截器内部，启动负载均衡策略。</p>
+</blockquote>
+
 <blockquote class="prompt-warning">
   <ul>
     <li>数据库性能调优如何做</li>
@@ -2286,6 +2459,29 @@ implements是实现一个或多个接口，实现一个接口就是要实现该�
     <li>工作中觉得哪方面欠缺</li>
     <li>期望薪水</li>
     <li>为什么要离开现在的公司</li>
+  </ul>
+</blockquote>
+
+<h3 id="大数据相关名词"><span class="me-2">大数据相关名词</span><a href="#大数据相关名词" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-info">
+  <ul>
+    <li>数据仓库：
+      <ul>
+        <li>Hive（基于Hadoop的数据仓库工具）</li>
+        <li>HBase（分布式的、面向列的开源数据库）</li>
+      </ul>
+    </li>
+    <li>框架：Hadoop（大数据处理开源框架）
+      <ul>
+        <li>模块：Hadoop HDFS（分布式存储系统）</li>
+        <li>模块：Hadoop YARN（任务调度和集群资源管理）</li>
+        <li>模块：Hadoop MapReduce（基于Hadoop YARN的大型数据集并行计算处理系统）</li>
+        <li>其他模块：Pig（运行在Hadoop上，对大型数据集进行分析和评估的平台）</li>
+        <li>其他模块：Spark（Hadoop数据快速通用的计算引擎）</li>
+        <li>其他模块：ZooKeeper（分布式的、开源的分布式应用程序协调服务，是Hadoop、HBase的重要组件）</li>
+      </ul>
+    </li>
+    <li>数据传输：Sqoop（Hive、HBase、Hadoop等数据仓库和数据库之间的数据传输工具）</li>
   </ul>
 </blockquote>
 
@@ -4586,6 +4782,18 @@ implements是实现一个或多个接口，实现一个接口就是要实现该�
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 

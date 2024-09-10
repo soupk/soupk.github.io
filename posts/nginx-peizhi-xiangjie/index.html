@@ -544,6 +544,91 @@
 
 
 
+  
+  
+
+  <!-- CDN URL -->
+  
+
+  <!-- Add image path -->
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
+
+  
+
+
 
 <!-- Add header for code snippets -->
 
@@ -566,6 +651,18 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
       
 
       
@@ -741,7 +838,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2609 words"
+  title="2652 words"
 >
   <em>14 min</em> read</span>
 
@@ -772,7 +869,7 @@ worker_processes  1<span class="p">;</span>
 
 <span class="c">#pid        logs/nginx.pid;</span>
 </pre></td></tr></tbody></table></code></div></div>
-<p>上述配置都是存放在main全局配置模块中的配置项。</p>
+<p>该部分配置主要影响Nginx全局，上述配置都是存放在main全局配置模块中的配置项。</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">user</code>：用来指定nginx worker进程运行用户以及用户组，默认nobody账号运行；</li>
   <li><code class="language-plaintext highlighter-rouge">worker_processes</code>：指定Nginx要开启的子进程数量，运行过程中监控每个进程消耗内存(一般几M~几十M不等)根据实际情况进行调整，通常数量是CPU内核数量的整数倍；</li>
@@ -796,7 +893,7 @@ worker_processes  1<span class="p">;</span>
 <span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>上述配置是针对Nginx服务器的工作模式的一些操作配置。</p>
+<p>该部分配置主要影响Nginx服务器与用户的网络连接，上述配置是针对Nginx服务器的工作模式的一些操作配置。</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">worker_connections</code>：指定最大可以同时接收的连接数量，这里一定要注意，最大连接数量是和<code class="language-plaintext highlighter-rouge">worker processes</code>共同决定的；</li>
   <li><code class="language-plaintext highlighter-rouge">multi_accept</code>：指定Nginx在收到一个新连接通知后尽可能多的接受更多的连接；</li>
@@ -1064,6 +1161,9 @@ worker_processes  1<span class="p">;</span>
     </ul>
   </li>
 </ul>
+
+<h2 id="七一份配置清单"><span class="me-2">七、一份配置清单</span><a href="#七一份配置清单" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p><a href="\assets\img\illustration\Knowledge\Nginx\2023-05-23-nginx-peizhi-xiangjie\1.jpg" class="popup img-link "><img data-src="\assets\img\illustration\Knowledge\Nginx\2023-05-23-nginx-peizhi-xiangjie\1.jpg" alt="Desktop View" class="lazyload" data-proofer-ignore></a></p>
 
 <blockquote>
   <p>参考：<a href="https://www.jianshu.com/p/81e03e442f90">Nginx基本使用</a></p>
@@ -3374,6 +3474,18 @@ worker_processes  1<span class="p">;</span>
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
