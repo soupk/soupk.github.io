@@ -2957,6 +2957,11 @@ the option in Preferences -&gt; SQL Editor and reconnect. 0.000 sec
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -3044,6 +3049,54 @@ the option in Preferences -&gt; SQL Editor and reconnect. 0.000 sec
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -8733,49 +8786,6 @@ the option in Preferences -&gt; SQL Editor and reconnect. 0.000 sec
         
         
         <div class="col">
-          <a href="/posts/error-code-1175/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1645498020"
-  data-df="ll"
-  
->
-  Feb 22, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Error Code：1175. You are using safe update mode and you tried to update a table without a WHERE tha</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  MySQL在执行删除、更新语句时报这种错误，是因为在MySQL处于safe-updates模式中，如果where后跟的条件不是主键id，那么就会提示这种错误。解决方式有两种。
-
-
-  SET SQL_SAFE_UPDATES = 0;执行该命令更改MySQL数据库模式。
-  在where判断条件中跟上主键id，例如：delete from firstmysqldatabase.user wh...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/mysql-fenye-chaxun-youhua/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8826,7 +8836,7 @@ SELECT ... FROM ... WHERE ... ORDER BY ... (#{pageNum} - 1) * #{pageSize}, #{pag
         
         
         <div class="col">
-          <a href="/posts/feifuwu-moshi-xia-qidong-he-guanbi-mysql/" class="card post-preview h-100">
+          <a href="/posts/mysql-shujuku-kasi-zenmeban/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8839,14 +8849,14 @@ SELECT ... FROM ... WHERE ... ORDER BY ... (#{pageNum} - 1) * #{pageSize}, #{pag
 
 <em
   class="small"
-  data-ts="1605073620"
+  data-ts="1680140820"
   data-df="ll"
   
 >
-  Nov 11, 2020
+  Mar 30, 2023
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Windows非服务模式下如何启动和关闭MySQL数据库</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>MySQL进行删除等操作时卡死</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8855,13 +8865,55 @@ SELECT ... FROM ... WHERE ... ORDER BY ... (#{pageNum} - 1) * #{pageSize}, #{pag
 
 
 
-                  启动
-mysqld --standalone
+                  报错信息
+删除MySQL数据库中一个库出现卡死情况。
 
-关闭
-mysqladmin -uroot -proot shutdown
+解决办法
+进入MySQL使用命令show full processlist;查看当前的操作process，然后执行kill processid;删除对应id的process（都删了，或者删除waiting的就行）。
+
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/mysql-xiugai-mima-tishi-error/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
 
 
+
+
+
+<em
+  class="small"
+  data-ts="1680140820"
+  data-df="ll"
+  
+>
+  Mar 30, 2023
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>MySQL修改密码提示ERROR 1054</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  报错信息
+执行update mysql.user set password=password(&#39;password&#39;) where user=&#39;root&#39;;会出现以下错误ERROR 1054 (42S22): Unknown column &#39;password&#39; in &#39;field list&#39;。
+
+报错原因
+MySQL数据库下已经没有password这个字段了，password字段改成了auth...
                 </p>
               </div>
             </div>
@@ -10910,6 +10962,11 @@ mysqladmin -uroot -proot shutdown
     
     
       
+    
+  
+    
+    
+    
     
   
     

@@ -3226,6 +3226,11 @@
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -3313,6 +3318,54 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -9002,51 +9055,6 @@
         
         
         <div class="col">
-          <a href="/posts/gaussdb-zhengze-chaxun/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1706334420"
-  data-df="ll"
-  
->
-  Jan 27, 2024
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>GaussDB正则查询</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  GaussDB使用正则表达式查询示例：
-1
-2
--- 查询所有以abc开头的字符串
-select * from table where cloum ~ &#39;^abc&#39;
-
-
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/gaussdb-shajincheng/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9110,7 +9118,7 @@ FROM
         
         
         <div class="col">
-          <a href="/posts/qianduan-dao-houtai-400-cuowu/" class="card post-preview h-100">
+          <a href="/posts/gaussdb-zhengze-chaxun/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9123,14 +9131,14 @@ FROM
 
 <em
   class="small"
-  data-ts="1642700820"
+  data-ts="1706334420"
   data-df="ll"
   
 >
-  Jan 21, 2022
+  Jan 27, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>前端到后端400错误（The server cannot or will not process the request due to...）</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>GaussDB正则查询</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9139,11 +9147,58 @@ FROM
 
 
 
-                  错误信息
+                  GaussDB使用正则表达式查询示例：
+1
+2
+-- 查询所有以abc开头的字符串
+select * from table where cloum ~ &#39;^abc&#39;
 
-The server cannot or will not process the request due to something that 
-is perceived to be a client error (e.g., malformed request syntax, invalid 
-request message framing, or deceptive requ...
+
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/jsessionid-shenme-shihou-shengcheng/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1646286420"
+  data-df="ll"
+  
+>
+  Mar  3, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>JSESSIONID什么时候生成并传递到前端的</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  如果客户端请求的cookie中不包含JSESSIONID，服务端调用request.getSession()时就会生成并传递给客户端，此次响应头会包含设置cookie的信息。
+
+
+
+如果客户端请求的cookie中包含JSESSIONID，服务端调用request.getSession()时就会根据JSESSIONID进行查找对象，如果能查到就返回，否则就跟没传递JSESSIONID一样。
+
+...
                 </p>
               </div>
             </div>
@@ -11192,6 +11247,11 @@ request message framing, or deceptive requ...
     
     
       
+    
+  
+    
+    
+    
     
   
     

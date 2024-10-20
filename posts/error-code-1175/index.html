@@ -2898,6 +2898,11 @@
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -2980,6 +2985,54 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -8769,7 +8822,7 @@ SELECT ... FROM ... WHERE ... ORDER BY ... (#{pageNum} - 1) * #{pageSize}, #{pag
         
         
         <div class="col">
-          <a href="/posts/feifuwu-moshi-xia-qidong-he-guanbi-mysql/" class="card post-preview h-100">
+          <a href="/posts/mysql-shujuku-kasi-zenmeban/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8782,14 +8835,14 @@ SELECT ... FROM ... WHERE ... ORDER BY ... (#{pageNum} - 1) * #{pageSize}, #{pag
 
 <em
   class="small"
-  data-ts="1605073620"
+  data-ts="1680140820"
   data-df="ll"
   
 >
-  Nov 11, 2020
+  Mar 30, 2023
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Windows非服务模式下如何启动和关闭MySQL数据库</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>MySQL进行删除等操作时卡死</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8798,12 +8851,11 @@ SELECT ... FROM ... WHERE ... ORDER BY ... (#{pageNum} - 1) * #{pageSize}, #{pag
 
 
 
-                  启动
-mysqld --standalone
+                  报错信息
+删除MySQL数据库中一个库出现卡死情况。
 
-关闭
-mysqladmin -uroot -proot shutdown
-
+解决办法
+进入MySQL使用命令show full processlist;查看当前的操作process，然后执行kill processid;删除对应id的process（都删了，或者删除waiting的就行）。
 
                 </p>
               </div>
@@ -10853,6 +10905,11 @@ mysqladmin -uroot -proot shutdown
     
     
       
+    
+  
+    
+    
+    
     
   
     

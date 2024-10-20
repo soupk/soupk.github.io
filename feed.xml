@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-09-10T12:35:33+08:00</updated>
+  <updated>2024-10-20T10:19:39+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,186 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>山西 - 云冈石窟</title>
+    <link href="http://localhost:4000/posts/yungangshiku/" rel="alternate" type="text/html" title="山西 - 云冈石窟" />
+    <published>2024-10-08T10:47:00+08:00</published>
+  
+    <updated>2024-10-08T10:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/yungangshiku/</id>
+    <content src="http://localhost:4000/posts/yungangshiku/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Collection" />
+    
+    <category term="Travel" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Redis缓存的雪崩、击穿、穿透</title>
+    <link href="http://localhost:4000/posts/redishuancun-xuebeng/" rel="alternate" type="text/html" title="Redis缓存的雪崩、击穿、穿透" />
+    <published>2024-09-12T13:47:00+08:00</published>
+  
+    <updated>2024-09-12T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/redishuancun-xuebeng/</id>
+    <content src="http://localhost:4000/posts/redishuancun-xuebeng/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="Redis" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      缓存雪崩
+
+缓存雪崩是指在某个时间点，大量的缓存数据同时失效或过期，导致大量的请求直接打到数据库或后端系统，从而造成数据库负载激增，甚至导致数据库宕机或系统崩溃的现象。
+
+
+  合理设置缓存的过期时间：将缓存的过期时间分散设置，避免大量缓存在同一时间过期。可以使用随机时间，或者将过期时间分布在一个时间段内。
+  实现缓存数据的自动刷新：确保热点数据在即将过期时能够自动刷新，避免数据大规模失效。
+  多级缓存：使用多级缓存，将热点数据缓存在多个层次，例如内存缓存、分布式缓存，以减轻缓存层的负担。
+  限流和熔断：实施请求限流和服务熔断，避免大量请求同时打到后端系统。
+  监控和报警：建立监控系统，实时监测缓存和后端系统的状态，及时发现问题并采取措施。
+
+
+缓存穿透
+
+缓存和数据库中都没有的数据，可用户还是源源不断的发起请求，导致每次请求都会到数据库，从而压垮数据库。比如客户查询一个根本...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>线程池</title>
+    <link href="http://localhost:4000/posts/xianchengchi/" rel="alternate" type="text/html" title="线程池" />
+    <published>2024-09-12T11:47:00+08:00</published>
+  
+    <updated>2024-09-12T11:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/xianchengchi/</id>
+    <content src="http://localhost:4000/posts/xianchengchi/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="Java" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      线程池的五种状态
+
+
+  RUNNING：线程池处于运行状态，能够接收新任务并处理队列中的任务。
+  SHUTDOWN：线程池处于关闭状态，不再接收新任务，但会处理队列中的剩余任务。
+  STOP：线程池处于停止状态，不再接收新任务，并中断正在执行的任务。
+  TIDYING：线程池中的所有任务执行完毕，活动线程数为0时的状态。
+  TERMINATED：线程池执行完terminated()方法后的状态。
+
+
+每种状态的定义和转换条件
+
+
+  RUNNING：线程池创建后默认进入此状态，能够接收新任务并处理队列中的任务。
+  SHUTDOWN：调用shutdown()方法后，线程池进入此状态，不再接收新任务，但会处理队列中的剩余任务。
+  STOP：调用shutdownNow()方法后，线程池进入此状态，不再接收新任务，并中断正在执行的任务。
+  TIDYING：所有任务执行完毕后，...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>保险名词</title>
+    <link href="http://localhost:4000/posts/baoxianmingci/" rel="alternate" type="text/html" title="保险名词" />
+    <published>2024-09-11T08:47:00+08:00</published>
+  
+    <updated>2024-09-11T08:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/baoxianmingci/</id>
+    <content src="http://localhost:4000/posts/baoxianmingci/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Collection" />
+    
+    <category term="Reading" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+  保险金额： 保险金额，简称”保额”，是保险利益的货币价值表现，是投保时给保险标的确定的金额，又是保险人计收保险费的依据和承担给付责任的最高限额。
+  保险人： 保险人是保险合同当事人的一方，是经营保险业务收取保险费，在保险事故发生时给付保险金的人。据我国《保险法》规定，保险人是指与投保人订立保险合同，并承担赔偿或者给付保险金责任的保险公司。
+  被保险人： 被保险人是受保险合同保障的人。他们以其财产、生命或身体为保险标的，在保险事故发生后，享有保险金请求权。被保险人可以与投保人为同一人。
+  投保人： 投保人是保险合同当事人的另一方，是向保险人申请订立保险合同，并负有交付保险费义务的人。
+  保单现金价值： 是指带有储蓄性的人身保险单所具有的价值。在长期人身保险中，保险费率中含有储蓄因素，特别是长期性带有生存给付保险的纯保险费，往往含有很大比重的储蓄保险费。于是保险单交费达到一...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -79,173 +259,6 @@ docker search --filter=STARS=9000 mysql
 docker pull 镜像名
 # 拉取指定版本镜像
 ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Windows11关闭BitLocker加密</title>
-    <link href="http://localhost:4000/posts/win11-guanbi-bitlocker-jiami/" rel="alternate" type="text/html" title="Windows11关闭BitLocker加密" />
-    <published>2024-06-25T13:47:00+08:00</published>
-  
-    <updated>2024-06-25T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/win11-guanbi-bitlocker-jiami/</id>
-    <content src="http://localhost:4000/posts/win11-guanbi-bitlocker-jiami/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="SYSTEM" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      使用manage-bde.exe -off E:命令对E区的数据进行解密。
-
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Windows11安装跳过联网</title>
-    <link href="http://localhost:4000/posts/win11-anzhuang-tiaoguo-wangluopeizhi/" rel="alternate" type="text/html" title="Windows11安装跳过联网" />
-    <published>2024-06-25T13:47:00+08:00</published>
-  
-    <updated>2024-06-25T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/win11-anzhuang-tiaoguo-wangluopeizhi/</id>
-    <content src="http://localhost:4000/posts/win11-anzhuang-tiaoguo-wangluopeizhi/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="SYSTEM" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      使用快捷键Shift + F10调出命令提示符窗口，然后输入OOBE\BYPASSNRO，重启电脑，在重启后的Win11联网界面中，选择“我没有Internet连接”的选项，并继续执行受限设置，这样可以跳过联网激活环节。
-
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>自定义启动banner</title>
-    <link href="http://localhost:4000/posts/zidingyi-qidong-banner/" rel="alternate" type="text/html" title="自定义启动banner" />
-    <published>2024-06-03T13:47:00+08:00</published>
-  
-    <updated>2024-06-03T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/zidingyi-qidong-banner/</id>
-    <content src="http://localhost:4000/posts/zidingyi-qidong-banner/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Spring Boot" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Spring Boot启动的时候默认的banner是spring的字样，看多了觉得挺单调的，Spring Boot为我们提供了自定义banner的功能。自定义banner只需要在resource下新建一个banner.txt文件，将我们需要的banner字样放进去，启动的时候就会去读取使用这个文本文件中的banner。
-
-控制banner样式
-Spring提供了三个枚举类来设定字符的颜色，分别是：
-
-  AnsiColor： 用来设定字符的前景色
-  AnsiBackground： 用来设定字符的背景色
-  AnsiStyle： 用来控制加粗、斜体、下划线等等
-使用${AnsiFoo.Bar}来指定样式，这个颜色的设置是可以变的，也就是说同一个屏幕可以指定多个${AnsiColor.FooColor}这种，指定了颜色之后直到下次指定之前的字符都是FooColor颜色的
-
-
-${Ans...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>MyBatis Generator配置详解</title>
-    <link href="http://localhost:4000/posts/mybatis-generator-peizhi-xiangjie/" rel="alternate" type="text/html" title="MyBatis Generator配置详解" />
-    <published>2024-05-31T09:47:00+08:00</published>
-  
-    <updated>2024-05-31T09:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/mybatis-generator-peizhi-xiangjie/</id>
-    <content src="http://localhost:4000/posts/mybatis-generator-peizhi-xiangjie/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="MyBatis" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      一、添加MyBatis和数据库驱动依赖
-&amp;lt;dependency&amp;gt;
-    &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt;
-    &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt;
-    &amp;lt;version&amp;gt;1.3.2&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;
-&amp;lt;dependency&amp;gt;
-    &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt;
-    &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt;
-    &amp;lt;version&amp;gt;8.0.28&amp;lt;/version&amp;gt;
-&amp;lt;/...
     </summary>
   
 

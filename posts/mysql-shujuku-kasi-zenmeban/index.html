@@ -2928,6 +2928,11 @@
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -3015,6 +3020,54 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -8704,49 +8757,6 @@
         
         
         <div class="col">
-          <a href="/posts/error-code-1175/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1645498020"
-  data-df="ll"
-  
->
-  Feb 22, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Error Code：1175. You are using safe update mode and you tried to update a table without a WHERE tha</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  MySQL在执行删除、更新语句时报这种错误，是因为在MySQL处于safe-updates模式中，如果where后跟的条件不是主键id，那么就会提示这种错误。解决方式有两种。
-
-
-  SET SQL_SAFE_UPDATES = 0;执行该命令更改MySQL数据库模式。
-  在where判断条件中跟上主键id，例如：delete from firstmysqldatabase.user wh...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/mysql-anquan-moshi/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8830,6 +8840,49 @@ SELECT ... FROM ... WHERE ... ORDER BY ... (#{pageNum} - 1) * #{pageSize}, #{pag
   提示：
 
   select fro...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/mysql-xiugai-mima-tishi-error/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1680140820"
+  data-df="ll"
+  
+>
+  Mar 30, 2023
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>MySQL修改密码提示ERROR 1054</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  报错信息
+执行update mysql.user set password=password(&#39;password&#39;) where user=&#39;root&#39;;会出现以下错误ERROR 1054 (42S22): Unknown column &#39;password&#39; in &#39;field list&#39;。
+
+报错原因
+MySQL数据库下已经没有password这个字段了，password字段改成了auth...
                 </p>
               </div>
             </div>
@@ -10878,6 +10931,11 @@ SELECT ... FROM ... WHERE ... ORDER BY ... (#{pageNum} - 1) * #{pageSize}, #{pag
     
     
       
+    
+  
+    
+    
+    
     
   
     

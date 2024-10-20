@@ -658,7 +658,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="594 words"
+  title="651 words"
 >
   <em>3 min</em> read</span>
 
@@ -819,6 +819,20 @@ netstat <span class="nt">-pnt</span> |grep :80 |wc
 2
 </pre></td><td class="rouge-code"><pre><span class="c"># 查看进程的线程数量</span>
 ps <span class="nt">-o</span> nlwp &lt;pid&gt;
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c"># 生成dump文件</span>
+<span class="c"># 如果JDK是安装版的可以执行</span>
+jmap <span class="nt">-dump</span>:format<span class="o">=</span>b,file<span class="o">=</span>/home/oper/dump.hprof 14912
+<span class="c"># 如果JDK不是按照版本需要进入到JDK的bin目录下</span>
+./jmap <span class="nt">-dump</span>:format<span class="o">=</span>b,file<span class="o">=</span>/home/oper/dump.hprof 14912<span class="o">(</span>服务的进程id<span class="o">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 </div>
@@ -3039,6 +3053,11 @@ ps <span class="nt">-o</span> nlwp &lt;pid&gt;
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -3121,6 +3140,54 @@ ps <span class="nt">-o</span> nlwp &lt;pid&gt;
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -11015,6 +11082,11 @@ ONBOOT=yes
     
     
       
+    
+  
+    
+    
+    
     
   
     

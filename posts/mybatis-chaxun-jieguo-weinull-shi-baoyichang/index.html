@@ -3030,6 +3030,11 @@ method with a primitive return type (int).
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -3117,6 +3122,54 @@ method with a primitive return type (int).
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -8859,7 +8912,7 @@ mode=IN, javaType=class java.lang...
         
         
         <div class="col">
-          <a href="/posts/mybatis-fenye-jisuan-gongshi/" class="card post-preview h-100">
+          <a href="/posts/mybatis-generator-peizhi-xiangjie/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8872,14 +8925,14 @@ mode=IN, javaType=class java.lang...
 
 <em
   class="small"
-  data-ts="1708480020"
+  data-ts="1717120020"
   data-df="ll"
   
 >
-  Feb 21, 2024
+  May 31, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Mybatis分页计算公式</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>MyBatis Generator配置详解</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8888,23 +8941,21 @@ mode=IN, javaType=class java.lang...
 
 
 
-                  MySQL
-1
-2
--- n为页码，m为每页数据条数
-select * from table_name limit (n-1)*m, m
-
-Oracle
+                  一、添加MyBatis和数据库驱动依赖
 1
 2
 3
 4
 5
--- n为页码，m为每页数据条数
-select a.* from (
-  select b.*,rownum as rn from table_name b
-) a
-where a.rn between (n-1)*m+...
+6
+7
+8
+9
+10
+&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+    &amp;lt;v...
                 </p>
               </div>
             </div>
@@ -10996,6 +11047,11 @@ where a.rn between (n-1)*m+...
     
     
       
+    
+  
+    
+    
+    
     
   
     

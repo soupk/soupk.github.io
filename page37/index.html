@@ -586,6 +586,287 @@
 
 <div id="post-list">
   
+    <a href="/posts/jquery-huoqu-xianglin-yuansu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery获取相邻元素
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              JQuery里我们要获取某个元素的相邻元素时，可以用到的命令有三个：
+
+  next()：用来获取下一个同辈元素。
+  prev()：用来获取上一个同辈元素。
+  siblings()：用来获取所有的同辈元素。
+
+
+下面来看看简单的实例：
+&amp;lt;div&amp;gt;
+    &amp;lt;p id=&quot;1&quot;&amp;gt;1&amp;lt;/p&amp;gt;
+    &amp;lt;p id=&quot;2&quot;&amp;gt;2&amp;lt;/p&amp;gt;
+ ...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607320020"
+  data-df="ll"
+  
+>
+  Dec  7, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jquery-he-dom-yuansu-huzhuan/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery对象和DOM元素的互转
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              JQuery对象转成DOM元素
+id选择器 $(“#id”)[0]
+&amp;lt;input type=&quot;text&quot; id=&quot;tx&quot; value=&quot;44&quot;&amp;gt;
+&amp;lt;script&amp;gt;
+$(function() {
+    // 通过id选择器获取Jquery对象
+    var tx =  $(&quot;#tx&quot;);
+    // 转成dom对象
+    var domObj = tx[0];
+...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607320020"
+  data-df="ll"
+  
+>
+  Dec  7, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jquery-fasong-post-qingqiu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery发送POST请求
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              $.post(&quot;/test/test/deleteAction.do&quot;, function(data) {
+    alert(data);
+});
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607320020"
+  data-df="ll"
+  
+>
+  Dec  7, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/huoqu-dianji-duixiang-de-shuxing/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery获取当前点击元素的自定义属性
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              &amp;lt;a onclick=&quot;goTest(this)&quot; myAttr=&quot;${data}&quot;&amp;gt;点击删除&amp;lt;/a&amp;gt;&#39;;
+
+传this过去即可
+function goTest(e) {
+    var data = $(e).attr(&quot;myAttr&quot;);
+    $(&quot;form&quot;).attr(&quot;action&quot;, &quot;goTest.do?data=&quot; + data).submit()...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607320020"
+  data-df="ll"
+  
+>
+  Dec  7, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/a-biaoqian-zhuanwei-post-fangshi-tijiao/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -983,280 +1264,6 @@ Jira REST A...
                   
                     Knowledge,
                     Jira
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/sanzhong-shujuk-jdbc-lianjiefangshi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            MySQL、SQLServer、Oracle三种数据库的JDBC连接方式
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              MySQL
-Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
-String url = &quot;jdbc:mysql://localhost:3306/test?characterEncoding=UTF8&quot;;
-Connection connection = DriverManager.getConnection(url, username, password);
-S...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606888020"
-  data-df="ll"
-  
->
-  Dec  2, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JDBC
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/geda-shujuku-lianjiechuan/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JDBC各大数据库的连接字符串和驱动类
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              Oracle
-driverClass：oracle.jdbc.OracleDriver
-url：jdbc:oracle:thin:@localhost:1521:dbname
-
-
-MySQL
-driverClass：com.mysql.jdbc.Driver
-url：jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;amp;use...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606888020"
-  data-df="ll"
-  
->
-  Dec  2, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JDBC
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/caozuo-shujuku-chuxian-luanma/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JDBC操作数据库出现中文乱码
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              通过JDBC操作数据库表时，如果记录中有中文，可能会碰到乱码的问题。主要原因是字符编码（characterEncoding）不正确，包括以下几个方面：
-
-  在数据库服务器上创建表格时没有选择支持中文的编码方式；
-  建立JDBC连接时没有指明支持中文的编码方式；
-
-
-建议在创建表格和建立JDBC连接时都采用utf-8编码。具体方法如下：
-
-  创建数据库表时，选择character与col...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606888020"
-  data-df="ll"
-  
->
-  Dec  2, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JDBC
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/docker-dakai-xinchuangkou-baocuo/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Windows下Docker打开新窗口报错
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              错误信息
-error during connect: Get http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.26/containers/json: 
-open  //./pipe/docker_engine: The system cannot find the file specified. 
-In the default daemon configur...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606888020"
-  data-df="ll"
-  
->
-  Dec  2, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Docker
                 </span>
               
             </div>
@@ -4052,6 +4059,11 @@ In the default daemon configur...
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -6105,6 +6117,11 @@ In the default daemon configur...
     
     
       
+    
+  
+    
+    
+    
     
   
     

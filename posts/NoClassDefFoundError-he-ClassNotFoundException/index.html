@@ -2953,6 +2953,11 @@
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -3040,6 +3045,54 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -8729,7 +8782,7 @@
         
         
         <div class="col">
-          <a href="/posts/qianduan-dao-houtai-400-cuowu/" class="card post-preview h-100">
+          <a href="/posts/shiyong-calendar-huoqu-shijain/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8742,14 +8795,14 @@
 
 <em
   class="small"
-  data-ts="1642700820"
+  data-ts="1603770420"
   data-df="ll"
   
 >
-  Jan 21, 2022
+  Oct 27, 2020
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>前端到后端400错误（The server cannot or will not process the request due to...）</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>使用Calendar类来输出年份、月份等</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8758,14 +8811,13 @@
 
 
 
-                  错误信息
+                  import java.util.Calendar;
 
-1
-2
-3
-The server cannot or will not process the request due to something that 
-is perceived to be a client error (e.g., malformed request syntax, invalid 
-request message framing, or deceptiv...
+public class Main {
+    public static void main(String[] args) {
+        Calendar cal = Calendar.getInstance();
+        int day = cal.get(Calendar.DATE);
+        int mon...
                 </p>
               </div>
             </div>
@@ -8775,7 +8827,7 @@ request message framing, or deceptiv...
         
         
         <div class="col">
-          <a href="/posts/qudiao-json-hong-wei-null-de-yuansu/" class="card post-preview h-100">
+          <a href="/posts/java-zhong-array-he-list-de-zhuanhuan/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8788,14 +8840,14 @@ request message framing, or deceptiv...
 
 <em
   class="small"
-  data-ts="1645120020"
+  data-ts="1603770420"
   data-df="ll"
   
 >
-  Feb 18, 2022
+  Oct 27, 2020
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Java去掉JSON数据中值为null的属性字段</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Java中Array和List的相互转换</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8804,23 +8856,13 @@ request message framing, or deceptiv...
 
 
 
-                  1
-@JsonInclude(JsonInclude.Include.NON_NULL) 
+                  Array转List
+String[] array = {&quot;string1&quot;, &quot;string2&quot;, &quot;string3&quot;};
+List&amp;lt;String&amp;gt; list = Arrays.asList(array);
+//Arrays.asList产生一个Arrays内置的类，其中数组用final表示
+// list.add(&quot;string4&quot;);  所以不能往其中添加元素
 
-此方法集成于Springboot2.0中，此方法的配置意在实体类与JSON互转的时候属性值为null的不参与序列化。使用时用注解的方式：
-
-放在标记类
-
-1
-2
-3
-4
-5
-6
-7
-8
-@JsonInclude(JsonInclude.Include.NON_NULL) 
-public class ...
+for(S...
                 </p>
               </div>
             </div>
@@ -8830,7 +8872,7 @@ public class ...
         
         
         <div class="col">
-          <a href="/posts/aes-jiami-yichang/" class="card post-preview h-100">
+          <a href="/posts/jisuan-xiangcha-de-yueshu/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8843,14 +8885,14 @@ public class ...
 
 <em
   class="small"
-  data-ts="1710992820"
+  data-ts="1603775580"
   data-df="ll"
   
 >
-  Mar 21, 2024
+  Oct 27, 2020
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>AES加密异常</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>计算相差的月数</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8859,11 +8901,12 @@ public class ...
 
 
 
-                  报错信息
-Java实现AES加密，抛出异常如下：java.security.InvalidKeyException: Illegal key size
-
-报错原因
-Illegal key size or default parameters是指密钥长度受限制，Java运行时环境读到的是受限的policy文件。policy文件位于${java_home}/jre/lib/security 目录...
+                  public static int getMonthDiff(Date d1, Date d2) {
+	Calendar c1 = Calendar.getInstance();
+	Calendar c2 = Calendar.getInstance();
+	c1.setTime(d1);
+	c2.setTime(d2);
+	int year1 = c1.get(Calendar.YEAR)...
                 </p>
               </div>
             </div>
@@ -10912,6 +10955,11 @@ Illegal key size or default parameters是指密钥长度受限制，Java运行�
     
     
       
+    
+  
+    
+    
+    
     
   
     

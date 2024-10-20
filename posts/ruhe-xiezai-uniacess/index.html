@@ -658,7 +658,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="166 words"
+  title="241 words"
 >
   <em>1 min</em> read</span>
 
@@ -670,6 +670,30 @@
 
 <div class="post-content">
   <p>下载360安全卫士文件粉碎机独立版，使用文件粉碎机打开<code class="language-plaintext highlighter-rouge">C:\Windows\LVUAAgentInstBaseRoot</code>目录（使用Windows资源管理器打开无法看到目录下的文件），强力删除目录下的<code class="language-plaintext highlighter-rouge">UniAccessAgentBrowser.exe</code>、<code class="language-plaintext highlighter-rouge">UniAccessAgentDaemon.exe</code>、<code class="language-plaintext highlighter-rouge">UniAccessAgentTray.exe</code>这3个文件，<code class="language-plaintext highlighter-rouge">UniAccessAgentUI.exe</code>和<code class="language-plaintext highlighter-rouge">UniAccessAgent.exe</code>这两个文件要留着，这个就是程序的界面，然后<code class="language-plaintext highlighter-rouge">UniAccessAgentUI.exe</code>创建一个快捷方式到桌面，如果不能登录内网，双击快捷方式就会弹出桌面管家网络认证的界面，点击其中的登录网络即可。然后重启Windows系统，UniAccessAgent相关的进程就不会自动重启了。</p>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="c"># Ntrtscan服务注册</span>
+sc create ntrtscan <span class="nv">binpath</span><span class="o">=</span> <span class="s2">"C:</span><span class="se">\P</span><span class="s2">rogram Files (x86)</span><span class="se">\A</span><span class="s2">siainfo Security</span><span class="se">\O</span><span class="s2">fficeScan Client</span><span class="se">\N</span><span class="s2">trtscan.exe"</span> <span class="nb">type</span><span class="o">=</span> own <span class="nv">start</span><span class="o">=</span> auto <span class="nv">displayname</span><span class="o">=</span> <span class="s2">"OfficeScan NT RealTime Scan"</span>
+<span class="c"># UniAccessAgent服务注册</span>
+sc create UniAccessAgent <span class="nv">binpath</span><span class="o">=</span> <span class="s2">"C:</span><span class="se">\W</span><span class="s2">indows</span><span class="se">\L</span><span class="s2">VUAAgentInstBaseRoot</span><span class="se">\U</span><span class="s2">niAccessAgent.exe"</span> <span class="nb">type</span><span class="o">=</span> own <span class="nv">start</span><span class="o">=</span> auto <span class="nv">displayname</span><span class="o">=</span> <span class="s2">"UniAccessAgent"</span>
+<span class="c"># 启动服务</span>
+sc start ntrtscan
+<span class="c"># 停止服务</span>
+sc stop ntrtscan
+<span class="c"># 删除服务</span>
+sc delete ntrscan
+</pre></td></tr></tbody></table></code></div></div>
 
 </div>
 
@@ -2889,6 +2913,11 @@
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -2971,6 +3000,54 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -10823,6 +10900,11 @@ $(&quot;#content_views pre code&quot;).css(&quot;user-select&quot;, &quot;text&q
     
     
       
+    
+  
+    
+    
+    
     
   
     

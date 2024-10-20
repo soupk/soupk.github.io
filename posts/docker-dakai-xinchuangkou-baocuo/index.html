@@ -2944,6 +2944,11 @@ to connect. This error may also indicate that the docker daemon is not running.
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -3031,6 +3036,54 @@ to connect. This error may also indicate that the docker daemon is not running.
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -8827,7 +8880,7 @@ to connect. This error may also indicate that the docker daemon is not running.
         
         
         <div class="col">
-          <a href="/posts/qianduan-dao-houtai-400-cuowu/" class="card post-preview h-100">
+          <a href="/posts/jsessionid-shenme-shihou-shengcheng/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8840,14 +8893,14 @@ to connect. This error may also indicate that the docker daemon is not running.
 
 <em
   class="small"
-  data-ts="1642700820"
+  data-ts="1646286420"
   data-df="ll"
   
 >
-  Jan 21, 2022
+  Mar  3, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>前端到后端400错误（The server cannot or will not process the request due to...）</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>JSESSIONID什么时候生成并传递到前端的</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8856,14 +8909,13 @@ to connect. This error may also indicate that the docker daemon is not running.
 
 
 
-                  错误信息
+                  如果客户端请求的cookie中不包含JSESSIONID，服务端调用request.getSession()时就会生成并传递给客户端，此次响应头会包含设置cookie的信息。
 
-1
-2
-3
-The server cannot or will not process the request due to something that 
-is perceived to be a client error (e.g., malformed request syntax, invalid 
-request message framing, or deceptiv...
+
+
+如果客户端请求的cookie中包含JSESSIONID，服务端调用request.getSession()时就会根据JSESSIONID进行查找对象，如果能查到就返回，否则就跟没传递JSESSIONID一样。
+
+...
                 </p>
               </div>
             </div>
@@ -8873,7 +8925,7 @@ request message framing, or deceptiv...
         
         
         <div class="col">
-          <a href="/posts/qudiao-json-hong-wei-null-de-yuansu/" class="card post-preview h-100">
+          <a href="/posts/redis-qidong-baocuo/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8886,14 +8938,14 @@ request message framing, or deceptiv...
 
 <em
   class="small"
-  data-ts="1645120020"
+  data-ts="1648100820"
   data-df="ll"
   
 >
-  Feb 18, 2022
+  Mar 24, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Java去掉JSON数据中值为null的属性字段</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Redis启动报错：The Windows version of Redis allocates a memory ...</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8902,13 +8954,7 @@ request message framing, or deceptiv...
 
 
 
-                  1
-@JsonInclude(JsonInclude.Include.NON_NULL) 
-
-此方法集成于Springboot2.0中，此方法的配置意在实体类与JSON互转的时候属性值为null的不参与序列化。使用时用注解的方式：
-
-放在标记类
-
+                  报错信息
 1
 2
 3
@@ -8917,8 +8963,16 @@ request message framing, or deceptiv...
 6
 7
 8
-@JsonInclude(JsonInclude.Include.NON_NULL) 
-public class ...
+9
+10
+11
+12
+13
+14
+15
+The Windows version of Redis allocates a memory mapped heap for 
+sharing with the forked process used for persistence operations. 
+In order to share this me...
                 </p>
               </div>
             </div>
@@ -10967,6 +11021,11 @@ public class ...
     
     
       
+    
+  
+    
+    
+    
     
   
     

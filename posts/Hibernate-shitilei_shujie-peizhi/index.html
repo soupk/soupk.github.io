@@ -3587,6 +3587,11 @@ Teacher实体表示教师，Student实体表示学生，为了描述教师和学
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -3674,6 +3679,54 @@ Teacher实体表示教师，Student实体表示学生，为了描述教师和学
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -9461,7 +9514,7 @@ Criteria、HQL
         
         
         <div class="col">
-          <a href="/posts/qianduan-dao-houtai-400-cuowu/" class="card post-preview h-100">
+          <a href="/posts/jsessionid-shenme-shihou-shengcheng/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9474,14 +9527,14 @@ Criteria、HQL
 
 <em
   class="small"
-  data-ts="1642700820"
+  data-ts="1646286420"
   data-df="ll"
   
 >
-  Jan 21, 2022
+  Mar  3, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>前端到后端400错误（The server cannot or will not process the request due to...）</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>JSESSIONID什么时候生成并传递到前端的</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9490,14 +9543,13 @@ Criteria、HQL
 
 
 
-                  错误信息
+                  如果客户端请求的cookie中不包含JSESSIONID，服务端调用request.getSession()时就会生成并传递给客户端，此次响应头会包含设置cookie的信息。
 
-1
-2
-3
-The server cannot or will not process the request due to something that 
-is perceived to be a client error (e.g., malformed request syntax, invalid 
-request message framing, or deceptiv...
+
+
+如果客户端请求的cookie中包含JSESSIONID，服务端调用request.getSession()时就会根据JSESSIONID进行查找对象，如果能查到就返回，否则就跟没传递JSESSIONID一样。
+
+...
                 </p>
               </div>
             </div>
@@ -11546,6 +11598,11 @@ request message framing, or deceptiv...
     
     
       
+    
+  
+    
+    
+    
     
   
     

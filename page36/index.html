@@ -586,6 +586,286 @@
 
 <div id="post-list">
   
+    <a href="/posts/jquery-zai-iframe-zhong-chazhao-yuansu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery在iframe中查找元素
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              $(window).on(&#39;load&#39;, function () {
+    $(&#39;#mainiframe&#39;).contents().find(&#39;#myTab&#39;).remove();
+});
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607406420"
+  data-df="ll"
+  
+>
+  Dec  8, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jquery-wei-input-bangding-chufa-shijian/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery为input绑定触发事件
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              输入框正在输入时
+$(&quot;#ipt&quot;).on(&#39;input&#39;, function() {
+    if (!($(&#39;#ipt&#39;).val() == &#39;&#39;)) {
+        $(&quot;.cancle_ico&quot;).removeClass(&#39;hide&#39;);
+    } else {
+        $(&quot;.cancle_ico&quot;).addClass(&#39;hide&#39;);
+    }
+})
+
+
+输入框得...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607406420"
+  data-df="ll"
+  
+>
+  Dec  8, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jquery-shiyong-replace-hanshu-tihuan-quanbu-pipeixiang/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery使用Replace函数替换全部匹配项
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              JQuery的Replace仅能替换第一个匹配的内容，例如：
+var str = &quot;a&amp;lt;br/&amp;gt;b&amp;lt;br/&amp;gt;c&amp;lt;br/&amp;gt;&quot;;
+var Newstr = str.Replace(&quot;&amp;lt;br/&amp;gt;&quot;, &quot;&quot;);
+alert(Newstr); // 内容为：ab&amp;lt;br/&amp;gt;c&amp;lt;br/&amp;gt;
+
+要替换全部匹配项，可以使用正则表达式：
+va...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607406420"
+  data-df="ll"
+  
+>
+  Dec  8, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jquery-jiancha-ziduan-shifou-weikong/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery检查字段是否为空
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              function checkIsNull() {
+    var flag = false;
+    var test1 = $(&#39;input:radio[name=&quot;test1&quot;]:checked&#39;).val();
+    var test2 = $(&quot;#test2&quot;).val()
+
+    if (test1) {
+        flag = true;
+    } else {
+  ...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607406420"
+  data-df="ll"
+  
+>
+  Dec  8, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/jquery-jiancha-shuru-neirong-shifou-baohan-teshu-zifu/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -958,287 +1238,6 @@ var checkLength = function(dom, maxLength) {
     var l = 0;
     for(var i = 0; i &amp;lt; dom.value.length; i++) {
         if (/[\u4e00-...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1607320020"
-  data-df="ll"
-  
->
-  Dec  7, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JQuery
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/jquery-huoqu-xianglin-yuansu/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JQuery获取相邻元素
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              JQuery里我们要获取某个元素的相邻元素时，可以用到的命令有三个：
-
-  next()：用来获取下一个同辈元素。
-  prev()：用来获取上一个同辈元素。
-  siblings()：用来获取所有的同辈元素。
-
-
-下面来看看简单的实例：
-&amp;lt;div&amp;gt;
-    &amp;lt;p id=&quot;1&quot;&amp;gt;1&amp;lt;/p&amp;gt;
-    &amp;lt;p id=&quot;2&quot;&amp;gt;2&amp;lt;/p&amp;gt;
- ...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1607320020"
-  data-df="ll"
-  
->
-  Dec  7, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JQuery
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/jquery-he-dom-yuansu-huzhuan/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JQuery对象和DOM元素的互转
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              JQuery对象转成DOM元素
-id选择器 $(“#id”)[0]
-&amp;lt;input type=&quot;text&quot; id=&quot;tx&quot; value=&quot;44&quot;&amp;gt;
-&amp;lt;script&amp;gt;
-$(function() {
-    // 通过id选择器获取Jquery对象
-    var tx =  $(&quot;#tx&quot;);
-    // 转成dom对象
-    var domObj = tx[0];
-...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1607320020"
-  data-df="ll"
-  
->
-  Dec  7, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JQuery
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/jquery-fasong-post-qingqiu/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JQuery发送POST请求
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              $.post(&quot;/test/test/deleteAction.do&quot;, function(data) {
-    alert(data);
-});
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1607320020"
-  data-df="ll"
-  
->
-  Dec  7, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JQuery
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/huoqu-dianji-duixiang-de-shuxing/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JQuery获取当前点击元素的自定义属性
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              &amp;lt;a onclick=&quot;goTest(this)&quot; myAttr=&quot;${data}&quot;&amp;gt;点击删除&amp;lt;/a&amp;gt;&#39;;
-
-传this过去即可
-function goTest(e) {
-    var data = $(e).attr(&quot;myAttr&quot;);
-    $(&quot;form&quot;).attr(&quot;action&quot;, &quot;goTest.do?data=&quot; + data).submit()...
             </p>
           </div>
 
@@ -4067,6 +4066,11 @@ function goTest(e) {
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -6120,6 +6124,11 @@ function goTest(e) {
     
     
       
+    
+  
+    
+    
+    
     
   
     

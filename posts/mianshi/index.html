@@ -1326,6 +1326,102 @@
       
 
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
 
     
 
@@ -1483,9 +1579,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="14459 words"
+  title="15484 words"
 >
-  <em>80 min</em> read</span>
+  <em>86 min</em> read</span>
 
     </div>
 
@@ -2425,6 +2521,83 @@ implements是实现一个或多个接口，实现一个接口就是要实现该�
 <h3 id="loadbalanced的作用是什么"><span class="me-2">@LoadBalanced的作用是什么</span><a href="#loadbalanced的作用是什么" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <blockquote class="prompt-tip">
   <p>描述RestTemplate对象，用于告诉Spring框架，在使用RestTempalte进行服务调用时，这个调用过程会被一个拦截器进行拦截，然后在拦截器内部，启动负载均衡策略。</p>
+</blockquote>
+
+<h3 id="spring-boot-actuator原生端点"><span class="me-2">Spring Boot Actuator原生端点</span><a href="#spring-boot-actuator原生端点" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>原生端点分为三大类：</p>
+  <ul>
+    <li>应用配置类：获取应用程序中加载的应用配置、环境变量、自动化配置报告等与Spring Boot应用密切相关的配置类信息。</li>
+    <li>度量指标类：获取应用程序运行过程中用于监控的度量指标，比如：内存信息、线程池信息、HTTP请求统计等。</li>
+    <li>操作控制类：提供了对应用的关闭等操作类功能。</li>
+  </ul>
+</blockquote>
+
+<h3 id="spring管理事务的方式"><span class="me-2">Spring管理事务的方式</span><a href="#spring管理事务的方式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <ul>
+    <li>编程式事务，在代码中硬编码</li>
+    <li>声明式事务：在配置文件中声明</li>
+    <li>基于XML的声明式事务</li>
+    <li>基于注解的声明式事务</li>
+  </ul>
+</blockquote>
+
+<h3 id="spring-boot的核心注解"><span class="me-2">Spring Boot的核心注解</span><a href="#spring-boot的核心注解" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>Spring Boot的核心注解是@SpringBootApplication，它也是启动类使用的注解，主要包含了3个注解：</p>
+  <ul>
+    <li>@SpringBootConfiguration：它组合了@Configuration注解，实现配置文件的功能。</li>
+    <li>@EnableAutoConfiguration：具有打开自动配置的功能，也可以关闭某个自动配置的选项。</li>
+    <li>@ComponentScan：用于Spring组件扫描。</li>
+  </ul>
+</blockquote>
+
+<h3 id="spring-boot自动配置原理是什么"><span class="me-2">Spring Boot自动配置原理是什么</span><a href="#spring-boot自动配置原理是什么" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>@EnableAuto Configuration注解、@Configuration注解和@ConditionalOnClass注解组成了Spring Boot白动配置的核心，首先它得是一个配置文件，其次根据类路径下是否有这个类去自动配置。具体是通过Maven读取每个starter中的spring.factories文件，该文件配置了所有需要被创建在spring容器中的bean。</p>
+</blockquote>
+
+<h3 id="spring-boot配置加载顺序"><span class="me-2">Spring Boot配置加载顺序</span><a href="#spring-boot配置加载顺序" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>Spring Boot配置加载顺序优先级是：propertiese文件、YAML文件、系统环境变量、命令行参数。<br />
+bootstrap.properties比application.properties优先加载，而且bootstrap里面的属性不能被覆盖。</p>
+</blockquote>
+
+<h3 id="spring-boot是否可以使用xml配置"><span class="me-2">Spring Boot是否可以使用XML配置</span><a href="#spring-boot是否可以使用xml配置" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <p>通过@ImportResource注解加载XML配置。</p>
+</blockquote>
+
+<h3 id="filter和interator的区别"><span class="me-2">Filter和Interator的区别</span><a href="#filter和interator的区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <ul>
+    <li>Filter过滤器是在请求进入Tomcat容器之后，请求进入Servlet之前执行。Filter是Servlet规定规范的。
+Interator拦截器是在Servlet和Controller控制器之间执行。Interator是SpringframeWork中规定的。</li>
+    <li>Filter的主要作用是过滤字符编码、做一些业务逻辑判断，主要用于对用户请求进行预处理，同时也可以进行逻辑判断。Interator的主要作用是拦截用户请求，进行处理，比如判断用户登录情况、权限验证，只针对Controller请求进行处理。</li>
+  </ul>
+</blockquote>
+
+<h3 id="springmvc的工作流程"><span class="me-2">SpringMVC的工作流程</span><a href="#springmvc的工作流程" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote class="prompt-tip">
+  <ol>
+    <li>用户向服务端发送一次请求，这个请求会先到前端控制器DispatcherServlet(也叫中央控制器)</li>
+    <li>DispatcherServlet接收到请求后会调用HandlerMapping处理器映射器。由此得知，该请求该由哪个Controller来处理（并未调用Controller,只是得知)</li>
+    <li>DispatcherServleti调用HandlerAdapter处理器适配器，告诉处理器适配器应该要去执行哪个Controller</li>
+    <li>HandlerAdapter处理器适配器去执行Controller并得到ModelAndView(数据和视图)，并层层返回给DispatcherServlet</li>
+    <li>DispatcherServlet将ModelAndView?交给ViewReslover视图解析器解析，然后返回真正的视图</li>
+    <li>DispatcherServlet将模型数据填充到视图中</li>
+    <li>DispatcherServlet将结果响应给用户</li>
+  </ol>
+
+  <p>组件说明</p>
+  <ul>
+    <li>DispatcherServlet：前端控制器，也称为中央控制器，它是整个请求响应的控制中心，组件的调用由它统一调度。</li>
+    <li>HandlerMapping：处理器映射器，它根据用户访问的URL映射到对应的后端处理器Handler。也就是说它知道处理用户请求的后端处理器，但是它并不执行后端处理器，而是将处理器告诉给中央处理器。</li>
+    <li>HandlerAdapter：处理器适配器，它调用后端处理器中的方法，返回逻辑视图ModelAndView对象。</li>
+    <li>ViewResolver：视图解析器，将ModelAndView逻辑视图解析为具体的视图（如JSP)。</li>
+    <li>Handler：后端处理器，对用户具体请求进行处理，也就是我们编写的Controller类。</li>
+  </ul>
 </blockquote>
 
 <blockquote class="prompt-warning">
@@ -4695,6 +4868,11 @@ implements是实现一个或多个接口，实现一个接口就是要实现该�
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -4782,6 +4960,54 @@ implements是实现一个或多个接口，实现一个接口就是要实现该�
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -12656,6 +12882,11 @@ implements是实现一个或多个接口，实现一个接口就是要实现该�
     
     
       
+    
+  
+    
+    
+    
     
   
     

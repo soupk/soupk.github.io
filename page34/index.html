@@ -586,6 +586,285 @@
 
 <div id="post-list">
   
+    <a href="/posts/git-shangchuan-buqufen-daxiaoxie/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Git上传文件不区分大小写的问题
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              问题
+文件名称最初新建的时候是大写，但是后面想要改成小写的，修改完提交的时候使用git status命令发现并没有修改的记录，提交之后在Git上也没有修改。
+
+解决办法
+因为Git默认是不区分大小写的，所以git status是不会提示你有修改的。
+
+  通过git config --get core.ignorecase查看默认配置
+  通过git config core.ignoreca...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1608184020"
+  data-df="ll"
+  
+>
+  Dec 17, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Git
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/json-fanxuliehua-cuowu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Jackson反序列化错误的解决方法
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              错误信息com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException：Unrecognized field，出现这种问题的情况是由于JSON里面包含了实体没有的字段导致反序列化失败。
+第一种解决方案
+// ObjectMapper对象添加
+String s = &quot;{\&quot;id\&quot;:1,\&quot;name\&quot;:\&quot;test\&quot;,\&quot;a...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1608176820"
+  data-df="ll"
+  
+>
+  Dec 17, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Java
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jiang-shuzu-zhong-de-yuansu-fuzhi-dao-lingyige-shuzu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            一个数组中的元素复制到另一个数组
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              使用函数arraycopy(Object src, int srcPos, Object dest,  int destPos, int length)，其中五个参数分别表示为：
+
+  src— 被复制的数组
+  srcPos —从第几个元素开始复制
+  dest —要复制到的数组
+  destPos —从第几个元素开始粘贴
+  length —一共需要复制的元素个数
+
+
+public st...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1608176820"
+  data-df="ll"
+  
+>
+  Dec 17, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Java
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/java-zhong-chuangjian-shuzu-de-sanzhong-fangshi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Java中创建数组的三种方式
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              public static void main(String[] args) {
+    //创建数组的第一种方法，指定数组长度
+    int[] arr1 = new int[6];
+
+    //创建数组的第二种方法，创建并初始化
+    int[] arr2 = {1, 2, 3, 4};
+
+    //创建数组的第三种方法
+    int[] arr3 = new int[]{1,...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1608176820"
+  data-df="ll"
+  
+>
+  Dec 17, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Java
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/java-jiang-json-zhuanwei-duixiangshuzu-de-fangfa/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -988,291 +1267,6 @@ Cannot query proxy blanket: no such interface supported (0x80004002)
                   
                     Knowledge,
                     Nexus
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/intelliJ-idea-kuaijiejian/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            IntelliJ IDEA快捷键
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              IDEA原生
-
-导包：Alt + Enter
-快速切换下一行：Shift + Enter
-查看继承关系：F4
-查看类结构：Ctrl + o
-整体修改变量名或方法名：Ctrl + Shift + r
-生成try catch方法：Alt + Shift + z
-查找文件：Shift + Shift
-抽取方法：Alt + Shift + m
-打开最近修改的文件：Ctrl + e
-快速搜索类中错误：...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1607923380"
-  data-df="ll"
-  
->
-  Dec 14, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    IntelliJ IDEA
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/springmvc-jieshou-form-biaodan-tijiao-de-shuzu-shuju/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            SpringMVC接收form表单提交的数组数据
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              前端页面
-&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html lang=&quot;en&quot;&amp;gt;
-    &amp;lt;head&amp;gt;
-        &amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;
-        &amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt;
-    &amp;lt;/head&amp;gt;
-    &amp;lt;body&amp;gt;
-        &amp;lt;form ...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1607579220"
-  data-df="ll"
-  
->
-  Dec 10, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    SpringMVC
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/select-biaoqian-de-huixian/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            < select>标签的回显
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              &amp;lt;div class=&quot;form-group&quot;&amp;gt;
-    &amp;lt;label class=&quot;col-sm-2&quot; contenteditable=&quot;true&quot; for=&quot;test&quot;&amp;gt;数字&amp;lt;/label&amp;gt;
-    &amp;lt;div class=&quot;col-xs-12&quot;&amp;gt;
-        &amp;lt;select id=&quot;num&quot; class=&quot;num&quot; name=&quot;n...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1607579220"
-  data-df="ll"
-  
->
-  Dec 10, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JQuery
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/jquery-ruhe-panduan-kongzhi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JQuery如何判断为null、undefined、NaN
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              判断是否为null
-&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
-    var tmp = null;
-    if (tmp == null) {
-        alert(&quot;null&quot;);
-    }
-&amp;lt;/script&amp;gt;
-
-运行结果：会弹窗null
-
-判断是否为undefined
-&amp;lt;script type=&quot;text/javascrip...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1607579220"
-  data-df="ll"
-  
->
-  Dec 10, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JQuery
                 </span>
               
             </div>
@@ -4068,6 +4062,11 @@ Cannot query proxy blanket: no such interface supported (0x80004002)
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -6121,6 +6120,11 @@ Cannot query proxy blanket: no such interface supported (0x80004002)
     
     
       
+    
+  
+    
+    
+    
     
   
     

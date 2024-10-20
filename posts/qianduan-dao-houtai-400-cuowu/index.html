@@ -2954,6 +2954,11 @@ request message framing, or deceptive request routing).
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -3041,6 +3046,54 @@ request message framing, or deceptive request routing).
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -8730,104 +8783,6 @@ request message framing, or deceptive request routing).
         
         
         <div class="col">
-          <a href="/posts/qudiao-json-hong-wei-null-de-yuansu/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1645120020"
-  data-df="ll"
-  
->
-  Feb 18, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Java去掉JSON数据中值为null的属性字段</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  1
-@JsonInclude(JsonInclude.Include.NON_NULL) 
-
-此方法集成于Springboot2.0中，此方法的配置意在实体类与JSON互转的时候属性值为null的不参与序列化。使用时用注解的方式：
-
-放在标记类
-
-1
-2
-3
-4
-5
-6
-7
-8
-@JsonInclude(JsonInclude.Include.NON_NULL) 
-public class ...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
-          <a href="/posts/aes-jiami-yichang/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1710992820"
-  data-df="ll"
-  
->
-  Mar 21, 2024
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>AES加密异常</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  报错信息
-Java实现AES加密，抛出异常如下：java.security.InvalidKeyException: Illegal key size
-
-报错原因
-Illegal key size or default parameters是指密钥长度受限制，Java运行时环境读到的是受限的policy文件。policy文件位于${java_home}/jre/lib/security 目录...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/shiyong-calendar-huoqu-shijain/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8864,6 +8819,95 @@ public class Main {
         Calendar cal = Calendar.getInstance();
         int day = cal.get(Calendar.DATE);
         int mon...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/java-zhong-array-he-list-de-zhuanhuan/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1603770420"
+  data-df="ll"
+  
+>
+  Oct 27, 2020
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Java中Array和List的相互转换</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  Array转List
+String[] array = {&quot;string1&quot;, &quot;string2&quot;, &quot;string3&quot;};
+List&amp;lt;String&amp;gt; list = Arrays.asList(array);
+//Arrays.asList产生一个Arrays内置的类，其中数组用final表示
+// list.add(&quot;string4&quot;);  所以不能往其中添加元素
+
+for(S...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/jisuan-xiangcha-de-yueshu/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1603775580"
+  data-df="ll"
+  
+>
+  Oct 27, 2020
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>计算相差的月数</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  public static int getMonthDiff(Date d1, Date d2) {
+	Calendar c1 = Calendar.getInstance();
+	Calendar c2 = Calendar.getInstance();
+	c1.setTime(d1);
+	c2.setTime(d2);
+	int year1 = c1.get(Calendar.YEAR)...
                 </p>
               </div>
             </div>
@@ -10912,6 +10956,11 @@ public class Main {
     
     
       
+    
+  
+    
+    
+    
     
   
     
