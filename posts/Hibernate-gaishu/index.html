@@ -3160,10 +3160,20 @@ Detached状态的对象可以再次与某个Session实例相关联而成为Persi
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -3638,6 +3648,18 @@ Detached状态的对象可以再次与某个Session实例相关联而成为Persi
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -9463,7 +9485,7 @@ Detached状态的对象可以再次与某个Session实例相关联而成为Persi
         
         
         <div class="col">
-          <a href="/posts/jsessionid-shenme-shihou-shengcheng/" class="card post-preview h-100">
+          <a href="/posts/redis-qidong-baocuo/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9476,14 +9498,14 @@ Detached状态的对象可以再次与某个Session实例相关联而成为Persi
 
 <em
   class="small"
-  data-ts="1646286420"
+  data-ts="1648100820"
   data-df="ll"
   
 >
-  Mar  3, 2022
+  Mar 24, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>JSESSIONID什么时候生成并传递到前端的</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Redis启动报错：The Windows version of Redis allocates a memory ...</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9492,13 +9514,25 @@ Detached状态的对象可以再次与某个Session实例相关联而成为Persi
 
 
 
-                  如果客户端请求的cookie中不包含JSESSIONID，服务端调用request.getSession()时就会生成并传递给客户端，此次响应头会包含设置cookie的信息。
-
-
-
-如果客户端请求的cookie中包含JSESSIONID，服务端调用request.getSession()时就会根据JSESSIONID进行查找对象，如果能查到就返回，否则就跟没传递JSESSIONID一样。
-
-...
+                  报错信息
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+The Windows version of Redis allocates a memory mapped heap for 
+sharing with the forked process used for persistence operations. 
+In order to share this me...
                 </p>
               </div>
             </div>
@@ -11222,10 +11256,20 @@ Detached状态的对象可以再次与某个Session实例相关联而成为Persi
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     

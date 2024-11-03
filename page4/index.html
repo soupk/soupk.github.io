@@ -586,6 +586,72 @@
 
 <div id="post-list">
   
+    <a href="/posts/filebeat-zidong-tingzhi-de-wenti/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Filebeat启动后自动停止的问题
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              Linux环境部署的Filebeat在启动正常的情况下自动停止运行。启动Filebeat的指令是：
+nohup ./filebeat -e -c filebeat.yml &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 &amp;amp;
+
+通过对nohup的指令了解后发现，当关闭xshell终端时，断开ssh连接，会导致nohup进程同时终止。解决办法：关闭xshell终端前，先exit退出，...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1686721620"
+  data-df="ll"
+  
+>
+  Jun 14, 2023
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Filebeat
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/springboot-zhenghe-baolande/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1192,77 +1258,6 @@ worker_processes  1;
                   
                     Knowledge,
                     SOFTWARE
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/json-zhuan-xml-gongjulei/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JSON转XML工具类
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-
-public clas...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1683654420"
-  data-df="ll"
-  
->
-  May 10, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Java
                 </span>
               
             </div>
@@ -3672,10 +3667,20 @@ public clas...
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -5791,10 +5796,20 @@ public clas...
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     

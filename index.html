@@ -521,106 +521,6 @@
 
 
 
-  
-  
-
-  <!-- CDN URL -->
-  
-
-  <!-- Add image path -->
-  
-
-  
-    
-      
-      
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-
-    
-
-    
-
-    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
-    
-    
-
-    <!-- add image placeholder -->
-    
-      
-        <!-- add SVG placehoder -->
-        
-      
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-      <!-- create the image wrapper -->
-      
-
-    
-
-    <!-- combine -->
-    
-
-  
-
-  
-
-
 
 <!-- Add header for code snippets -->
 
@@ -778,15 +678,6 @@
     <a href="/posts/shipu/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
-          
-
-          
-          
-
-          
-
-          <div class="preview-img shimmer"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 8'%3E%3C/svg%3E" data-src="/assets/img/illustration/Tools/shipu/title.jpg" width="15" height="8" alt="Preview Image"  class="lazyload" data-proofer-ignore></div>
-        
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
@@ -870,6 +761,79 @@
                 <i class="fas fa-thumbtack fa-fw"></i>
                 <span></span>
               </div>
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/rclone/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            使用Rclone迁移对象存储数据
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              一、安装Rclone
+下载地址：https://rclone.org/downloads/。
+
+二、启动
+解压下载的压缩包，进到Rclone根目录，使用以下命令启动。
+# 不带账号密码启动
+rclone rcd --rc-web-gui
+# 带账号密码启动
+rclone rcd --rc-web-gui --rc-user me --rc-pass mypassword
+
+启动后会自动下载页...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1730094420"
+  data-df="ll"
+  
+>
+  Oct 28, 2024
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    OSS
+                </span>
+              
+            </div>
+
             
           </div>
           <!-- .post-meta -->
@@ -1341,72 +1305,6 @@ systemctl status docker
                   
                     Knowledge,
                     SYSTEM
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/zidingyi-qidong-banner/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            自定义启动banner
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              Spring Boot启动的时候默认的banner是spring的字样，看多了觉得挺单调的，Spring Boot为我们提供了自定义banner的功能。自定义banner只需要在resource下新建一个banner.txt文件，将我们需要的banner字样放进去，启动的时候就会去读取使用这个文本文件中的banner。
-
-控制banner样式
-Spring提供了三个枚举类来设定字符的颜色，分...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1717393620"
-  data-df="ll"
-  
->
-  Jun  3, 2024
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Spring Boot
                 </span>
               
             </div>
@@ -3806,10 +3704,20 @@ Spring提供了三个枚举类来设定字符的颜色，分...
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -5925,10 +5833,20 @@ Spring提供了三个枚举类来设定字符的颜色，分...
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     

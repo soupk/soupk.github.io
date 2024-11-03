@@ -2529,10 +2529,20 @@ git remote update origin <span class="nt">--prune</span>    <span class="c"># �
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -3002,6 +3012,18 @@ git remote update origin <span class="nt">--prune</span>    <span class="c"># �
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -8784,6 +8806,56 @@ git config --global --unset https.proxy
         
         
         <div class="col">
+          <a href="/posts/git-qingchu-yonghu-xinxi/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1680500820"
+  data-df="ll"
+  
+>
+  Apr  3, 2023
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Git清除用户名密码</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  清空所有用户名和密码
+
+1
+git config –system –unset credential.helper
+
+
+如果不好使，那就得去Windows管理凭据里更改了
+
+1
+控制面板 — 用户账户 — Windows管理凭据 — 编辑
+
+
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
           <a href="/posts/git-push-baocuo/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8816,51 +8888,6 @@ git config --global --unset https.proxy
                   将git push origin master 改成git push origin HEAD
 HEAD指向当前工作的branch，master不一定指向当前工作的branch
 
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
-          <a href="/posts/git-qiehuan-yuancheng-cangku-dizhi/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1606283220"
-  data-df="ll"
-  
->
-  Nov 25, 2020
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Git切换远程仓库地址</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  Git仓库的服务器IP地址变了，本地代码挺多，重新检出太占时间，可以修改一个什么配置让本地仓库和新的远程仓库建立关联吗， 答案是肯定的！
-方式一：修改远程仓库地址
-git remote -v  # 查看当前远程仓库地址
-git remote set-url origin &amp;lt;new url&amp;gt;  # 修改远程地址为新的地址 &amp;lt;new url&amp;gt; 改为新的地址
-
-
-方式二：先...
                 </p>
               </div>
             </div>
@@ -10584,10 +10611,20 @@ git remote set-url origin &amp;lt;new url&amp;gt;  # 修改远程地址为新的
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     

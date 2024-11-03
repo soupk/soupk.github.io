@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-10-20T10:19:39+08:00</updated>
+  <updated>2024-11-04T01:56:59+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,57 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>使用Rclone迁移对象存储数据</title>
+    <link href="http://localhost:4000/posts/rclone/" rel="alternate" type="text/html" title="使用Rclone迁移对象存储数据" />
+    <published>2024-10-28T13:47:00+08:00</published>
+  
+    <updated>2024-10-28T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/rclone/</id>
+    <content src="http://localhost:4000/posts/rclone/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="OSS" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、安装Rclone
+下载地址：https://rclone.org/downloads/。
+
+二、启动
+解压下载的压缩包，进到Rclone根目录，使用以下命令启动。
+# 不带账号密码启动
+rclone rcd --rc-web-gui
+# 带账号密码启动
+rclone rcd --rc-web-gui --rc-user me --rc-pass mypassword
+
+启动后会自动下载页面文件到C:\Users\admin\AppData\Local\rclone目录下，启动成功后自动跳转到浏览器，可以在浏览器页面进行查看、下载OSS文件等操作。
+
+三、配置OSS连接
+打开C:\Users\admin\AppData\Roaming\rclone目录下的rclone.conf文件，没有的话新建一个，写入以下OSS配置，以下为多个OSS的配置。
+[remote]
+type = s3...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -193,72 +244,6 @@
   被保险人： 被保险人是受保险合同保障的人。他们以其财产、生命或身体为保险标的，在保险事故发生后，享有保险金请求权。被保险人可以与投保人为同一人。
   投保人： 投保人是保险合同当事人的另一方，是向保险人申请订立保险合同，并负有交付保险费义务的人。
   保单现金价值： 是指带有储蓄性的人身保险单所具有的价值。在长期人身保险中，保险费率中含有储蓄因素，特别是长期性带有生存给付保险的纯保险费，往往含有很大比重的储蓄保险费。于是保险单交费达到一...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Docker基础命令</title>
-    <link href="http://localhost:4000/posts/docker-mingling/" rel="alternate" type="text/html" title="Docker基础命令" />
-    <published>2024-08-23T08:47:00+08:00</published>
-  
-    <updated>2024-08-23T08:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/docker-mingling/</id>
-    <content src="http://localhost:4000/posts/docker-mingling/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Docker" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      # 启动Docker
-systemctl start docker
-
-# 关闭Docker
-systemctl stop docker
-
-#重启Docker
-systemctl restart docker
-
-# Docker设置随服务启动
-systemctl enable docker
-
-# 查看Docker运行状态
-systemctl status docker
-
-# 查看Docker版本号信息
-docker version
-docker info
-
-# 查看自己服务器中Docker镜像列表
-docker images
-
-# 搜索镜像
-docker search 镜像名
-# 搜索STARS&amp;gt;9000的MySQL镜像
-docker search --filter=STARS=9000 mysql 
-
-# 拉取最新版本镜像
-docker pull 镜像名
-# 拉取指定版本镜像
-...
     </summary>
   
 

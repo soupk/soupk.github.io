@@ -2632,10 +2632,20 @@
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -3110,6 +3120,18 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -8847,51 +8869,6 @@
         
         
         <div class="col">
-          <a href="/posts/jsessionid-shenme-shihou-shengcheng/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1646286420"
-  data-df="ll"
-  
->
-  Mar  3, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>JSESSIONID什么时候生成并传递到前端的</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  如果客户端请求的cookie中不包含JSESSIONID，服务端调用request.getSession()时就会生成并传递给客户端，此次响应头会包含设置cookie的信息。
-
-
-
-如果客户端请求的cookie中包含JSESSIONID，服务端调用request.getSession()时就会根据JSESSIONID进行查找对象，如果能查到就返回，否则就跟没传递JSESSIONID一样。
-
-...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/guolvqi-fangxing-zhiding-dizhi/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8967,6 +8944,54 @@
                   程序执行部分到达子程序，子程序要获得结果，就要用到程序之前的一些结果（包括但不限于外部变量值，外部对象等等）；APP点击一个按钮进入一个新的界面，也要保存你是在哪个屏幕跳过来的等等信息，以便你点击返回的时候能正确跳回，如果不存肯定就无法正确跳回了。
 
 这些都是上下文的典型例子，理解成环境就可以，而且上下文虽然叫上下文，但是程序里面一般都只有上文而已，只是叫的好听叫上下文。进程中断在操作系统中...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/servlet-ruhe-shihyong-cookie/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1626155220"
+  data-df="ll"
+  
+>
+  Jul 13, 2021
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Servlet如何使用Cookie</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  /** 创建Cookie */
+// 键值形式创建Cookie
+Cookie cookie = new Cookie(&quot;temp&quot;, tempData);
+// 设置Cookie的存活时间为秒
+cookie.setMaxAge(60 * 60 * 24);
+// 写入客户端硬盘
+response.addCookie(cookie);
+
+/** 调用Cookie */
+// 将目录下所有Coo...
                 </p>
               </div>
             </div>
@@ -10690,10 +10715,20 @@
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     

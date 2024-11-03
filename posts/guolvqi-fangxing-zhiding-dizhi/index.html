@@ -2540,10 +2540,20 @@
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -3013,6 +3023,18 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -8750,51 +8772,6 @@
         
         
         <div class="col">
-          <a href="/posts/jsessionid-shenme-shihou-shengcheng/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1646286420"
-  data-df="ll"
-  
->
-  Mar  3, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>JSESSIONID什么时候生成并传递到前端的</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  如果客户端请求的cookie中不包含JSESSIONID，服务端调用request.getSession()时就会生成并传递给客户端，此次响应头会包含设置cookie的信息。
-
-
-
-如果客户端请求的cookie中包含JSESSIONID，服务端调用request.getSession()时就会根据JSESSIONID进行查找对象，如果能查到就返回，否则就跟没传递JSESSIONID一样。
-
-...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/shangxiawen/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -8892,6 +8869,50 @@ Cookie cookie = new Cookie(&quot;temp&quot;, tempData);
 cookie.setMaxAge(60 * 60 * 24);
 // 写入客户端硬盘
 respon...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/servlet-zhong-4dayu-zhongde-zhi-de-huoqu-fangshi/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1626155220"
+  data-df="ll"
+  
+>
+  Jul 13, 2021
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Servlet四大域中的值的获取方式</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  PageContext
+PageContent是PageContext类的实例，它提供了如下两个方法来访问page、request、session、application范围的变量。常用方法：
+1
+2
+getAttribute(String name); // 取得page范围内的name属性 
+getAttribute(String name, int scope); // 取得指定范围内...
                 </p>
               </div>
             </div>
@@ -10615,10 +10636,20 @@ respon...
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
