@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-11-04T01:56:59+08:00</updated>
+  <updated>2025-01-02T10:49:30+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -13,10 +13,51 @@
   <link rel="alternate" type="text/html" hreflang="en"
     href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
-  <rights> © 2024 lemon </rights>
+  <rights> © 2025 lemon </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>GaussDB在导入数据时给定唯一主键id</title>
+    <link href="http://localhost:4000/posts/daoru-shuju-shengchengid/" rel="alternate" type="text/html" title="GaussDB在导入数据时给定唯一主键id" />
+    <published>2024-12-16T13:47:00+08:00</published>
+  
+    <updated>2024-12-16T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/daoru-shuju-shengchengid/</id>
+    <content src="http://localhost:4000/posts/daoru-shuju-shengchengid/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="GaussDB" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      在要导入数据的表中增加create_time字段，默认值设置为pg_systimestamp()，在从csv文件导入数据的时候会自动给create_time字段插入时间戳。然后将时间戳转为纯数字字符串即可。
+SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, '.', '') FROM test_table tt;
+
+UPDATE test_table SET id = REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, '.', '');
+
+
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -203,47 +244,6 @@ type = s3...
   SHUTDOWN：调用shutdown()方法后，线程池进入此状态，不再接收新任务，但会处理队列中的剩余任务。
   STOP：调用shutdownNow()方法后，线程池进入此状态，不再接收新任务，并中断正在执行的任务。
   TIDYING：所有任务执行完毕后，...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>保险名词</title>
-    <link href="http://localhost:4000/posts/baoxianmingci/" rel="alternate" type="text/html" title="保险名词" />
-    <published>2024-09-11T08:47:00+08:00</published>
-  
-    <updated>2024-09-11T08:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/baoxianmingci/</id>
-    <content src="http://localhost:4000/posts/baoxianmingci/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Collection" />
-    
-    <category term="Reading" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-  保险金额： 保险金额，简称”保额”，是保险利益的货币价值表现，是投保时给保险标的确定的金额，又是保险人计收保险费的依据和承担给付责任的最高限额。
-  保险人： 保险人是保险合同当事人的一方，是经营保险业务收取保险费，在保险事故发生时给付保险金的人。据我国《保险法》规定，保险人是指与投保人订立保险合同，并承担赔偿或者给付保险金责任的保险公司。
-  被保险人： 被保险人是受保险合同保障的人。他们以其财产、生命或身体为保险标的，在保险事故发生后，享有保险金请求权。被保险人可以与投保人为同一人。
-  投保人： 投保人是保险合同当事人的另一方，是向保险人申请订立保险合同，并负有交付保险费义务的人。
-  保单现金价值： 是指带有储蓄性的人身保险单所具有的价值。在长期人身保险中，保险费率中含有储蓄因素，特别是长期性带有生存给付保险的纯保险费，往往含有很大比重的储蓄保险费。于是保险单交费达到一...
     </summary>
   
 
