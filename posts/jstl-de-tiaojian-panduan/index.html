@@ -8126,6 +8126,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8924,7 +8948,7 @@
         
         
         <div class="col">
-          <a href="/posts/ruhe-chakan-he-xiugai-redis-mima/" class="card post-preview h-100">
+          <a href="/posts/kali-pojie-wifi/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8937,14 +8961,14 @@
 
 <em
   class="small"
-  data-ts="1648100820"
+  data-ts="1649483220"
   data-df="ll"
   
 >
-  Mar 24, 2022
+  Apr  9, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>如何查看和修改Redis密码</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Kali暴力破解wifi密码</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8953,8 +8977,31 @@
 
 
 
-                  打开redis.windows.conf文件，默认是没有requirepass root这句话的，因为默认密码是”“，加上这句话意思就是密码修改为root。
+                  查看本机网卡名称
+1
+ifconfig
 
+
+
+  eth0有线网卡
+  wlan0无线网卡
+
+
+虚拟机无法访问网卡，所以需要使用外接的USB无线网卡。
+
+查看是否支持监听模式
+1
+airmon-ng
+
+
+如果该命令没有任何输出则表示没有可以支持监听模式的网卡。
+
+开启无线网卡的监听模式
+1
+airmon-ng start wlan0
+
+
+如果airmon-ng显示的是wifi0，就把wlan...
                 </p>
               </div>
             </div>

@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-03-10T03:57:11+08:00</updated>
+  <updated>2025-04-07T22:01:55+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,91 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>GaussDB将JSON字符串转为对象并取某个字段的值</title>
+    <link href="http://localhost:4000/posts/chaxun-json-ziduan/" rel="alternate" type="text/html" title="GaussDB将JSON字符串转为对象并取某个字段的值" />
+    <published>2025-03-31T13:47:00+08:00</published>
+  
+    <updated>2025-03-31T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/chaxun-json-ziduan/</id>
+    <content src="http://localhost:4000/posts/chaxun-json-ziduan/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="GaussDB" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      select jsonb_extract_path_text(json_param::jsonb, 'param_a') as param_a from json_test_table;
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>给路由器刷第三方固件</title>
+    <link href="http://localhost:4000/posts/luyouqi-shua-xitong/" rel="alternate" type="text/html" title="给路由器刷第三方固件" />
+    <published>2025-03-31T13:47:00+08:00</published>
+  
+    <updated>2025-03-31T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/luyouqi-shua-xitong/</id>
+    <content src="http://localhost:4000/posts/luyouqi-shua-xitong/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Collection" />
+    
+    <category term="Technical" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      固件下载地址
+
+Bread下载：https://breed.hackpascal.net/
+潘多拉固件下载：http://downloads.pangubox.com:6380/pandorabox/18.10/targets/ralink/mt7620/
+OpenWrt下载：https://downloads.openwrt.org/
+小米路由器固件下载：https://www.miwifi.com/miwifi_download.html
+
+教程
+
+网件路由器R6220刷不死breed的教程：https://jingyan.baidu.com/article/09ea3eded82eb581afde390b.html
+网件r6220如何刷潘多拉固件：https://jingyan.baidu.com/article/09ea3eded813b581afde3936.html
+小米...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -142,108 +227,6 @@ type = s3...
 
       
 
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Redis缓存的雪崩、击穿、穿透</title>
-    <link href="http://localhost:4000/posts/redishuancun-xuebeng/" rel="alternate" type="text/html" title="Redis缓存的雪崩、击穿、穿透" />
-    <published>2024-09-12T13:47:00+08:00</published>
-  
-    <updated>2024-09-12T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/redishuancun-xuebeng/</id>
-    <content src="http://localhost:4000/posts/redishuancun-xuebeng/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Redis" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      缓存雪崩
-
-缓存雪崩是指在某个时间点，大量的缓存数据同时失效或过期，导致大量的请求直接打到数据库或后端系统，从而造成数据库负载激增，甚至导致数据库宕机或系统崩溃的现象。
-
-
-  合理设置缓存的过期时间：将缓存的过期时间分散设置，避免大量缓存在同一时间过期。可以使用随机时间，或者将过期时间分布在一个时间段内。
-  实现缓存数据的自动刷新：确保热点数据在即将过期时能够自动刷新，避免数据大规模失效。
-  多级缓存：使用多级缓存，将热点数据缓存在多个层次，例如内存缓存、分布式缓存，以减轻缓存层的负担。
-  限流和熔断：实施请求限流和服务熔断，避免大量请求同时打到后端系统。
-  监控和报警：建立监控系统，实时监测缓存和后端系统的状态，及时发现问题并采取措施。
-
-
-缓存穿透
-
-缓存和数据库中都没有的数据，可用户还是源源不断的发起请求，导致每次请求都会到数据库，从而压垮数据库。比如客户查询一个根本...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>线程池</title>
-    <link href="http://localhost:4000/posts/xianchengchi/" rel="alternate" type="text/html" title="线程池" />
-    <published>2024-09-12T11:47:00+08:00</published>
-  
-    <updated>2024-09-12T11:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/xianchengchi/</id>
-    <content src="http://localhost:4000/posts/xianchengchi/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Java" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      线程池的五种状态
-
-
-  RUNNING：线程池处于运行状态，能够接收新任务并处理队列中的任务。
-  SHUTDOWN：线程池处于关闭状态，不再接收新任务，但会处理队列中的剩余任务。
-  STOP：线程池处于停止状态，不再接收新任务，并中断正在执行的任务。
-  TIDYING：线程池中的所有任务执行完毕，活动线程数为0时的状态。
-  TERMINATED：线程池执行完terminated()方法后的状态。
-
-
-每种状态的定义和转换条件
-
-
-  RUNNING：线程池创建后默认进入此状态，能够接收新任务并处理队列中的任务。
-  SHUTDOWN：调用shutdown()方法后，线程池进入此状态，不再接收新任务，但会处理队列中的剩余任务。
-  STOP：调用shutdownNow()方法后，线程池进入此状态，不再接收新任务，并中断正在执行的任务。
-  TIDYING：所有任务执行完毕后，...
     </summary>
   
 

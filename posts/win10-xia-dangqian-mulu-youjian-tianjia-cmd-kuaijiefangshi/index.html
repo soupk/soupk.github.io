@@ -4398,6 +4398,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8847,7 +8871,7 @@
         
         
         <div class="col">
-          <a href="/posts/win11-anzhuang-tiaoguo-wangluopeizhi/" class="card post-preview h-100">
+          <a href="/posts/win11-guanbi-bitlocker-jiami/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8867,7 +8891,7 @@
   Jun 25, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Windows11安装跳过联网</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Windows11关闭BitLocker加密</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8876,7 +8900,7 @@
 
 
 
-                  使用快捷键Shift + F10调出命令提示符窗口，然后输入OOBE\BYPASSNRO，重启电脑，在重启后的Win11联网界面中，选择“我没有Internet连接”的选项，并继续执行受限设置，这样可以跳过联网激活环节。
+                  使用manage-bde.exe -off E:命令对E区的数据进行解密。
 
                 </p>
               </div>
@@ -8938,7 +8962,7 @@
         
         
         <div class="col">
-          <a href="/posts/win11-guanbi-bitlocker-jiami/" class="card post-preview h-100">
+          <a href="/posts/win10-anzhuang-xianru-wuxian-xunhuan/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8951,14 +8975,14 @@
 
 <em
   class="small"
-  data-ts="1719294420"
+  data-ts="1604987220"
   data-df="ll"
   
 >
-  Jun 25, 2024
+  Nov 10, 2020
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Windows11关闭BitLocker加密</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Windows10安装陷入无限循环</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8967,8 +8991,14 @@
 
 
 
-                  使用manage-bde.exe -off E:命令对E区的数据进行解密。
+                  故障描述
+当你安装Windows10到了系统初始化设置界面时，电脑会一遍又一遍地让你进行相同的设置
 
+解决方案
+1、按Ctrl + Shift + F3跳过OOBE（Out-of-box experience）直接进入系统
+2、进入系统的过程中，会弹出一个错误窗口，上面写着：应用程序无法正常启动0xc0000142
+3、点击确定，之后应该会出现一个系统准备工具，不用管它
+4、进去之后你就会发...
                 </p>
               </div>
             </div>

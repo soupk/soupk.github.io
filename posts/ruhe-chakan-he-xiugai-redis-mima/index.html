@@ -4228,6 +4228,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8927,7 +8951,7 @@ spring:
         
         
         <div class="col">
-          <a href="/posts/shiyong-ssh-fangshi-lianjie-redis/" class="card post-preview h-100">
+          <a href="/posts/redishuancun-xuebeng/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -8940,14 +8964,14 @@ spring:
 
 <em
   class="small"
-  data-ts="1683697620"
+  data-ts="1726120020"
   data-df="ll"
   
 >
-  May 10, 2023
+  Sep 12, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Redis Desktop Manager使用SSH连接Redis</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Redis缓存的雪崩、击穿、穿透</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -8956,18 +8980,13 @@ spring:
 
 
 
-                  第一步
+                  缓存雪崩
+
+缓存雪崩是指在某个时间点，大量的缓存数据同时失效或过期，导致大量的请求直接打到数据库或后端系统，从而造成数据库负载激增，甚至导致数据库宕机或系统崩溃的现象。
 
 
-
-第二步
-
-
-
-第三步
-
-
-
+  合理设置缓存的过期时间：将缓存的过期时间分散设置，避免大量缓存在同一时间过期。可以使用随机时间，或者将过期时间分布在一个时间段内。
+  实现缓存数据的自动刷新：确保热点数据在即将过期时能够自动刷新，避免数据大规模失效...
                 </p>
               </div>
             </div>

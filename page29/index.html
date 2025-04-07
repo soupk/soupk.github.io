@@ -586,6 +586,145 @@
 
 <div id="post-list">
   
+    <a href="/posts/wei-jekyll-boke-tianjia-fangwenliang-tongji/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            给Jekyll博客添加访问量统计
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              给Jekyll博客添加访问量统计需要使用不蒜子插件，在需要统计浏览量的页面引入busuanzi.js：
+
+&amp;lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+添加站点的访问量：
+
+
+  
+    pv的方式
+
+      &amp;lt;!-- 单个...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1610296440"
+  data-df="ll"
+  
+>
+  Jan 11, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Index,
+                    Jekyll
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/git-huoqu-wenjian-de-commit-riqi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Git获取文件commit的日期
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              git log -1 --pretty=%ad --date=iso test.html
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1610171220"
+  data-df="ll"
+  
+>
+  Jan  9, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Git
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/yixie-haokan-de-touxiang/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1168,149 +1307,6 @@ public class RandomDemo {
                   
                     Knowledge,
                     Java
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/fileoutputstream-de-huanhang-xieru-he-zhuijia-xieru/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            FileOutputStream类的换行写入和追加写入
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              import java.io.FileOutputStream;  
-  
-public class FileOutputStreamDemo {  
-    public static void main(String[] args) throws Exception {  
-        // 创建文件输出流对象  
-        FileOutputStream fos1 = ne...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1609645620"
-  data-df="ll"
-  
->
-  Jan  3, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Java
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/maven-de-anzhuang-he-shiyong/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Maven的安装和使用
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              一、Maven的安装和配置
-
-1.1 下载
-进入Maven官网的下载页面：http://maven.apache.org/download.cgi，选择当前最新版本，例如apache-maven-3.0.4-bin.zip，下载到本地并解压。
-
-1.2 配置
-进入Maven安装目录下的conf子目录中，打开settings.xml进行配置修改。
-
-
-  
-    修改默认的本地仓库位置
-
- ...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1609566420"
-  data-df="ll"
-  
->
-  Jan  2, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Maven
                 </span>
               
             </div>
@@ -1994,12 +1990,25 @@ public class FileOutputStreamDemo {
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page48"
-        >48</a>
+          href="/page49"
+        >49</a>
       </li>
     
   
@@ -2007,7 +2016,7 @@ public class FileOutputStreamDemo {
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>29</span>
-    <span class="text-muted">/ 48</span>
+    <span class="text-muted">/ 49</span>
   </li>
 
   <!-- right arrow -->

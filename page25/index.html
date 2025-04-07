@@ -586,6 +586,156 @@
 
 <div id="post-list">
   
+    <a href="/posts/oracle-chaxun-baohan-daxiaoxie-de-shuju/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 查询包含大小写的数据
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              查询包含小写的所有数据
+select oper_no from info_oper where regexp_like(oper_no,&#39;[[:lower:]]&#39;);
+select oper_no from info_oper where regexp_like(oper_no,&#39;[a-z]&#39;);
+
+
+查询包含大写的所有数据
+select oper_no from info_oper whe...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1620625620"
+  data-df="ll"
+  
+>
+  May 10, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/springboot-ruhe-kuaisu-qiehuan-peizhi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Spring Boot如何快速切换配置
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              如果，我们有生产环境和开发环境，怎样更简单的切换配置呢？
+创建一个开发环境用的yml：application-dev.yml
+
+
+
+创建一个生产环境用的yml：application-prod.yml
+
+
+
+假如再有个都要使用的yml：application-common.yml
+
+
+
+写一个总的配置来集成他们：application.yml
+
+
+
+在不同的要求下，切换相应的配置文件即可。
+...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1616737620"
+  data-df="ll"
+  
+>
+  Mar 26, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Spring Boot
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/intelliJ-idea-yunxing-xiangmu-bao-command-line-is-too-long/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1166,157 +1316,6 @@ else:
                   
                     Knowledge,
                     Python
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/shiyong-javamail-tongguo-smtp-xieyi-faxin/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            使用Javamail通过SMTP协议发信
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              package mail.util;
-
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-
-import java.io.UnsupportedEncodingException;
-import java.util.Propertie...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1614836820"
-  data-df="ll"
-  
->
-  Mar  4, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Java
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/dui-zifuchuan-leixing-ziduan-jinxing-shuzizhi-paixu/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            MySQL中对字符串类型字段进行数字值排序
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              -- 方式一
-SELECT
-    * 
-FROM
-    TABLE_TEST 
-WHERE
-    STATUS = &#39;1&#39; 
-ORDER BY
-    ORDER_NUMBER + 0 DESC
-        
-        
--- 方式二        
-SELECT
-    * 
-FROM
-    TABLE_TEST 
-WHERE
-    STATUS = &#39;1&#39; 
-ORDE...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1612072020"
-  data-df="ll"
-  
->
-  Jan 31, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    MySQL
                 </span>
               
             </div>
@@ -2000,12 +1999,25 @@ ORDE...
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page48"
-        >48</a>
+          href="/page49"
+        >49</a>
       </li>
     
   
@@ -2013,7 +2025,7 @@ ORDE...
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>25</span>
-    <span class="text-muted">/ 48</span>
+    <span class="text-muted">/ 49</span>
   </li>
 
   <!-- right arrow -->

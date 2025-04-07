@@ -586,6 +586,205 @@
 
 <div id="post-list">
   
+    <a href="/posts/jdk-he-jre/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JDK和JRE
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              JDK是整个Java的核心，包括了Java运行环境JRE、Java开发工具和Java基础类库。利用JDK（调用JAVA API）开发了属于我们自己的Java程序后，通过JDK中的编译程序（javac）将我们的Java文件编译成Java字节码，在JRE上运行这些Java字节码，JVM解析这些字节码，映射到CPU指令集或OS的系统调用。
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1669960020"
+  data-df="ll"
+  
+>
+  Dec  2, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JDK
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/git-wufa-tiijaohegengxin/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Git无法提交和更新
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              依次执行以下命令就可以正常push和pull
+git config --global --unset http.proxy 
+git config --global --unset https.proxy
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1669873620"
+  data-df="ll"
+  
+>
+  Dec  1, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Git
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/js-zhong-huoqu-alert-weizhi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JS中获取alert代码的位置
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              找到弹窗出现的页面，在浏览器控制台输入：
+var oalert = window.alert
+window.alert = (...args) =&amp;gt; { oalert(...args); console.error(new Error(&#39;someone alerted&#39;))}
+
+然后复现弹窗，即可在控制台看到alert代码的位置。
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1669862820"
+  data-df="ll"
+  
+>
+  Dec  1, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JavaScript
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/js-fasong-postjson-geshi-qingqiu/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -642,96 +841,6 @@ xhr.send(JSON.strin...
                   
                     Knowledge,
                     JavaScript
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/yaoxiang/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            药典
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              
-
-
-📃 药品清单
-
-
-  
-    
-      名称
-      批号
-      药箱
-      标签
-    
-  
-  
-    
-      多维元素片
-      SC10611130713405
-      营养药箱
-      营养药
-    
-    
-      软铁糖
-      SC11337108200263
-      营养药箱
-      营养药
-    
-...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1669268820"
-  data-df="ll"
-  
->
-  Nov 24, 2022
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Index,
-                    Tools
                 </span>
               
             </div>
@@ -1182,158 +1291,6 @@ systemctl start firewalld
                   
                     Knowledge,
                     Linux
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/eclipse-ruhe-xianshi-hanghao/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Eclipse如何显示行号
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              一、快捷键法
-
-打开一个代码页面，直接输入快捷键CTRL + F10，就会调出一个菜单，勾选show line numbers即可显示行号。
-
-
-
-二、右侧边栏法
-
-打开一个代码页面，右键点击其侧边栏，如图所示的位置，就会显示一个菜单，勾选show line numbers即可显示行号。
-
-
-
-三、通用设置法
-
-在Eclipse菜单栏选择Window -&amp;gt; Prenference，在打...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1663868820"
-  data-df="ll"
-  
->
-  Sep 23, 2022
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Eclipse
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/chedi-guanbi-windows-gengxin/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Windows10彻底关闭自动更新
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              一、禁用Windows Update服务
-
-
-  打开运行对话框，输入services.msc，点击确定打开服务。
-  找到Windows Update这一项，双击打开。
-  点击停止，把启动类型选为禁用，最后点击应用。
-  接下再切换到恢复选项，将默认的重新启动服务改为无操作，然后点击应用。
-
-
-二、在组策略里关闭Win10自动更新相关服务
-
-
-  打开运行对话框，输入gpedit.msc...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1662702420"
-  data-df="ll"
-  
->
-  Sep  9, 2022
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    SYSTEM
                 </span>
               
             </div>
@@ -2017,12 +1974,25 @@ systemctl start firewalld
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page48"
-        >48</a>
+          href="/page49"
+        >49</a>
       </li>
     
   
@@ -2030,7 +2000,7 @@ systemctl start firewalld
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>8</span>
-    <span class="text-muted">/ 48</span>
+    <span class="text-muted">/ 49</span>
   </li>
 
   <!-- right arrow -->

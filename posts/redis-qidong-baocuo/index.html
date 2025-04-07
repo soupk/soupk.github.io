@@ -4337,6 +4337,30 @@ Redis can not continue. Exiting.
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8906,46 +8930,6 @@ Redis can not continue. Exiting.
         
         
         <div class="col">
-          <a href="/posts/ruhe-chakan-he-xiugai-redis-mima/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1648100820"
-  data-df="ll"
-  
->
-  Mar 24, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>如何查看和修改Redis密码</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  打开redis.windows.conf文件，默认是没有requirepass root这句话的，因为默认密码是”“，加上这句话意思就是密码修改为root。
-
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/redis-shaobing-moshi-zhixing-select0-baocuo/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9055,6 +9039,51 @@ spring:
         port: 6379
         password: root # 哨兵模式有效
      ...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/redishuancun-xuebeng/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1726120020"
+  data-df="ll"
+  
+>
+  Sep 12, 2024
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Redis缓存的雪崩、击穿、穿透</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  缓存雪崩
+
+缓存雪崩是指在某个时间点，大量的缓存数据同时失效或过期，导致大量的请求直接打到数据库或后端系统，从而造成数据库负载激增，甚至导致数据库宕机或系统崩溃的现象。
+
+
+  合理设置缓存的过期时间：将缓存的过期时间分散设置，避免大量缓存在同一时间过期。可以使用随机时间，或者将过期时间分布在一个时间段内。
+  实现缓存数据的自动刷新：确保热点数据在即将过期时能够自动刷新，避免数据大规模失效...
                 </p>
               </div>
             </div>

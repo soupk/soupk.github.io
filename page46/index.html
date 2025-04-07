@@ -586,6 +586,141 @@
 
 <div id="post-list">
   
+    <a href="/posts/html-jinyong-yuansu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            HTML元素禁用的方法
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              禁用radio，设置为只读，不能选定
+&amp;lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;1&quot; disabled/&amp;gt;&amp;lt;span &amp;gt;男&amp;lt;/span&amp;gt;
+&amp;lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;0&quot; disabled/&amp;gt;&amp;lt;span &amp;gt;女&amp;lt;/span&amp;gt; 
+
+...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1603776180"
+  data-df="ll"
+  
+>
+  Oct 27, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    HTML
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/jisuan-xiangcha-de-yueshu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            计算相差的月数
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              public static int getMonthDiff(Date d1, Date d2) {
+	Calendar c1 = Calendar.getInstance();
+	Calendar c2 = Calendar.getInstance();
+	c1.setTime(d1);
+	c2.setTime(d2);
+	int year1 = c1.get(Calendar.YEAR)...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1603775580"
+  data-df="ll"
+  
+>
+  Oct 27, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Java
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/java-zhong-array-he-list-de-zhuanhuan/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1120,140 +1255,6 @@ s...
                   
                     Knowledge,
                     MyBatis
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/mybatis-shiyong-mohu-chaxun/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            MyBatis中使用模糊查询
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              &amp;lt;if test=&#39;testdata != null and testdata !=&quot;&quot;&#39;&amp;gt;
-    AND T.TEST_DATA LIKE CONCAT(CONCAT(&#39;%&#39;, #{testdata, jdbcType = VARCHAR}), &#39;%&#39;) 
-&amp;lt;/if&amp;gt;
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1603691220"
-  data-df="ll"
-  
->
-  Oct 26, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    MyBatis
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/shoudong-commit/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JavaScript实现submit按钮的功能
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              document.forms[0].action = &quot;/demo/test/doSubmit.do?param=0&quot;;
-document.forms[0].method = &quot;post&quot;;
-document.forms[0].submit();	
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1603691220"
-  data-df="ll"
-  
->
-  Oct 26, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JavaScript
                 </span>
               
             </div>
@@ -1932,12 +1933,30 @@ document.forms[0].submit();
     
 
     
+      <!-- hide number -->
+      
+        <li class="page-item disabled">
+          <span class="page-link btn-box-shadow">...</span>
+        </li>
+        
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page48"
-        >48</a>
+          href="/page49"
+        >49</a>
       </li>
     
   
@@ -1945,7 +1964,7 @@ document.forms[0].submit();
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>46</span>
-    <span class="text-muted">/ 48</span>
+    <span class="text-muted">/ 49</span>
   </li>
 
   <!-- right arrow -->
