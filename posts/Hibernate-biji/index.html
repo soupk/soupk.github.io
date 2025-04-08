@@ -5914,6 +5914,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -10283,7 +10295,7 @@ Criteria、HQL
         
         
         <div class="col">
-          <a href="/posts/kali-pojie-wifi/" class="card post-preview h-100">
+          <a href="/posts/kali-qu-luyouqi-pinma/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -10296,14 +10308,14 @@ Criteria、HQL
 
 <em
   class="small"
-  data-ts="1649483220"
+  data-ts="1649569620"
   data-df="ll"
   
 >
-  Apr  9, 2022
+  Apr 10, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Kali暴力破解wifi密码</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Kali拿取路由器pin码</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -10312,31 +10324,33 @@ Criteria、HQL
 
 
 
-                  查看本机网卡名称
+                  网卡监听模式
 1
-ifconfig
+airmon-ng start wlan0　　
 
 
 
-  eth0有线网卡
-  wlan0无线网卡
 
-
-虚拟机无法访问网卡，所以需要使用外接的USB无线网卡。
-
-查看是否支持监听模式
+扫描
 1
-airmon-ng
+wash -i wlan0mon
 
 
-如果该命令没有任何输出则表示没有可以支持监听模式的网卡。
 
-开启无线网卡的监听模式
+
+跑pin
 1
-airmon-ng start wlan0
+2
+            网卡          物理地址         信道
+reaver -i wlan0mon -b 00:5A:13:40:AA:F8 -c 11 -vv -K 0
 
 
-如果airmon-ng显示的是wifi0，就把wlan...
+
+
+通过pin获得wifi密码
+1
+2
+        ...
                 </p>
               </div>
             </div>

@@ -586,6 +586,80 @@
 
 <div id="post-list">
   
+    <a href="/posts/mybatis-plus-jinxing-update-de-3zhong-fangshi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Mybatis-Plus进行update的三种方式
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              第一种：主键updateById
+User user = new User();
+// 这个id是主键
+user.setId(4L);
+user.setPhone(&quot;119&quot;);
+// getBaseMapper是mybatis-plus方法
+getBaseMapper().updateById(user);
+
+
+第二种：通过实体类筛选进行update
+// 作为查询条件
+UpdateWra...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1696643220"
+  data-df="ll"
+  
+>
+  Oct  7, 2023
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    MyBatis
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/linux-he-win-build-tools-qubie/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1194,74 +1268,6 @@ from information_schema.table...
                   
                     Knowledge,
                     Redis
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/nginx-tianjia-ssl-mokuai/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Nginx添加ssl模块
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              一、在安装时添加ssl模块
-1、进入源码包所在的目录，进行编译，编译时添加参数–with-http_stub_status_module --with-http_ssl_module
-cd /usr/local/nginx-1.20.2
-./configure --with-http_stub_status_module --with-http_ssl_module
-
-2、进行编译与编译安装...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1684820820"
-  data-df="ll"
-  
->
-  May 23, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Nginx
                 </span>
               
             </div>

@@ -8523,6 +8523,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8916,69 +8928,6 @@
         
         
         <div class="col">
-          <a href="/posts/kali-pojie-wifi/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1649483220"
-  data-df="ll"
-  
->
-  Apr  9, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Kali暴力破解wifi密码</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  查看本机网卡名称
-1
-ifconfig
-
-
-
-  eth0有线网卡
-  wlan0无线网卡
-
-
-虚拟机无法访问网卡，所以需要使用外接的USB无线网卡。
-
-查看是否支持监听模式
-1
-airmon-ng
-
-
-如果该命令没有任何输出则表示没有可以支持监听模式的网卡。
-
-开启无线网卡的监听模式
-1
-airmon-ng start wlan0
-
-
-如果airmon-ng显示的是wifi0，就把wlan...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/kali-qu-luyouqi-pinma/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9100,6 +9049,63 @@ $(function(){
 function getDateString(time) {
     var datetime = new Date();
     datetime.se...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/maven-lianjie-sifu-de-peizhi/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1654753620"
+  data-df="ll"
+  
+>
+  Jun  9, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Maven连接私服如何配置</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  Maven的setting.xml文件配置，该配置中使用了一个id为nexusProfile的profile，这个profile包含了相关的仓库配置，同时配置中又使用了activeProfile元素将这个profile激活，这样当执行Maven构件的时候，激活的profile会将仓库配置应用到项目中去。
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18...
                 </p>
               </div>
             </div>

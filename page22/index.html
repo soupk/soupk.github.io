@@ -586,6 +586,82 @@
 
 <div id="post-list">
   
+    <a href="/posts/linux-chmod-mingling/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Linux chmod命令
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              在Linux中要修改一个文件夹或文件的权限要用到chmod命令，语法如下：
+
+chmod [who] [+ | - | =] [mode] 文件名
+
+
+各选项含义
+
+
+  who
+    
+      u 表示“用户（user）”，即文件或目录的所有者
+      g 表示“同组（group）用户”，即与文件属主有相同组ID的所有用户
+      o 表示“其他（others）用户”
+   ...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1624470420"
+  data-df="ll"
+  
+>
+  Jun 24, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Linux
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/eclipse-genghuan-kongjian/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1201,74 +1277,6 @@ java.lang.IllegalArgumentException: 在请求目标中找到无效字符。有�
   打开Perferences首选项；
   定位到Installed JREs，选中你已有的要添加Java API的JRE或JDK；
   单击右方的Edit，出现Edit JRE对话框，如果你是新建，出现New JRE对话框也一样。这时下方会出现一列jar包，例如X:/Program Files/Java/(jre/jdk版本)/jre/lib/rt.jar。单击rt.jar包选中，...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1624340820"
-  data-df="ll"
-  
->
-  Jun 22, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Eclipse
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/eclipse-bao-permgen-space-yichang/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Eclipse报PermGen space异常
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              修改catalina.bat
-在Tomcat/bin目录下的catalina.bat
-rem ----- Execute The Requested Command ----------------------
-
-下面加入
-JAVA_OPTS=&quot;-server -Xms800m -Xmx800m -XXNewSize=256M -XX:PermSize=256M -XX:MaxNewSize...
             </p>
           </div>
 
