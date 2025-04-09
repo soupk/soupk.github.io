@@ -586,6 +586,78 @@
 
 <div id="post-list">
   
+    <a href="/posts/poi-dongjie-hang-huo-lie/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            POI冻结行或列
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              HSSFWorkbook workbook = new HSSFWorkbook();  
+HSSFSheet sheet = workbook.createSheet();  
+sheet.createFreezePane(a, b, c, d);   
+
+四个参数的含义：
+
+  ａ表示要冻结的列数；
+  ｂ表示要冻结的行数；
+  ｃ表示右边区域[可见]的首列序号；
+  ｄ表示下边区域[可...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1609645620"
+  data-df="ll"
+  
+>
+  Jan  3, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    POI
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/java-suijishu-de-huoqu-fangshi/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1166,72 +1238,6 @@ Java本身也是一个不断完善的语言，他也在频繁的改动他的系�
 
 多态
 多态性就是发送消息给某个对象，让该对象自行决定响应何种行为。指允许不...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1609472820"
-  data-df="ll"
-  
->
-  Jan  1, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Java
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/chongxie-chongzai-de-qubie/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            重写和重载的区别
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              重写（overwrite）
-父类与子类之间的多态性，对父类的函数进行重新定义。重写继承到的那个方法的代码，原方法被放弃。子类继承了父类的同名有参函数。当子类继承了父类的一个同名方法，且方法参数不同，称为重写。通过方法的重写，子类可以重新实现父类的某些方法，使其具有自己的特征。重写方法只能存在于具有继承关系中，重写方法只能重写父类非私有的方法。子类函数的访问修饰权限不能低于父类的。
-
-重载（o...
             </p>
           </div>
 

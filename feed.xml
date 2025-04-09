@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-04-08T20:12:16+08:00</updated>
+  <updated>2025-04-09T16:15:28+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,85 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>色卡收藏</title>
+    <link href="http://localhost:4000/posts/seka/" rel="alternate" type="text/html" title="色卡收藏" />
+    <published>2025-04-09T13:47:00+08:00</published>
+  
+    <updated>2025-04-09T13:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/seka/</id>
+    <content src="http://localhost:4000/posts/seka/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Index" />
+    
+    <category term="Tools" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+	
+    
+    
+		
+
+	
+    
+		
+            #3366FF
+        
+		
+            #33CC99
+        
+		
+            #FF6699
+        
+		
+            #FF6600
+        
+        
+            #EF4444
+        
+        
+            #F59E0B
+        
+        
+            #22C55E
+        
+        
+            #3B82F6
+        
+        
+            #8B5CF6
+        
+        
+            #EC4899
+        
+    
+
+
+
+
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -181,57 +260,6 @@ SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, '.', '') FRO
 UPDATE test_table SET id = REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, '.', '');
 
 
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>使用Rclone迁移对象存储数据</title>
-    <link href="http://localhost:4000/posts/rclone/" rel="alternate" type="text/html" title="使用Rclone迁移对象存储数据" />
-    <published>2024-10-28T13:47:00+08:00</published>
-  
-    <updated>2024-10-28T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/rclone/</id>
-    <content src="http://localhost:4000/posts/rclone/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="OSS" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      一、安装Rclone
-下载地址：https://rclone.org/downloads/。
-
-二、启动
-解压下载的压缩包，进到Rclone根目录，使用以下命令启动。
-# 不带账号密码启动
-rclone rcd --rc-web-gui
-# 带账号密码启动
-rclone rcd --rc-web-gui --rc-user me --rc-pass mypassword
-
-启动后会自动下载页面文件到C:\Users\admin\AppData\Local\rclone目录下，启动成功后自动跳转到浏览器，可以在浏览器页面进行查看、下载OSS文件等操作。
-
-三、配置OSS连接
-打开C:\Users\admin\AppData\Roaming\rclone目录下的rclone.conf文件，没有的话新建一个，写入以下OSS配置，以下为多个OSS的配置。
-[remote]
-type = s3...
     </summary>
   
 

@@ -5255,6 +5255,18 @@ Teacher实体表示教师，Student实体表示学生，为了描述教师和学
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9646,7 +9658,7 @@ Criteria、HQL
         
         
         <div class="col">
-          <a href="/posts/kali-qu-luyouqi-pinma/" class="card post-preview h-100">
+          <a href="/posts/jquery-geshihua-shijian/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9659,14 +9671,14 @@ Criteria、HQL
 
 <em
   class="small"
-  data-ts="1649569620"
+  data-ts="1650347220"
   data-df="ll"
   
 >
-  Apr 10, 2022
+  Apr 19, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Kali拿取路由器pin码</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>JQuery格式化时间</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9675,33 +9687,33 @@ Criteria、HQL
 
 
 
-                  网卡监听模式
-1
-airmon-ng start wlan0　　
-
-
-
-
-扫描
-1
-wash -i wlan0mon
-
-
-
-
-跑pin
-1
+                  1
 2
-            网卡          物理地址         信道
-reaver -i wlan0mon -b 00:5A:13:40:AA:F8 -c 11 -vv -K 0
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+$(function(){
+    alert(getDateString(new Date(&quot;2022-04-19&quot;)));
+});
 
-
-
-
-通过pin获得wifi密码
-1
-2
-        ...
+function getDateString(time) {
+    var datetime = new Date();
+    datetime.se...
                 </p>
               </div>
             </div>

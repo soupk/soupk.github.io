@@ -586,6 +586,76 @@
 
 <div id="post-list">
   
+    <a href="/posts/jquery-jiancha-shuru-neirong-shifou-baohan-teshu-zifu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery检查输入内容是否包含特殊字符
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              调用函数判断
+function checkNameReg(val) { 
+    var regEn = /[@#$%^&amp;amp;*()[\]]/im,
+        regCn = /[@#￥%……&amp;amp;*[\]]/im;
+    if(regEn.test(val) || regCn.test(val)) {
+        return false;
+    }
+    retu...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607406420"
+  data-df="ll"
+  
+>
+  Dec  8, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/$-is-not-defined/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1169,72 +1239,6 @@ $(function() {
 function goTest(e) {
     var data = $(e).attr(&quot;myAttr&quot;);
     $(&quot;form&quot;).attr(&quot;action&quot;, &quot;goTest.do?data=&quot; + data).submit()...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1607320020"
-  data-df="ll"
-  
->
-  Dec  7, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JQuery
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/a-biaoqian-zhuanwei-post-fangshi-tijiao/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            将< a>标签转为POST方式提交
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              点击&amp;lt;a&amp;gt;标签调用JS函数提交，使用Ajax请求后台，发现无法获得ModelAndView返回的View，无法跳转页面，因此将&amp;lt;a&amp;gt;标签跳转改为POST方式提交。
-function goTest(el) {
-    var href = $(el).attr(&quot;href&quot;); // 获取&amp;lt;a&amp;gt;标签的href
-    $(&quot;form&quot;).attr(&quot;acti...
             </p>
           </div>
 

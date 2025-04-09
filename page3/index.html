@@ -586,6 +586,77 @@
 
 <div id="post-list">
   
+    <a href="/posts/shujuku-changyong-hanshu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            数据库常用查询和函数
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              MySQL
+-- 字符串转数字
+-- 1、+0
+select &#39;00123&#39; + 0;
+-- 2、cast(&#39;字符串&#39; as 数值类型)
+-- 整数 SIGNED，无符号整数 UNSIGNED，浮点数 DECIMAL
+select cast(&#39;000123&#39; as SIGNED);
+-- 3、convert(&#39;字符串&#39;, 数值类型)
+-- 整数 SIGNED，无符号整数 UNSIGNED，浮...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1708562820"
+  data-df="ll"
+  
+>
+  Feb 22, 2024
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Database
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/mybatis-fenye-jisuan-gongshi/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1201,73 +1272,6 @@ java.lang.UnsupportedOperationException: null
                   
                     Knowledge,
                     GaussDB
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/java-servlet-api-baocuo/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            NoClassDefFoundError：javax/servlet/ServletOutputStream报错解决
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              报错信息
-java.lang.NoClassDefFoundError: javax/servlet/ServletOutputStream
-at java.lang.Class.getDeclaredMethods0(Native Method)
-at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
-at java.la...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1696700820"
-  data-df="ll"
-  
->
-  Oct  8, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Java
                 </span>
               
             </div>

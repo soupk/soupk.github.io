@@ -586,6 +586,85 @@
 
 <div id="post-list">
   
+    <a href="/posts/plsql-wufa-shiyong-like-chaxun-wufa-cahxun-zhongwen/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            PLSQL无法使用like查询，无法查询中文
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              问题描述
+
+  中文乱码。
+  中文显示没有乱码，中文作为条件无法查询。
+  like无法查询出中文内容。
+
+
+问题原因
+以上三种情况是因为Oracle客户端和服务器端的编码方式不一样导致。
+
+解决办法
+首先要查询Oracle服务器的语言、地域和字符集，然后将查询结果设置为本地的环境变量：NLS_LANG，具体如下：
+
+  
+    查询Oracle服务器的语言、地域和字符集
+
+     s...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1608529620"
+  data-df="ll"
+  
+>
+  Dec 21, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    PLSQL
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/linux-rm-mingling/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1170,72 +1249,6 @@ public st...
 
     //创建数组的第三种方法
     int[] arr3 = new int[]{1,...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1608176820"
-  data-df="ll"
-  
->
-  Dec 17, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Java
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/java-jiang-json-zhuanwei-duixiangshuzu-de-fangfa/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Java将JSON转为对象数组的方法
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              第一种方法
-String jsonStr = &quot;[{\&quot;id\&quot;: \&quot;0\&quot;, \&quot;ip\&quot;: \&quot;123\&quot;, \&quot;mac\&quot;: \&quot;456\&quot;}, 
-                   {\&quot;id\&quot;: \&quot;1\&quot;, \&quot;ip\&quot;: \&quot;111\&quot;, \&quot;mac\&quot;: \&quot;222\&quot;}]&quot;;
-List&amp;lt;User&amp;gt; userList = new ArrayList&amp;lt;U...
             </p>
           </div>
 

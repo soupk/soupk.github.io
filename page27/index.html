@@ -586,6 +586,82 @@
 
 <div id="post-list">
   
+    <a href="/posts/oracle-baoliu-sanwei-xiaoshu-buzu-bu0/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 保留三位小数，不足补0
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              格式化为小数
+select 
+  to_char(round(0.2, 3),&#39;fm99999999990.000&#39;)
+from 
+  dual;
+
+
+格式化为百分比
+select
+  to_char(round(0.2*100,2),&#39;fm99999999990.00&#39;)||&#39;%&#39;
+from 
+  dual;
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1611208020"
+  data-df="ll"
+  
+>
+  Jan 21, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/mysql-shiyong-sql-yuju-daoru-waibu-shuju/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1165,75 +1241,6 @@ jdbc:mysq...
 test_database =
   (DESCRIPTION =
     (ADDRESS = (PRO...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610862420"
-  data-df="ll"
-  
->
-  Jan 17, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    PLSQL
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/ora-12560/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            PLSQL连接数据库时报ORA-12560:TNS:协议适配器错误
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              造成ORA-12560:TNS:协议适配器错误的问题的原因有三个：
-
-
-  监听服务没有启起来。
-Windows平台可以如下操作：开始—程序—管理工具—服务，打开服务面板，启动OracleOraDb11g_home1TNSlistener服务。
-  database instance没有起起来。
-Windows平台如下操作：开始—程序—管理工具—服务，打开服务面板，启动OracleServi...
             </p>
           </div>
 
