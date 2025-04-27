@@ -2997,11 +2997,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -3084,6 +3079,54 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -8905,97 +8948,6 @@
         
         
         <div class="col">
-          <a href="/posts/redis-shaobing-moshi-zhixing-select0-baocuo/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1654753620"
-  data-df="ll"
-  
->
-  Jun  9, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Redis哨兵模式执行select 0命令报错： (error) ERR unknown command select, with args beginning with：0</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  报错信息
-Redis哨兵模式执行select 0命令报错。
-(error) ERR unknown command select, with args beginning with: 0
-
-
-解决办法
-三个node节点为：10.12.168.68:6395,10.12.168.69:6395,10.12.168.70:6396
-redis-cli -h 10.12.168.68 -p 639...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
-          <a href="/posts/redishuancun-xuebeng/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1726120020"
-  data-df="ll"
-  
->
-  Sep 12, 2024
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Redis缓存的雪崩、击穿、穿透</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  缓存雪崩
-
-缓存雪崩是指在某个时间点，大量的缓存数据同时失效或过期，导致大量的请求直接打到数据库或后端系统，从而造成数据库负载激增，甚至导致数据库宕机或系统崩溃的现象。
-
-
-  合理设置缓存的过期时间：将缓存的过期时间分散设置，避免大量缓存在同一时间过期。可以使用随机时间，或者将过期时间分布在一个时间段内。
-  实现缓存数据的自动刷新：确保热点数据在即将过期时能够自动刷新，避免数据大规模失效...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/shiyong-ssh-fangshi-lianjie-redis/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9037,6 +8989,92 @@ redis-cli -h 10.12.168.68 -p 639...
 
 
 
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/redis-lianjie-baocuo/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1684907220"
+  data-df="ll"
+  
+>
+  May 24, 2023
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Redis使用redis-cli连接报错：WRONGPASS invalid username-password pair or user is disabled.</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  报错信息
+使用redis-cli连接Redis时报错，具体为认证失败问题WRONGPASS invalid username-password pair or user is disabled.。之前输入auth pass即可，但此次在终端窗口有提示需要username。
+
+报错原因
+本机Redis为7.0版本。Redis6.0起，支持ACL权限控制，Redis6.0之前的版本只支持验证密码...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/redis-yichang-wufa-huoqu-lianjie/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1608961620"
+  data-df="ll"
+  
+>
+  Dec 26, 2020
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Redis异常：Could not get a resource from the pool</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  报错信息
+redis.clients.jedis.exceptions.JedisConnectionException: 
+Could not get a resource from the pool  
+at redis.clients.util.Pool.getResource(Pool.java:22)  
+at com.derbysoft.jredis.longkeytest.Bo...
                 </p>
               </div>
             </div>
@@ -11145,11 +11183,6 @@ redis-cli -h 10.12.168.68 -p 639...
     
     
       
-    
-  
-    
-    
-    
     
   
     

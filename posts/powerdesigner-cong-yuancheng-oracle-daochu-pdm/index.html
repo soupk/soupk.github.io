@@ -4057,11 +4057,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -4149,6 +4144,54 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -10079,7 +10122,7 @@ name转到comment注释字段
         
         
         <div class="col">
-          <a href="/posts/jquery-geshihua-shijian/" class="card post-preview h-100">
+          <a href="/posts/ruhe-gei-tomcat-zhiding-jdk/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -10092,14 +10135,14 @@ name转到comment注释字段
 
 <em
   class="small"
-  data-ts="1650347220"
+  data-ts="1654753620"
   data-df="ll"
   
 >
-  Apr 19, 2022
+  Jun  9, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>JQuery格式化时间</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>如何给Tomcat指定JDK和JRE</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -10108,33 +10151,14 @@ name转到comment注释字段
 
 
 
-                  1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-$(function(){
-    alert(getDateString(new Date(&quot;2022-04-19&quot;)));
-});
+                  在Tomcat安装目录下的bin目录下找到setclasspath.sh，在最开始添加以下代码
 
-function getDateString(time) {
-    var datetime = new Date();
-    datetime.se...
+1
+2
+export JAVA_HOME=&quot;/home/jdk-1.8&quot;
+export JRE_HOME=&quot;/home/jdk-1.8/jre&quot;
+
+
                 </p>
               </div>
             </div>
@@ -12243,11 +12267,6 @@ function getDateString(time) {
     
     
       
-    
-  
-    
-    
-    
     
   
     

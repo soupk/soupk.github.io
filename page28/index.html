@@ -586,6 +586,283 @@
 
 <div id="post-list">
   
+    <a href="/posts/xiangmu-qidong-bao-shiqu-cuowu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            项目启动报时区错误
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              报错信息
+The server time zone value &#39;�й���׼ʱ��&#39; is 
+unrecognized or represents more than one time 
+zone. You must...
+
+
+报错原因
+原因是使用了Mysql Connector/J 6.x以上的版本，然后就报了时区的错误。
+
+解决方法
+在配置url的时候不能简单写成：
+jdbc:mysq...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1611035220"
+  data-df="ll"
+  
+>
+  Jan 19, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Java
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/java-chuli-oracle-in-chaoguo-1000-tiao-de-qingkuang/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Java中Oracle WHERE IN查询的项超过1000条的解决方案
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              /**
+ * 处理Oracle SQL语句IN子句中WHERE id IN (1, 2, ..., 1000, 1001)，
+ * 如果子句中超过1000项就会报错。
+ * 这主要是Oracle考虑性能问题做的限制。
+ * 如果要解决此问题，可以用 WHERE id IN (1, 2, ..., 1000) OR id IN (1001, ...)
+ * @author hoojo
+ * @...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1611028020"
+  data-df="ll"
+  
+>
+  Jan 19, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Java
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/plsql-qingkehuduan-de-peizhi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            PLSQL轻客户端的配置
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              安装instantclient的原因
+在64位系统上安装64位的Oracle数据库，但是没有对应的64位PLSQL Developer，此时就不能使用PLSQL Developer来进行直接连接的，所以要想实现连接还得需要安装轻客户端：instantclient_11_2。instantclient_11_2的安装其实就是从官网下载一个压缩文件，解压到任意目录下然后配置即可。
+
+配置inst...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1610862420"
+  data-df="ll"
+  
+>
+  Jan 17, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    PLSQL
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/plsql-peizhi-lianjie/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            PLSQL通过修改配置文件实现数据库连接
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              在Oracle的安装目录下查找tnsnames.ora文件，一般路径为：%ORACLE_HOME%\network\admin。打开tnsnames.ora，可以看到所有的数据库连接配置，介绍下配置格式：
+  
+只需要根据上一步介绍的格式修改IP或者端口号或者SID即可，总体不变，例如：
+test_database =
+  (DESCRIPTION =
+    (ADDRESS = (PRO...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1610862420"
+  data-df="ll"
+  
+>
+  Jan 17, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    PLSQL
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/ora-12560/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1020,292 +1297,6 @@ Jira的运行是依赖Java环境的，也就是说需要安装JDK并且要是1.8
                   
                     Knowledge,
                     SVN
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/linux-nohup-mingling/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Linux nohup命令
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              Linux下有时候我们希望某个程序可以一直在后台执行，很多都是使用&amp;amp;在程序命令结尾来让程序自动运行。
-
-[root@lbogon roy]# ./test.sh &amp;amp; 
-
-
-但是这样在终端关闭的时候，程序也会随之停止，此时我们可以使用nohup命令。
-
-[root@lbogon roy]# nohup ./test.sh &amp;amp; 
-
-
-这样的话终端关闭后程序不会停止，但是如...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610430420"
-  data-df="ll"
-  
->
-  Jan 12, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Linux
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/linux-mv-mingling/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Linux mv命令
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              作用
-重命名、覆盖或移动文件。
-
-参数
-mv [options] existing-file new-filename
-mv [options] existing-file-list directory
-mv [options] existing-directory new-directory
-
-
-  第一种形式：
-  existing-file是需要重命名的文件路径；
-  new-file...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610430420"
-  data-df="ll"
-  
->
-  Jan 12, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Linux
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/springboot-duqu-peizhi-wnejian-de-shuju/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Spring Boot读取properties配置文件中的数据
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              一、使用@Value注解读取
-
-读取properties配置文件时，默认读取的是application.properties。
-
-application.properties：
-
-demo.name = Name
-demo.age = 18
-
-
-Java：
-
-import org.springframework.beans.factory.annotation.Value;
-import o...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610344020"
-  data-df="ll"
-  
->
-  Jan 11, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Spring Boot
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/jstl-biaoqian-de-yongfa/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JSTL标签的用法
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              JSP标准标记库（Standard Tag Library，JSTL）是一组以标准化格式实现许多通用的Web站点功能的定制标记。除了核心JSP标记，如jsp:include之外，定制标记库工具使您能够创建唯一的标记来描述以站点或应用程序为导向的操作。一旦您创建了定制标记库（简称taglib），当您扩展项目或转向另一个项目时您可以重复使用这些标记。您还可以将 taglib传递给其它开发人员，从...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610344020"
-  data-df="ll"
-  
->
-  Jan 11, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JSTL
                 </span>
               
             </div>
@@ -4174,11 +4165,6 @@ import o...
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -6292,11 +6278,6 @@ import o...
     
     
       
-    
-  
-    
-    
-    
     
   
     

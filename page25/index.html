@@ -586,6 +586,299 @@
 
 <div id="post-list">
   
+    <a href="/posts/oracle-chakan-hanzi-suozhan-zijie/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 查看汉字所占字节
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              使用以下语句查询
+
+select userenv(&#39;language&#39;) from dual;
+
+
+如果显示如下，一个汉字占用两个字节
+
+SIMPLIFIED CHINESE_CHINA.ZHS16GBK
+
+
+如果显示如下，一个汉字占用三个字节
+
+SIMPLIFIED CHINESE_CHINA.AL32UTF8
+
+
+也可以用以下语句查询一个汉字占用的字节长度
+
+select lengthb...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1621403220"
+  data-df="ll"
+  
+>
+  May 19, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/oracle-add-month-hanshu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle add_month函数
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              SELECT
+  ADD_MONTHS (
+    TO_DATE (
+      TO_CHAR (SYSDATE, &#39;yyyy-MM-dd&#39;),
+      &#39;yyyy-MM-dd HH24:mi:ss&#39;
+    ),
+    - 1
+  )
+FROM
+  dual
+
+执行结果为上一个月的今天。
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1621403220"
+  data-df="ll"
+  
+>
+  May 19, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/oracle-panduan-zifuchuan-shifou-xiangdeng/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 判断字符串是否相等，包含NULL的情况
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              在Oracle中，将空字符串视为null，任何值与null比较结果都为null。如此一来，在比较两个字符串的时候就会出现意外，例如：
+select * from test where str &amp;lt;&amp;gt; &#39;test&#39;;
+
+此时，值为null的记录不会显示出。应当将null转为其他字符串：
+select * from test where nvl(to_char(str),&#39;xx&#39;) &amp;...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1621316820"
+  data-df="ll"
+  
+>
+  May 18, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/oracle-jiang-chaxunchu-de-shuju-xiugaihou-charu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 将查询出来的表数据修改一个或几个字段后，再插入到表中
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              INSERT INTO
+  tableName
+SELECT
+  seq_master.nextval, --自定义值（序列号）
+  TO_DATE(&#39;2012/01/01&#39;, &#39;YYYY/MM/DD&#39;), --自定义值
+  CURR_SOURCE, --原始字段信息
+  CURR_DEST, --原始字段信息
+  EXCHANGE_RATE, --原始字段信息
+  SYSDATE, --自...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1621316820"
+  data-df="ll"
+  
+>
+  May 18, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/oracle-ge-fuwu-de-zuoyong/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1013,304 +1306,6 @@ select oper_no from info_oper whe...
   
 >
   Mar 26, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    IntelliJ IDEA
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/intelliJ-idea-quxiao-xingcanming-tishi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            IntelliJ IDEA取消参数名称（形参名）提示
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              File -&amp;gt; Setting -&amp;gt; Editor -&amp;gt; General -&amp;gt; Appearance 把“Show parameter name hints”选项前面的勾去掉，点击“OK”，完成。
-
-
-
-  参考：IDEA取消参数名称（形参名）提示
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1616736180"
-  data-df="ll"
-  
->
-  Mar 26, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    IntelliJ IDEA
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/intelliJ-idea-de-rundashboard-ruhe-xianshi-chulai/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            IntelliJ IDEA的Run Dashboard如何显示出来
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              点击如图所示位置的下来三角按钮，然后选择Edit Configurations，或者点击菜单栏Run -&amp;gt; Edit Configurations
-
-
-
-在运行配置窗口，选择一条Spring Boot的运行配置，然后点击上方的复制按钮进行复制副本
-
-
-
-
-
-复制完成之后，点击OK确定按钮，然后在屏幕右下角可以看到一个弹框提示
-
-
-
-点击弹框右下角的向下的小箭头，展开弹框详情信息，然后点...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1616736180"
-  data-df="ll"
-  
->
-  Mar 26, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    IntelliJ IDEA
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/intelliJ-idea-wenjianming-xianshi-hongse/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            IntelliJ IDEA项目目录的文件名显示为红色的解决办法
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              报错信息
-导入IDEA的项目文件显示为红色。
-
-
-报错原因
-项目目录中存在版本控制文件所导致的，解决办法就是——解除版本控制。
-
-解决方法
-File –&amp;gt; settings –&amp;gt; version control或者使用快捷键CTRL + ALT + S进入设置界面，在右侧的目录列表中选择项目后面的Subversion改成&amp;lt;none&amp;gt;即可。
-
-
-
-  参考：IDEA项目...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1616044980"
-  data-df="ll"
-  
->
-  Mar 18, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    IntelliJ IDEA
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/intelliJ-idea-wenjian-zuoxiajiao-chuxian-hongquan/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            IntelliJ IDEA项目目录的Java类文件名的左下角出现红圈
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              报错信息
-src目录下的Java类的名字的左下角出现红圈并且中间有一个字母J。
-
-按住CTRL点左键的时候出现“cannot find declaration to go to”。
-
-
-报错原因
-模块路径错误。
-
-解决方法
-File –&amp;gt; Project Structure –&amp;gt; Modules进入模块设置界面，重新添加工程路径即可。 
-
-
-
-  参考：idea的src目录下的j...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1616044980"
-  data-df="ll"
-  
->
-  Mar 18, 2021
 </em>
 
 
@@ -4189,11 +4184,6 @@ File –&amp;gt; Project Structure –&amp;gt; Modules进入模块设置界面�
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -6307,11 +6297,6 @@ File –&amp;gt; Project Structure –&amp;gt; Modules进入模块设置界面�
     
     
       
-    
-  
-    
-    
-    
     
   
     

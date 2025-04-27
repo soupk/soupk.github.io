@@ -3156,11 +3156,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -3243,6 +3238,54 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -9064,7 +9107,7 @@
         
         
         <div class="col">
-          <a href="/posts/redis-shaobing-moshi-zhixing-select0-baocuo/" class="card post-preview h-100">
+          <a href="/posts/redis-lianjie-baocuo/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9077,14 +9120,14 @@
 
 <em
   class="small"
-  data-ts="1654753620"
+  data-ts="1684907220"
   data-df="ll"
   
 >
-  Jun  9, 2022
+  May 24, 2023
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Redis哨兵模式执行select 0命令报错： (error) ERR unknown command select, with args beginning with：0</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Redis使用redis-cli连接报错：WRONGPASS invalid username-password pair or user is disabled.</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9094,13 +9137,10 @@
 
 
                   报错信息
-Redis哨兵模式执行select 0命令报错。
-(error) ERR unknown command select, with args beginning with: 0
+使用redis-cli连接Redis时报错，具体为认证失败问题WRONGPASS invalid username-password pair or user is disabled.。之前输入auth pass即可，但此次在终端窗口有提示需要username。
 
-
-解决办法
-三个node节点为：10.12.168.68:6395,10.12.168.69:6395,10.12.168.70:6396
-redis-cli -h 10.12.168.68 -p 639...
+报错原因
+本机Redis为7.0版本。Redis6.0起，支持ACL权限控制，Redis6.0之前的版本只支持验证密码...
                 </p>
               </div>
             </div>
@@ -9110,7 +9150,7 @@ redis-cli -h 10.12.168.68 -p 639...
         
         
         <div class="col">
-          <a href="/posts/springboot-peizhi-redis-shaobing-moshi-zhixing-lianjie/" class="card post-preview h-100">
+          <a href="/posts/redis-yichang-wufa-huoqu-lianjie/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9123,14 +9163,14 @@ redis-cli -h 10.12.168.68 -p 639...
 
 <em
   class="small"
-  data-ts="1654753620"
+  data-ts="1608961620"
   data-df="ll"
   
 >
-  Jun  9, 2022
+  Dec 26, 2020
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Spring Boot配置Redis哨兵模式连接</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Redis异常：Could not get a resource from the pool</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9139,15 +9179,11 @@ redis-cli -h 10.12.168.68 -p 639...
 
 
 
-                  spring:
-    redis:
-        database: 0
-        # host: 127.0.0.1 # 哨兵模式无效youxiao
-        port: 6379
-        password: root # 哨兵模式有效
-        # 连接超时时长（毫秒）
-        pingInterval: 100000
-        timeout...
+                  报错信息
+redis.clients.jedis.exceptions.JedisConnectionException: 
+Could not get a resource from the pool  
+at redis.clients.util.Pool.getResource(Pool.java:22)  
+at com.derbysoft.jredis.longkeytest.Bo...
                 </p>
               </div>
             </div>
@@ -11301,11 +11337,6 @@ redis-cli -h 10.12.168.68 -p 639...
     
     
       
-    
-  
-    
-    
-    
     
   
     

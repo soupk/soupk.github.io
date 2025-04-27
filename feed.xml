@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-04-09T16:15:28+08:00</updated>
+  <updated>2025-04-27T16:31:37+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,172 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>工具箱</title>
+    <link href="http://localhost:4000/posts/gongjuxiang/" rel="alternate" type="text/html" title="工具箱" />
+    <published>2025-04-27T08:47:00+08:00</published>
+  
+    <updated>2025-04-27T08:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/gongjuxiang/</id>
+    <content src="http://localhost:4000/posts/gongjuxiang/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Index" />
+    
+    <category term="Tools" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+    
+
+
+
+    
+        
+			
+                &amp;nbsp;&amp;nbsp;
+                AES加密和解密
+                进行AES加密和解密。
+                使用工具
+            
+			
+                &amp;nbsp;&amp;nbsp;
+                SQL格式化
+                格式化SQL语句。
+                使用工具
+            
+            
+                &amp;nbsp;&amp;nbsp;
+                色卡收藏
+                颜色卡片收藏。
+                使用工具
+            
+        
+    
+
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>GaussDB的窗口函数</title>
+    <link href="http://localhost:4000/posts/chuangkou-hanshu/" rel="alternate" type="text/html" title="GaussDB的窗口函数" />
+    <published>2025-04-16T08:47:00+08:00</published>
+  
+    <updated>2025-04-16T08:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/chuangkou-hanshu/</id>
+    <content src="http://localhost:4000/posts/chuangkou-hanshu/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="GaussDB" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      窗口函数（Window Function）是GaussDB这类关系型数据库中强大的工具，它能对查询结果集的一个子集（窗口）进行计算，在分析数据时极为有用。
+
+一、基本语法
+
+function_name(arg1, arg2, ...) OVER (
+    [PARTITION BY partition_expression1, partition_expression2, ...]
+    [ORDER BY sort_expression1 [ASC | DESC], sort_expression2 [ASC | DESC], ...]
+    [frame_clause]
+)
+
+
+
+  function_name：窗口函数的名称，像SUM、AVG、ROW_NUMBER等。
+  OVER：这是窗口函数的标志，用于定义窗口。
+  PARTITION BY：把结果集划分成多个分区，...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>GaussDB的with子句</title>
+    <link href="http://localhost:4000/posts/cte/" rel="alternate" type="text/html" title="GaussDB的with子句" />
+    <published>2025-04-15T09:47:00+08:00</published>
+  
+    <updated>2025-04-15T09:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/cte/</id>
+    <content src="http://localhost:4000/posts/cte/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="GaussDB" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      with子句在GaussDB（基于PostgreSQL内核）里也被称作公共表表达式（CTE），它能定义临时的命名结果集，在查询里可以多次引用这些结果集。CTE 能够让复杂的查询更易读、易维护，并且在某些情况下还能提升查询性能。
+
+-- 定义一个名为dept_employee_count的CTE
+WITH dept_employee_count AS (
+    SELECT 
+        department_id,
+        COUNT(employee_id) AS employee_count
+    FROM 
+        employees
+    GROUP BY 
+        department_id
+)
+-- 主查询，将CTE与departments表连接
+SELECT 
+    d.department_name,
+    dec.employe...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -99,23 +265,23 @@
 
   
   <entry>
-    <title>GaussDB将JSON字符串转为对象并取某个字段的值</title>
-    <link href="http://localhost:4000/posts/chaxun-json-ziduan/" rel="alternate" type="text/html" title="GaussDB将JSON字符串转为对象并取某个字段的值" />
-    <published>2025-03-31T13:47:00+08:00</published>
+    <title>AES加密和解密</title>
+    <link href="http://localhost:4000/posts/aes-jiami-jiemi/" rel="alternate" type="text/html" title="AES加密和解密" />
+    <published>2025-04-01T08:47:00+08:00</published>
   
-    <updated>2025-03-31T13:47:00+08:00</updated>
+    <updated>2025-04-01T08:47:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/chaxun-json-ziduan/</id>
-    <content src="http://localhost:4000/posts/chaxun-json-ziduan/" />
+    <id>http://localhost:4000/posts/aes-jiami-jiemi/</id>
+    <content src="http://localhost:4000/posts/aes-jiami-jiemi/" />
     <author>
       <name>Lemon</name>
     </author>
 
   
     
-    <category term="Knowledge" />
+    <category term="Index" />
     
-    <category term="GaussDB" />
+    <category term="Tools" />
     
   
 
@@ -127,137 +293,37 @@
 
 
 
-      select jsonb_extract_path_text(json_param::jsonb, 'param_a') as param_a from json_test_table;
-
-
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>给路由器刷第三方固件</title>
-    <link href="http://localhost:4000/posts/luyouqi-shua-xitong/" rel="alternate" type="text/html" title="给路由器刷第三方固件" />
-    <published>2025-03-31T13:47:00+08:00</published>
-  
-    <updated>2025-03-31T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/luyouqi-shua-xitong/</id>
-    <content src="http://localhost:4000/posts/luyouqi-shua-xitong/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Collection" />
-    
-    <category term="Technical" />
-    
-  
-
-  
-    <summary>
       
-
-
-
-
-
-      固件下载地址
-
-Bread下载：https://breed.hackpascal.net/
-潘多拉固件下载：http://downloads.pangubox.com:6380/pandorabox/18.10/targets/ralink/mt7620/
-OpenWrt下载：https://downloads.openwrt.org/
-小米路由器固件下载：https://www.miwifi.com/miwifi_download.html
-
-教程
-
-网件路由器R6220刷不死breed的教程：https://jingyan.baidu.com/article/09ea3eded82eb581afde390b.html
-网件r6220如何刷潘多拉固件：https://jingyan.baidu.com/article/09ea3eded813b581afde3936.html
-小米...
-    </summary>
+  
+  
   
 
-  </entry>
 
-  
-  <entry>
-    <title>Java实体类模型</title>
-    <link href="http://localhost:4000/posts/java-shitilei-moxing/" rel="alternate" type="text/html" title="Java实体类模型" />
-    <published>2025-02-27T13:47:00+08:00</published>
-  
-    <updated>2025-02-27T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/java-shitilei-moxing/</id>
-    <content src="http://localhost:4000/posts/java-shitilei-moxing/" />
-    <author>
-      <name>Lemon</name>
-    </author>
 
   
     
-    <category term="Knowledge" />
-    
-    <category term="Java" />
-    
-  
-
-  
-    <summary>
+      输入文本
       
-
-
-
-
-
-      一、核心概念解析
-
-  POJO：即普通Java对象，没有业务逻辑，包含DO、DTO、BO、VO和PO等，遵守简单对象概念，比JavaBean更纯净。有private参数及对应的get和set方法，不继承、不实现接口且未被框架侵入。
-  VO：视图模型，用于展示层，将指定页面或组件的数据封装起来，实现后台向前端传输数据，在业务不复杂系统中可直接用DTO替代。
-  DTO：数据传输对象，在后端是Java对象，前端是js对象（类似json）。用于前端向后端传输数据，在满足能完整表达业务模块输出的情况下，也可用于服务间调用，它没有行为，仅存储和提供数据查询。
-  Entity/PO：持久化对象，等同于Entity，对应数据库表中的记录，属性与表字段一一对应，数量与数据库表数量相关，除get、set方法外一般无其他方法。
-  DO：领域对象，从现实世界抽象出的业务实体，用于业务逻辑层接收数据...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>GaussDB在导入数据时给定唯一主键id</title>
-    <link href="http://localhost:4000/posts/daoru-shuju-shengchengid/" rel="alternate" type="text/html" title="GaussDB在导入数据时给定唯一主键id" />
-    <published>2024-12-16T13:47:00+08:00</published>
-  
-    <updated>2024-12-16T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/daoru-shuju-shengchengid/</id>
-    <content src="http://localhost:4000/posts/daoru-shuju-shengchengid/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
     
-    <category term="Knowledge" />
     
-    <category term="GaussDB" />
-    
-  
-
-  
-    <summary>
+      密钥
       
+    
+    
+      加密&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+      解密&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+      复制结果&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+      JSON格式化
+    
+    
+      输出结果
+      
+    
+  
+  输出结果已复制到剪贴板
 
+  
 
-
-
-
-      在要导入数据的表中增加create_time字段，默认值设置为pg_systimestamp()，在从csv文件导入数据的时候会自动给create_time字段插入时间戳。然后将时间戳转为纯数字字符串即可。
-SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, '.', '') FROM test_table tt;
-
-UPDATE test_table SET id = REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, '.', '');
 
 
     </summary>

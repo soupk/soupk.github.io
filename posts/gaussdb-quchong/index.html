@@ -3286,11 +3286,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -3378,6 +3373,54 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -9242,6 +9285,48 @@ SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;,
         
         
         <div class="col">
+          <a href="/posts/chaxun-json-ziduan/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1743400020"
+  data-df="ll"
+  
+>
+  Mar 31, 2025
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>GaussDB将JSON字符串转为对象并取某个字段的值</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  1
+select jsonb_extract_path_text(json_param::jsonb, &#39;param_a&#39;) as param_a from json_test_table;
+
+
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
           <a href="/posts/gaussdb-zhengze-chaxun/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9278,69 +9363,6 @@ SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;,
 select * from table where cloum ~ &#39;^abc&#39;
 
 
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
-          <a href="/posts/gaussdb-shajincheng/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1715320020"
-  data-df="ll"
-  
->
-  May 10, 2024
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>GaussDB查进程锁和杀进程</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  通过以下SQL就能确认当前的连接用户、连接地址、连接应用、状态、是否等待锁、排队状态以及线程id
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-SELECT
-  usename,
-  client_addr,
-  application_name,
-  state,
-  waiting,
-  enqueue,
-  pid
-FROM
-  PG_STAT_ACTIVITY
-WHERE
- ...
                 </p>
               </div>
             </div>
@@ -11449,11 +11471,6 @@ WHERE
     
     
       
-    
-  
-    
-    
-    
     
   
     

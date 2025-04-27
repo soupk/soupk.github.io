@@ -586,6 +586,287 @@
 
 <div id="post-list">
   
+    <a href="/posts/linux-yonghu-caozuo/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Linux 用户操作
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              查看用户列表 
+cat /etc/passwd 或者 cat /etc/shadow
+
+
+增加/修改/删除用户 
+useradd/usermod/userdel
+
+
+增加/修改/删除用户组 
+groupadd/groupmod/groupdel
+
+
+修改密码 
+passwd &amp;lt;accountName&amp;gt;
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1611294420"
+  data-df="ll"
+  
+>
+  Jan 22, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Linux
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/next-he-nextline-de-qubie/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            next()和nextLine()的区别
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              
+  next()这个函数会扫描从有效字符起到空格，Tab，回车等结束字符之间的内容并作为String返回。
+  nextLine()这个函数在输入完一些东西之后按下回车则视为输入结束，输入的内容将被作为String返回。
+  next()这个函数与之不同在于，next()什么都不输入直接敲回车不会返回，而nextLine()即使不输入东西直接敲回车也会返回。
+
+
+再举个例子，输入abc d...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1611294420"
+  data-df="ll"
+  
+>
+  Jan 22, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Java
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/java-shanchu-shuzu-zhong-yuansu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Java删除数组中元素的方法
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              public static void main(String[] args) {
+    String[] data = new String[] { &quot;a&quot;, &quot;b&quot;, &quot;c&quot; };
+    String del = &quot;c&quot;;
+    for (int i = 0; i &amp;lt; data.length; i++) {
+        if (del.equals(data[i])) {
+...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1611294420"
+  data-df="ll"
+  
+>
+  Jan 22, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Java
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/java-ruhe-panduan-bigdecimal-shifou-wei0/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            如何判断Bigdecimal类型变量是否等于0
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              使用以下方法比较存在问题：
+b.equals(BigDecimal.ZERO);
+
+查看源代码发现Bigdecimal的equals方法不仅仅比较值的大小是否相等，首先比较的是scale（scale是bigdecimal的保留小数点位数，比如new Bigdecimal(&quot;1.001&quot;)scale为3），也就是说，不但值的大小要相等，保留位数也要相等，equals才能返回true。Bigde...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1611294420"
+  data-df="ll"
+  
+>
+  Jan 22, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Java
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/oracle-baoliu-sanwei-xiaoshu-buzu-bu0/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -997,283 +1278,6 @@ Maven通过特定的标识来定义项目名称，这样既可以唯一的匹配
                   
                     Knowledge,
                     Maven
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/xiangmu-qidong-bao-shiqu-cuowu/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            项目启动报时区错误
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              报错信息
-The server time zone value &#39;�й���׼ʱ��&#39; is 
-unrecognized or represents more than one time 
-zone. You must...
-
-
-报错原因
-原因是使用了Mysql Connector/J 6.x以上的版本，然后就报了时区的错误。
-
-解决方法
-在配置url的时候不能简单写成：
-jdbc:mysq...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1611035220"
-  data-df="ll"
-  
->
-  Jan 19, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Java
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/java-chuli-oracle-in-chaoguo-1000-tiao-de-qingkuang/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Java中Oracle WHERE IN查询的项超过1000条的解决方案
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              /**
- * 处理Oracle SQL语句IN子句中WHERE id IN (1, 2, ..., 1000, 1001)，
- * 如果子句中超过1000项就会报错。
- * 这主要是Oracle考虑性能问题做的限制。
- * 如果要解决此问题，可以用 WHERE id IN (1, 2, ..., 1000) OR id IN (1001, ...)
- * @author hoojo
- * @...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1611028020"
-  data-df="ll"
-  
->
-  Jan 19, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Java
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/plsql-qingkehuduan-de-peizhi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            PLSQL轻客户端的配置
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              安装instantclient的原因
-在64位系统上安装64位的Oracle数据库，但是没有对应的64位PLSQL Developer，此时就不能使用PLSQL Developer来进行直接连接的，所以要想实现连接还得需要安装轻客户端：instantclient_11_2。instantclient_11_2的安装其实就是从官网下载一个压缩文件，解压到任意目录下然后配置即可。
-
-配置inst...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610862420"
-  data-df="ll"
-  
->
-  Jan 17, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    PLSQL
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/plsql-peizhi-lianjie/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            PLSQL通过修改配置文件实现数据库连接
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              在Oracle的安装目录下查找tnsnames.ora文件，一般路径为：%ORACLE_HOME%\network\admin。打开tnsnames.ora，可以看到所有的数据库连接配置，介绍下配置格式：
-  
-只需要根据上一步介绍的格式修改IP或者端口号或者SID即可，总体不变，例如：
-test_database =
-  (DESCRIPTION =
-    (ADDRESS = (PRO...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610862420"
-  data-df="ll"
-  
->
-  Jan 17, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    PLSQL
                 </span>
               
             </div>
@@ -4142,11 +4146,6 @@ test_database =
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -6260,11 +6259,6 @@ test_database =
     
     
       
-    
-  
-    
-    
-    
     
   
     
