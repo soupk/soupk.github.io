@@ -7875,6 +7875,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8904,59 +8928,6 @@
         
         
         <div class="col">
-          <a href="/posts/chaxun-suoyoubiao-de-suoyou-ziduan/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1606283220"
-  data-df="ll"
-  
->
-  Nov 25, 2020
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>查询数据库所有表的所有字段</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  MySQL数据库
-SELECT
- table_name,
- column_name
-FROM
- information_schema. COLUMNS
-WHERE
- table_schema = &#39;testdb&#39;
-AND table_name IN (
- SELECT
-  TABLE_NAME
- FROM
-  INFORMATION_SCHEMA. TABLES
- WHERE
-  TABLE...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/mysql-chaxun-zhujian/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9033,6 +9004,59 @@ select
 table_name,
 column_name 
 from information_schema.key_...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/chaxun-suoyoubiao-de-suoyou-ziduan/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1606283220"
+  data-df="ll"
+  
+>
+  Nov 25, 2020
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>查询数据库所有表的所有字段</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  MySQL数据库
+SELECT
+ table_name,
+ column_name
+FROM
+ information_schema. COLUMNS
+WHERE
+ table_schema = &#39;testdb&#39;
+AND table_name IN (
+ SELECT
+  TABLE_NAME
+ FROM
+  INFORMATION_SCHEMA. TABLES
+ WHERE
+  TABLE...
                 </p>
               </div>
             </div>

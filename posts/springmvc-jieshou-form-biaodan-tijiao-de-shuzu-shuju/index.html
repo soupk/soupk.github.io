@@ -7462,6 +7462,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9157,52 +9181,6 @@ SpringMVC是一个基于Java的实现了MVC设计模式的请求驱动类型的�
         
         
         <div class="col">
-          <a href="/posts/ruhe-gei-tomcat-zhiding-jdk/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1654753620"
-  data-df="ll"
-  
->
-  Jun  9, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>如何给Tomcat指定JDK和JRE</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  在Tomcat安装目录下的bin目录下找到setclasspath.sh，在最开始添加以下代码
-
-1
-2
-export JAVA_HOME=&quot;/home/jdk-1.8&quot;
-export JRE_HOME=&quot;/home/jdk-1.8/jre&quot;
-
-
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/jiejue-wufa-fuzhi-daima-wenti/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9238,6 +9216,56 @@ $(&quot;#content_views pre&quot;).css(&quot;user-select&quot;, &quot;text&quot;)
 $(&quot;#content_views pre code&quot;).css(&quot;user-select&quot;, &quot;text&quot;);
 
 
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/mysql-anquan-moshi/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1658371620"
+  data-df="ll"
+  
+>
+  Jul 21, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>MySQL安全模式</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  MySQL安全模式要求不能对非主键的条件查询做update和delete操作
+
+报错信息
+1
+2
+3
+4
+5
+update activity set type = 1 where title = &#39;aa&#39;
+ 
+Error Code: 1175. You are using safe update mode and you tried to update a 
+table without a ...
                 </p>
               </div>
             </div>

@@ -7313,6 +7313,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9038,52 +9062,6 @@
         
         
         <div class="col">
-          <a href="/posts/ruhe-gei-tomcat-zhiding-jdk/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1654753620"
-  data-df="ll"
-  
->
-  Jun  9, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>如何给Tomcat指定JDK和JRE</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  在Tomcat安装目录下的bin目录下找到setclasspath.sh，在最开始添加以下代码
-
-1
-2
-export JAVA_HOME=&quot;/home/jdk-1.8&quot;
-export JRE_HOME=&quot;/home/jdk-1.8/jre&quot;
-
-
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/tomcat-shezhi-ipheduankou-fangwen-xiangmu/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9167,6 +9145,50 @@ export JRE_HOME=&quot;/home/jdk-1.8/jre&quot;
 
 原因
 部署项目出错的话，把webapps目录下文件夹清空了，重新部署，这样就附带的把ROOT文件夹清理掉...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/qidong-tomcat-chuangkou-yishanerguo/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1608097620"
+  data-df="ll"
+  
+>
+  Dec 16, 2020
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>启动Tomcat时窗口一闪而过的解决方法</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  进入Tomcat的安装目录，看到圈出红色的3个bat文件，一般通过startup.bat启动Tomcat时流程是startup-&amp;gt;catalina-&amp;gt;setclasspath-&amp;gt;catalina，如果这3个bat文件里面有一个出现错误的话就是启动失败。
+
+先打开startup.bat，在最后加上一句pause
+
+
+再次执行startup.bat，就会看到上图，当按任意的键时...
                 </p>
               </div>
             </div>

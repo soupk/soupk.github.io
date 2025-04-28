@@ -8920,6 +8920,30 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -8936,46 +8960,6 @@
       Further Reading
     </h3>
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-      
-        
-        
-        <div class="col">
-          <a href="/posts/daoru-shuju-shengchengid/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1734328020"
-  data-df="ll"
-  
->
-  Dec 16, 2024
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>GaussDB在导入数据时给定唯一主键id</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  在要导入数据的表中增加create_time字段，默认值设置为pg_systimestamp()，在从csv文件导入数据的时候会自动给create_time字段插入时间戳。然后将时间戳转为纯数字字符串即可。
-SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;, &#39;&#39;) FROM test_table ...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
       
         
         
@@ -9060,6 +9044,49 @@ SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;,
 
 2、定义重复数据
 通过...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/gaussdb-zhengze-chaxun/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1706334420"
+  data-df="ll"
+  
+>
+  Jan 27, 2024
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>GaussDB正则查询</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  GaussDB使用正则表达式查询示例：
+-- 查询所有以abc开头的字符串
+select * from table where cloum ~ &#39;^abc&#39;
+
+
                 </p>
               </div>
             </div>

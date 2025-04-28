@@ -3737,6 +3737,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9242,49 +9266,6 @@
         
         
         <div class="col">
-          <a href="/posts/daoru-shuju-shengchengid/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1734328020"
-  data-df="ll"
-  
->
-  Dec 16, 2024
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>GaussDB在导入数据时给定唯一主键id</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  在要导入数据的表中增加create_time字段，默认值设置为pg_systimestamp()，在从csv文件导入数据的时候会自动给create_time字段插入时间戳。然后将时间戳转为纯数字字符串即可。
-1
-2
-3
-SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;, &#39;&#39;) FROM test_...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/chaxun-json-ziduan/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9363,6 +9344,69 @@ select jsonb_extract_path_text(json_param::jsonb, &#39;param_a&#39;) as param_a 
 select * from table where cloum ~ &#39;^abc&#39;
 
 
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/gaussdb-shajincheng/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1715320020"
+  data-df="ll"
+  
+>
+  May 10, 2024
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>GaussDB查进程锁和杀进程</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  通过以下SQL就能确认当前的连接用户、连接地址、连接应用、状态、是否等待锁、排队状态以及线程id
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+SELECT
+  usename,
+  client_addr,
+  application_name,
+  state,
+  waiting,
+  enqueue,
+  pid
+FROM
+  PG_STAT_ACTIVITY
+WHERE
+ ...
                 </p>
               </div>
             </div>

@@ -586,6 +586,146 @@
 
 <div id="post-list">
   
+    <a href="/posts/java-shiyong-freemarker-shengcheng-word-wendang/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Java中使用FreeMarker导出Word文档
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              制作模板
+在制作模板时需要注意的一些问题如下：
+
+  用Microsoft Office Word 2003或以上的版本来制作，不要用WPS做。
+  关于图片，一定要插入一张图片，方便后面找到图片的位置好进行替换。
+  一些需要动态生成的数据，如个人信息，用personInfo（其他字段也行，建议和程序中的VO字段对应）来代替，注意，单词要先用一个文本框写好，再复制黏贴过来，不要在Word上...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606369620"
+  data-df="ll"
+  
+>
+  Nov 26, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    FreeMarker
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/freemarker-geshihua-shuzi/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            FreeMarker如何格式化数字
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              // 如果小数点后不足两位，用&quot;0&quot;代替
+${num?string(&#39;0.00&#39;)} 
+
+// 输出为：1239765.46 
+// 如果小数点后多余两位，就只保留两位，否则输出实际值 
+${num?string(&#39;#.##&#39;)} 
+
+// 输出为：1,239,765.46 
+// 整数部分每三位用&quot;,&quot;分割，并且保证小数点后保留两位，不足用&quot;0&quot;代替
+${num?string(&#39;,###....
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1606369620"
+  data-df="ll"
+  
+>
+  Nov 26, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    FreeMarker
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/bitbucket-anzhuang-he-pojie/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1136,143 +1276,6 @@ git remote set-url origin &amp;lt;new url&amp;gt;  # 修改远程地址为新的
                   
                     Knowledge,
                     Git
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/git-push-baocuo/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Git推送代码时报错：error:src refspec master does not match any
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              将git push origin master 改成git push origin HEAD
-HEAD指向当前工作的branch，master不一定指向当前工作的branch
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606283220"
-  data-df="ll"
-  
->
-  Nov 25, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Git
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/ruhe-fangzhi-youpan-kaobei/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            如何防止U盘拷贝
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              拒绝移动存储权限
-gpedit.msc——用户配置——管理模板——系统——可移动存储访问——所有可移动
-存储类——拒绝所有权限——已启用
-
-隐藏右键send to
-删除SendTo文件夹
-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo
-
-添加磁盘写保护
-HKEY_LOCAL_MACHINE\S...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606196820"
-  data-df="ll"
-  
->
-  Nov 24, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    SECURITY
                 </span>
               
             </div>

@@ -3749,6 +3749,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8906,50 +8930,6 @@
         
         
         <div class="col">
-          <a href="/posts/ruhe-gei-tomcat-zhiding-jdk/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1654753620"
-  data-df="ll"
-  
->
-  Jun  9, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>如何给Tomcat指定JDK和JRE</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  在Tomcat安装目录下的bin目录下找到setclasspath.sh，在最开始添加以下代码
-
-export JAVA_HOME=&quot;/home/jdk-1.8&quot;
-export JRE_HOME=&quot;/home/jdk-1.8/jre&quot;
-
-
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/buneng-xianshi-tomcat-yemian/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9033,6 +9013,50 @@ export JRE_HOME=&quot;/home/jdk-1.8/jre&quot;
 
 
 再次执行startup.bat，就会看到上图，当按任意的键时...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/ruhe-zai-yitai-fuwuqi-shang-qidong-duoge-tomcat/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1608097620"
+  data-df="ll"
+  
+>
+  Dec 16, 2020
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>一台机器上启动多个Tomcat</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  如果需要在一台机器上启动多个Tomcat服务器，在默认设置下肯定会发生端口冲突。为实现这个效果，只需修改conf子目录中的server.xml文件即可。共需修改三处：
+
+修改http访问端口（默认为8080端口）:
+&amp;lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;
+connectionTimeout=&quot;20000&quot;
+redirectPort=&quot;844...
                 </p>
               </div>
             </div>
