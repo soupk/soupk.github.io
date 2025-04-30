@@ -4337,115 +4337,115 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -9122,7 +9122,7 @@ $(&quot;#content_views pre code&quot;).css(&quot;user-select&quot;, &quot;text&q
         
         
         <div class="col">
-          <a href="/posts/ruhe-xiezai-uniacess/" class="card post-preview h-100">
+          <a href="/posts/google-play-store-DF-DFERH-01/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9135,14 +9135,14 @@ $(&quot;#content_views pre code&quot;).css(&quot;user-select&quot;, &quot;text&q
 
 <em
   class="small"
-  data-ts="1683679620"
+  data-ts="1604987220"
   data-df="ll"
   
 >
-  May 10, 2023
+  Nov 10, 2020
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>如何卸载UniAccessAgent并且不影响网络连接</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Google Play Store显示“从服务器检索信息时出错，DF-DFERH-01”</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9151,7 +9151,10 @@ $(&quot;#content_views pre code&quot;).css(&quot;user-select&quot;, &quot;text&q
 
 
 
-                  下载360安全卫士文件粉碎机独立版，使用文件粉碎机打开C:\Windows\LVUAAgentInstBaseRoot目录（使用Windows资源管理器打开无法看到目录下的文件），强力删除目录下的UniAccessAgentBrowser.exe、UniAccessAgentDaemon.exe、UniAccessAgentTray.exe这3个文件，UniAccessAgentUI.exe...
+                  
+原因是软件要请求的services.googleapis.cn域名被解析到了国内。
+解决思路就是将该域名解析到国外即可，若是采用代理软件，设置为全局代理。
+
                 </p>
               </div>
             </div>
@@ -9193,6 +9196,73 @@ $(&quot;#content_views pre code&quot;).css(&quot;user-select&quot;, &quot;text&q
       
         
         <!--  The comments switcher -->
+
+  
+  <!-- https://giscus.app/ -->
+<script type="text/javascript">
+  (function () {
+    const origin = 'https://giscus.app';
+    const iframe = 'iframe.giscus-frame';
+    const lightTheme = 'light';
+    const darkTheme = 'dark_dimmed';
+
+    let initTheme = lightTheme;
+    const html = document.documentElement;
+
+    if (
+      (html.hasAttribute('data-mode') &&
+        html.getAttribute('data-mode') === 'dark') ||
+      (!html.hasAttribute('data-mode') &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      initTheme = darkTheme;
+    }
+
+    let giscusAttributes = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'soupk/lemon.giscus',
+      'data-repo-id': 'R_kgDOOiNkUA',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOOiNkUM4CpoLA',
+      'data-mapping': 'pathname',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-theme': initTheme,
+      'data-input-position': 'bottom',
+      'data-lang': 'en',
+      crossorigin: 'anonymous',
+      async: ''
+    };
+
+    let giscusScript = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusScript.setAttribute(key, value)
+    );
+    document.getElementById('tail-wrapper').appendChild(giscusScript);
+
+    addEventListener('message', (event) => {
+      if (
+        event.source === window &&
+        event.data &&
+        event.data.direction === ModeToggle.ID
+      ) {
+        /* global theme mode changed */
+        const mode = event.data.message;
+        const theme = mode === ModeToggle.DARK_MODE ? darkTheme : lightTheme;
+
+        const message = {
+          setConfig: {
+            theme: theme
+          }
+        };
+
+        const giscus = document.querySelector(iframe).contentWindow;
+        giscus.postMessage({ giscus: message }, origin);
+      }
+    });
+  })();
+</script>
+
 
 
       

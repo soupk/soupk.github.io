@@ -8326,19 +8326,19 @@ pst文件找不到的主要原因是pst文件被删除，文件路径被修改�
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -8971,6 +8971,55 @@ pst文件找不到的主要原因是pst文件被删除，文件路径被修改�
         
         
         <div class="col">
+          <a href="/posts/ruhe-quchu-youdaoyun-de-guanggao/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1649206020"
+  data-df="ll"
+  
+>
+  Apr  6, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>如何去除有道云笔记广告</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  一、适用于6.0之前版本
+你只需要找到有道云笔记的安装路径*\Youdao\YoudaoNote\theme\build.xml，把下面的代码删掉
+1
+2
+3
+4
+5
+6
+7
+&amp;lt;PanelAd type=&quot;adpanel&quot; css=&quot;public&quot; ass=&quot;mainform panelclient PanelAd&quot;&amp;gt;
+         &amp;lt;panelTopLine type...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
           <a href="/posts/jiejue-wufa-fuzhi-daima-wenti/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9052,45 +9101,6 @@ $(&quot;#content_views pre code&quot;).css(&quot;user-select&quot;, &quot;text&q
           </a>
         </div>
       
-        
-        
-        <div class="col">
-          <a href="/posts/ruhe-xiezai-uniacess/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1683679620"
-  data-df="ll"
-  
->
-  May 10, 2023
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>如何卸载UniAccessAgent并且不影响网络连接</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  下载360安全卫士文件粉碎机独立版，使用文件粉碎机打开C:\Windows\LVUAAgentInstBaseRoot目录（使用Windows资源管理器打开无法看到目录下的文件），强力删除目录下的UniAccessAgentBrowser.exe、UniAccessAgentDaemon.exe、UniAccessAgentTray.exe这3个文件，UniAccessAgentUI.exe...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
     </div>
     <!-- .card-deck -->
   </div>
@@ -9126,6 +9136,73 @@ $(&quot;#content_views pre code&quot;).css(&quot;user-select&quot;, &quot;text&q
       
         
         <!--  The comments switcher -->
+
+  
+  <!-- https://giscus.app/ -->
+<script type="text/javascript">
+  (function () {
+    const origin = 'https://giscus.app';
+    const iframe = 'iframe.giscus-frame';
+    const lightTheme = 'light';
+    const darkTheme = 'dark_dimmed';
+
+    let initTheme = lightTheme;
+    const html = document.documentElement;
+
+    if (
+      (html.hasAttribute('data-mode') &&
+        html.getAttribute('data-mode') === 'dark') ||
+      (!html.hasAttribute('data-mode') &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      initTheme = darkTheme;
+    }
+
+    let giscusAttributes = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'soupk/lemon.giscus',
+      'data-repo-id': 'R_kgDOOiNkUA',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOOiNkUM4CpoLA',
+      'data-mapping': 'pathname',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-theme': initTheme,
+      'data-input-position': 'bottom',
+      'data-lang': 'en',
+      crossorigin: 'anonymous',
+      async: ''
+    };
+
+    let giscusScript = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusScript.setAttribute(key, value)
+    );
+    document.getElementById('tail-wrapper').appendChild(giscusScript);
+
+    addEventListener('message', (event) => {
+      if (
+        event.source === window &&
+        event.data &&
+        event.data.direction === ModeToggle.ID
+      ) {
+        /* global theme mode changed */
+        const mode = event.data.message;
+        const theme = mode === ModeToggle.DARK_MODE ? darkTheme : lightTheme;
+
+        const message = {
+          setConfig: {
+            theme: theme
+          }
+        };
+
+        const giscus = document.querySelector(iframe).contentWindow;
+        giscus.postMessage({ giscus: message }, origin);
+      }
+    });
+  })();
+</script>
+
 
 
       

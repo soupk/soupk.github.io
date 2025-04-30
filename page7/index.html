@@ -586,284 +586,6 @@
 
 <div id="post-list">
   
-    <a href="/posts/centos-anzhuang-mysql/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            CentOS安装MySQL
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              1. 检测系统是否有自带MySQL
-#检查是否安装过MySQL
-rpm -qa | grep mysql 
-#检查是否存在Mariadb数据库（内置的MySQL数据库），有则强制删除
-rpm -qa | grep mariadb 
-#强制删除
-rpm -e --nodeps mariadb-libs-5.5.68-1.el7.x86_64 
-rpm -e --nodeps mariadb-5...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1677606420"
-  data-df="ll"
-  
->
-  Mar  1, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    CentOS
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/centos-anzhuang-mysql-shengchanhuanjing-guihua-ji-tiaoyou/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            CentOS安装MySQL - 生产环境MySQL安装规划及调优
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              一、生产环境MySQL部署问题
-
-  生产环境MySQL使用yum安装部署，这是大忌，因为生产环境的系统，通常硬件维护、操作系统维护都是分在不同的管理部门进行管理。作为应用厂商使用的自行维护的数据库，使用yum或rpm包安装方式安装，就意味着每次维护都需要root级别的权限，因为不管是my.cnf，还是MySQL的主程序文件，基本都在root用户权限下。每次要进行升级及维护，都需要申请roo...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1677606420"
-  data-df="ll"
-  
->
-  Mar  1, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    CentOS
-                </span>
-              
-            </div>
-
-            
-              <div class="pin ms-1">
-                <i class="fas fa-thumbtack fa-fw"></i>
-                <span></span>
-              </div>
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/tomcat-shezhi-ipheduankou-fangwen-xiangmu/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Tomcat设置通过IP+PORT访问项目
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              &amp;lt;!-- 在`&amp;lt;host&amp;gt;`之间增加下列代码，docBase改成webapps下面放的项目名称 --&amp;gt;
-&amp;lt;Context path=&quot;&quot; docBase=&quot;projectName&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&amp;gt;
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1677476820"
-  data-df="ll"
-  
->
-  Feb 27, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Tomcat
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/vmware-centos-kuorong/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            VMware虚拟机CentOS7磁盘扩容
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              1、给虚拟机添加硬盘
-将虚拟机关机，然后点6VM顶部菜单栏中的显示或隐藏控制台视图按钮来显示已建立的虚拟机的配置信息
-
-
-
-然后左边菜单栏点击硬盘，在弹出的对话框选中硬盘，并点击扩展按钮，然后在弹出框中的最大磁盘大小修改未所需要的磁盘大小，比如我现在需要扩容30G，原本的磁盘大小是20G，所以我这里将原本的20G修改成50G，然后点击扩展
-
-
-
-之后会收到提示，然后开启虚拟机，对磁盘进行进一...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1677390420"
-  data-df="ll"
-  
->
-  Feb 26, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    VMware
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
     <a href="/posts/ant-dabao-bao-neicunyichu/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1295,6 +1017,270 @@ service...
                   
                     Knowledge,
                     WebLogic
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/paas-iaas-saas/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            云计算的三种服务模式：IaaS，PaaS和SaaS
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              2008年，云计算的概念由Google率先提出，短时间内其核心理念在全球范围内迅速传播并发展。2010年在国内形成趋势，各大IT互联网商业巨头将目光聚焦在云计算，至目前，云计算在中国已经慢慢开始成熟起来。云计算指的是通过网络“云”将巨大的数据计算处理程序分解成无数个小程序，然后，通过多部服务器组成的系统进行处理和分析这些小程序得到结果并返回给用户，因此任何一个在互联网上提供服务的公司，都可以...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1674971220"
+  data-df="ll"
+  
+>
+  Jan 29, 2023
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Collection,
+                    Technical
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/kuayu-wenti/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            跨域问题
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              一、跨域问题产生的原因
+浏览器的同源策略。
+
+二、没有同源策略限制的两大危险场景
+浏览器是从两个方面去做同源策略的，一是针对接口的请求，二是针对DOM的查询。试想一下没有这样的限制上述两种动作有什么危险。
+
+2.1、没有同源策略限制的接口请求
+Cookie大家应该知道，一般用来处理登录等场景，目的是让服务端知道谁发出的这次请求。如果你请求了接口进行登录，服务端验证通过后会在响应头加入Set-...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1670910420"
+  data-df="ll"
+  
+>
+  Dec 13, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Nginx
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/url-loader-chuli-tupian-ziyuan-wenti/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Vue打包时url-loader处理CSS中的图片资源遇到的问题
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              处理CSS中的图片资源时，我们常用的两种loader是file-loader和url-loader，两者的主要差异在于：url-loader可以设置图片大小限制，当图片超过限制时，其表现行为等同于file-loader，而当图片不超过限制时，则会将图片以base64的形式打包进CSS文件，以减少请求次数。本文主要想说的是我们在使用file-loader或url-loader时经常出现的图片地...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1670219220"
+  data-df="ll"
+  
+>
+  Dec  5, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Vue
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/echarts-gepeizhixiang-shuoming/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            ECharts各个配置项详细说明总结
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              1、图表标题
+title: {
+    x: &#39;left&#39;,              // 水平安放位置，默认为左对齐，可选为：
+                            // &#39;center&#39; ¦ &#39;left&#39; ¦ &#39;right&#39; ¦ {number}（x坐标，单位px）
+    y: &#39;top&#39;,               // 垂直安放位置，默认为全图顶端，可选为：
+...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1670046420"
+  data-df="ll"
+  
+>
+  Dec  3, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    ECharts
                 </span>
               
             </div>

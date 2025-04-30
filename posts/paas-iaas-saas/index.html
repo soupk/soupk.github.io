@@ -4162,67 +4162,67 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -9283,50 +9283,6 @@
         
         
         <div class="col">
-          <a href="/posts/luyouqi-shua-xitong/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1743400020"
-  data-df="ll"
-  
->
-  Mar 31, 2025
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>给路由器刷第三方固件</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  固件下载地址
-
-Bread下载：https://breed.hackpascal.net/
-潘多拉固件下载：http://downloads.pangubox.com:6380/pandorabox/18.10/targets/ralink/mt7620/
-OpenWrt下载：https://downloads.openwrt.org/
-小米路由器固件下载：https://www.miwif...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/snat-he-dnat/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9403,6 +9359,63 @@ OpenWrt下载：https://downloads.openwrt.org/
           </a>
         </div>
       
+        
+        
+        <div class="col">
+          <a href="/posts/suanfa-fuzadu-suchabiao/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1606196820"
+  data-df="ll"
+  
+>
+  Nov 24, 2020
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>算法复杂度速查表</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  这篇文章覆盖了计算机科学里面常见算法的时间和空间的大O复杂度
+图例
+
+
+数据结构操作
+
+
+数组排序算法
+
+
+图操作
+
+
+堆操作
+
+
+大O复杂度图表
+
+
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
     </div>
     <!-- .card-deck -->
   </div>
@@ -9438,6 +9451,73 @@ OpenWrt下载：https://downloads.openwrt.org/
       
         
         <!--  The comments switcher -->
+
+  
+  <!-- https://giscus.app/ -->
+<script type="text/javascript">
+  (function () {
+    const origin = 'https://giscus.app';
+    const iframe = 'iframe.giscus-frame';
+    const lightTheme = 'light';
+    const darkTheme = 'dark_dimmed';
+
+    let initTheme = lightTheme;
+    const html = document.documentElement;
+
+    if (
+      (html.hasAttribute('data-mode') &&
+        html.getAttribute('data-mode') === 'dark') ||
+      (!html.hasAttribute('data-mode') &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      initTheme = darkTheme;
+    }
+
+    let giscusAttributes = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'soupk/lemon.giscus',
+      'data-repo-id': 'R_kgDOOiNkUA',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOOiNkUM4CpoLA',
+      'data-mapping': 'pathname',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-theme': initTheme,
+      'data-input-position': 'bottom',
+      'data-lang': 'en',
+      crossorigin: 'anonymous',
+      async: ''
+    };
+
+    let giscusScript = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusScript.setAttribute(key, value)
+    );
+    document.getElementById('tail-wrapper').appendChild(giscusScript);
+
+    addEventListener('message', (event) => {
+      if (
+        event.source === window &&
+        event.data &&
+        event.data.direction === ModeToggle.ID
+      ) {
+        /* global theme mode changed */
+        const mode = event.data.message;
+        const theme = mode === ModeToggle.DARK_MODE ? darkTheme : lightTheme;
+
+        const message = {
+          setConfig: {
+            theme: theme
+          }
+        };
+
+        const giscus = document.querySelector(iframe).contentWindow;
+        giscus.postMessage({ giscus: message }, origin);
+      }
+    });
+  })();
+</script>
+
 
 
       

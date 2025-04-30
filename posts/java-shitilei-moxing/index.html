@@ -3172,67 +3172,67 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -9013,7 +9013,7 @@
         
         
         <div class="col">
-          <a href="/posts/json-zhuan-xml-gongjulei/" class="card post-preview h-100">
+          <a href="/posts/xianchengchi/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9026,14 +9026,14 @@
 
 <em
   class="small"
-  data-ts="1683654420"
+  data-ts="1726112820"
   data-df="ll"
   
 >
-  May 10, 2023
+  Sep 12, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>JSON转XML工具类</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>线程池</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9042,15 +9042,14 @@
 
 
 
-                  import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
+                  线程池的五种状态
 
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
 
-public clas...
+  RUNNING：线程池处于运行状态，能够接收新任务并处理队列中的任务。
+  SHUTDOWN：线程池处于关闭状态，不再接收新任务，但会处理队列中的剩余任务。
+  STOP：线程池处于停止状态，不再接收新任务，并中断正在执行的任务。
+  TIDYING：线程池中的所有任务执行完毕，活动线程数为0时的状态。
+  TERMINATED：线程池执行完terminated()...
                 </p>
               </div>
             </div>
@@ -9182,6 +9181,73 @@ for(S...
       
         
         <!--  The comments switcher -->
+
+  
+  <!-- https://giscus.app/ -->
+<script type="text/javascript">
+  (function () {
+    const origin = 'https://giscus.app';
+    const iframe = 'iframe.giscus-frame';
+    const lightTheme = 'light';
+    const darkTheme = 'dark_dimmed';
+
+    let initTheme = lightTheme;
+    const html = document.documentElement;
+
+    if (
+      (html.hasAttribute('data-mode') &&
+        html.getAttribute('data-mode') === 'dark') ||
+      (!html.hasAttribute('data-mode') &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      initTheme = darkTheme;
+    }
+
+    let giscusAttributes = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'soupk/lemon.giscus',
+      'data-repo-id': 'R_kgDOOiNkUA',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOOiNkUM4CpoLA',
+      'data-mapping': 'pathname',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-theme': initTheme,
+      'data-input-position': 'bottom',
+      'data-lang': 'en',
+      crossorigin: 'anonymous',
+      async: ''
+    };
+
+    let giscusScript = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusScript.setAttribute(key, value)
+    );
+    document.getElementById('tail-wrapper').appendChild(giscusScript);
+
+    addEventListener('message', (event) => {
+      if (
+        event.source === window &&
+        event.data &&
+        event.data.direction === ModeToggle.ID
+      ) {
+        /* global theme mode changed */
+        const mode = event.data.message;
+        const theme = mode === ModeToggle.DARK_MODE ? darkTheme : lightTheme;
+
+        const message = {
+          setConfig: {
+            theme: theme
+          }
+        };
+
+        const giscus = document.querySelector(iframe).contentWindow;
+        giscus.postMessage({ giscus: message }, origin);
+      }
+    });
+  })();
+</script>
+
 
 
       

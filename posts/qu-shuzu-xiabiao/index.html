@@ -8245,19 +8245,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -9043,7 +9043,7 @@
         
         
         <div class="col">
-          <a href="/posts/jiejue-wufa-fuzhi-daima-wenti/" class="card post-preview h-100">
+          <a href="/posts/ruhe-quchu-youdaoyun-de-guanggao/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9056,14 +9056,14 @@
 
 <em
   class="small"
-  data-ts="1658364420"
+  data-ts="1649206020"
   data-df="ll"
   
 >
-  Jul 21, 2022
+  Apr  6, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>解决无法复制代码的问题</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>如何去除有道云笔记广告</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9072,12 +9072,17 @@
 
 
 
-                  1
+                  一、适用于6.0之前版本
+你只需要找到有道云笔记的安装路径*\Youdao\YoudaoNote\theme\build.xml，把下面的代码删掉
+1
 2
-$(&quot;#content_views pre&quot;).css(&quot;user-select&quot;, &quot;text&quot;);
-$(&quot;#content_views pre code&quot;).css(&quot;user-select&quot;, &quot;text&quot;);
-
-
+3
+4
+5
+6
+7
+&amp;lt;PanelAd type=&quot;adpanel&quot; css=&quot;public&quot; ass=&quot;mainform panelclient PanelAd&quot;&amp;gt;
+         &amp;lt;panelTopLine type...
                 </p>
               </div>
             </div>
@@ -9119,6 +9124,73 @@ $(&quot;#content_views pre code&quot;).css(&quot;user-select&quot;, &quot;text&q
       
         
         <!--  The comments switcher -->
+
+  
+  <!-- https://giscus.app/ -->
+<script type="text/javascript">
+  (function () {
+    const origin = 'https://giscus.app';
+    const iframe = 'iframe.giscus-frame';
+    const lightTheme = 'light';
+    const darkTheme = 'dark_dimmed';
+
+    let initTheme = lightTheme;
+    const html = document.documentElement;
+
+    if (
+      (html.hasAttribute('data-mode') &&
+        html.getAttribute('data-mode') === 'dark') ||
+      (!html.hasAttribute('data-mode') &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      initTheme = darkTheme;
+    }
+
+    let giscusAttributes = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'soupk/lemon.giscus',
+      'data-repo-id': 'R_kgDOOiNkUA',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOOiNkUM4CpoLA',
+      'data-mapping': 'pathname',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-theme': initTheme,
+      'data-input-position': 'bottom',
+      'data-lang': 'en',
+      crossorigin: 'anonymous',
+      async: ''
+    };
+
+    let giscusScript = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusScript.setAttribute(key, value)
+    );
+    document.getElementById('tail-wrapper').appendChild(giscusScript);
+
+    addEventListener('message', (event) => {
+      if (
+        event.source === window &&
+        event.data &&
+        event.data.direction === ModeToggle.ID
+      ) {
+        /* global theme mode changed */
+        const mode = event.data.message;
+        const theme = mode === ModeToggle.DARK_MODE ? darkTheme : lightTheme;
+
+        const message = {
+          setConfig: {
+            theme: theme
+          }
+        };
+
+        const giscus = document.querySelector(iframe).contentWindow;
+        giscus.postMessage({ giscus: message }, origin);
+      }
+    });
+  })();
+</script>
+
 
 
       

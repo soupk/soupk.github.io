@@ -3701,67 +3701,67 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -9266,7 +9266,7 @@
         
         
         <div class="col">
-          <a href="/posts/chaxun-json-ziduan/" class="card post-preview h-100">
+          <a href="/posts/daoru-shuju-shengchengid/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9279,14 +9279,14 @@
 
 <em
   class="small"
-  data-ts="1743400020"
+  data-ts="1734328020"
   data-df="ll"
   
 >
-  Mar 31, 2025
+  Dec 16, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>GaussDB将JSON字符串转为对象并取某个字段的值</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>GaussDB在导入数据时给定唯一主键id</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9295,10 +9295,11 @@
 
 
 
-                  1
-select jsonb_extract_path_text(json_param::jsonb, &#39;param_a&#39;) as param_a from json_test_table;
-
-
+                  在要导入数据的表中增加create_time字段，默认值设置为pg_systimestamp()，在从csv文件导入数据的时候会自动给create_time字段插入时间戳。然后将时间戳转为纯数字字符串即可。
+1
+2
+3
+SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;, &#39;&#39;) FROM test_...
                 </p>
               </div>
             </div>
@@ -9353,7 +9354,7 @@ select * from table where cloum ~ &#39;^abc&#39;
         
         
         <div class="col">
-          <a href="/posts/gaussdb-shajincheng/" class="card post-preview h-100">
+          <a href="/posts/chaxun-json-ziduan/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9366,14 +9367,14 @@ select * from table where cloum ~ &#39;^abc&#39;
 
 <em
   class="small"
-  data-ts="1715320020"
+  data-ts="1743400020"
   data-df="ll"
   
 >
-  May 10, 2024
+  Mar 31, 2025
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>GaussDB查进程锁和杀进程</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>GaussDB将JSON字符串转为对象并取某个字段的值</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9382,31 +9383,10 @@ select * from table where cloum ~ &#39;^abc&#39;
 
 
 
-                  通过以下SQL就能确认当前的连接用户、连接地址、连接应用、状态、是否等待锁、排队状态以及线程id
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-SELECT
-  usename,
-  client_addr,
-  application_name,
-  state,
-  waiting,
-  enqueue,
-  pid
-FROM
-  PG_STAT_ACTIVITY
-WHERE
- ...
+                  1
+select jsonb_extract_path_text(json_param::jsonb, &#39;param_a&#39;) as param_a from json_test_table;
+
+
                 </p>
               </div>
             </div>
@@ -9448,6 +9428,73 @@ WHERE
       
         
         <!--  The comments switcher -->
+
+  
+  <!-- https://giscus.app/ -->
+<script type="text/javascript">
+  (function () {
+    const origin = 'https://giscus.app';
+    const iframe = 'iframe.giscus-frame';
+    const lightTheme = 'light';
+    const darkTheme = 'dark_dimmed';
+
+    let initTheme = lightTheme;
+    const html = document.documentElement;
+
+    if (
+      (html.hasAttribute('data-mode') &&
+        html.getAttribute('data-mode') === 'dark') ||
+      (!html.hasAttribute('data-mode') &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      initTheme = darkTheme;
+    }
+
+    let giscusAttributes = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'soupk/lemon.giscus',
+      'data-repo-id': 'R_kgDOOiNkUA',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOOiNkUM4CpoLA',
+      'data-mapping': 'pathname',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-theme': initTheme,
+      'data-input-position': 'bottom',
+      'data-lang': 'en',
+      crossorigin: 'anonymous',
+      async: ''
+    };
+
+    let giscusScript = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusScript.setAttribute(key, value)
+    );
+    document.getElementById('tail-wrapper').appendChild(giscusScript);
+
+    addEventListener('message', (event) => {
+      if (
+        event.source === window &&
+        event.data &&
+        event.data.direction === ModeToggle.ID
+      ) {
+        /* global theme mode changed */
+        const mode = event.data.message;
+        const theme = mode === ModeToggle.DARK_MODE ? darkTheme : lightTheme;
+
+        const message = {
+          setConfig: {
+            theme: theme
+          }
+        };
+
+        const giscus = document.querySelector(iframe).contentWindow;
+        giscus.postMessage({ giscus: message }, origin);
+      }
+    });
+  })();
+</script>
+
 
 
       

@@ -7951,115 +7951,115 @@ table th:first-of-type { width: 100px; }
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -10192,7 +10192,7 @@ table th:first-of-type { width: 100px; }
         
         
         <div class="col">
-          <a href="/posts/java-shitilei-moxing/" class="card post-preview h-100">
+          <a href="/posts/xianchengchi/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -10205,14 +10205,14 @@ table th:first-of-type { width: 100px; }
 
 <em
   class="small"
-  data-ts="1740635220"
+  data-ts="1726112820"
   data-df="ll"
   
 >
-  Feb 27, 2025
+  Sep 12, 2024
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Java实体类模型</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>线程池</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -10221,118 +10221,14 @@ table th:first-of-type { width: 100px; }
 
 
 
-                  一、核心概念解析
-
-  POJO：即普通Java对象，没有业务逻辑，包含DO、DTO、BO、VO和PO等，遵守简单对象概念，比JavaBean更纯净。有private参数及对应的get和set方法，不继承、不实现接口且未被框架侵入。
-  VO：视图模型，用于展示层，将指定页面或组件的数据封装起来，实现后台向前端传输数据，在业务不复杂系统中可直接用DTO替代。
-  DTO：数据传输对象，在后端...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
-          <a href="/posts/json-zhuan-xml-gongjulei/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
+                  线程池的五种状态
 
 
-
-
-
-<em
-  class="small"
-  data-ts="1683654420"
-  data-df="ll"
-  
->
-  May 10, 2023
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>JSON转XML工具类</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69...
+  RUNNING：线程池处于运行状态，能够接收新任务并处理队列中的任务。
+  SHUTDOWN：线程池处于关闭状态，不再接收新任务，但会处理队列中的剩余任务。
+  STOP：线程池处于停止状态，不再接收新任务，并中断正在执行的任务。
+  TIDYING：线程池中的所有任务执行完毕，活动线程数为0时的状态。
+  TERMINATED：线程池执行完terminated()...
                 </p>
               </div>
             </div>
@@ -10384,6 +10280,51 @@ public class Main {
           </a>
         </div>
       
+        
+        
+        <div class="col">
+          <a href="/posts/java-zhong-array-he-list-de-zhuanhuan/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1603770420"
+  data-df="ll"
+  
+>
+  Oct 27, 2020
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Java中Array和List的相互转换</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  Array转List
+String[] array = {&quot;string1&quot;, &quot;string2&quot;, &quot;string3&quot;};
+List&amp;lt;String&amp;gt; list = Arrays.asList(array);
+//Arrays.asList产生一个Arrays内置的类，其中数组用final表示
+// list.add(&quot;string4&quot;);  所以不能往其中添加元素
+
+for(S...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
     </div>
     <!-- .card-deck -->
   </div>
@@ -10419,6 +10360,73 @@ public class Main {
       
         
         <!--  The comments switcher -->
+
+  
+  <!-- https://giscus.app/ -->
+<script type="text/javascript">
+  (function () {
+    const origin = 'https://giscus.app';
+    const iframe = 'iframe.giscus-frame';
+    const lightTheme = 'light';
+    const darkTheme = 'dark_dimmed';
+
+    let initTheme = lightTheme;
+    const html = document.documentElement;
+
+    if (
+      (html.hasAttribute('data-mode') &&
+        html.getAttribute('data-mode') === 'dark') ||
+      (!html.hasAttribute('data-mode') &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      initTheme = darkTheme;
+    }
+
+    let giscusAttributes = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'soupk/lemon.giscus',
+      'data-repo-id': 'R_kgDOOiNkUA',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOOiNkUM4CpoLA',
+      'data-mapping': 'pathname',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-theme': initTheme,
+      'data-input-position': 'bottom',
+      'data-lang': 'en',
+      crossorigin: 'anonymous',
+      async: ''
+    };
+
+    let giscusScript = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusScript.setAttribute(key, value)
+    );
+    document.getElementById('tail-wrapper').appendChild(giscusScript);
+
+    addEventListener('message', (event) => {
+      if (
+        event.source === window &&
+        event.data &&
+        event.data.direction === ModeToggle.ID
+      ) {
+        /* global theme mode changed */
+        const mode = event.data.message;
+        const theme = mode === ModeToggle.DARK_MODE ? darkTheme : lightTheme;
+
+        const message = {
+          setConfig: {
+            theme: theme
+          }
+        };
+
+        const giscus = document.querySelector(iframe).contentWindow;
+        giscus.postMessage({ giscus: message }, origin);
+      }
+    });
+  })();
+</script>
+
 
 
       
