@@ -586,6 +586,148 @@
 
 <div id="post-list">
   
+    <a href="/posts/java-ruhe-panduan-bigdecimal-shifou-wei0/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            如何判断Bigdecimal类型变量是否等于0
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              使用以下方法比较存在问题：
+b.equals(BigDecimal.ZERO);
+
+查看源代码发现Bigdecimal的equals方法不仅仅比较值的大小是否相等，首先比较的是scale（scale是bigdecimal的保留小数点位数，比如new Bigdecimal(&quot;1.001&quot;)scale为3），也就是说，不但值的大小要相等，保留位数也要相等，equals才能返回true。Bigde...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1611294420"
+  data-df="ll"
+  
+>
+  Jan 22, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Java
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/oracle-baoliu-sanwei-xiaoshu-buzu-bu0/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 保留三位小数，不足补0
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              格式化为小数
+select 
+  to_char(round(0.2, 3),&#39;fm99999999990.000&#39;)
+from 
+  dual;
+
+
+格式化为百分比
+select
+  to_char(round(0.2*100,2),&#39;fm99999999990.00&#39;)||&#39;%&#39;
+from 
+  dual;
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1611208020"
+  data-df="ll"
+  
+>
+  Jan 21, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/mysql-shiyong-sql-yuju-daoru-waibu-shuju/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1097,143 +1239,6 @@ jdbc:mysq...
 在64位系统上安装64位的Oracle数据库，但是没有对应的64位PLSQL Developer，此时就不能使用PLSQL Developer来进行直接连接的，所以要想实现连接还得需要安装轻客户端：instantclient_11_2。instantclient_11_2的安装其实就是从官网下载一个压缩文件，解压到任意目录下然后配置即可。
 
 配置inst...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610862420"
-  data-df="ll"
-  
->
-  Jan 17, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    PLSQL
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/plsql-peizhi-lianjie/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            PLSQL通过修改配置文件实现数据库连接
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              在Oracle的安装目录下查找tnsnames.ora文件，一般路径为：%ORACLE_HOME%\network\admin。打开tnsnames.ora，可以看到所有的数据库连接配置，介绍下配置格式：
-  
-只需要根据上一步介绍的格式修改IP或者端口号或者SID即可，总体不变，例如：
-test_database =
-  (DESCRIPTION =
-    (ADDRESS = (PRO...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610862420"
-  data-df="ll"
-  
->
-  Jan 17, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    PLSQL
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/ora-12560/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            PLSQL连接数据库时报ORA-12560:TNS:协议适配器错误
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              造成ORA-12560:TNS:协议适配器错误的问题的原因有三个：
-
-
-  监听服务没有启起来。
-Windows平台可以如下操作：开始—程序—管理工具—服务，打开服务面板，启动OracleOraDb11g_home1TNSlistener服务。
-  database instance没有起起来。
-Windows平台如下操作：开始—程序—管理工具—服务，打开服务面板，启动OracleServi...
             </p>
           </div>
 
@@ -1963,12 +1968,25 @@ Windows平台如下操作：开始—程序—管理工具—服务，打开服�
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page49"
-        >49</a>
+          href="/page50"
+        >50</a>
       </li>
     
   
@@ -1976,7 +1994,7 @@ Windows平台如下操作：开始—程序—管理工具—服务，打开服�
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>27</span>
-    <span class="text-muted">/ 49</span>
+    <span class="text-muted">/ 50</span>
   </li>
 
   <!-- right arrow -->

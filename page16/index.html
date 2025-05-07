@@ -586,6 +586,144 @@
 
 <div id="post-list">
   
+    <a href="/posts/shanchu-xiazai-weiwanzheng-de-yilai/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            删除下载未完整的依赖文件
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              set REPOSITORY_PATH=E:\repository
+rem 正在搜索...
+for /f &quot;delims=&quot; %%i in (&#39;dir /b /s &quot;%REPOSITORY_PATH%\*lastUpdated*&quot;&#39;) do (
+ del /s /q %%i
+)
+rem 搜索完毕
+pause
+
+记得路径修改为你自己所在依赖包的位置，然后把.txt文件后缀改为.bat ，双击运...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1626205620"
+  data-df="ll"
+  
+>
+  Jul 14, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Maven
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/maven-candan-mokuai-wei-huise/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            IntelliJ IDEA Maven菜单模块为灰色
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              Idea用maven搭建聚合项目时，出现了如下的问题：即Maven工具栏中的某一个模块是灰色的，同时导致了新的问题：在pom文件中引入jar包，但是在Java代码里，找不到这个类。然后我看了一下Dependencies目录，jar是下载好的。
+
+
+
+jar包是下载好的，但是引用类文件的地方还是有红色报错：提示要Add library to classpath。解决办法：Preferences...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1626204180"
+  data-df="ll"
+  
+>
+  Jul 14, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    IntelliJ IDEA
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/lixian-shiyong-maven-cangku-de-fangfa/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1114,147 +1252,6 @@ getAttribute(String name, int scope); // 取得指定范围内的nam...
                   
                     Knowledge,
                     Servlet
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/servlet-ruhe-shihyong-cookie/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Servlet如何使用Cookie
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              /** 创建Cookie */
-// 键值形式创建Cookie
-Cookie cookie = new Cookie(&quot;temp&quot;, tempData);
-// 设置Cookie的存活时间为秒
-cookie.setMaxAge(60 * 60 * 24);
-// 写入客户端硬盘
-response.addCookie(cookie);
-
-/** 调用Cookie */
-// 将目录下所有Coo...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1626155220"
-  data-df="ll"
-  
->
-  Jul 13, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Servlet
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/spring-de-hexin-zujian/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Spring核心组件
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              
-
-核心容器（Spring Core）
-核心容器提供Spring框架的基本功能。Spring以bean的方式组织和管理Java应用中的各个组件及其关系。Spring使用BeanFactory来产生和管理Bean，它是工厂模式的实现。BeanFactory使用控制反转(IoC)模式将应用的配置和依赖性规范与实际的应用程序代码分开。
-
-应用上下文（Spring Context）
-Spring上下...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1626068820"
-  data-df="ll"
-  
->
-  Jul 12, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Spring
                 </span>
               
             </div>
@@ -1951,12 +1948,25 @@ Spring上下...
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page49"
-        >49</a>
+          href="/page50"
+        >50</a>
       </li>
     
   
@@ -1964,7 +1974,7 @@ Spring上下...
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>16</span>
-    <span class="text-muted">/ 49</span>
+    <span class="text-muted">/ 50</span>
   </li>
 
   <!-- right arrow -->

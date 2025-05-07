@@ -1,6 +1,40 @@
 [
   
   {
+    "title": "北京密云 - 古北水镇",
+    "url": "/posts/gubeishuizhen/",
+    "categories": "Collection, Travel",
+    "tags": "Travel",
+    "date": "2025-05-07 10:47:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "GitHub开源软件",
+    "url": "/posts/kaiyuan-ruanjian/",
+    "categories": "Lab",
+    "tags": "🧪Lab",
+    "date": "2025-05-07 01:47:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "    \t                        AsrTools            智能语音转文本工具，高效的批处理，用户友好的界面，无需GPU，支持SRT/TXT输出。                            访问                    \t\t            VideoCaptioner            一款基于大语言模型(LLM)的...",
+    "content": "    \t                        AsrTools            智能语音转文本工具，高效的批处理，用户友好的界面，无需GPU，支持SRT/TXT输出。                            访问                    \t\t            VideoCaptioner            一款基于大语言模型(LLM)的视频字幕处理助手，支持语音识别、字幕断句、优化、翻译全流程处理。                            访问                    \t\t            Python3-Introduction-Notebook            以jupyter notebook的形式，提供交互式的python3入门学习笔记，含练习题若干。                            访问                            "
+  },
+  
+  {
     "title": "GaussDB的窗口函数",
     "url": "/posts/chuangkou-hanshu/",
     "categories": "Knowledge, GaussDB",
@@ -6779,8 +6813,8 @@
 
 
     
-    "snippet": "\t        \t\t\t    \t\t            #3366FF        \t\t            #33CC99        \t\t            #FF6699        \t\t            #FF6600                            #EF4444                            #F59E0B   ...",
-    "content": "\t        \t\t\t    \t\t            #3366FF        \t\t            #33CC99        \t\t            #FF6699        \t\t            #FF6600                            #EF4444                            #F59E0B                            #22C55E                            #3B82F6                            #8B5CF6                            #EC4899            "
+    "snippet": "\t        \t\t\t    \t\t            #F05050        \t\t            #23B7E5        \t\t            #3A3F51        \t\t            #27C24C        \t\t            #FAD733        \t\t\t\t            #3366FF        \t\t   ...",
+    "content": "\t        \t\t\t    \t\t            #F05050        \t\t            #23B7E5        \t\t            #3A3F51        \t\t            #27C24C        \t\t            #FAD733        \t\t\t\t            #3366FF        \t\t            #33CC99        \t\t            #FF6699        \t\t            #FF6600                            #EF4444                            #F59E0B                            #22C55E                            #3B82F6                            #8B5CF6                            #EC4899            "
   },
   
   {

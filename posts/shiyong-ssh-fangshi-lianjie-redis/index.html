@@ -3746,6 +3746,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9224,7 +9248,7 @@ redis-cli -h 10.12.168.68 -p 639...
         
         
         <div class="col">
-          <a href="/posts/redishuancun-xuebeng/" class="card post-preview h-100">
+          <a href="/posts/redis-lianjie-baocuo/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9237,14 +9261,14 @@ redis-cli -h 10.12.168.68 -p 639...
 
 <em
   class="small"
-  data-ts="1726120020"
+  data-ts="1684907220"
   data-df="ll"
   
 >
-  Sep 12, 2024
+  May 24, 2023
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Redis缓存的雪崩、击穿、穿透</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Redis使用redis-cli连接报错：WRONGPASS invalid username-password pair or user is disabled.</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9253,13 +9277,11 @@ redis-cli -h 10.12.168.68 -p 639...
 
 
 
-                  缓存雪崩
+                  报错信息
+使用redis-cli连接Redis时报错，具体为认证失败问题WRONGPASS invalid username-password pair or user is disabled.。之前输入auth pass即可，但此次在终端窗口有提示需要username。
 
-缓存雪崩是指在某个时间点，大量的缓存数据同时失效或过期，导致大量的请求直接打到数据库或后端系统，从而造成数据库负载激增，甚至导致数据库宕机或系统崩溃的现象。
-
-
-  合理设置缓存的过期时间：将缓存的过期时间分散设置，避免大量缓存在同一时间过期。可以使用随机时间，或者将过期时间分布在一个时间段内。
-  实现缓存数据的自动刷新：确保热点数据在即将过期时能够自动刷新，避免数据大规模失效...
+报错原因
+本机Redis为7.0版本。Redis6.0起，支持ACL权限控制，Redis6.0之前的版本只支持验证密码...
                 </p>
               </div>
             </div>

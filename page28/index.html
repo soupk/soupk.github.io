@@ -586,6 +586,143 @@
 
 <div id="post-list">
   
+    <a href="/posts/plsql-peizhi-lianjie/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            PLSQL通过修改配置文件实现数据库连接
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              在Oracle的安装目录下查找tnsnames.ora文件，一般路径为：%ORACLE_HOME%\network\admin。打开tnsnames.ora，可以看到所有的数据库连接配置，介绍下配置格式：
+  
+只需要根据上一步介绍的格式修改IP或者端口号或者SID即可，总体不变，例如：
+test_database =
+  (DESCRIPTION =
+    (ADDRESS = (PRO...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1610862420"
+  data-df="ll"
+  
+>
+  Jan 17, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    PLSQL
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/ora-12560/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            PLSQL连接数据库时报ORA-12560:TNS:协议适配器错误
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              造成ORA-12560:TNS:协议适配器错误的问题的原因有三个：
+
+
+  监听服务没有启起来。
+Windows平台可以如下操作：开始—程序—管理工具—服务，打开服务面板，启动OracleOraDb11g_home1TNSlistener服务。
+  database instance没有起起来。
+Windows平台如下操作：开始—程序—管理工具—服务，打开服务面板，启动OracleServi...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1610862420"
+  data-df="ll"
+  
+>
+  Jan 17, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    PLSQL
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/mybatis-chaxun-jieguo-weinull-shi-baoyichang/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1174,144 +1311,6 @@ import o...
                   
                     Knowledge,
                     Spring Boot
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/jstl-biaoqian-de-yongfa/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JSTL标签的用法
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              JSP标准标记库（Standard Tag Library，JSTL）是一组以标准化格式实现许多通用的Web站点功能的定制标记。除了核心JSP标记，如jsp:include之外，定制标记库工具使您能够创建唯一的标记来描述以站点或应用程序为导向的操作。一旦您创建了定制标记库（简称taglib），当您扩展项目或转向另一个项目时您可以重复使用这些标记。您还可以将 taglib传递给其它开发人员，从...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610344020"
-  data-df="ll"
-  
->
-  Jan 11, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JSTL
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/gei-github-zhuye-tianjia-tongjimianban/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            给GitHub主页添加统计图
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              本文添加的统计图来源于这个仓库https://github.com/anuraghazra/github-readme-stats
-
-创建仓库
-登录你的Github帐号，然后创建一个与你的用户名同名的仓库。注意事项：
-
-  仓库名与用户名必须一样；
-  仓库必须公开；
-  仓库里需要有一个README文件；
-
-
-修改README的内容
-以下是我的配置：
-&amp;lt;img align=&quot;righ...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1610344020"
-  data-df="ll"
-  
->
-  Jan 11, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    GitHub
                 </span>
               
             </div>
@@ -2008,12 +2007,25 @@ import o...
     
 
     
+      <!-- hide number -->
+      
+    
+  
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
         <a
           class="page-link btn-box-shadow"
-          href="/page49"
-        >49</a>
+          href="/page50"
+        >50</a>
       </li>
     
   
@@ -2021,7 +2033,7 @@ import o...
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>28</span>
-    <span class="text-muted">/ 49</span>
+    <span class="text-muted">/ 50</span>
   </li>
 
   <!-- right arrow -->

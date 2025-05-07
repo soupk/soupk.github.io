@@ -3214,6 +3214,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9143,7 +9167,7 @@ SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;,
         
         
         <div class="col">
-          <a href="/posts/gaussdb-quchong/" class="card post-preview h-100">
+          <a href="/posts/chaxun-json-ziduan/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9156,14 +9180,14 @@ SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;,
 
 <em
   class="small"
-  data-ts="1698126420"
+  data-ts="1743400020"
   data-df="ll"
   
 >
-  Oct 24, 2023
+  Mar 31, 2025
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>GaussDB去重</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>GaussDB将JSON字符串转为对象并取某个字段的值</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9172,16 +9196,9 @@ SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;,
 
 
 
-                  1、示例场景描述
-以保险行业的客户信息去重为例，为防止坐席重复联系客户，需要将客户进行唯一身份识别。存在以下两种情况，需要将其识别成一个人，这时候就需要进行数据去重的动作。
+                  select jsonb_extract_path_text(json_param::jsonb, &#39;param_a&#39;) as param_a from json_test_table;
 
 
-  情况一：同一个客户有不同的来源渠道：客户即购买了寿险、又购买了产险（两个不同的来源系统）；
-  情况二：同一个客户多次回流：客户在同一个渠道多次购买（续保或者购买同一险种的不同产品）。
-
-
-2、定义重复数据
-通过...
                 </p>
               </div>
             </div>
@@ -9191,7 +9208,7 @@ SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;,
         
         
         <div class="col">
-          <a href="/posts/gaussdb-zhengze-chaxun/" class="card post-preview h-100">
+          <a href="/posts/cte/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9204,14 +9221,14 @@ SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;,
 
 <em
   class="small"
-  data-ts="1706334420"
+  data-ts="1744681620"
   data-df="ll"
   
 >
-  Jan 27, 2024
+  Apr 15, 2025
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>GaussDB正则查询</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>GaussDB的with子句</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9220,11 +9237,12 @@ SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;,
 
 
 
-                  GaussDB使用正则表达式查询示例：
--- 查询所有以abc开头的字符串
-select * from table where cloum ~ &#39;^abc&#39;
+                  with子句在GaussDB（基于PostgreSQL内核）里也被称作公共表表达式（CTE），它能定义临时的命名结果集，在查询里可以多次引用这些结果集。CTE 能够让复杂的查询更易读、易维护，并且在某些情况下还能提升查询性能。
 
-
+-- 定义一个名为dept_employee_count的CTE
+WITH dept_employee_count AS (
+    SELECT 
+       ...
                 </p>
               </div>
             </div>
@@ -9253,12 +9271,13 @@ select * from table where cloum ~ &#39;^abc&#39;
   
 
   
-    <div
-      class="btn btn-outline-primary disabled"
+    <a
+      href="/posts/kaiyuan-ruanjian/"
+      class="btn btn-outline-primary"
       prompt="Newer"
     >
-      <p>-</p>
-    </div>
+      <p>GitHub开源软件</p>
+    </a>
   
 </div>
 

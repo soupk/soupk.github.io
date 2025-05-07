@@ -3063,6 +3063,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8968,6 +8992,66 @@ SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;,
         
         
         <div class="col">
+          <a href="/posts/cte/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1744681620"
+  data-df="ll"
+  
+>
+  Apr 15, 2025
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>GaussDB的with子句</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  with子句在GaussDB（基于PostgreSQL内核）里也被称作公共表表达式（CTE），它能定义临时的命名结果集，在查询里可以多次引用这些结果集。CTE 能够让复杂的查询更易读、易维护，并且在某些情况下还能提升查询性能。
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+-- 定义一个名为dept_employee_count的CTE
+WITH...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
           <a href="/posts/gaussdb-quchong/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9007,49 +9091,6 @@ SELECT REPLACE(EXTRACT(EPOCH FROM create_time::TIMESTAMP)::VARCHAR, &#39;.&#39;,
 
 2、定义重复数据
 通过...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
-          <a href="/posts/gaussdb-zhengze-chaxun/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1706334420"
-  data-df="ll"
-  
->
-  Jan 27, 2024
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>GaussDB正则查询</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  GaussDB使用正则表达式查询示例：
--- 查询所有以abc开头的字符串
-select * from table where cloum ~ &#39;^abc&#39;
-
-
                 </p>
               </div>
             </div>

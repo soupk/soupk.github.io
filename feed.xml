@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-04-30T17:19:28+08:00</updated>
+  <updated>2025-05-07T19:05:11+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,104 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>北京密云 - 古北水镇</title>
+    <link href="http://localhost:4000/posts/gubeishuizhen/" rel="alternate" type="text/html" title="北京密云 - 古北水镇" />
+    <published>2025-05-07T10:47:00+08:00</published>
+  
+    <updated>2025-05-07T10:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/gubeishuizhen/</id>
+    <content src="http://localhost:4000/posts/gubeishuizhen/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Collection" />
+    
+    <category term="Travel" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+
+
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>GitHub开源软件</title>
+    <link href="http://localhost:4000/posts/kaiyuan-ruanjian/" rel="alternate" type="text/html" title="GitHub开源软件" />
+    <published>2025-05-07T01:47:00+08:00</published>
+  
+    <updated>2025-05-07T01:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/kaiyuan-ruanjian/</id>
+    <content src="http://localhost:4000/posts/kaiyuan-ruanjian/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Lab" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+    
+	
+
+
+
+    
+        
+            AsrTools
+            智能语音转文本工具，高效的批处理，用户友好的界面，无需GPU，支持SRT/TXT输出。
+            
+                访问
+            
+        
+		
+            VideoCaptioner
+            一款基于大语言模型(LLM)的视频字幕处理助手，支持语音识别、字幕断句、优化、翻译全流程处理。
+            
+                访问
+            
+        
+		
+            Python3-Introduction-Notebook
+            以jupyter notebook的形式，提供交互式的python3入门学习笔记...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -152,95 +250,6 @@ SELECT
       select jsonb_extract_path_text(json_param::jsonb, 'param_a') as param_a from json_test_table;
 
 
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>给路由器刷第三方固件</title>
-    <link href="http://localhost:4000/posts/luyouqi-shua-xitong/" rel="alternate" type="text/html" title="给路由器刷第三方固件" />
-    <published>2025-03-31T13:47:00+08:00</published>
-  
-    <updated>2025-03-31T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/luyouqi-shua-xitong/</id>
-    <content src="http://localhost:4000/posts/luyouqi-shua-xitong/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Collection" />
-    
-    <category term="Technical" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      固件下载地址
-
-Bread下载：https://breed.hackpascal.net/
-潘多拉固件下载：http://downloads.pangubox.com:6380/pandorabox/18.10/targets/ralink/mt7620/
-OpenWrt下载：https://downloads.openwrt.org/
-小米路由器固件下载：https://www.miwifi.com/miwifi_download.html
-
-教程
-
-网件路由器R6220刷不死breed的教程：https://jingyan.baidu.com/article/09ea3eded82eb581afde390b.html
-网件r6220如何刷潘多拉固件：https://jingyan.baidu.com/article/09ea3eded813b581afde3936.html
-小米...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Java实体类模型</title>
-    <link href="http://localhost:4000/posts/java-shitilei-moxing/" rel="alternate" type="text/html" title="Java实体类模型" />
-    <published>2025-02-27T13:47:00+08:00</published>
-  
-    <updated>2025-02-27T13:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/java-shitilei-moxing/</id>
-    <content src="http://localhost:4000/posts/java-shitilei-moxing/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="Java" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      一、核心概念解析
-
-  POJO：即普通Java对象，没有业务逻辑，包含DO、DTO、BO、VO和PO等，遵守简单对象概念，比JavaBean更纯净。有private参数及对应的get和set方法，不继承、不实现接口且未被框架侵入。
-  VO：视图模型，用于展示层，将指定页面或组件的数据封装起来，实现后台向前端传输数据，在业务不复杂系统中可直接用DTO替代。
-  DTO：数据传输对象，在后端是Java对象，前端是js对象（类似json）。用于前端向后端传输数据，在满足能完整表达业务模块输出的情况下，也可用于服务间调用，它没有行为，仅存储和提供数据查询。
-  Entity/PO：持久化对象，等同于Entity，对应数据库表中的记录，属性与表字段一一对应，数量与数据库表数量相关，除get、set方法外一般无其他方法。
-  DO：领域对象，从现实世界抽象出的业务实体，用于业务逻辑层接收数据...
     </summary>
   
 
