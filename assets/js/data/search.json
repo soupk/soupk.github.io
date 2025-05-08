@@ -6835,6 +6835,23 @@
   },
   
   {
+    "title": "JSON转Java实体类",
+    "url": "/posts/java-shitilei-shengcheng-gongju/",
+    "categories": "Index, Tools",
+    "tags": "🤖Tools",
+    "date": "2020-11-26 13:47:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "            \t                    \t\t\t                生成                ",
+    "content": "            \t                    \t\t\t                生成                "
+  },
+  
+  {
     "title": "UUID生成器",
     "url": "/posts/uuid-shengchengqi/",
     "categories": "Index, Tools",
@@ -6881,8 +6898,8 @@
 
 
     
-    "snippet": "    \t\t\t\t\t\t&nbsp;&nbsp;\t\t\tAES加密和解密\t\t\t进行AES加密和解密。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\t随机信息生成器\t\t\t生成随机信息以供测试。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\tUUID生成器\t\t\t生成多种格式UUID。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\tSQL格式化\t\t\t格式化SQL语句。\t\t\t...",
-    "content": "    \t\t\t\t\t\t&nbsp;&nbsp;\t\t\tAES加密和解密\t\t\t进行AES加密和解密。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\t随机信息生成器\t\t\t生成随机信息以供测试。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\tUUID生成器\t\t\t生成多种格式UUID。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\tSQL格式化\t\t\t格式化SQL语句。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\t颜色卡片收藏\t\t\t颜色卡片收藏。\t\t\t使用工具\t\t\t"
+    "snippet": "    \t\t\t\t\t\t&nbsp;&nbsp;\t\t\tAES加密和解密\t\t\t进行AES加密和解密。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\t随机信息生成器\t\t\t生成随机信息以供测试。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\tUUID生成器\t\t\t生成多种格式UUID。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\tJSON转Java实体类\t\t\t根据JSON...",
+    "content": "    \t\t\t\t\t\t&nbsp;&nbsp;\t\t\tAES加密和解密\t\t\t进行AES加密和解密。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\t随机信息生成器\t\t\t生成随机信息以供测试。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\tUUID生成器\t\t\t生成多种格式UUID。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\tJSON转Java实体类\t\t\t根据JSON生成Java实体类。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\tSQL格式化\t\t\t格式化SQL语句。\t\t\t使用工具\t\t\t\t\t\t\t&nbsp;&nbsp;\t\t\t颜色卡片收藏\t\t\t颜色卡片收藏。\t\t\t使用工具\t\t\t"
   },
   
   {
