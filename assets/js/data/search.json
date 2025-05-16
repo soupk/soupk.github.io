@@ -4814,7 +4814,7 @@
   {
     "title": "一些好看的头像",
     "url": "/posts/yixie-haokan-de-touxiang/",
-    "categories": "Design, Picture",
+    "categories": "Collection, Picture",
     "tags": "Picture",
     "date": "2021-01-06 13:47:00 +0800",
     
@@ -4824,8 +4824,8 @@
 
 
     
-    "snippet": "这些好看的头像是我在这个网址发现的：https://mobile.zcool.com.cn/work/ZMTQwNzQ4MjQ=.html，是叫土星浮游的一位插画师的作品，收藏了   ",
-    "content": "这些好看的头像是我在这个网址发现的：https://mobile.zcool.com.cn/work/ZMTQwNzQ4MjQ=.html，是叫土星浮游的一位插画师的作品，收藏了   "
+    "snippet": "来源：https://mobile.zcool.com.cn/work/ZMTQwNzQ4MjQ=.html   ",
+    "content": "来源：https://mobile.zcool.com.cn/work/ZMTQwNzQ4MjQ=.html   "
   },
   
   {
@@ -6830,8 +6830,8 @@
 
 
     
-    "snippet": "            \t    ",
-    "content": "            \t    "
+    "snippet": "    \t            \t        \t\t         ",
+    "content": "    \t            \t        \t\t         "
   },
   
   {
@@ -7087,40 +7087,6 @@
     
     "snippet": "calc -----------启动计算器  control --------打开控制面板 cleanmgr -------磁盘清理eventvwr -------事件查看器mplayer2 -------简易widnowsmediaplayer  Sndvol32 -------音量控制程序 mmc ------------打开控制台write ----------写字板dfrg.msc ...",
     "content": "calc -----------启动计算器  control --------打开控制面板 cleanmgr -------磁盘清理eventvwr -------事件查看器mplayer2 -------简易widnowsmediaplayer  Sndvol32 -------音量控制程序 mmc ------------打开控制台write ----------写字板dfrg.msc -------磁盘碎片整理程序compmgmt.msc ---计算机管理 diskmgmt.msc ---磁盘管理实用程序gpedit.msc -----组策略  lusrmgr.msc ----本机用户和组certmgr.msc ----证书管理实用程序 fsmgmt.msc -----共享文件夹管理器 devmgmt.msc --- 设备管理器 secpol.msc -----本地安全策略 desk.cpl -------显示属性 firewall.cpl ---WINDOWS防火墙 ncpa.cpl -------网络连接 sysdm.cpl ------系统 wscui.cpl ------安全中心sfc.exe --------系统文件检查器chkdsk.exe -----Chkdsk磁盘检查 shutdown -------关机，详细请在cmd中输入shutdown /?logoff ---------注销wmic bios ------查看BIOS信息dxdiag ---------查看系统信息方式1start msinfo32 -查看系统信息方式2winmsd ---------查看系统信息方式3ipconfig/all ---查询IP地址getmac ---------查询MAC地址winver ---------检测windows版本netstat -na ----查看电脑端口号"
-  },
-  
-  {
-    "title": "颜色搭配",
-    "url": "/posts/yanse-dapei/",
-    "categories": "Design, Mutual",
-    "tags": "Mutual",
-    "date": "2020-11-24 13:47:00 +0800",
-    
-
-
-
-
-
-    
-    "snippet": "",
-    "content": ""
-  },
-  
-  {
-    "title": "交互按钮设计",
-    "url": "/posts/jiaohu-anniu-sheji/",
-    "categories": "Design, Mutual",
-    "tags": "Mutual",
-    "date": "2020-11-24 13:47:00 +0800",
-    
-
-
-
-
-
-    
-    "snippet": "",
-    "content": ""
   },
   
   {
@@ -7682,57 +7648,6 @@
     
     "snippet": "1.搭建Nodejs环境前往Node.js官网下载最新版Nodejs windows系统安装包安装成功后再cmd窗体中输入node -v查看是否安装成功2.安装GitBook可视化编写工具  GitBook Editor Windows版  Visual Studio Code下载Markdown All in One插件  Typora3.安装GitBook在任意目录下运行cmd控制台 输...",
     "content": "1.搭建Nodejs环境前往Node.js官网下载最新版Nodejs windows系统安装包安装成功后再cmd窗体中输入node -v查看是否安装成功2.安装GitBook可视化编写工具  GitBook Editor Windows版  Visual Studio Code下载Markdown All in One插件  Typora3.安装GitBook在任意目录下运行cmd控制台 输入:npm install gitbook-cli -g进行安装4.开始使用GitBookrem 初始化gitBookgitbook initrem 下载gitBook插件 gitbook installrem 发布gitBookgitbook serverem 编译gitBookgitbook build"
-  },
-  
-  {
-    "title": "界面动效设计",
-    "url": "/posts/jiemian_dongxiao_sheji/",
-    "categories": "Design, Mutual",
-    "tags": "Mutual",
-    "date": "2020-10-27 13:47:00 +0800",
-    
-
-
-
-
-
-    
-    "snippet": "趣味交互动效趣味音量调节动效  by.ALEX BENDER点赞按钮动效  by.Aaron Iker趣味捐赠按钮动画  by.Aaron IkerBUTTON V2  by.Aaron Iker项目管理APP完成动效  by.Leonid Arestov一组可爱的标签栏交互动效  by.Dimest压缩文件动画  by.Aaron IkerAR拍照应用标签栏交互设计  by.Oleg Fr...",
-    "content": "趣味交互动效趣味音量调节动效  by.ALEX BENDER点赞按钮动效  by.Aaron Iker趣味捐赠按钮动画  by.Aaron IkerBUTTON V2  by.Aaron Iker项目管理APP完成动效  by.Leonid Arestov一组可爱的标签栏交互动效  by.Dimest压缩文件动画  by.Aaron IkerAR拍照应用标签栏交互设计  by.Oleg Frolov创意举重提交按钮  by.Aaron IkerFILTER UX  by.Yurii家居装修应用动效设计  by.YanBin Tan引导页3D动画  by Minh Pham ✪响应式HTML设计  by.Anton Tkachevwelovedail网站的趣味交互动画  by Dennis Snellenberg智能银行app动效设计  by.Jakub Kośla3D风格引导页设计  by.Ramotion交付执行小动效  by.Saptarshi Prakash3D网页动画设计  by.Barthelemy Chalvet"
-  },
-  
-  {
-    "title": "App界面设计欣赏",
-    "url": "/posts/app-sheji-xinshang/",
-    "categories": "Design, Mutual",
-    "tags": "Mutual",
-    "date": "2020-10-27 13:47:00 +0800",
-    
-
-
-
-
-
-    
-    "snippet": "",
-    "content": ""
-  },
-  
-  {
-    "title": "布里萨戈群岛旅游LOGO",
-    "url": "/posts/bu-li-sa-ge-qun-dao/",
-    "categories": "Design, Logo",
-    "tags": "Logo",
-    "date": "2020-10-27 13:47:00 +0800",
-    
-
-
-
-
-
-    
-    "snippet": "布里萨戈群岛（Isole di Brissago）位于瑞士南部的马焦雷湖，靠近瑞士城镇布里萨戈，是一组由两个岛屿组成的小岛，较大的岛屿（圣潘克拉齐奥）占地25568平方米，较小的岛屿（圣阿波利奈尔）占地8186平方米。其中大岛上有著名的植物园，它由安托瓦内特·圣莱热男爵夫人于1885年创建，园内拥有超过2000多种亚热带植物，具有重要的科学研究价值，吸引了大批专家和植物爱好者前往参观。今年3...",
-    "content": "布里萨戈群岛（Isole di Brissago）位于瑞士南部的马焦雷湖，靠近瑞士城镇布里萨戈，是一组由两个岛屿组成的小岛，较大的岛屿（圣潘克拉齐奥）占地25568平方米，较小的岛屿（圣阿波利奈尔）占地8186平方米。其中大岛上有著名的植物园，它由安托瓦内特·圣莱热男爵夫人于1885年创建，园内拥有超过2000多种亚热带植物，具有重要的科学研究价值，吸引了大批专家和植物爱好者前往参观。今年3月份，受到疫情的影响，布里萨戈群岛临时关闭了旅游入口。上周，该岛屿宣布将重新向公众开放。与此同时，布里萨戈群岛还重新设计了旅游LOGO来宣传群岛的旅游文化。由于群岛最显著的特点是由两个小岛组成，所以在LOGO的设计上将两个岛屿抽象化，变为一大一小两个圆点。大的绿色圆点●为圣潘克拉齐奥岛，右下角的小圆点•则代表了圣阿波利奈尔岛。重新开放后，新LOGO也将正式和旅客见面。据悉，在关闭岛屿期间，岛屿的管理机构与设计公司合作完成了新形象的设计，包括员工制服，旅游指导手册，纪念品等周边产品的开发和设计。"
   },
   
   {
