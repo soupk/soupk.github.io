@@ -2428,6 +2428,8 @@
     
     
     
+      
+    
   
     
     
@@ -8961,6 +8963,18 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -9071,7 +9085,7 @@ for(S...
         
         
         <div class="col">
-          <a href="/posts/json-zhuan-xml-gongjulei/" class="card post-preview h-100">
+          <a href="/posts/jisuan-xiangcha-de-yueshu/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9084,14 +9098,14 @@ for(S...
 
 <em
   class="small"
-  data-ts="1683654420"
+  data-ts="1603775580"
   data-df="ll"
   
 >
-  May 10, 2023
+  Oct 27, 2020
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>JSON转XML工具类</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>计算相差的月数</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9100,15 +9114,12 @@ for(S...
 
 
 
-                  import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-
-public clas...
+                  public static int getMonthDiff(Date d1, Date d2) {
+	Calendar c1 = Calendar.getInstance();
+	Calendar c2 = Calendar.getInstance();
+	c1.setTime(d1);
+	c2.setTime(d2);
+	int year1 = c1.get(Calendar.YEAR)...
                 </p>
               </div>
             </div>
@@ -10739,6 +10750,8 @@ public clas...
     
     
     
+    
+      
     
   
     
