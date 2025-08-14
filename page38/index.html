@@ -586,6 +586,73 @@
 
 <div id="post-list">
   
+    <a href="/posts/jquery-fasong-post-qingqiu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            JQuery发送POST请求
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              $.post(&quot;/test/test/deleteAction.do&quot;, function(data) {
+    alert(data);
+});
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607320020"
+  data-df="ll"
+  
+>
+  Dec  7, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JQuery
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/huoqu-dianji-duixiang-de-shuxing/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1155,77 +1222,6 @@ url：jdbc:oracle:thin:@localhost:1521:dbname
 MySQL
 driverClass：com.mysql.jdbc.Driver
 url：jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;amp;use...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1606888020"
-  data-df="ll"
-  
->
-  Dec  2, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JDBC
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/caozuo-shujuku-chuxian-luanma/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JDBC操作数据库出现中文乱码
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              通过JDBC操作数据库表时，如果记录中有中文，可能会碰到乱码的问题。主要原因是字符编码（characterEncoding）不正确，包括以下几个方面：
-
-  在数据库服务器上创建表格时没有选择支持中文的编码方式；
-  建立JDBC连接时没有指明支持中文的编码方式；
-
-
-建议在创建表格和建立JDBC连接时都采用utf-8编码。具体方法如下：
-
-  创建数据库表时，选择character与col...
             </p>
           </div>
 
