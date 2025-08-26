@@ -586,6 +586,154 @@
 
 <div id="post-list">
   
+    <a href="/posts/gitbook-qidong-jiaoben/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            GitBook启动脚本
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              @echo off 
+cls
+TITLE GitBook 管理菜单
+color 1f
+
+goto menu
+:menu
+echo.
+echo                        ╭──────────────╮
+echo    ╭─────────┤       GitBook 管理菜单      ├╮
+echo    │ 主菜单           │              ...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1608702420"
+  data-df="ll"
+  
+>
+  Dec 23, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    GitBook
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/gitbook-daochu-de-html-buzhichi-tiaozhuan/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            使用gitbook build命令导出的HTML不能跳转
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              原因
+GitBook新版本不支持HTML跳转功能，所以要降版本至2.6.7。
+
+解决办法如下
+
+第一步
+生成时指定GitBook的版本, 本地没有会先下载。
+gitbook build --gitbook=2.6.7 
+
+可能会报错，如下操作，列出本地所有的GitBook版本。
+gitbook ls 
+
+卸载对应的GitBook版本（新版本需要先卸载，也可以先下载2.6.7版本，这样两个版本...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1608702420"
+  data-df="ll"
+  
+>
+  Dec 23, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    GitBook
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/gitbook-changyong-chajian/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1142,142 +1290,6 @@ for (var i = 0; i &amp;lt; 12; i++) {
                   
                     Knowledge,
                     JavaScript
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/git-shangchuan-buqufen-daxiaoxie/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Git上传文件不区分大小写的问题
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              问题
-文件名称最初新建的时候是大写，但是后面想要改成小写的，修改完提交的时候使用git status命令发现并没有修改的记录，提交之后在Git上也没有修改。
-
-解决办法
-因为Git默认是不区分大小写的，所以git status是不会提示你有修改的。
-
-  通过git config --get core.ignorecase查看默认配置
-  通过git config core.ignoreca...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1608184020"
-  data-df="ll"
-  
->
-  Dec 17, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Git
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/json-fanxuliehua-cuowu/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Jackson反序列化错误的解决方法
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              错误信息com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException：Unrecognized field，出现这种问题的情况是由于JSON里面包含了实体没有的字段导致反序列化失败。
-第一种解决方案
-// ObjectMapper对象添加
-String s = &quot;{\&quot;id\&quot;:1,\&quot;name\&quot;:\&quot;test\&quot;,\&quot;a...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1608176820"
-  data-df="ll"
-  
->
-  Dec 17, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Java
                 </span>
               
             </div>

@@ -586,6 +586,187 @@
 
 <div id="post-list">
   
+    <a href="/posts/log4j-loudong-xiufu/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Log4j漏洞修复
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              升级官方版本（推荐）
+目前Apache官方已发布最新版升级包，Java7版本升级至log4j-2.12.4版本，Java8及以上版本升级至log4j-2.17.0版本，升级包中移除了对lookup功能的支持，默认禁用了JNDI方法。
+
+移除Log4j包中JndiLookup类（可能存在未知影响）
+移除log4j-core包中JndiLookup类文件，并重启服务，具体方法如下：
+
+
+  Li...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1664344020"
+  data-df="ll"
+  
+>
+  Sep 28, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Log4j
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/eclipse-genghuan-gongzuokongjian-buzhou/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Eclipse更换工作空间的步骤
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              一、指定新工作空间位置
+
+二、设置编码
+
+设置工作空间编码UTF-8
+
+
+
+设置JSP编码
+
+
+
+三、指定JDK位置
+
+
+
+四、配置Tomcat
+
+
+
+
+
+五、切换Java视图
+
+六、使用Package Explorer视图
+
+七、添加工作集视图
+
+
+
+八、指定Maven插件
+
+指定maven插件
+
+
+
+指定maven仓库
+
+
+
+九、查看Maven仓库索引
+
+
+
+十、字体修改
+
+
+
+十一、添...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1664300820"
+  data-df="ll"
+  
+>
+  Sep 28, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Eclipse
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/springboot-qiehuan-duohuanjing-peizhiwenjian/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1132,141 +1313,6 @@ systemctl start firewalld
                   
                     Knowledge,
                     Eclipse
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/eclipse-yiijng-daoru-jarbao-danhaishi-xianshi-classnotfound/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Eclipse已经导入jar包，但还是出现ClassNotFound异常
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              问题描述
-最近在部署一个Web项目，jar包在lib目录下新建了子目录放置，在Java类中直接通过import能导入使用，并且单独运行一个Java类的main方法可以正常运行，但是在运行Web项目时却会报ClassNotFound的错误。
-
-问题原因
-对于普通的Java类，编译jar包时，就直接在导入的包中查找就可以了，但是对于Web项目，由于它们是借助了Tomcat或者其他的容器发布，基于...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1662659220"
-  data-df="ll"
-  
->
-  Sep  9, 2022
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Eclipse
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/aliyun-jingxiang-xiazai-jar-shibai/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Maven使用阿里云镜像下载jar包失败
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              将旧版阿里云映像
-&amp;lt;mirror&amp;gt;
-    &amp;lt;id&amp;gt;nexus-aliyun&amp;lt;/id&amp;gt;
-    &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt;
-    &amp;lt;name&amp;gt;Nexus aliyun&amp;lt;/name&amp;gt;
-    &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/con...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1659937620"
-  data-df="ll"
-  
->
-  Aug  8, 2022
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Maven
                 </span>
               
             </div>

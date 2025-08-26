@@ -586,6 +586,141 @@
 
 <div id="post-list">
   
+    <a href="/posts/eclipse-yiijng-daoru-jarbao-danhaishi-xianshi-classnotfound/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Eclipse已经导入jar包，但还是出现ClassNotFound异常
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              问题描述
+最近在部署一个Web项目，jar包在lib目录下新建了子目录放置，在Java类中直接通过import能导入使用，并且单独运行一个Java类的main方法可以正常运行，但是在运行Web项目时却会报ClassNotFound的错误。
+
+问题原因
+对于普通的Java类，编译jar包时，就直接在导入的包中查找就可以了，但是对于Web项目，由于它们是借助了Tomcat或者其他的容器发布，基于...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1662659220"
+  data-df="ll"
+  
+>
+  Sep  9, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Eclipse
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/aliyun-jingxiang-xiazai-jar-shibai/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Maven使用阿里云镜像下载jar包失败
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              将旧版阿里云映像
+&amp;lt;mirror&amp;gt;
+    &amp;lt;id&amp;gt;nexus-aliyun&amp;lt;/id&amp;gt;
+    &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt;
+    &amp;lt;name&amp;gt;Nexus aliyun&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/con...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1659937620"
+  data-df="ll"
+  
+>
+  Aug  8, 2022
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Maven
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/springboot-shiyong-pagehelper/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1116,142 +1251,6 @@ export JRE_HOME=&quot;/home/jdk-1.8/jre&quot;
                   
                     Knowledge,
                     Redis
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/redis-shaobing-moshi-zhixing-select0-baocuo/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Redis哨兵模式执行select 0命令报错： (error) ERR unknown command select, with args beginning with：0
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              报错信息
-Redis哨兵模式执行select 0命令报错。
-(error) ERR unknown command select, with args beginning with: 0
-
-
-解决办法
-三个node节点为：10.12.168.68:6395,10.12.168.69:6395,10.12.168.70:6396
-redis-cli -h 10.12.168.68 -p 639...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1654753620"
-  data-df="ll"
-  
->
-  Jun  9, 2022
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Redis
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/maven-lianjie-sifu-de-peizhi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Maven连接私服如何配置
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              Maven的setting.xml文件配置，该配置中使用了一个id为nexusProfile的profile，这个profile包含了相关的仓库配置，同时配置中又使用了activeProfile元素将这个profile激活，这样当执行Maven构件的时候，激活的profile会将仓库配置应用到项目中去。
-&amp;lt;profiles&amp;gt;
-    &amp;lt;profile&amp;gt;
-       ...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1654753620"
-  data-df="ll"
-  
->
-  Jun  9, 2022
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Maven
                 </span>
               
             </div>

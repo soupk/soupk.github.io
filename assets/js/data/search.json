@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "GaussDB搜索包含关键字的存储过程",
+    "url": "/posts/sousuo-cunchugcheng/",
+    "categories": "Knowledge, GaussDB",
+    "tags": "GaussDB",
+    "date": "2025-08-21 08:47:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "GaussDB搜索包含“content_key”内容的存储过程，可通过查询系统表pg_proc来实现。pg_proc表涵盖了存储过程与函数的相关信息。可筛选prokind为p的记录找出存储过程。示例代码如下：SELECT     proname AS procedure_name,    proargnames AS argument_names,    prosrc AS source_c...",
+    "content": "GaussDB搜索包含“content_key”内容的存储过程，可通过查询系统表pg_proc来实现。pg_proc表涵盖了存储过程与函数的相关信息。可筛选prokind为p的记录找出存储过程。示例代码如下：SELECT     proname AS procedure_name,    proargnames AS argument_names,    prosrc AS source_codeFROM     pg_procWHERE     prokind = 'p'     AND prosrc LIKE '%content_key%'; "
+  },
+  
+  {
     "title": "北京密云 - 古北水镇",
     "url": "/posts/gubeishuizhen/",
     "categories": "Collection, Travel",
@@ -66,6 +83,23 @@
     
     "snippet": "with子句在GaussDB（基于PostgreSQL内核）里也被称作公共表表达式（CTE），它能定义临时的命名结果集，在查询里可以多次引用这些结果集。CTE 能够让复杂的查询更易读、易维护，并且在某些情况下还能提升查询性能。-- 定义一个名为dept_employee_count的CTEWITH dept_employee_count AS (    SELECT         depa...",
     "content": "with子句在GaussDB（基于PostgreSQL内核）里也被称作公共表表达式（CTE），它能定义临时的命名结果集，在查询里可以多次引用这些结果集。CTE 能够让复杂的查询更易读、易维护，并且在某些情况下还能提升查询性能。-- 定义一个名为dept_employee_count的CTEWITH dept_employee_count AS (    SELECT         department_id,        COUNT(employee_id) AS employee_count    FROM         employees    GROUP BY         department_id)-- 主查询，将CTE与departments表连接SELECT     d.department_name,    dec.employee_countFROM     departments dJOIN     dept_employee_count dec ON d.department_id = dec.department_id;  "
+  },
+  
+  {
+    "title": "一些图标",
+    "url": "/posts/tubiao/",
+    "categories": "Collection, Picture",
+    "tags": "Picture",
+    "date": "2025-04-06 13:47:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
   },
   
   {

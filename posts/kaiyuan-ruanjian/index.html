@@ -3064,7 +3064,31 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -8967,15 +8991,15 @@
   
     
     
+      
+      
+        
+        
+        
+      
+    
   
     
-    
-      
-      
-        
-        
-        
-      
     
   
     
@@ -8994,6 +9018,58 @@
       Further Reading
     </h3>
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        
+        
+        <div class="col">
+          <a href="/posts/sousuo-cunchugcheng/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1755737220"
+  data-df="ll"
+  
+>
+  Aug 21, 2025
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>GaussDB搜索包含关键字的存储过程</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  GaussDB搜索包含“content_key”内容的存储过程，可通过查询系统表pg_proc来实现。pg_proc表涵盖了存储过程与函数的相关信息。可筛选prokind为p的记录找出存储过程。示例代码如下：
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+SELECT 
+    proname AS procedure_name,
+    proargnames AS argument_names,...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
       
         
         
@@ -9078,50 +9154,6 @@
 function_name(arg1, arg2, ...) OVER (
     [PARTITION BY partition_expression1, partition_expression2, ...]
    ...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
-          <a href="/posts/cte/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1744681620"
-  data-df="ll"
-  
->
-  Apr 15, 2025
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>GaussDB的with子句</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  with子句在GaussDB（基于PostgreSQL内核）里也被称作公共表表达式（CTE），它能定义临时的命名结果集，在查询里可以多次引用这些结果集。CTE 能够让复杂的查询更易读、易维护，并且在某些情况下还能提升查询性能。
-
--- 定义一个名为dept_employee_count的CTE
-WITH dept_employee_count AS (
-    SELECT 
-       ...
                 </p>
               </div>
             </div>

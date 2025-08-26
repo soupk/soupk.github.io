@@ -586,6 +586,146 @@
 
 <div id="post-list">
   
+    <a href="/posts/guanyu-rocketmq/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            关于RocketMQ
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              RocketMQ队列的长度
+RocketMQ没有内存Buffer概念，RocketMQ的队列都是持久化磁盘，数据定期清除。RocketMQ同其他MQ有非常显著的区别，RocketMQ的内存Buffer抽象成一个无限长度的队列，不管有多少数据进来都能装得下，这个无限是有前提的，Broker会定期删除过期的数据，例如Broker只保存3天的消息，那么这个Buffer虽然长度无限，但是3天前的数据...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1626241620"
+  data-df="ll"
+  
+>
+  Jul 14, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    RocketMQ
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/centos-anzhuang-rocketmq/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            CentOS7安装RocketMQ
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              
+  
+    上传安装包
+
+    JDK1.8 (注意一定要使用1.8以上版本，1.7版本不能识别RocketMQ中的metaspace特性，该特性由1.8最新提出) 。
+  RocketMQ压缩包，下载选择binary版。
+  
+  
+    解压RocketMQ压缩包
+  
+  
+    修改配置文件
+
+    在conf文件中可以看到以下文件夹，对应rocketmq的不同部署模式：...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1626241620"
+  data-df="ll"
+  
+>
+  Jul 14, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    RocketMQ
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/shanchu-xiazai-weiwanzheng-de-yilai/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1085,140 +1225,6 @@ public class SpringContextUtils implements ApplicationContextAware {
 
   ServletContext.getRequestDispatcher(url).forward(req,rops);，url只能使用绝对路径，因为ServletRequest具有相对路径的概念；而ServletContext对象无此概念。当使用绝对路径时，/代表的是Web项目，代表http://localhost:8080/项目名/。
   request.ge...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1626155220"
-  data-df="ll"
-  
->
-  Jul 13, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Servlet
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/shenmeshi-servlet/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            关于Servlet
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              什么是Servlet
-Java Servlet是运行在Web服务器或应用服务器上的程序，它是作为来Web浏览器或其他Http客户端的请求和HTTP服务器上的数据库或应用程序之间的中间层。
-
-使用Servlet，您可以收集来自网页表单的用户输入，呈现来自数据库或者其他源的记录，还可以动态创建网页。
-
-Servlet是一个Java编写的程序，此程序是基于Http协议的，在服务器端运行的。是按照S...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1626155220"
-  data-df="ll"
-  
->
-  Jul 13, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Servlet
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/servlet-zhong-4dayu-zhongde-zhi-de-huoqu-fangshi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Servlet四大域中的值的获取方式
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              PageContext
-PageContent是PageContext类的实例，它提供了如下两个方法来访问page、request、session、application范围的变量。常用方法：
-getAttribute(String name); // 取得page范围内的name属性 
-getAttribute(String name, int scope); // 取得指定范围内的nam...
             </p>
           </div>
 

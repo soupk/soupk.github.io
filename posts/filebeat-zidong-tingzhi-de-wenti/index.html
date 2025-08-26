@@ -3448,6 +3448,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -8929,111 +8953,6 @@
         
         
         <div class="col">
-          <a href="/posts/kali-qu-luyouqi-pinma/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1649569620"
-  data-df="ll"
-  
->
-  Apr 10, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Kali拿取路由器pin码</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  网卡监听模式
-airmon-ng start wlan0　　
-
-
-
-
-扫描
-wash -i wlan0mon
-
-
-
-
-跑pin
-            网卡          物理地址         信道
-reaver -i wlan0mon -b 00:5A:13:40:AA:F8 -c 11 -vv -K 0
-
-
-
-
-通过pin获得wifi密码
-            网卡      ...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
-          <a href="/posts/jquery-geshihua-shijian/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1650347220"
-  data-df="ll"
-  
->
-  Apr 19, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>JQuery格式化时间</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  $(function(){
-    alert(getDateString(new Date(&quot;2022-04-19&quot;)));
-});
-
-function getDateString(time) {
-    var datetime = new Date();
-    datetime.setTime(time);
-    var year = datetime.getFullYear();...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/maven-lianjie-sifu-de-peizhi/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9067,6 +8986,99 @@ function getDateString(time) {
 &amp;lt;profiles&amp;gt;
     &amp;lt;profile&amp;gt;
        ...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/redis-shaobing-moshi-zhixing-select0-baocuo/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1654753620"
+  data-df="ll"
+  
+>
+  Jun  9, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Redis哨兵模式执行select 0命令报错： (error) ERR unknown command select, with args beginning with：0</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  报错信息
+Redis哨兵模式执行select 0命令报错。
+(error) ERR unknown command select, with args beginning with: 0
+
+
+解决办法
+三个node节点为：10.12.168.68:6395,10.12.168.69:6395,10.12.168.70:6396
+redis-cli -h 10.12.168.68 -p 639...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/springboot-peizhi-redis-shaobing-moshi-zhixing-lianjie/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1654753620"
+  data-df="ll"
+  
+>
+  Jun  9, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Spring Boot配置Redis哨兵模式连接</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  spring:
+    redis:
+        database: 0
+        # host: 127.0.0.1 # 哨兵模式无效youxiao
+        port: 6379
+        password: root # 哨兵模式有效
+        # 连接超时时长（毫秒）
+        pingInterval: 100000
+        timeout...
                 </p>
               </div>
             </div>
