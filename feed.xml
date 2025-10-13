@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Lemon</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-08-26T11:24:39+08:00</updated>
+  <updated>2025-10-13T10:33:03+08:00</updated>
   <author>
     <name>lemon</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,73 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>摘录</title>
+    <link href="http://localhost:4000/posts/zhailu/" rel="alternate" type="text/html" title="摘录" />
+    <published>2025-09-19T01:47:00+08:00</published>
+  
+    <updated>2025-09-19T01:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/zhailu/</id>
+    <content src="http://localhost:4000/posts/zhailu/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Lab" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+
+
+等待“完美”的时刻，就是错过开始的时刻。真正的准备不是在起点空想，而是在路上迭代。完成，远胜完美。先完成一个雏形，再在行动中不断优化它。
+
+你做什么都不会白做，因为要么成功，要么学到东西，要大胆去干。只要脚步还在向前，每一次“没成功”，都是下一次“会成功”的铺垫。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -209,57 +276,6 @@ function_name(arg1, arg2, ...) OVER (
   function_name：窗口函数的名称，像SUM、AVG、ROW_NUMBER等。
   OVER：这是窗口函数的标志，用于定义窗口。
   PARTITION BY：把结果集划分成多个分区，...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>GaussDB的with子句</title>
-    <link href="http://localhost:4000/posts/cte/" rel="alternate" type="text/html" title="GaussDB的with子句" />
-    <published>2025-04-15T09:47:00+08:00</published>
-  
-    <updated>2025-04-15T09:47:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/cte/</id>
-    <content src="http://localhost:4000/posts/cte/" />
-    <author>
-      <name>Lemon</name>
-    </author>
-
-  
-    
-    <category term="Knowledge" />
-    
-    <category term="GaussDB" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      with子句在GaussDB（基于PostgreSQL内核）里也被称作公共表表达式（CTE），它能定义临时的命名结果集，在查询里可以多次引用这些结果集。CTE 能够让复杂的查询更易读、易维护，并且在某些情况下还能提升查询性能。
-
--- 定义一个名为dept_employee_count的CTE
-WITH dept_employee_count AS (
-    SELECT 
-        department_id,
-        COUNT(employee_id) AS employee_count
-    FROM 
-        employees
-    GROUP BY 
-        department_id
-)
--- 主查询，将CTE与departments表连接
-SELECT 
-    d.department_name,
-    dec.employe...
     </summary>
   
 

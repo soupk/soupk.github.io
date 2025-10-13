@@ -3122,6 +3122,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9053,7 +9065,7 @@ WITH...
         
         
         <div class="col">
-          <a href="/posts/gaussdb-quchong/" class="card post-preview h-100">
+          <a href="/posts/chuangkou-hanshu/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9066,14 +9078,14 @@ WITH...
 
 <em
   class="small"
-  data-ts="1698126420"
+  data-ts="1744764420"
   data-df="ll"
   
 >
-  Oct 24, 2023
+  Apr 16, 2025
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>GaussDB去重</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>GaussDB的窗口函数</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9082,16 +9094,17 @@ WITH...
 
 
 
-                  1、示例场景描述
-以保险行业的客户信息去重为例，为防止坐席重复联系客户，需要将客户进行唯一身份识别。存在以下两种情况，需要将其识别成一个人，这时候就需要进行数据去重的动作。
+                  窗口函数（Window Function）是GaussDB这类关系型数据库中强大的工具，它能对查询结果集的一个子集（窗口）进行计算，在分析数据时极为有用。
 
+一、基本语法
 
-  情况一：同一个客户有不同的来源渠道：客户即购买了寿险、又购买了产险（两个不同的来源系统）；
-  情况二：同一个客户多次回流：客户在同一个渠道多次购买（续保或者购买同一险种的不同产品）。
-
-
-2、定义重复数据
-通过...
+1
+2
+3
+4
+5
+function_name(arg1, arg2, ...) OVER (
+    [PARTITION BY partition_expression1, partition_expression2...
                 </p>
               </div>
             </div>

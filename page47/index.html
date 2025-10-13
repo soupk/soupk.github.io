@@ -586,6 +586,82 @@
 
 <div id="post-list">
   
+    <a href="/posts/bitwarden/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            密码管理软件 Bitwarden
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              特性
+
+  提供免费和付费选择
+  适用于团队（企业）和个人
+  开源
+  支持自托管
+  能够作为身份验证器应用（如 Google 身份验证器）
+  跨平台支持（安卓、iOS、Linux、Windows 和 macOS）
+  提供浏览器扩展（Firefox,、Chrome、Opera、Edge、Safari）
+  提供命令行工具
+  提供网页保管库
+  能够导入/导出密码
+  密码生成器
+...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1603777620"
+  data-df="ll"
+  
+>
+  Oct 27, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Collection,
+                    Storage
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/20201028/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1155,71 +1231,6 @@ select * from user_se...
 
 
               create table a_bak as select * from a;
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1603691220"
-  data-df="ll"
-  
->
-  Oct 26, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Oracle
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/qu-paixuhou-diyitiao-shuju/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            Oracle 取查询结果排序后的第一条记录
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              select * from (select t.*, row_number() over(order by id) rn from test_order t) t where rn = 1;
 
 
             </p>

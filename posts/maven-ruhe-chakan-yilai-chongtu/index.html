@@ -6771,6 +6771,18 @@ mvn dependency:tree <span class="nt">-Dverbose</span> <span class="nt">-DoutputF
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9036,63 +9048,6 @@ mvn dependency:tree <span class="nt">-Dverbose</span> <span class="nt">-DoutputF
         
         
         <div class="col">
-          <a href="/posts/maven-lianjie-sifu-de-peizhi/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1654753620"
-  data-df="ll"
-  
->
-  Jun  9, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Maven连接私服如何配置</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  Maven的setting.xml文件配置，该配置中使用了一个id为nexusProfile的profile，这个profile包含了相关的仓库配置，同时配置中又使用了activeProfile元素将这个profile激活，这样当执行Maven构件的时候，激活的profile会将仓库配置应用到项目中去。
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/aliyun-jingxiang-xiazai-jar-shibai/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9185,6 +9140,59 @@ mvn dependency:tree <span class="nt">-Dverbose</span> <span class="nt">-DoutputF
     修改默认的本地仓库位置
 
  ...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/aliyun-jingxiangku/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1611035220"
+  data-df="ll"
+  
+>
+  Jan 19, 2021
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>国内Maven库镜像（阿里云）</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  原来Maven地址应该是：http://repo1.maven.org/maven2/
+还有一个：http://central.maven.org/maven2/
+但是太慢了，可以改成阿里云的镜像库，配置如下：
+1
+2
+3
+4
+5
+6
+7
+8
+&amp;lt;mirrors&amp;gt;
+  &amp;lt;mirror&amp;gt;
+    &amp;lt;id&amp;gt;alimaven&amp;lt;/id&amp;gt;
+    &amp;lt;...
                 </p>
               </div>
             </div>

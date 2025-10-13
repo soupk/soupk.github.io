@@ -8281,6 +8281,18 @@ npm config <span class="nb">set </span>disturl https://npm.taobao.org/dist <span
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9020,63 +9032,6 @@ npm config <span class="nb">set </span>disturl https://npm.taobao.org/dist <span
         
         
         <div class="col">
-          <a href="/posts/maven-lianjie-sifu-de-peizhi/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1654753620"
-  data-df="ll"
-  
->
-  Jun  9, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Maven连接私服如何配置</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  Maven的setting.xml文件配置，该配置中使用了一个id为nexusProfile的profile，这个profile包含了相关的仓库配置，同时配置中又使用了activeProfile元素将这个profile激活，这样当执行Maven构件的时候，激活的profile会将仓库配置应用到项目中去。
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/redis-shaobing-moshi-zhixing-select0-baocuo/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9118,6 +9073,74 @@ Redis哨兵模式执行select 0命令报错。
 2
 3
 redis-cli -h 10.12.168.6...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/springboot-peizhi-redis-shaobing-moshi-zhixing-lianjie/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1654753620"
+  data-df="ll"
+  
+>
+  Jun  9, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Spring Boot配置Redis哨兵模式连接</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+spring:
+    redis:
+        database: 0
+        # host: 127.0.0.1 # 哨兵模式无效youxiao
+        port: 6379
+        password: root # 哨兵模式有效
+     ...
                 </p>
               </div>
             </div>

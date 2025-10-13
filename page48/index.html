@@ -586,6 +586,71 @@
 
 <div id="post-list">
   
+    <a href="/posts/qu-paixuhou-diyitiao-shuju/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 取查询结果排序后的第一条记录
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              select * from (select t.*, row_number() over(order by id) rn from test_order t) t where rn = 1;
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1603691220"
+  data-df="ll"
+  
+>
+  Oct 26, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/piliang-shanchu-xulie/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1185,74 +1250,6 @@ var param = &#39;&amp;lt;%=request.getAttribute(&quot;param&quot;)%&amp;gt;&#39;
                   
                     Knowledge,
                     JSP
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/jquery-huoqu-yuansu-gaodu-de-butong-fangfa/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JQuery获取元素高度不同方法的区别
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              $ele = $(&quot;#element&quot;)
-$ele.height() // 纯内高height
-$ele.innerHeight() //  height + padding
-$ele.outerHeight() // height + padding + border
-$ele.outerHeight(True) // height + padding + border + margin
-...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1603691220"
-  data-df="ll"
-  
->
-  Oct 26, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JQuery
                 </span>
               
             </div>

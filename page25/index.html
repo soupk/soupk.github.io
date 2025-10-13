@@ -586,6 +586,86 @@
 
 <div id="post-list">
   
+    <a href="/posts/oracle-chakan-hanzi-suozhan-zijie/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Oracle 查看汉字所占字节
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              使用以下语句查询
+
+select userenv(&#39;language&#39;) from dual;
+
+
+如果显示如下，一个汉字占用两个字节
+
+SIMPLIFIED CHINESE_CHINA.ZHS16GBK
+
+
+如果显示如下，一个汉字占用三个字节
+
+SIMPLIFIED CHINESE_CHINA.AL32UTF8
+
+
+也可以用以下语句查询一个汉字占用的字节长度
+
+select lengthb...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1621403220"
+  data-df="ll"
+  
+>
+  May 19, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/oracle-add-month-hanshu/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1201,75 +1281,6 @@ select oper_no from info_oper whe...
 
 
   参考：intellij idea 如何一键清除所有断点
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1616736180"
-  data-df="ll"
-  
->
-  Mar 26, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    IntelliJ IDEA
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/intelliJ-idea-quxiao-xingcanming-tishi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            IntelliJ IDEA取消参数名称（形参名）提示
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              File -&amp;gt; Setting -&amp;gt; Editor -&amp;gt; General -&amp;gt; Appearance 把“Show parameter name hints”选项前面的勾去掉，点击“OK”，完成。
-
-
-
-  参考：IDEA取消参数名称（形参名）提示
 
 
             </p>

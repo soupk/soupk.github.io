@@ -6292,6 +6292,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9049,63 +9061,6 @@
         
         
         <div class="col">
-          <a href="/posts/maven-lianjie-sifu-de-peizhi/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1654753620"
-  data-df="ll"
-  
->
-  Jun  9, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Maven连接私服如何配置</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  Maven的setting.xml文件配置，该配置中使用了一个id为nexusProfile的profile，这个profile包含了相关的仓库配置，同时配置中又使用了activeProfile元素将这个profile激活，这样当执行Maven构件的时候，激活的profile会将仓库配置应用到项目中去。
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/aliyun-jingxiang-xiazai-jar-shibai/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9187,6 +9142,57 @@
 
                   什么是依赖冲突
 Maven是个很好用的依赖管理工具，但是再好的东西也不是完美的。Maven的依赖机制会导致Jar包的冲突。举个例子，现在你的项目中，使用了两个Jar包，分别是A和B。现在A需要依赖另一个Jar包C，B也需要依赖C。但是A依赖的C的版本是1.0，B依赖的C的版本是2.0。这时候，Maven会将这1.0的C和2.0的C都下载到你的项目中，这样你的项目中就存在了不同版本的C，这时M...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/maven-de-anzhuang-he-shiyong/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1609566420"
+  data-df="ll"
+  
+>
+  Jan  2, 2021
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>Maven的安装和使用</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  一、Maven的安装和配置
+
+1.1 下载
+进入Maven官网的下载页面：http://maven.apache.org/download.cgi，选择当前最新版本，例如apache-maven-3.0.4-bin.zip，下载到本地并解压。
+
+1.2 配置
+进入Maven安装目录下的conf子目录中，打开settings.xml进行配置修改。
+
+
+  
+    修改默认的本地仓库位置
+
+ ...
                 </p>
               </div>
             </div>
