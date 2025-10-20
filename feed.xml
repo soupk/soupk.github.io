@@ -1,0 +1,290 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Lemon</title>
+  <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
+  <updated>2025-10-20T18:16:52+08:00</updated>
+  <author>
+    <name>lemon</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+  <rights> © 2025 lemon </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>河北秦皇岛 - 北戴河</title>
+    <link href="http://localhost:4000/posts/beidaihe/" rel="alternate" type="text/html" title="河北秦皇岛 - 北戴河" />
+    <published>2025-10-17T10:47:00+08:00</published>
+  
+    <updated>2025-10-17T10:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/beidaihe/</id>
+    <content src="http://localhost:4000/posts/beidaihe/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Collection" />
+    
+    <category term="Travel" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      🏖️ 赶海地点推荐
+
+
+  金梦海湾沙滩、金屋浴场：人少，本地人常去，常见虾、螃蟹、花蛤、蛏子。
+  浅水湾浴场：月亮贝、虾、螃蟹、黄蛤。
+  金山浴场：本地人多，花蛤、猫眼、蛏子。
+  海天一色浴场：生蚝、螃蟹、虾、寄居蟹。
+  欢乐湾：海星、小海螺、寄居蟹。
+  鸽子窝：螃蟹、蛤蜊、虾、猫眼螺。
+  葡萄岛：猫眼螺、贝、小虾。
+  平水桥：小虾、蛏子、螃蟹等。
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>摘录</title>
+    <link href="http://localhost:4000/posts/zhailu/" rel="alternate" type="text/html" title="摘录" />
+    <published>2025-09-19T01:47:00+08:00</published>
+  
+    <updated>2025-09-19T01:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/zhailu/</id>
+    <content src="http://localhost:4000/posts/zhailu/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Collection" />
+    
+    <category term="Reading" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+
+
+💠等待“完美”的时刻，就是错过开始的时刻。真正的准备不是在起点空想，而是在路上迭代。完成，远胜完美。先完成一个雏形，再在行动中不断优化它。
+
+💠你做什么都不会白做，因为要么成功，要么学到东西，要大胆去干。只要脚步还在向前，每一次“没成功”，都是下一次“会成功”的铺垫。
+
+💠永远不要相信苦难是值得的，苦难就是苦难，它不会带来成功，也不值得追求，磨练意志是因为苦难无法避开。  ——余华
+
+💠眞正的强大不是对抗而是允许一切发生!允许遗憾、愚蠢、丑陋、虚伪…允许付出没有回报。  ——莫言
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>GaussDB搜索包含关键字的存储过程</title>
+    <link href="http://localhost:4000/posts/sousuo-cunchugcheng/" rel="alternate" type="text/html" title="GaussDB搜索包含关键字的存储过程" />
+    <published>2025-08-21T08:47:00+08:00</published>
+  
+    <updated>2025-08-21T08:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/sousuo-cunchugcheng/</id>
+    <content src="http://localhost:4000/posts/sousuo-cunchugcheng/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Knowledge" />
+    
+    <category term="GaussDB" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      GaussDB搜索包含“content_key”内容的存储过程，可通过查询系统表pg_proc来实现。pg_proc表涵盖了存储过程与函数的相关信息。可筛选prokind为p的记录找出存储过程。示例代码如下：
+
+SELECT 
+    proname AS procedure_name,
+    proargnames AS argument_names,
+    prosrc AS source_code
+FROM 
+    pg_proc
+WHERE 
+    prokind = 'p' 
+    AND prosrc LIKE '%content_key%'; 
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>北京密云 - 古北水镇</title>
+    <link href="http://localhost:4000/posts/gubeishuizhen/" rel="alternate" type="text/html" title="北京密云 - 古北水镇" />
+    <published>2025-05-07T10:47:00+08:00</published>
+  
+    <updated>2025-05-07T10:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/gubeishuizhen/</id>
+    <content src="http://localhost:4000/posts/gubeishuizhen/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Collection" />
+    
+    <category term="Travel" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+
+
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>GitHub开源软件</title>
+    <link href="http://localhost:4000/posts/kaiyuan-ruanjian/" rel="alternate" type="text/html" title="GitHub开源软件" />
+    <published>2025-05-07T01:47:00+08:00</published>
+  
+    <updated>2025-05-07T01:47:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/kaiyuan-ruanjian/</id>
+    <content src="http://localhost:4000/posts/kaiyuan-ruanjian/" />
+    <author>
+      <name>Lemon</name>
+    </author>
+
+  
+    
+    <category term="Lab" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+    
+	
+
+
+
+    
+        
+            AsrTools
+            智能语音转文本工具，高效的批处理，用户友好的界面，无需GPU，支持SRT/TXT输出。
+            
+                访问
+            
+        
+		
+            VideoCaptioner
+            一款基于大语言模型(LLM)的视频字幕处理助手，支持语音识别、字幕断句、优化、翻译全流程处理。
+            
+                访问
+            
+        
+		
+            Python3-Introduction-Notebook
+            以jupyter notebook的形式，提供交互式的python3入门学习笔记...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
