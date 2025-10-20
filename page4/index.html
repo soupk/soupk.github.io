@@ -586,6 +586,77 @@
 
 <div id="post-list">
   
+    <a href="/posts/mybatis-baocuo/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Mybatis报错，栏位索引超过许可范围
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              报错信息
+Caused by: org.postgresql.util.PSQLException: 栏位索引超过许可范围：4，栏位数：3
+
+报错原因
+极有可能是Mybatis的xml文件中的注释格式书写不正确
+
+解决办法
+删除或修正xml中注释
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1706320020"
+  data-df="ll"
+  
+>
+  Jan 27, 2024
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    MyBatis
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/fenbushi-xia-synchronized-suo-shixiao/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1202,78 +1273,6 @@ UpdateWra...
                   
                     Knowledge,
                     Gradle
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/mysql-chaxun-shujuku-shujuliang-daxiao/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            MySQL查询数据库的数据量大小
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              查询数据库最大连接数
-show variables like &#39;%max_connections%&#39;;
-
-查询数据库连接超时时间单位(s)
-Show variables like &#39;wait_timeout&#39;;
-
-查询各个数据库量的大小
-select
-  TABLE_SCHEMA,
-  CONCAT(ROUND(SUM(DATA_LENGTH / 1024 / 1024), 2), &#39;MB&#39;...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1688262420"
-  data-df="ll"
-  
->
-  Jul  2, 2023
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    MySQL
                 </span>
               
             </div>

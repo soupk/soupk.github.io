@@ -8323,6 +8323,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9073,7 +9085,7 @@
         
         
         <div class="col">
-          <a href="/posts/redis-shaobing-moshi-zhixing-select0-baocuo/" class="card post-preview h-100">
+          <a href="/posts/springboot-peizhi-redis-shaobing-moshi-zhixing-lianjie/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9093,7 +9105,7 @@
   Jun  9, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Redis哨兵模式执行select 0命令报错： (error) ERR unknown command select, with args beginning with：0</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>Spring Boot配置Redis哨兵模式连接</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9102,18 +9114,36 @@
 
 
 
-                  报错信息
-Redis哨兵模式执行select 0命令报错。
-1
-(error) ERR unknown command select, with args beginning with: 0
-
-
-解决办法
-三个node节点为：10.12.168.68:6395,10.12.168.69:6395,10.12.168.70:6396
-1
+                  1
 2
 3
-redis-cli -h 10.12.168.6...
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+spring:
+    redis:
+        database: 0
+        # host: 127.0.0.1 # 哨兵模式无效youxiao
+        port: 6379
+        password: root # 哨兵模式有效
+     ...
                 </p>
               </div>
             </div>

@@ -586,6 +586,76 @@
 
 <div id="post-list">
   
+    <a href="/posts/context-param-he-init-param/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            context-param和init-param
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              初始化参数
+
+web.xml里面可以定义两种参数
+
+  Application范围内的参数，存放在ServletContext中，在web.xml中配置如下
+     &amp;lt;context-param&amp;gt;
+     &amp;lt;param-name&amp;gt;context/param&amp;lt;/param-name&amp;gt;
+     &amp;lt;param-value&amp;gt;avalible du...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1625161620"
+  data-df="ll"
+  
+>
+  Jul  2, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    JavaWeb
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/spring-xiangmu-qidong-baocuo/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1196,75 +1266,6 @@ Linux上一般会安装Open JDK，关于OpenJDK和JDK的区别：h...
                   
                     Knowledge,
                     CentOS
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/tongshi-zhixing-duotiao-insert-yuju-baocuo/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            ORA-00911 invalid character
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              错误信息
-在PLSQL Developer中的SQL窗口执行多条insert语句时会提示错误：ORA-00911 : invalid character，检查sql提示所在的分号是英文的，没有问题。更加奇怪的是如果一条一条执行，是不会出现这个错误的，都是可以成功的，但是批量执行就会提示ORA-00911了。
-
-解决方法
-在SQL的开始和最后添加如下：
-begin
-  insert sql1;...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1624600020"
-  data-df="ll"
-  
->
-  Jun 25, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    Oracle
                 </span>
               
             </div>

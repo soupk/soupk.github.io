@@ -25,7 +25,7 @@ Main Components
 -------------------------------- */
 .cd-accordion-menu {
   width: 90%;
-  max-width: 600px;
+  max-width: 800px;
   background: #4d5158;
   margin: 4em auto;
 }
@@ -160,8 +160,12 @@ Main Components
   left: 95px;
 }
 @media only screen and (min-width: 600px) {
-  .cd-accordion-menu #collection_label, .cd-accordion-menu #collection_a {
+  .cd-accordion-menu #collection_label {
     padding: 24px 24px 24px 82px;
+    font-size: 1.1rem;
+  }
+  .cd-accordion-menu #collection_a {
+    padding: 18px 18px 18px 82px;
     font-size: 1.1rem;
   }
   .cd-accordion-menu #collection_label::before {
@@ -170,8 +174,7 @@ Main Components
   .cd-accordion-menu #collection_label::after {
     left: 53px;
   }
-  .cd-accordion-menu #collection_ul #collection_label,
-  .cd-accordion-menu #collection_ul #collection_a {
+  .cd-accordion-menu #collection_ul #collection_label {
     padding-left: 106px;
   }
   .cd-accordion-menu #collection_ul #collection_label::before {
@@ -183,7 +186,7 @@ Main Components
   }
   .cd-accordion-menu #collection_ul #collection_ul #collection_label,
   .cd-accordion-menu #collection_ul #collection_ul #collection_a {
-    padding-left: 130px;
+    padding-left: 90px;
   }
   .cd-accordion-menu #collection_ul #collection_ul #collection_label::before {
     left: 72px;

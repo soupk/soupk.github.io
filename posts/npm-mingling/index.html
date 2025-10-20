@@ -8293,6 +8293,18 @@ npm config <span class="nb">set </span>disturl https://npm.taobao.org/dist <span
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -9032,56 +9044,6 @@ npm config <span class="nb">set </span>disturl https://npm.taobao.org/dist <span
         
         
         <div class="col">
-          <a href="/posts/redis-shaobing-moshi-zhixing-select0-baocuo/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1654753620"
-  data-df="ll"
-  
->
-  Jun  9, 2022
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>Redis哨兵模式执行select 0命令报错： (error) ERR unknown command select, with args beginning with：0</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  报错信息
-Redis哨兵模式执行select 0命令报错。
-1
-(error) ERR unknown command select, with args beginning with: 0
-
-
-解决办法
-三个node节点为：10.12.168.68:6395,10.12.168.69:6395,10.12.168.70:6396
-1
-2
-3
-redis-cli -h 10.12.168.6...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
-        
-        
-        <div class="col">
           <a href="/posts/springboot-peizhi-redis-shaobing-moshi-zhixing-lianjie/" class="card post-preview h-100">
             <div class="card-body">
               <!--
@@ -9141,6 +9103,52 @@ spring:
         port: 6379
         password: root # 哨兵模式有效
      ...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        
+        
+        <div class="col">
+          <a href="/posts/ruhe-gei-tomcat-zhiding-jdk/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1654753620"
+  data-df="ll"
+  
+>
+  Jun  9, 2022
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>如何给Tomcat指定JDK和JRE</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  在Tomcat安装目录下的bin目录下找到setclasspath.sh，在最开始添加以下代码
+
+1
+2
+export JAVA_HOME=&quot;/home/jdk-1.8&quot;
+export JRE_HOME=&quot;/home/jdk-1.8/jre&quot;
+
+
                 </p>
               </div>
             </div>

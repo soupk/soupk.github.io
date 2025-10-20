@@ -586,6 +586,77 @@
 
 <div id="post-list">
   
+    <a href="/posts/linux-vi-mingling/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            Linux退出vi编辑模式
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              按ESC键跳到命令模式，然后：
+:w         保存文件但不退出vi
+:w file    将修改另外保存到file中，不退出vi
+:w!        强制保存，不推出vi
+:wq        保存文件并退出vi
+:wq!       强制保存文件，并退出vi
+q:         不保存文件，退出vi
+:q!        不保存文件，强制退出vi
+:e!        放弃所有...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1607406420"
+  data-df="ll"
+  
+>
+  Dec  8, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Linux
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/linux-changyong-mingling/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1197,79 +1268,6 @@ var b = Math.abs(a);
                   
                     Knowledge,
                     JavaScript
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/jquery-yemian-jiazai-wanbi-shijian/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JQuery的页面加载完毕事件
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              第一种
-$(document).ready(function() {
-    // do something
-});
-
-$(document)把原生的document这个DOM对象转换为JQuery对象，转换完成后才能调用。其中ready方法ready(fn)表示的是页面结构被加载完毕后执行传入函数fn。
-
-第二种
-$(function() {
-    // do something
-});...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1607320020"
-  data-df="ll"
-  
->
-  Dec  7, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JQuery
                 </span>
               
             </div>

@@ -586,6 +586,75 @@
 
 <div id="post-list">
   
+    <a href="/posts/tongshi-zhixing-duotiao-insert-yuju-baocuo/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            ORA-00911 invalid character
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              错误信息
+在PLSQL Developer中的SQL窗口执行多条insert语句时会提示错误：ORA-00911 : invalid character，检查sql提示所在的分号是英文的，没有问题。更加奇怪的是如果一条一条执行，是不会出现这个错误的，都是可以成功的，但是批量执行就会提示ORA-00911了。
+
+解决方法
+在SQL的开始和最后添加如下：
+begin
+  insert sql1;...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1624600020"
+  data-df="ll"
+  
+>
+  Jun 25, 2021
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Oracle
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/oracle-de-jinggque-hanshu/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1189,77 +1258,6 @@ var date = new Date(str);
 date.setDate(date.getDate() + 1);
 
 
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1624513620"
-  data-df="ll"
-  
->
-  Jun 24, 2021
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JavaScript
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/js-huoqu-zifuchuan-zai-shuzu-zhongde-weizhi/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JS获取字符串在数组的位置
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              function indexOf(arr, str){
-    // 如果可以的话，调用原生方法
-    if(arr &amp;amp;&amp;amp; arr.indexOf){
-        return arr.indexOf(str);
-    }
-     
-    var len = arr.length;
-    for(var i = 0; i &amp;lt; len; i++){
-    ...
             </p>
           </div>
 
