@@ -759,7 +759,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1456 words"
+  title="1446 words"
 >
   <em>8 min</em> read</span>
 
@@ -786,6 +786,42 @@
         left: 0px;
         vertical-align: middle;
     }
+	
+	.glass-label-blue {
+		/* 自动宽度：由内容撑开 */
+		display: inline-block;
+		padding: 0.3px 12px; /* 固定内边距，保证椭圆比例 */
+		border-radius: 50px; /* 椭圆效果 */
+		
+		margin-left: 10px;
+			
+		/* 荧光蓝玻璃背景 */
+		background-color: rgba(0, 255, 255, 0.3); /* 半透荧光蓝 */
+		border: 1px solid rgba(0, 255, 255, 0.6); /* 边框增强轮廓 */
+		
+		/* 玻璃效果 */
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+		
+		/* 高清晰字体设置 */
+		color: #00f7ff; /* 饱和荧光蓝文字，与背景区分明显 */
+		font-family: "Segoe UI", "Microsoft YaHei", sans-serif; /* 清晰无衬线字体 */
+		font-size: 14px;
+		font-weight: 500; /* 适度加粗，提升辨识度 */
+		letter-spacing: 0.3px; /* 微调字间距，避免拥挤 */
+		text-shadow: 0 0 2px rgba(0, 255, 255, 0.7); /* 轻微发光，增强清晰度 */
+		
+		/* 交互优化 */
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	/* 悬停效果：强化清晰度 */
+	.glass-label-blue:hover {
+		background-color: rgba(0, 255, 255, 0.35);
+		text-shadow: 0 0 4px rgba(0, 255, 255, 0.9); /* 增强发光，文字更突出 */
+	}
+
 </style>
 
 <body class="collection_body" id="collection_body">
@@ -849,12 +885,12 @@
                     <input class="collection_input" type="checkbox" name="sub-group-21" id="sub-group-21" />
                     <label id="collection_label" for="sub-group-21">媒体资源</label>
                     <ul id="collection_ul">
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://webstack.cc/cn/#">WebStack.cc - 设计师网址导航</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.pexels.com/zh-cn/">Pexels - 免费素材图片</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://stockup.sitebuilderreport.com/">Stock Up - 免费素材图片</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://unsplash.com/">Unsplash - 免费素材图片</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://pixabay.com/">Pixabay - 免费素材图片</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://stocksnap.io/">StockSnap - 免费素材图片</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://webstack.cc/cn/#">WebStack.cc<label for="input-short" class="glass-label-blue">设计师网址导航</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.pexels.com/zh-cn/">Pexels<label for="input-short" class="glass-label-blue">免费素材图片</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://stockup.sitebuilderreport.com/">Stock Up<label for="input-short" class="glass-label-blue">免费素材图片</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://unsplash.com/">Unsplash<label for="input-short" class="glass-label-blue">免费素材图片</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://pixabay.com/">Pixabay<label for="input-short" class="glass-label-blue">免费素材图片</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://stocksnap.io/">StockSnap<label for="input-short" class="glass-label-blue">免费素材图片</label></a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.aigei.com/">爱给</a></li>
                     </ul>
                 </li>
@@ -880,11 +916,11 @@
                     <input class="collection_input" type="checkbox" name="sub-group-24" id="sub-group-24" />
                     <label id="collection_label" for="sub-group-24">插件资源</label>
                     <ul id="collection_ul">
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://greasyfork.org/zh-CN">Greasy Fork - 油猴脚本</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://greasyfork.org/zh-CN">Greasy Fork<label for="input-short" class="glass-label-blue">油猴脚本</label></a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://marketplace.atlassian.com/">Atlassian插件市场</a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://segmentfault.com/a/1190000019806829?utm_source=tag-newest">Gitbook常用插件</a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.scootersoftware.com/kb/moreformats?version=4https://start.firefoxchina.cn">Beyond Compare插件</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.crxsoso.com/">Crx - 浏览器插件</a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.crxsoso.com/">Crx<label for="input-short" class="glass-label-blue">浏览器插件</label></a></li>
 					</ul>
                 </li>
                 <li class="has-children" id="collection_li">
@@ -900,7 +936,7 @@
                     <input class="collection_input" type="checkbox" name="sub-group-27" id="sub-group-27" />
                     <label id="collection_label" for="sub-group-27">教育资源</label>
                     <ul id="collection_ul">
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.zivip.com/">超级字帖 - 练字练题</a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.zivip.com/">超级字帖<label for="input-short" class="glass-label-blue">练字练题</label></a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="http://www.haoduoyun.cc/">电子课本</a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="https://basic.smartedu.cn/">国家中小学智慧教育平台</a></li>
                     </ul>
@@ -951,10 +987,10 @@
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://mirrors.edge.kernel.org/pub/software/scm/git/">Git</a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.cnblogs.com/Nico-luo/p/8108006.html">JQuery</a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.python.org/downloads/">Python</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.rpmfind.net/linux/RPM/index.html">RPM仓库 - Linux软件</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://pkgs.org/">pkgs.org - Linux和Unix软件</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.rpmfind.net/linux/RPM/index.html">RPM仓库<label for="input-short" class="glass-label-blue">Linux软件</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://pkgs.org/">pkgs.org<label for="input-short" class="glass-label-blue">Linux和Unix软件</label></a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://mvnrepository.com/">Maven仓库</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://developer.aliyun.com/mvn/search">Maven仓库 - 阿里云</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://developer.aliyun.com/mvn/search">Maven仓库<label for="input-short" class="glass-label-blue">阿里云仓库</label></a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://rubyinstaller.org/downloads/">Ruby</a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://fontawesome.dashgame.com/">Font Awesome - v4</a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://fa5.dashgame.com/#/">Font Awesome - v5</a></li>
@@ -974,8 +1010,8 @@
                     <input class="collection_input" type="checkbox" name="sub-group-75" id="sub-group-75" />
                     <label id="collection_label" for="sub-group-75">Git项目</label>
                     <ul id="collection_ul">
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://github.com/macrozheng/mall">mall项目 - 电商系统</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://github.com/phachon/mm-wiki">MM-Wiki - 轻量级的企业知识分享与团队协同软件</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://github.com/macrozheng/mall">mall项目<label for="input-short" class="glass-label-blue">电商系统</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://github.com/phachon/mm-wiki">MM-Wiki<label for="input-short" class="glass-label-blue">团队协同</label><label for="input-short" class="glass-label-blue">企业知识分享</label></a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://blog.csdn.net/x763795151/article/details/102249353">GitHub开源的10个优秀后台管理面板</a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://open-hl.toutiao.com/a6824867804370436621/?utm_campaign=open&amp;utm_medium=webview&amp;utm_source=o_llq_api&amp;req_id=202006291919550100140292220A0B54DD&amp;dt=PACM00&amp;label=open_o_channel&amp;a_t=30160199459216503508399708291876&amp;gy=9325fd919d937d26728fa200a0228244f1f0a23ea61171f1de7ca9d8e748c000c764f0a660452e4225bd9b11ba013314846ee3938aaf4a145f683c2da00ff80bdfa41704bb4f2d22c1f24bcecca238ad6c2a78df570d7913b870a6d9eda6a434301ba90a97abd46ef2614452530f15228886e4dcac0dd45f70b0204413fe01ae&amp;crypt=9954&amp;item_id=6824867804370436621&amp;__docId__=6824867804370436621&amp;__barStyle__=1_1&amp;__statParams__=sourceMedia&amp;__fromId__=__all__&amp;__source__=toutiao&amp;sourceMedia=toutiao&amp;__cmtCnt__=96&amp;__styleType__=1&amp;__publisher_id__=99362292158&amp;openv=&amp;__pf__=detail">25个国内顶级技术开发团队Github</a></li>
                     </ul>
@@ -992,17 +1028,19 @@
                     <label id="collection_label" for="sub-group-31">媒体工具</label>
                     <ul id="collection_ul">
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://view.xdocin.com">XDOC文档预览云服务</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://separator.mayastudios.com/index.php?t=horz">Chrome Bookmarks Separator - 虚拟分隔符</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://flatuicolors.com">Palettes - 调色板</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.materialpalette.com">Material Palette - 调色板</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://colorhunt.co">Color Hunt - 调色板</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.simoneferrari.it">Simone Ferrari - 网页配色方案</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.135editor.com/beautify_editor.html">135编辑器 - 微信公众号编辑器</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://separator.mayastudios.com/index.php?t=horz">Chrome Bookmarks Separator<label for="input-short" class="glass-label-blue">虚拟分隔符</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://flatuicolors.com">Palettes<label for="input-short" class="glass-label-blue">调色板</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.materialpalette.com">Material Palette<label for="input-short" class="glass-label-blue">调色板</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://colorhunt.co">Color Hunt<label for="input-short" class="glass-label-blue">调色板</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.simoneferrari.it">Simone Ferrari<label for="input-short" class="glass-label-blue">网页配色方案</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.135editor.com/beautify_editor.html">135编辑器<label for="input-short" class="glass-label-blue">微信公众号编辑器</label></a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.21zui.com/">在线改图</a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="https://doocs.github.io/md/">微信Markdown编辑器</a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="https://icon.yukonga.top/">苹果商店APP图标获取</a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="http://m.91tool.com/img-txt">图片文字提取</a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="https://tinypng.com">图片压缩</a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://vpot.fun/#/">VPot<label for="input-short" class="glass-label-blue">语音合成</label><label for="input-short" class="glass-label-blue">语音转文字</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.datatool.vip/">DataTool<label for="input-short" class="glass-label-blue">视频下载器</label></a></li>
                     </ul>
                 </li>
                 <li class="has-children" id="collection_li">
@@ -1025,11 +1063,18 @@
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.b910.cn/tool/1.htm">中国省市区编码对照表2020版</a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://cron.qqe2.com/">Cron表达式生成器</a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://render.alipay.com/p/s/jvm-generate/">JVM配置工具</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://jingweidu.bmcx.com">经纬度查询 - 坐标拾取系统</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://jingweidu.bmcx.com">经纬度查询<label for="input-short" class="glass-label-blue">坐标拾取</label></a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="http://www.zhongguosou.com/education_graduate_course_tools/time_date_difference.html">时间日期间隔计算器</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://yunjisms.xyz">云际云短信 - 模拟接码</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://yunjisms.xyz">云际云短信<label for="input-short" class="glass-label-blue">模拟接码</label></a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://cli.im">草料二维码生成器</a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="http://24mail.chacuo.net/">临时邮箱</a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://smail.pw/">Smail<label for="input-short" class="glass-label-blue">临时邮箱</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://mail.tm/zh/">Maoil.tm<label for="input-short" class="glass-label-blue">临时邮箱</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://fakermail.com/">Fakermail<label for="input-short" class="glass-label-blue">临时邮箱</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://mail.td/zh">Mail.td<label for="input-short" class="glass-label-blue">临时邮箱</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://maildrop.cc/">Maildrop<label for="input-short" class="glass-label-blue">临时邮箱</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.amz123.com/tools-mail">跨境电商临时邮箱</a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://22.do/">22.Do<label for="input-short" class="glass-label-blue">临时邮箱</label><label for="input-short" class="glass-label-blue">Gmail</label></a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.ssleye.com/ssltool/aes_cipher.html">AES加解密</a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.toolhelper.cn/Date/CronExpression">Corn表达式生成器</a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.bootschool.net/ascii">Spring Boot banner在线生成工具</a></li>
@@ -1061,7 +1106,7 @@
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://mp.weixin.qq.com/debug/">微信公众平台接口调试工具</a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="http://p8z.fun/">Java命名/p8z</a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://editor.method.ac">SVG编辑器</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://hoppscotch.io">Hoppscotch - 在线Postman</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://hoppscotch.io">Hoppscotch<label for="input-short" class="glass-label-blue">在线Postman</label></a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.bejson.com/json2javapojo/">JSON转实体类</a></li>
                     </ul>
                 </li>
@@ -1084,8 +1129,8 @@
                     <label id="collection_label" for="sub-group-37">AI工具</label>
                     <ul id="collection_ul">
                         <li id="collection_li"><a target="_blank" id="collection_a" href="https://kimi.moonshot.cn/">Kimi</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://metaso.cn/">Metaso - 秘塔搜</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://tinywow.com/tools">TinyWow - AI工具</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://metaso.cn/">Metaso<label for="input-short" class="glass-label-blue">AI搜索工具</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://tinywow.com/tools">TinyWow<label for="input-short" class="glass-label-blue">AI工具</label></a></li>
 						<li id="collection_li"><a target="_blank" id="collection_a" href="https://durable.co/">AI网页生成工具</a></li>
                     </ul>
                 </li>
@@ -1107,52 +1152,52 @@
                     <input class="collection_input" type="checkbox" name="sub-group-41" id="sub-group-41" />
                     <label id="collection_label" for="sub-group-41">国家</label>
                     <ul id="collection_ul">
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://www.gov.cn/index.htm">政府 - 中国政府网 - 中央人民政府门户网站</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="http://xzqh.mca.gov.cn/map">政府 - 民政部 - 全国行政区划信息查询平台</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://ntce.neea.edu.cn/html1/folder/1507/1076-1.htm">教育 - 中国教育考试网（教师资格证考试）</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.jszg.edu.cn/">教育 - 中国教师资格网（教师资格证认证）</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="http://www.cltt.org/">教育 - 国家普通话水平测试网</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://gaokao.chsi.com.cn">教育 - 阳光高考（高校招生）</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.chsi.com.cn/">教育 - 中国高等教育学生信息网（学信网）</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://bm.ruankao.org.cn/sign/welcome?eai_id=cGFnZS5fdGFwLl9tb2R1bGUu&amp;_lokiJumpTimes=2">继续教育 - 全国计算机技术与软件专业技术资格（水平）考试网上报名平台</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://px.cie.org.cn/">继续教育 - 中国电子学会电子信息人才能力提升工程</a></li> 
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://www.chinamde.com.cn/">继续教育 - 现代专技继续教育网</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://le.ouchn.cn/home#/home">继续教育 - 终身教育平台</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="http://osta.mohrss.gov.cn/">继续教育 - 技能人才评价工作网（职业技能等级认定机构目录）</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://etax.chinatax.gov.cn/yhdl.html">税务 - 自然人电子税务局</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://www.gov.cn/index.htm">中华人民共和国中央人民政府<label for="input-short" class="glass-label-blue">政务信息</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="http://xzqh.mca.gov.cn/map">中华人民共和国民政部<label for="input-short" class="glass-label-blue">全国行政区划信息查询</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://ntce.neea.edu.cn/html1/folder/1507/1076-1.htm">中国教育考试网<label for="input-short" class="glass-label-blue">教育</label><label for="input-short" class="glass-label-blue">教师资格证考试</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.jszg.edu.cn/">中国教师资格网<label for="input-short" class="glass-label-blue">教育</label><label for="input-short" class="glass-label-blue">教师资格证认证</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="http://www.cltt.org/">国家普通话水平测试网<label for="input-short" class="glass-label-blue">教育</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://gaokao.chsi.com.cn">阳光高考<label for="input-short" class="glass-label-blue">教育</label><label for="input-short" class="glass-label-blue">高校招生</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.chsi.com.cn/">中国高等教育学生信息网（学信网）<label for="input-short" class="glass-label-blue">教育</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://bm.ruankao.org.cn/sign/welcome?eai_id=cGFnZS5fdGFwLl9tb2R1bGUu&amp;_lokiJumpTimes=2">全国计算机技术与软件专业技术资格（水平）考试网上报名平台<label for="input-short" class="glass-label-blue">继续教育</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://px.cie.org.cn/">中国电子学会电子信息人才能力提升工程<label for="input-short" class="glass-label-blue">继续教育</label></a></li> 
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://www.chinamde.com.cn/">现代专技继续教育网<label for="input-short" class="glass-label-blue">继续教育</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://le.ouchn.cn/home#/home">终身教育平台<label for="input-short" class="glass-label-blue">继续教育</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="http://osta.mohrss.gov.cn/">技能人才评价工作网（职业技能等级认定机构目录）<label for="input-short" class="glass-label-blue">继续教育</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://etax.chinatax.gov.cn/yhdl.html">自然人电子税务局<label for="input-short" class="glass-label-blue">税务</label></a></li>
                         <li id="collection_li"><a target="_blank" id="collection_a" href="http://si.12333.gov.cn/index.jhtml">社保 - 国家社会保险公共服务平台</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://fuwu.nhsa.gov.cn">医保 - 国家医保服务平台</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.ndcpa.gov.cn/jbkzzx/index.html">医疗 - 国家疾病预防控制局</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://flk.npc.gov.cn/index.html">法律 - 国家法律法规数据库</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.nmpa.gov.cn/datasearch/">法律 - 国家药品监督管理局数据库</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://fuwu.nhsa.gov.cn">国家医保服务平台<label for="input-short" class="glass-label-blue">医保</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.ndcpa.gov.cn/jbkzzx/index.html">国家疾病预防控制局<label for="input-short" class="glass-label-blue">医疗</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://flk.npc.gov.cn/index.html">国家法律法规数据库<label for="input-short" class="glass-label-blue">法律法规</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.nmpa.gov.cn/datasearch/">国家药品监督管理局数据库<label for="input-short" class="glass-label-blue">法律法规</label></a></li>
                     </ul>
                 </li>
                 <li class="has-children" id="collection_li">
                     <input class="collection_input" type="checkbox" name="sub-group-42" id="sub-group-42" />
                     <label id="collection_label" for="sub-group-42">北京</label>
                     <ul id="collection_ul">
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://bj.px.rsbsyzx.cn/">继续教育 - 北京继续教育</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.bjjnts.cn/home">继续教育 - 北京市职业技能提升行动管理平台</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://rsj.beijing.gov.cn/csibiz/">社保 - 北京市人力资源和社会保障局</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://rsj.beijing.gov.cn/ywsite/jflh/">居住 - 北京市积分落户服务专栏</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://xkczb.jtw.beijing.gov.cn">车辆 - 北京市小客车指标调控管理信息系统</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://jtgl.beijing.gov.cn/">车辆 - 北京市公安局公安交通管理局</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://bj.px.rsbsyzx.cn/">北京继续教育<label for="input-short" class="glass-label-blue">继续教育</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.bjjnts.cn/home">北京市职业技能提升行动管理平台<label for="input-short" class="glass-label-blue">继续教育</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://rsj.beijing.gov.cn/csibiz/">北京市人力资源和社会保障局<label for="input-short" class="glass-label-blue">社保</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://rsj.beijing.gov.cn/ywsite/jflh/">北京市积分落户服务专栏<label for="input-short" class="glass-label-blue">居住</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://xkczb.jtw.beijing.gov.cn">京市小客车指标调控管理信息系统<label for="input-short" class="glass-label-blue">车辆</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://jtgl.beijing.gov.cn/">北京市公安局公安交通管理局<label for="input-short" class="glass-label-blue">车辆</label></a></li>
                     </ul>
                 </li>
                 <li class="has-children" id="collection_li">
                     <input class="collection_input" type="checkbox" name="sub-group-43" id="sub-group-43" />
                     <label id="collection_label" for="sub-group-43">河北</label>
                     <ul id="collection_ul">
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.hbrc.com.cn">就业 - 河北人才网</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.zjk.gov.cn/index.html">政府 - 张家口市人民政府</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="http://www.zjkgxq.gov.cn/index.html">政府 - 张家口经济技术开发区管理委员会</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://rsj.zjk.gov.cn/">社保 - 张家口人力资源和社会保障局</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://ybj.zjk.gov.cn/">医保 - 张家口市医疗保障局</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://www.sdsgwy.com/teacher/hebei/zhangjiakou/">教育 - 张家口教师招聘考试网</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://www.hebeea.edu.cn/">教育 - 河北省教育考试院</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.mingxiaow.com">教育 - 名校网 - 全国各省市学校大全</a></li>
-                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://www.hebeigwy.org/html/kszc/202208/2_46582.html">教育 - 河北公务员考试网</a></li>
-						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.cprec.cn">就业 - 人事招考中心</a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.hbrc.com.cn">河北人才网<label for="input-short" class="glass-label-blue">就业</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.zjk.gov.cn/index.html">张家口市人民政府<label for="input-short" class="glass-label-blue">政务信息</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="http://www.zjkgxq.gov.cn/index.html">张家口经济技术开发区管理委员会<label for="input-short" class="glass-label-blue">政务信息</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://rsj.zjk.gov.cn/">张家口人力资源和社会保障局<label for="input-short" class="glass-label-blue">社保</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://ybj.zjk.gov.cn/">张家口市医疗保障局<label for="input-short" class="glass-label-blue">医保</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://www.sdsgwy.com/teacher/hebei/zhangjiakou/">张家口教师招聘考试网<label for="input-short" class="glass-label-blue">教育</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://www.hebeea.edu.cn/">河北省教育考试院<label for="input-short" class="glass-label-blue">教育</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="https://www.mingxiaow.com">名校网<label for="input-short" class="glass-label-blue">教育</label><label for="input-short" class="glass-label-blue">全国各省市学校大全</label></a></li>
+                        <li id="collection_li"><a target="_blank" id="collection_a" href="http://www.hebeigwy.org/html/kszc/202208/2_46582.html">河北公务员考试网<label for="input-short" class="glass-label-blue">教育</label></a></li>
+						<li id="collection_li"><a target="_blank" id="collection_a" href="https://www.cprec.cn">人事招考中心<label for="input-short" class="glass-label-blue">就业</label></a></li>
                     </ul>
                 </li>
             </ul>
@@ -1194,7 +1239,7 @@ for (var i=0; i<coli.length; i++) {
 }
 
 function showerrimg(obj) {
-  obj.src = "/assets/plugins/lableCollection/img/cd-icons.png";
+  obj.src = "/assets/plugins/lableCollection/img/cd-iconss.svg";
 }
 </script>
 </html>
@@ -3529,6 +3574,30 @@ function showerrimg(obj) {
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 

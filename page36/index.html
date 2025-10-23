@@ -586,6 +586,142 @@
 
 <div id="post-list">
   
+    <a href="/posts/ruhe-zai-yitai-fuwuqi-shang-qidong-duoge-tomcat/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            一台机器上启动多个Tomcat
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              如果需要在一台机器上启动多个Tomcat服务器，在默认设置下肯定会发生端口冲突。为实现这个效果，只需修改conf子目录中的server.xml文件即可。共需修改三处：
+
+修改http访问端口（默认为8080端口）:
+&amp;lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;
+connectionTimeout=&quot;20000&quot;
+redirectPort=&quot;844...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1608097620"
+  data-df="ll"
+  
+>
+  Dec 16, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Tomcat
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/qidong-tomcat-chuangkou-yishanerguo/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            启动Tomcat时窗口一闪而过的解决方法
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              进入Tomcat的安装目录，看到圈出红色的3个bat文件，一般通过startup.bat启动Tomcat时流程是startup-&amp;gt;catalina-&amp;gt;setclasspath-&amp;gt;catalina，如果这3个bat文件里面有一个出现错误的话就是启动失败。
+
+先打开startup.bat，在最后加上一句pause
+
+
+再次执行startup.bat，就会看到上图，当按任意的键时...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1608097620"
+  data-df="ll"
+  
+>
+  Dec 16, 2020
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Knowledge,
+                    Tomcat
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
     <a href="/posts/dajian-svn-fuwuqi-shi-baocuo/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
@@ -1100,144 +1236,6 @@ Cannot query proxy blanket: no such interface supported (0x80004002)
 
               根据官方的建议，具有 true 和 false 两个值的属性，如 checked, selected 或者 disabled 使用 prop()，其他的使用 attr()
 
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1607492820"
-  data-df="ll"
-  
->
-  Dec  9, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JQuery
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/jquery-panduan-xiala-danxuan-shifou-xuanzhong/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JQuery判断下拉和单选是否选中并获取值和索引
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              select
-判断option是否被选中
-$(&quot;#mySelect&quot;).is(&quot;:checked&quot;); // false是未被选中，true是被选中
-$(&quot;#mySelect&quot;).attr(&#39;checked&#39;) == undefined; // false是未被选中，true是被选中
-
-获取select选中的值
-$(&quot;#mySelect option:selected&quot;).val();
-$(...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1607492820"
-  data-df="ll"
-  
->
-  Dec  9, 2020
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    Knowledge,
-                    JQuery
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/jquery-huoqu-zifuchuan-zijie-changdu/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            JQuery获取字符串字节长度
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              function getByteLen(val) {
-    var len = 0;
-    for (var i = 0; i &amp;lt; val.length; i++) {
-        var code = val.charCodeAt(i);
-        if (code &amp;gt;= 0 &amp;amp;&amp;amp; code &amp;lt;= 128) {
-            len...
             </p>
           </div>
 
