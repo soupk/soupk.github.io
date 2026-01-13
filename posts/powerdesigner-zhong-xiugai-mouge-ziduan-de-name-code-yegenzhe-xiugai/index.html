@@ -2018,6 +2018,180 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2181,178 +2355,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2956,10 +2958,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/linux/">Linux</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/mysql/">MySQL</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/tools/">🤖Tools</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/tools/">🤖Tools</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/mysql/">MySQL</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/eclipse/">Eclipse</a>
@@ -4429,7 +4431,31 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -9108,7 +9134,7 @@ name转到comment注释字段
         
         
         <div class="col">
-          <a href="/posts/springboot-peizhi-redis-shaobing-moshi-zhixing-lianjie/" class="card post-preview h-100">
+          <a href="/posts/ruhe-gei-tomcat-zhiding-jdk/" class="card post-preview h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -9128,7 +9154,7 @@ name转到comment注释字段
   Jun  9, 2022
 </em>
 
-              <h4 class="pt-0 my-2" data-toc-skip>Spring Boot配置Redis哨兵模式连接</h4>
+              <h4 class="pt-0 my-2" data-toc-skip>如何给Tomcat指定JDK和JRE</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -9137,36 +9163,14 @@ name转到comment注释字段
 
 
 
-                  1
+                  在Tomcat安装目录下的bin目录下找到setclasspath.sh，在最开始添加以下代码
+
+1
 2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-spring:
-    redis:
-        database: 0
-        # host: 127.0.0.1 # 哨兵模式无效youxiao
-        port: 6379
-        password: root # 哨兵模式有效
-     ...
+export JAVA_HOME=&quot;/home/jdk-1.8&quot;
+export JRE_HOME=&quot;/home/jdk-1.8/jre&quot;
+
+
                 </p>
               </div>
             </div>
@@ -10464,6 +10468,180 @@ spring:
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -10627,178 +10805,6 @@ spring:
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -11402,10 +11408,10 @@ spring:
         <a class="post-tag btn btn-outline-primary" href="/tags/linux/">Linux</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/mysql/">MySQL</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/tools/">🤖Tools</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/tools/">🤖Tools</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/mysql/">MySQL</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/eclipse/">Eclipse</a>
@@ -11434,7 +11440,7 @@ spring:
       </p>
 
       <p>©
-        2025
+        2026
         <a href="https://twitter.com/username">lemon</a>.
         
           <span
